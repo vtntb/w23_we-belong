@@ -36,4 +36,10 @@ We Belong connects people with intellectual disability to local hobby/interest/s
 See [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
 ## License
-MIT (or your institution’s preferred license).
+Copyright (c) 2025 Group W23, University of Wollongong
+
+This repository was created as part of the CSIT321 subject at the University
+of Wollongong. It is for educational purposes only. No license is granted to
+copy, modify, or distribute this work without permission from the authors
+and the University.
+
