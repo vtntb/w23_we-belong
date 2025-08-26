@@ -1,4 +1,4 @@
-# We Belong — Inclusive Community Platform
+# Flagstaff's We Belong — Inclusive Community Platform
 
 Helping people with intellectual disability discover welcoming clubs—and helping clubs become truly inclusive.
 
