@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flag Staff - We Belong</title>
+        <meta charset="UTF-8">
+        <title>MSI 2025</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: white;
+            }
+
+            .header {
+                background-color: black;
+                color: white;
+                text-align: center;
+                width: 100%;
+                padding: 20px;
+                height: 50px;
+            }
+
+            .navigation {
+                background-color: white;
+                color: black;
+                padding: 10px;
+                padding-top: 20px;
+                text-align: center;
+                width: 100%;
+                height: 130px;
+            }
+
+            .link {
+                color: inherit;
+                text-decoration: none;
+                margin: 0 15px;
+                font-size: 18px;
+                padding: 10px;
+            }
+
+            .header .link:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            .logo {
+                height: 50px;
+                vertical-align: middle;
+            }
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+
+            .navigation .link:hover {
+                background-color: red;
+                color: white;
+            }
+
+            .aboutthis {
+                background-color: red;
+                color: white;
+                text-align: left;
+                padding: 20px;
+                font-size: 50px;
+            }
+
+            .details p {
+                font-size: 20px;
+                text-align: justify;
+                padding-left: 80px;
+                padding-right: 1000px;
+            }
+
+            .chatbox {
+                width: 500px;
+                margin-right: 200px;
+                margin-bottom: 100px;
+                border: 1px solid #000000;
+                border-radius: 8px;
+                background-color: #fff;
+                float: right;
+            }
+
+            .aichat {
+                height: 300px;
+                padding: 10px;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .aimess {
+                margin-bottom: 15px;
+                padding: 10px;
+                background-color: #e0e0e0;
+                border-radius: 5px;
+                max-width: 70%;
+                margin-left: 10px;
+            }
+
+            .chatinput {
+                padding: 10px;
+            }
+
+            #tinput {
+                width: 50%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .options {
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                margin-right: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            #ailogo {
+                width: 80px;
+                border-radius: 50%;
+                margin: auto;
+                text-align: center;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <table class="header">
+                <tr>
+                    <td>
+                        <a href="about.html"><img class="logo" src="Logo/FlagstaffLogo.png" /></a>
+                    </td>
+                    <td>
+                        <a class="link" href="tel:(02) 4272 0222">(02) 4272 0222</a>
+                    </td>
+                    <td>
+                        <a class="link" href="https://www.facebook.com/flagstaffgroup">Facebook</a>
+                    </td>
+                    <td>
+                        <a class="link" href="https://www.instagram.com/flagstaff_group">Instagram</a>
+                    </td>
+                    <td>
+                        <a class="link" href="https://x.com/flagstaff_group">X</a>
+                    </td>
+                    <td>
+                        <a class="link" href="https://www.linkedin.com/company/the-flagstaff-group">LinkedIn</a>
+                    </td>
+                    <td class="acclink">
+                        <a class="link" href="login.html">Login</a>
+                    </td>
+                    <td class="acclink">
+                        <a class="link" href="account.html">My Account</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <table class="navigation">
+                <tr>
+                    <td>
+                        <a href="about.html"><img class="logo" src="Logo/FlagstaffLogo2.png" /></a>
+                    </td>
+                    <td>
+                        <a class="link" href="about.html">We Belong</a>
+                    </td>
+                    <td>
+                        <a class="link" href="builder.html">Confidence Builder</a>
+                    </td>
+                    <td>
+                        <a class="link" href="chatbot.html">AI ChatBot</a>
+                    </td>
+                    <td>
+                        <a class="link" href="coach1.html">Coaching Tools</a>
+                    </td>
+                    <td>
+                        <a class="link" href="coach2.html">Youth-friendly Content</a>
+                    </td>
+                    <td>
+                        <a class="link" href="user.html">User Management</a>
+                    </td>
+                </tr>
+            </table>
+        </div >
+        
+        <div class="aboutthis">
+            <p class="fchange" style="padding-left: 80px;">AI ChatBot</p>
+        </div>
+
+        <div class="details">
+            <div class="chatbox">
+                <div>
+                    <img id="ailogo" src="Logo/AIlogo.jpg" alt="ChatbotLogo" />
+                </div>
+                <div class="aichat" id="aichat">
+                    <div class="aimess">
+                        <span class="receive">Bot:</span> Welcome! How can I help you today?
+                    </div>
+                </div>
+
+                <div class="chatinput">
+                    <select class="options">
+                        <option>Text</option>
+                        <option>Audio</option>
+                        <option>Picture</option>
+                        <option>Files</option>
+                    </select>
+                    <input type="text" id="tinput" placeholder="Type your message..." />
+                    <button id="clearbutt">Clear</button>
+                    <button id="sendbutt">Send</button>
+                </div>
+            </div>
+            <p>Our AI ChatBot is designed to provide instant support and assistance to users with disabilities, helping them navigate our services and find the information about clubs, activities they need quickly and efficiently.</p>
+            <p>Whether you have questions about our services, need help with account management, navigation, or are looking for guidance on using our tools, our ChatBot is here to assist you 24/7.</p> 
+            <p>With advanced natural language processing capabilities, the ChatBot can understand and respond to a wide range of inquiries, ensuring a seamless and user-friendly experience.</p>
+            <p>Our AI ChatBot provides real-time support and answers without jargon which also include Plain-language Q&A, Story Prompts, Wayfinding Support, etc.</p>
+            <p>Try it out today and see how it can enhance your interaction with The Flag Staff Group!</p>
+        </div>
+
+
+
+        <div>
+            <table class="header" style="margin-top: 20px;">
+                <tr>
+                    <td style="text-align: center; font-size: 14px; color: white;">
+                        &copy; since 2021 Flag Staff Group
+                    </td>
+                    <td style="text-align: center; font-size: 14px; color: white;">
+                        <a class="link" href="https://flagstaffonline.com.au/privacy-statement">Privacy Statement
+                    </td>
+                    <td style="text-align: center; font-size: 14px; color: white;">
+                        ABN 53 000 551 575
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </body>
+</html>

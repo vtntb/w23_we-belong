@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flag Staff - We Belong</title>
+        <meta charset="UTF-8">
+        <title>MSI 2025</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: white;
+            }
+
+            .header {
+                background-color: black;
+                color: white;
+                text-align: center;
+                width: 100%;
+                padding: 20px;
+                height: 50px;
+            }
+
+            .navigation {
+                background-color: white;
+                color: black;
+                padding: 10px;
+                padding-top: 20px;
+                text-align: center;
+                width: 100%;
+                height: 130px;
+            }
+
+            .link {
+                color: inherit;
+                text-decoration: none;
+                margin: 0 15px;
+                font-size: 18px;
+                padding: 10px;
+            }
+
+            .header .link:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            .logo {
+                height: 50px;
+                vertical-align: middle;
+            }
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+
+            .navigation .link:hover {
+                background-color: red;
+                color: white;
+            }
+
+            .aboutus {
+                background-color: red;
+                color: white;
+                text-align: left;
+                padding: 20px;
+                font-size: 50px;
+            }
+
+            .details p {
+                font-size: 20px;
+                text-align: justify;
+                padding-left: 80px;
+                padding-right: 1000px;
+            }
+
+            #cclist {
+                width: 90%;
+                margin: auto;
+                border: 1px solid #000000;
+                border-radius: 8px;
+                background-color: #fff;
+                padding-bottom: 20px;
+            }
+
+            .row {
+                border: 1px solid #000000;
+                border-radius: 8px;
+                background-color: #fff;
+                margin: 20px;
+                padding: 20px;
+            }
+
+            .endbtn {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            #cclear, #csub {
+                font-size: 18px;
+                padding: 10px;
+                margin: 0 10px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            #cclear:hover {
+                background-color: red;
+                color: white;
+            }
+
+            #csub:hover {
+                background-color: green;
+                color: white;
+            }
+
+            #coachtool {
+                position: relative;
+                float: right;
+                width: 700px;
+                height: auto;
+                margin-right: 200px;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <table class="header">
+                <tr>
+                    <td>
+                        <a href="about.html"><img class="logo" src="Logo/FlagstaffLogo.png" /></a>
+                    </td>
+                    <td>
+                        <a class="link" href="tel:(02) 4272 0222">(02) 4272 0222</a>
+                    </td>
+                    <td>
+                        <a class="link" href="https://www.facebook.com/flagstaffgroup">Facebook</a>
+                    </td>
+                    <td>
+                        <a class="link" href="https://www.instagram.com/flagstaff_group">Instagram</a>
+                    </td>
+                    <td>
+                        <a class="link" href="https://x.com/flagstaff_group">X</a>
+                    </td>
+                    <td>
+                        <a class="link" href="https://www.linkedin.com/company/the-flagstaff-group">LinkedIn</a>
+                    </td>
+                    <td class="acclink">
+                        <a class="link" href="login.html">Login</a>
+                    </td>
+                    <td class="acclink">
+                        <a class="link" href="account.html">My Account</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <table class="navigation">
+                <tr>
+                    <td>
+                        <a href="about.html"><img class="logo" src="Logo/FlagstaffLogo2.png" /></a>
+                    </td>
+                    <td>
+                        <a class="link" href="about.html">We Belong</a>
+                    </td>
+                    <td>
+                        <a class="link" href="builder.html">Confidence Builder</a>
+                    </td>
+                    <td>
+                        <a class="link" href="chatbot.html">AI ChatBot</a>
+                    </td>
+                    <td>
+                        <a class="link" href="coach1.html">Coaching Tools</a>
+                    </td>
+                    <td>
+                        <a class="link" href="coach2.html">Youth-friendly Content</a>
+                    </td>
+                    <td>
+                        <a class="link" href="user.html">User Management</a>
+                    </td>
+                </tr>
+            </table>
+        </div >
+
+        <div class="aboutus">
+            <p class="fchange" style="padding-left: 80px;">Coaching Tools</p>
+        </div>
+
+        <div class="details" style="margin-bottom: 230px;">
+            <img src="RefImage/Ctool.png" alt="Ctool" id="coachtool"/>
+            <p>Coaches and support workers can use this checklist to prepare for inclusive sessions. It covers communication, environment, participation, and safety considerations to help create welcoming spaces for people with disabilities.</p>
+            <p>The checklist is designed to be quick and easy to use, helping coaches ensure their session is accessible and inclusive.</p>
+            <p>Inclusion is an ongoing process. Use this checklist as a starting point, but always be open to feedback and ready to adapt based on the needs of the young people you work with.</p>
+            <p>By taking these steps, coaches and teaching staff can help create a positive experience where every individuals feels valued and supported.</p>
+        </div>
+
+        <section id="cclist">
+            <h2 style="text-align:center; font-size: 28px;">Inclusive Coaching Checklist</h2>
+            <p style="text-align:center; font-size: 20px;">Tick what you’ve prepared for today’s session.</p>
+
+            <div class="progress" aria-label="Completion">
+                <div class="bar" id="chkBar" style="width:0%"></div>
+            </div>
+
+            <div>
+                <fieldset class="row">
+                    <legend>Communication</legend>
+                    <label><input type="checkbox">Plain-language instructions prepared</label>
+                    <label><input type="checkbox">Visual cues / demo planned</label>
+                    <label><input type="checkbox">Allow extra processing time</label>
+                    <label><input type="checkbox">Ask preferred communication style</label>
+                </fieldset>
+
+                <fieldset class="row">
+                    <legend>Environment</legend>
+                    <label><input type="checkbox">Quiet space / low sensory corner</label>
+                    <label><input type="checkbox">Clear signage & easy wayfinding</label>
+                    <label><input type="checkbox">Seating / rest options available</label>
+                    <label><input type="checkbox">Step-free access checked</label>
+                </fieldset>
+
+                <fieldset class="row">
+                    <legend>Participation & Choice</legend>
+                    <label><input type="checkbox">Offer role/skill variations</label>
+                    <label><input type="checkbox">Break tasks into small steps</label>
+                    <label><input type="checkbox">Alternative success measures</label>
+                    <label><input type="checkbox">Withdraw without penalty</label>
+                </fieldset>
+
+                <fieldset class="row">
+                    <legend>Safety & Dignity</legend>
+                    <label><input type="checkbox">Consent before touch/assistance</label>
+                    <label><input type="checkbox">Emergency info & contacts ready</label>
+                    <label><input type="checkbox">Debrief time at end</label>
+                    <label><input type="checkbox">Feedback channel provided</label>
+                </fieldset>
+            </div>
+
+            <div class="endbtn">
+                <button id="cclear">Clear</button>
+                <button id="csub" onclick="window.print()">Submit & Print</button>
+            </div>
+        </section>
+
+        <div>
+            <table class="header" style="margin-top: 20px;">
+                <tr>
+                    <td style="text-align: center; font-size: 14px; color: white;">
+                        &copy; since 2021 Flag Staff Group
+                    </td>
+                    <td style="text-align: center; font-size: 14px; color: white;">
+                        <a class="link" href="https://flagstaffonline.com.au/privacy-statement">Privacy Statement
+                    </td>
+                    <td style="text-align: center; font-size: 14px; color: white;">
+                        ABN 53 000 551 575
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </body>
+</html>
