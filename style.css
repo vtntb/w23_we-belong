@@ -1,0 +1,98 @@
+.acclink {
+    background-color: red;
+    color: white;
+    margin-left: auto;
+}
+
+#flagimg {
+    position: relative;
+    float: right;
+    width: 800px;
+}
+
+#weblong {
+    position: relative;
+    float: right;
+}
+
+#sendbutt {
+    width: 60px;
+    padding: 10px;
+    border: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#clearbutt {
+    width: 60px;
+    padding: 10px;
+    border: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.details {
+    margin-top: 50px;
+}
+
+.noteclear {
+    border: none;
+    color: black;
+    cursor: pointer;
+    background-color: lightgrey;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.noteclear:hover {
+    background-color: darkred;
+    color: white;
+}
+
+.notesave {
+    border: none;
+    color: black;
+    background-color: lightgrey;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.notesave:hover {
+    background-color: darkgreen;
+    color: white;
+}
+
+#accordion p {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+#accordion strong {
+  color: red;
+}
+
+#accordion div p strong {
+  color: green;
+}
+
+.dlcheck {
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+
+#streak {
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#css {
+    margin-bottom: 20px;
+}

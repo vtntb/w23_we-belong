@@ -32,9 +32,6 @@ We Belong connects people with intellectual disability to local hobby/interest/s
 - `src/` – application code
 - `scripts/` – helper scripts
 
-## Contributing
-See [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
-
 ## License
 Copyright (c) 2025 Group W23, University of Wollongong
 
