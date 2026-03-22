@@ -20,25 +20,32 @@ body {
     box-sizing: border-box;
 }
 
-.topbar-center,
+.topbar-center {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 500px;
+    gap: 14px;
+}
 .topbar-right {
     font-size: 16px;
     display: flex;
     align-items: center;
     gap: 14px;
-}
-
-.topbar-right {
     position: absolute;
-    right: 30px;
+    right: 200px;
 }
 
-.topbar-link,
-.social-link {
+.topbar-link {
     color: white;
     text-decoration: none;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.topbar-link:hover {
+    text-decoration: underline;
 }
 
 .icon {
@@ -64,14 +71,14 @@ body {
 
 .mainnav-left {
     align-items: center;
+    position: relative;
+    left: 150px;
 }
 
 .mainnav-right {
     align-items: center;
-}
-
-.mainnavmenu {
-    width: 80%;
+    position: relative;
+    right: 150px;
 }
 
 .mainnav-menu {
@@ -84,14 +91,19 @@ body {
     color: #000000;
     text-decoration: none;
     font-size: 18px;
-    padding: 28px 18px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 14px;
+    padding-bottom: 14px;
     border-right: 1px solid #d9d9d9;
 }
 
 .mainnav-menu a:hover {
-    background: #9341d2;
+    color: white;
     text-decoration: underline;
+    background-color: #4f186b;
 }
+
 
 .we-belong-logo {
     height: 70px;
@@ -100,9 +112,49 @@ body {
 }
 
 .flagstaff-logo {
-    height: 40px;
+    height: 30px;
     width: auto;
     display: flex;
+}
+
+/* ===== DROP1 ===== */
+/* wrapper */
+.drop1 {
+    position: relative;
+}
+
+/* hidden menu */
+.content1 {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    background: #ffffff;
+    min-width: 280px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
+
+/* drop1 items */
+.content1 a {
+    display: block;
+    padding: 14px 18px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+/* hover item */
+.content1 a:hover {
+    background: #e5e5e5;
+}
+
+/* SHOW drop1 on hover */
+.drop1:hover .content1 {
+    display: block;
 }
 
 /* ===== FOOTER ===== */
