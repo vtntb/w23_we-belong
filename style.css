@@ -46,6 +46,7 @@ body {
 
 .topbar-link:hover {
     text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .icon {
@@ -91,16 +92,14 @@ body {
     color: #000000;
     text-decoration: none;
     font-size: 18px;
-    padding-left: 18px;
-    padding-right: 18px;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding: 14px 18px;
     border-right: 1px solid #d9d9d9;
 }
 
 .mainnav-menu a:hover {
     color: white;
     text-decoration: underline;
+    text-underline-offset: 4px;
     background-color: #4f186b;
 }
 
@@ -117,48 +116,49 @@ body {
     display: flex;
 }
 
-/* ===== DROP1 ===== */
-/* wrapper */
-.drop1 {
+/* ===== Exten ===== */
+.dropdown {
     position: relative;
 }
 
 /* hidden menu */
-.content1 {
+.content {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
-
     background: #ffffff;
-    min-width: 280px;
-
+    min-width: 300px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    z-index: 1000;
+    z-index: 1;
 }
 
-/* drop1 items */
-.content1 a {
+/* dropdown items */
+.content a {
     display: block;
     padding: 14px 18px;
-    color: #333;
     text-decoration: none;
-    border-bottom: 1px solid #ddd;
-    font-size: 16px;
+    font-size: 18px;
 }
 
-/* hover item */
-.content1 a:hover {
-    background: #e5e5e5;
+.content a:hover {
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    background-color: #4f186b;
 }
 
-/* SHOW drop1 on hover */
-.drop1:hover .content1 {
+/* keep title in hover state */
+.dropdown:hover > a {
+    color: white;
+    background-color: #4f186b;
+}
+
+/* Show on hover */
+.dropdown:hover .content {
     display: block;
+    top: 34px;
 }
 
 /* ===== FOOTER ===== */
-
 .site-footer {
     margin-top: 20px;
 }
@@ -183,4 +183,53 @@ body {
 
 .footer-link:hover {
     text-decoration: underline;
+}
+
+/* ===== IMAGE BANNER ===== */
+.simple-banner {
+    position: relative;
+    height: 200px;
+
+    background-image: url("/home-page-banner.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+}
+
+/* overlay for readability */
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(84, 2, 119, 0.816); /* purple overlay */
+}
+
+/* content */
+.banner-content {
+    position: relative;
+    color: white;
+    padding-left: 180px;
+}
+
+/* home link */
+.home-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* title */
+.banner-title {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 500;
 }
