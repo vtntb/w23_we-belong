@@ -46,6 +46,7 @@ body {
 
 .topbar-link:hover {
     text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .icon {
@@ -91,16 +92,14 @@ body {
     color: #000000;
     text-decoration: none;
     font-size: 18px;
-    padding-left: 18px;
-    padding-right: 18px;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding: 14px 18px;
     border-right: 1px solid #d9d9d9;
 }
 
 .mainnav-menu a:hover {
     color: white;
     text-decoration: underline;
+    text-underline-offset: 4px;
     background-color: #4f186b;
 }
 
@@ -117,44 +116,46 @@ body {
     display: flex;
 }
 
-/* ===== DROP1 ===== */
-/* wrapper */
-.drop1 {
+/* ===== Exten ===== */
+.dropdown {
     position: relative;
 }
 
 /* hidden menu */
-.content1 {
+.content {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
-
     background: #ffffff;
-    min-width: 280px;
-
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    z-index: 1000;
+    min-width: 300px;
+    box-shadow: black;
 }
 
-/* drop1 items */
-.content1 a {
+/* dropdown items */
+.content a {
     display: block;
     padding: 14px 18px;
-    color: #333;
     text-decoration: none;
-    border-bottom: 1px solid #ddd;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 /* hover item */
-.content1 a:hover {
-    background: #e5e5e5;
+.content a:hover {
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    background-color: #4f186b;
+}
+
+/* keep title in hover state */
+.dropdown:hover > a {
+    color: white;
+    background-color: #4f186b;
 }
 
 /* SHOW drop1 on hover */
-.drop1:hover .content1 {
+.dropdown:hover .content {
     display: block;
+    top: 34px;
 }
 
 /* ===== FOOTER ===== */
