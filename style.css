@@ -202,7 +202,7 @@ body {
 .banner-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(30, 2, 41, 0.816); /* purple overlay */
+    background: linear-gradient(rgba(111, 44, 145, 0.88), rgba(111, 44, 145, 0.88));
 }
 
 /* content */
@@ -470,7 +470,7 @@ body {
 
 .about-text h2 {
     margin: 0 0 22px;
-    font-size: 31px;
+    font-size: 33px;
     line-height: 1.25;
     color: #4f186b;
     font-weight: 700;
@@ -478,7 +478,7 @@ body {
 
 .about-text p {
     margin: 0 0 22px;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.8;
     color: #333;
 }
@@ -498,22 +498,25 @@ body {
 .about-cards {
     display: flex;
     gap: 28px;
-    margin-bottom: 40px;
+    margin: 0 auto 40px;
+    justify-content: center;
+    align-items: stretch;
 }
 
 .about-card {
-    flex: 1;
+    flex: 0 1 420px;
     background: #ffffff;
     border-radius: 18px;
     padding: 28px 26px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-    text-align: left;
+    text-align: center;
 }
 
-.about-icon {
-    font-size: 28px;
+.about-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
     margin-bottom: 14px;
-    line-height: 1;
 }
 
 .about-card h3 {
@@ -522,6 +525,7 @@ body {
     line-height: 1.2;
     color: #111;
     font-weight: 700;
+    text-align: center;
 }
 
 .about-card p {
@@ -529,12 +533,12 @@ body {
     font-size: 17px;
     line-height: 1.7;
     color: #333;
+    text-align: center;
 }
 
-
-
 .about-button-box {
-    margin-top: 28px;
+    margin-top: 30px;
+    text-align: center;
 }
 
 .about-btn {
@@ -552,28 +556,42 @@ body {
 .about-btn:hover {
     background: #4f186b;
 }
-/* ===== VALUES SECTION (FINAL STYLE) ===== */
+/* ===== VALUES ===== */
+.values-header {
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.values-main-icon {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-top: 12px;
+    margin-bottom: 0;
+}
 .values-box {
     background: transparent;
     box-shadow: none;
     padding: 0;
+    text-align: center;
 }
 
 .values-box h2 {
-    margin: 40px 0 30px;
+    margin: 15px 0 10px;
     font-size: 34px;
     color: #111;
     font-weight: 700;
+    text-align: center;
 }
 
-/* 4 in one line */
 .values-grid {
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: nowrap;
 }
 
-/* remove box look */
 .value-card {
     flex: 1;
     background: none;
@@ -581,7 +599,6 @@ body {
     text-align: center;
 }
 
-/* bigger images */
 .value-img {
     width: 270px;
     height:270px;
@@ -591,15 +608,19 @@ body {
 /* text */
 .value-card h4 {
     font-size: 25px;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
+    margin-top: 0;
     color: #111;
+    text-align: center;
 }
 
 .value-card p {
     font-size: 15px;
     line-height: 1.6;
     color: #444;
+    text-align: center;
 }
+
 /* ===== RESPONSIVE ===== */
 @media screen and (max-width: 900px) {
     .about-flex {
