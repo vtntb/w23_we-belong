@@ -424,3 +424,18 @@ body {
         width: 100%;
     }
 }
+
+/* ===== BACK COURSES ===== */
+.back-btn {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
