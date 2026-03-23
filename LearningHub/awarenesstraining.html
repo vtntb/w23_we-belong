@@ -8,12 +8,157 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="/script.js" defer></script>
+    <style>
+        /* ===== COURSE HEADER ===== */
+        .course-header {
+            padding: 40px 180px 20px;
+        }
+
+        .course-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f0f2f4;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .course-col {
+            text-align: center;
+            flex: 1;
+        }
+
+        .label {
+            font-size: 18px;
+            font-weight: bold;
+            color: #666;
+        }
+
+        .price {
+            margin: 5px 0 0;
+            font-size: 28px;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .not-enrolled {
+            background: #ffd84d;
+            color: black;
+        }
+
+        .enrol-btn {
+            background: #6f2c91;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .enrol-btn:hover {
+            background: #4f186b;
+        }
+
+        .divider2 {
+            width: 1px;
+            height: 60px;
+            background: #ccc;
+        }
+
+
+        /* ===== COURSE CONTENT ===== */
+        .course-content-title {
+            padding: 20px 180px;
+        }
+
+        .lesson-list {
+            padding: 0 180px 60px;
+        }
+
+        .lesson {
+            background: #f8f9fa;
+            border: 1px solid #dcdcdc;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            font-size: 16px;
+            position: relative;
+        }
+
+        .lesson p:hover {
+            color: #4f186b;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* locked style */
+        .lesson.locked {
+            color: #333;
+            cursor: not-allowed;
+        }
+
+        /* lock icon circle */
+        .lesson.locked::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .lesson {
+            padding-left: 45px;
+        }
+    </style>
 </head>
 <body data-title="Disability Awareness Training" data-button="true">
   
     <div id="header-placeholder"></div>
     <div id="banner-placeholder"></div>  
-    <!-- page content -->
+    <div class="course-header">
+        <div class="course-box">
+            <div class="course-col">
+                <p class="label">Current Status</p>
+                <span class="status not-enrolled">NOT ENROLLED</span>
+            </div>
+
+            <div class="divider2"></div>
+
+            <div class="course-col">
+                <p class="label">Price</p>
+                <h2 style="font-size: 20px;">Free</h2>
+            </div>
+
+            <div class="divider2"></div>
+
+            <div class="course-col">
+                <p class="label">Get Started</p>
+                <button class="enrol-btn" id="enrolBtn">Register to Enroll</button>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="course-content-title">Course Content</h2>
+    <div class="lesson-list">
+        <div class="lesson locked"><p>Lesson 1 – What is Disability?</p></div>
+        <div class="lesson locked"><p>Lesson 2 – Types of Disability</p></div>
+        <div class="lesson locked"><p>Lesson 3 – Lived Experience Video</p></div>
+        <div class="lesson locked"><p>Lesson 4 – Customer Service Experiences</p></div>
+        <div class="lesson locked"><p>Lesson 5 – Face-to-Face Communication</p></div>
+        <div class="lesson locked"><p>Lesson 6 – Etiquette & Language</p></div>
+        <div class="lesson locked"><p>Lesson 7 – Disability Inclusive Customer Enabling Strategies</p></div>
+        <div class="lesson locked"><p>Lesson 8 – Employment</p></div>
+    </div>
 
     <div id="footer-placeholder"></div>
 </body>

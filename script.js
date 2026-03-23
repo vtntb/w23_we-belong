@@ -10,3 +10,16 @@ $(document).ready(function () {
         }
     });
 });
+
+window.onload = function () {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    const btn = document.getElementById("enrolBtn");
+
+    if (isLoggedIn !== "true") {
+        btn.innerText = "Register to Enroll";
+
+        btn.onclick = function () {
+            window.location.href = "/login.html";
+        };
+    }
+};
