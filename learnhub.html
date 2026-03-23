@@ -8,12 +8,84 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <style>
+        /* ===== LEARNING HUB SECTION ===== */
+        .learnhub-section {
+            display: flex;
+            justify-content: space-between;
+
+            padding: 60px 180px;
+            background: #f5f5f5;
+        }
+
+        /* left text */
+        .learnhub-text {
+            width: 50%;
+        }
+
+        .learnhub-text h2 {
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .learnhub-text p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .phone {
+            color: #6f2c91;
+            font-weight: 500;
+        }
+
+        /* right image */
+        .learnhub-image {
+            width: 40%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .learnhub-image img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+    </style>
+
 </head>
-<body data-title="Enter Title">
+
+<body data-title="Learning Hub">
   
     <div id="header-placeholder"></div>
-    <div id="banner-placeholder"></div>  
+    <div id="banner-placeholder"></div>
+
     <!-- page content -->
+    <div class="learnhub-section">
+        <div class="learnhub-text">
+            <h2>Online learning</h2>
+
+            <p>Do you prefer learning from home?</p>
+
+            <p>
+                Flagstaff have put together the below resources for you to access in your spare time.
+                Don’t forget to ask your manager, support worker or support coordinator if you have any
+                questions about the courses available.
+            </p>
+
+            <p>
+                If you have additional information you’d like to see on this page contact Alison Turner on 
+                <span class="phone">02 4272 0203</span>
+            </p>
+        </div>
+
+        <div class="learnhub-image">
+            <img src="/AdditionalIMG/LearningHubIMG.jpg" alt="Learning Hub">
+        </div>
+    </div>
+
+    
 
     <div id="footer-placeholder"></div>
 </body>
