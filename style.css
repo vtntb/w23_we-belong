@@ -424,3 +424,208 @@ body {
         width: 100%;
     }
 }
+
+/* ===== BACK COURSES ===== */
+.back-btn {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* ===== ABOUT PAGE ===== */
+.about-page {
+    background: #f3f3f3;
+    padding: 45px 0 70px;
+}
+
+.about-section {
+    width: 100%;
+}
+
+.about-wrapper {
+    width: 1120px;
+    max-width: 92%;
+    margin: 0 auto;
+}
+
+/* ===== TOP SECTION ===== */
+.about-flex {
+    display: flex;
+    gap: 55px;
+    align-items: flex-start;
+    margin-bottom: 55px;
+}
+
+.about-text {
+    flex: 1.05;
+}
+
+.about-text h2 {
+    margin: 0 0 22px;
+    font-size: 31px;
+    line-height: 1.25;
+    color: #4f186b;
+    font-weight: 700;
+}
+
+.about-text p {
+    margin: 0 0 22px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.about-image {
+    flex: 0.95;
+}
+
+.about-image img {
+    width: 100%;
+    display: block;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+/* ===== VISION + PURPOSE ===== */
+.about-cards {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 40px;
+}
+
+.about-card {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 28px 26px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.about-icon {
+    font-size: 28px;
+    margin-bottom: 14px;
+    line-height: 1;
+}
+
+.about-card h3 {
+    margin: 0 0 12px;
+    font-size: 25px;
+    line-height: 1.2;
+    color: #111;
+    font-weight: 700;
+}
+
+.about-card p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #333;
+}
+
+
+
+.about-button-box {
+    margin-top: 28px;
+}
+
+.about-btn {
+    display: inline-block;
+    background: #6f2c91;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 24px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 700;
+    transition: background 0.2s ease;
+}
+
+.about-btn:hover {
+    background: #4f186b;
+}
+/* ===== VALUES SECTION (FINAL STYLE) ===== */
+.values-box {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.values-box h2 {
+    margin: 40px 0 30px;
+    font-size: 34px;
+    color: #111;
+    font-weight: 700;
+}
+
+/* 4 in one line */
+.values-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* remove box look */
+.value-card {
+    flex: 1;
+    background: none;
+    padding: 0;
+    text-align: center;
+}
+
+/* bigger images */
+.value-img {
+    width: 270px;
+    height:270px;
+    object-fit: contain;
+}
+
+/* text */
+.value-card h4 {
+    font-size: 25px;
+    margin-bottom: 8px;
+    color: #111;
+}
+
+.value-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+}
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 900px) {
+    .about-flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-cards {
+        flex-direction: column;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-text h2 {
+        font-size: 27px;
+    }
+
+    .values-box h2 {
+        font-size: 28px;
+    }
+
+    .about-text p,
+    .about-card p,
+    .value-card p {
+        font-size: 16px;
+    }
+}
