@@ -11,6 +11,7 @@ $(document).ready(function () {
     });
 });
 
+
 window.onload = function () {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
     const btn = document.getElementById("enrolBtn");
@@ -19,6 +20,7 @@ window.onload = function () {
         btn.innerText = "Register to Enroll";
 
         btn.onclick = function () {
+            alert("Please log in first");
             window.location.href = "/login.html";
         };
     }
