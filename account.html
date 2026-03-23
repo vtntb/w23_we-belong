@@ -1,19 +1,405 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>We Belong Project - Disability Support, Employment & Inclusion</title>
+    <title>My Account - We Belong Project</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f4fb;
+            color: #222;
+        }
+
+        .account-hero {
+            background: linear-gradient(rgba(111, 44, 145, 0.88), rgba(111, 44, 145, 0.88)),
+                        url("home-page-banner.jpg") center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 70px 20px 90px;
+        }
+
+        .account-hero h1 {
+            font-size: 48px;
+            margin: 0 0 12px;
+        }
+
+        .account-hero p {
+            font-size: 22px;
+            margin: 0 auto;
+            max-width: 850px;
+            line-height: 1.6;
+        }
+
+        .account-wrapper {
+            max-width: 1250px;
+            margin: -40px auto 60px;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .account-grid {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        .card {
+            background: white;
+            border-radius: 22px;
+            box-shadow: 0 10px 28px rgba(0,0,0,0.10);
+            padding: 28px;
+            box-sizing: border-box;
+        }
+
+        .profile-card {
+            text-align: center;
+        }
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #ead9f6;
+            margin-bottom: 18px;
+        }
+
+        .profile-card h2 {
+            margin: 0 0 8px;
+            color: #6f2c91;
+            font-size: 30px;
+        }
+
+        .profile-card p {
+            margin: 8px 0;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .profile-badge {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 18px;
+            border-radius: 999px;
+            background: #f2e9fb;
+            color: #6f2c91;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .quick-actions {
+            margin-top: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .quick-actions a,
+        .quick-actions button {
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 14px;
+            padding: 15px 16px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .quick-actions a:hover,
+        .quick-actions button:hover {
+            background: #582273;
+        }
+
+        .main-column {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .section-title {
+            font-size: 30px;
+            color: #6f2c91;
+            margin: 0 0 18px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .stat-box {
+            background: #faf7fd;
+            border: 2px solid #eadcf6;
+            border-radius: 18px;
+            padding: 22px;
+            text-align: center;
+        }
+
+        .stat-box h3 {
+            margin: 0;
+            font-size: 38px;
+            color: #6f2c91;
+        }
+
+        .stat-box p {
+            margin: 10px 0 0;
+            font-size: 18px;
+        }
+
+        .courses-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .course-item {
+            border: 2px solid #eadcf6;
+            border-radius: 18px;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .course-item h3 {
+            margin: 0 0 10px;
+            font-size: 24px;
+            color: #6f2c91;
+        }
+
+        .course-item p {
+            margin: 0 0 14px;
+            font-size: 17px;
+            line-height: 1.5;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 14px;
+            background: #e9e1f1;
+            border-radius: 999px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 999px;
+            background: #6f2c91;
+        }
+
+        .course-meta {
+            font-size: 16px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .help-box {
+            background: #f6eefc;
+            border-left: 6px solid #6f2c91;
+            border-radius: 16px;
+            padding: 22px;
+        }
+
+        .help-box p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0 0 12px;
+        }
+
+        .help-box a {
+            color: #6f2c91;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .help-box a:hover {
+            text-decoration: underline;
+        }
+
+        .empty-state {
+            font-size: 19px;
+            line-height: 1.6;
+            background: #faf7fd;
+            border: 2px dashed #d8c2ea;
+            border-radius: 18px;
+            padding: 24px;
+        }
+
+        @media (max-width: 1000px) {
+            .account-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid,
+            .courses-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .account-hero h1 {
+                font-size: 36px;
+            }
+
+            .account-hero p {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 26px;
+            }
+
+            .profile-card h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
 </head>
-<body data-title="Enter Title">
-  
+<body data-title="My Account">
+
     <div id="header-placeholder"></div>
-    <!-- page content -->
+
+    <section class="account-hero">
+        <h1>My Account</h1>
+        <p>
+            View your profile, check your course progress, and continue learning with We Belong.
+        </p>
+    </section>
+
+    <main class="account-wrapper">
+        <div class="account-grid">
+
+            <aside class="card profile-card">
+                <img src="AdditionalIMG/account-user.png" alt="User profile picture" class="profile-avatar">
+
+                <h2 id="accountName">Welcome</h2>
+                <p id="accountEmail">user@email.com</p>
+                <p>Keep learning and building confidence step by step.</p>
+                <span class="profile-badge">Active Learner</span>
+
+                <div class="quick-actions">
+                    <a href="/learnhub.html">Go to Learning Hub</a>
+                    <a href="/contact.html">Get Support</a>
+                    <button id="logoutBtn">Logout</button>
+                </div>
+            </aside>
+
+            <section class="main-column">
+
+                <div class="card">
+                    <h2 class="section-title">Your Progress</h2>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <h3>3</h3>
+                            <p>Courses Started</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>1</h3>
+                            <p>Courses Completed</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>67%</h3>
+                            <p>Average Progress</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2 class="section-title">My Courses</h2>
+
+                    <div class="courses-list">
+                        <div class="course-item">
+                            <h3>Disability Awareness Training</h3>
+                            <p>Learn the basics of disability awareness and inclusive communication.</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%;"></div>
+                            </div>
+                            <div class="course-meta">Completed</div>
+                        </div>
+
+                        <div class="course-item">
+                            <h3>Inclusive Sport</h3>
+                            <p>Explore how clubs, coaches, teammates and spectators can create inclusive sport environments.</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%;"></div>
+                            </div>
+                            <div class="course-meta">65% Complete</div>
+                        </div>
+
+                        <div class="course-item">
+                            <h3>Building Confidence</h3>
+                            <p>Develop confidence to join activities, meet new people, and try new opportunities.</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 35%;"></div>
+                            </div>
+                            <div class="course-meta">35% Complete</div>
+                        </div>
+
+                        <div class="course-item">
+                            <h3>My Goals</h3>
+                            <p>Track personal goals and small steps toward joining groups and activities in the community.</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%;"></div>
+                            </div>
+                            <div class="course-meta">70% Complete</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2 class="section-title">Achievements</h2>
+                    <div class="empty-state">
+                        You completed your first course. Great job. Keep going to unlock more achievements and build confidence.
+                    </div>
+                </div>
+
+                <div class="card help-box">
+                    <p>
+                        Need help with your account or learning progress?
+                    </p>
+                    <p>
+                        Visit our <a href="/contact.html">Contact Us</a> page or return to the
+                        <a href="/learnhub.html">Learning Hub</a>.
+                    </p>
+                </div>
+
+            </section>
+        </div>
+    </main>
 
     <div id="footer-placeholder"></div>
+
+    <script>
+        const isLoggedIn = localStorage.getItem("isLoggedIn");
+        const userEmail = localStorage.getItem("userEmail");
+
+        if (isLoggedIn !== "true") {
+            window.location.href = "/login.html";
+        }
+
+        const emailText = userEmail ? userEmail : "user@email.com";
+        const nameText = userEmail ? userEmail.split("@")[0] : "Welcome";
+
+        document.getElementById("accountEmail").innerText = emailText;
+        document.getElementById("accountName").innerText = "Hi, " + nameText;
+
+        document.getElementById("logoutBtn").addEventListener("click", function () {
+            localStorage.removeItem("isLoggedIn");
+            localStorage.removeItem("userEmail");
+            window.location.href = "/login.html";
+        });
+    </script>
 </body>
 </html>
