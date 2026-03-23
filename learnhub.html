@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <style>
-        /* ===== LEARNING HUB SECTION ===== */
+        /* ===== LEARNING HUB INFO ===== */
         .learnhub-section {
             display: flex;
             justify-content: space-between;
@@ -26,7 +26,7 @@
 
         .learnhub-text h2 {
             margin-top: 0;
-            font-size: 22px;
+            font-size: 30px;
         }
 
         .learnhub-text p {
@@ -35,9 +35,22 @@
             margin-bottom: 18px;
         }
 
+        .learnhub-text li {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
         .phone {
             color: #6f2c91;
+            text-decoration: none;
             font-weight: 500;
+        }
+
+        .phone:hover {
+            color: black;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            font-weight: bold;
         }
 
         /* right image */
@@ -49,8 +62,64 @@
 
         .learnhub-image img {
             width: 100%;
-            max-width: 500px;
+            max-width: 600px;
             height: auto;
+        }
+
+        .learnhub-image img:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ===== LEARNING COURSES ===== */
+        /* container */
+        .course-list {
+            padding: 40px 180px;
+            background: #f5f5f5;
+        }
+
+        /* each row */
+        .course-item {
+            background: white;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+
+        /* top row (title + button) */
+        .course-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* title */
+        .course-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        /* button */
+        .course-btn {
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .course-btn:hover {
+            background: #4f186b;
+        }
+
+        /* description */
+        .course-desc {
+            margin-top: 10px;
+            font-size: 15px;
+            color: #555;
         }
     </style>
 
@@ -69,14 +138,29 @@
             <p>Do you prefer learning from home?</p>
 
             <p>
-                Flagstaff have put together the below resources for you to access in your spare time.
-                Don’t forget to ask your manager, support worker or support coordinator if you have any
-                questions about the courses available.
+                Flagstaff have put together the below resources for you to access in your spare time:
             </p>
 
+            <ul>
+                <li>Disability Awareness Training</li>
+                <li>Communication</li>
+                <li>Inclusive Sports Training</li>
+                <li>Cybersafety</li>
+                <li>Money</li>
+                <li>Learn to Drive</li>
+                <li>etc</li>
+            </ul>
+
+            <p>
+                Don’t forget to ask your manager, support worker or support coordinator if you have any
+                questions about the courses available. Additional information regards courses have been provided below.
+            </p>
+            <p>
+                
+            </p>
             <p>
                 If you have additional information you’d like to see on this page contact Alison Turner on 
-                <span class="phone">02 4272 0203</span>
+                <a href="tel: 0242720203" class="phone">02 4272 0203</a>
             </p>
         </div>
 
@@ -85,7 +169,57 @@
         </div>
     </div>
 
-    
+    <div class="course-list">
+
+        <div class="course-item">
+            <div class="course-top">
+                <span class="course-title">Disability Awareness Training</span>
+                <a href="LearningHub\awarenesstraining.html" class="course-btn">View Course</a>
+            </div>
+            <p class="course-desc">Open to access this content</p>
+        </div>
+
+        <div class="course-item">
+            <div class="course-top">
+                <span class="course-title">Communication</span>
+                <a href="LearningHub\communication.html" class="course-btn">View Course</a>
+            </div>
+            <p class="course-desc">Open to access this content</p>
+        </div>
+
+        <div class="course-item">
+            <div class="course-top">
+                <span class="course-title">Inclusive Sports Training</span>
+                <a href="LearningHub\sportstraining.html" class="course-btn">View Course</a>
+            </div>
+            <p class="course-desc">Open to access this content</p>
+        </div>
+
+        <div class="course-item">
+            <div class="course-top">
+                <span class="course-title">Cybersafety</span>
+                <a href="LearningHub\cybersafety.html" class="course-btn">View Course</a>
+            </div>
+            <p class="course-desc">Open to access this content</p>
+        </div>
+
+        <div class="course-item">
+            <div class="course-top">
+                <span class="course-title">Money</span>
+                <a href="LearningHub\money.html" class="course-btn">View Course</a>
+            </div>
+            <p class="course-desc">Open to access this content</p>
+        </div>
+
+        <div class="course-item">
+            <div class="course-top">
+                <span class="course-title">Learn to Drive</span>
+                <a href="LearningHub\learntodrive.html" class="course-btn">View Course</a>
+            </div>
+            <p class="course-desc">Open to access this content</p>
+        </div>
+
+    </div>
 
     <div id="footer-placeholder"></div>
 </body>
