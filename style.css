@@ -797,3 +797,57 @@ body {
   border-radius: 4px;
 }
 
+/* Section */
+.aa-sport {
+  background: #eee;
+  padding: 60px 0;
+}
+
+/* Container */
+.aa-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Layout */
+.aa-sport__wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+/* LEFT TEXT */
+.aa-sport__left {
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.7;
+}
+
+.aa-sport__left p {
+  margin-bottom: 20px;
+}
+
+/* RIGHT */
+.aa-sport__right {
+  width: 360px;
+}
+
+/* POSTER */
+.aa-sport__poster {
+  margin-bottom: 20px;
+}
+
+.aa-sport__poster img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
+
+/* FACT SHEET placeholder spacing */
+.aa-sport__factsheet {
+  margin-top: 10px;
+}
+
