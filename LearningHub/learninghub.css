@@ -91,7 +91,7 @@
     font-size: 18px;
 }
 
-.lesson a:hover {
+.lesson.unlocked a:hover {
     color: #4f186b;
     text-decoration: underline;
     text-underline-offset: 4px;
@@ -103,17 +103,16 @@
     cursor: not-allowed;
 }
 
-/* lock icon circle */
-.lesson.locked::before {
-    content: "";
-    width: 16px;
-    height: 16px;
-    border: 2px solid #ccc;
-    border-radius: 50%;
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
+.lesson.locked a {
+    pointer-events: none;
+    text-decoration: none;
+}
+
+.lesson.unlocked a {
+    pointer-events: auto;
+    color: inherit;
+    text-decoration: none;
+    display: block;
 }
 
 /* ===== COURSE INFO SECTION ===== */
@@ -203,6 +202,40 @@ li::marker {
     cursor: pointer;
 }
 
+/* lock icon circle */
+.lesson.locked::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .lesson.unlocked::before {
-    border-color: #6f2c91;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 2px solid #6f2c91;
+    border-radius: 50%;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lesson.completed::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 2px solid #6f2c91;
+    background: #38b26c;   /* green */
+    border-radius: 50%;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
 }

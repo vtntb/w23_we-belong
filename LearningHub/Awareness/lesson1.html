@@ -3,27 +3,89 @@
 <head>
     <title>Lesson 1 – What is Disability?</title>
     <meta charset="UTF-8">
-
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="../learninghub.css">
-
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="../../script.js" defer></script>
+    <script src="/script.js" defer></script>
     <script src="../learninghub.js" defer></script>
 
     <style>
-        .lesson-page {
+        .lessonnav {
+            padding: 15px 180px;
+            background: #eceaea;
+            font-size: 15px;
+        }
+
+        .lessonnav a {
+            color: #6f2c91;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .lessonnav a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .lessonwrap {
+            display: flex;
             padding: 40px 180px;
+            background: #ffffff;
         }
 
-        .lesson-page h2 {
-            margin-top: 0;
+        .lesson-left  {
+            width: 100%;
         }
 
-        .lesson-page p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 20px;
+        .lesson-right {
+            width: 95%;
+        }
+        .lesson-right img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .lessonwrap h2 {
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .lesson-left {
+            width: 100%;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        li::marker {
+            color: #6f2c91;
+            font-size: 30px;
+        }
+
+        .righttext p {
+            font-size: 20px;
+        }
+
+        .lesson-left img {
+            margin-top: 30px;
+        }
+
+        /* complete button */
+        .lesson-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 60px 0;
+        }
+
+        #lessonDoneMsg {
+            margin-top: 15px;
+            color: green;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -40,29 +102,56 @@
     <div id="header-placeholder"></div>
     <div id="banner-placeholder"></div>
 
-    <!-- LESSON CONTENT -->
-    <div class="lesson-page">
+    <!-- navibar -->
+    <div class="lessonnav">
+        <a href="/learnhub.html">Learning Hub</a>
+        <span>&gt;</span>
+        <a href="/LearningHub/awarenesstraining.html">Disability Awareness Training</a>
+        <span>&gt;</span>
+        <a href="/LearningHub/Awareness/lesson1.html">Lesson 1 – What is Disability?</a>
+    </div>
 
-        <h2>Lesson 1 – What is Disability?</h2>
+    <div class="lessonwrap">
 
-        <p>
-            This lesson introduces the concept of disability and explores
-            different perspectives and definitions.
-        </p>
+        <div class="lesson-left">
+            <div class="lefttext">
+                <h2>...an incapacity that impairs functional needs</h2>
+                <ul>
+                    <li>35.9% of Australian households include a person with a disability</li>
+                    <li>17.8% of females and 17.6% of males in Australia have a disability</li>
+                </ul>
+            </div>
+            <img src="/AdditionalIMG/Aware2.jpg" alt="Person with disabilities 2">
+        </div>
 
-        <p>
-            You will learn about how disability is understood in society
-            and why inclusion is important.
-        </p>
+        <div class="lesson-right">
+            <img src="/AdditionalIMG/Aware1.jpg" alt="Person with disabilities 1">
+            <div class="righttext">
+                <h2>What Is Disability Inclusion?</h2>
+                <p>Inclusion of people with disabilities into everyday activities involves practices and policies 
+                    designed to identify and remove barriers such as physical, communication, and attitudinal that
+                    hamper individuals’ ability to have full participation in society, 
+                    the same as people withoutdisabilities. Inclusion involves:</p>
+                
+                <ul>
+                    <li>Getting fair treatment from others (non-discrimination)</li>
+                    <li>Making products, communications, and the physical environment more usable by as many people as possible</li>
+                    <li>Modifying items, procedures, or systems to enable a person with a disability to use them to the maximum extent possible (known as reasonable adjustments)</li>
+                    <li>Eliminating the belief that people with disabilities are unhealthy or less capable of doing things (stigma, stereotypes)</li>
+                    <li>Disability inclusion involves input from people with disabilities, and or through organizations that support people with a disability (such as Flagstaff)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-        <!-- MARK COMPLETE BUTTON -->
+    <!-- complete button -->
+    <div class="lesson-actions">
         <button id="markCompleteBtn" class="enrol-btn">Mark Complete</button>
 
-        <p id="lessonDoneMsg" style="display:none; color:green;">
+        <p id="lessonDoneMsg" style="display:none;">
             Lesson marked as complete.
         </p>
-
-    </div>
+    </div>   
 
     <div id="footer-placeholder"></div>
 
