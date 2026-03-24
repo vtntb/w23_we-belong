@@ -426,7 +426,7 @@ body {
 }
 
 /* ===== BACK COURSES ===== */
-.back-btn {
+.hublink {
     display: inline-block;
     color: white;
     text-decoration: none;
@@ -435,7 +435,7 @@ body {
     margin-bottom: 10px;
 }
 
-.back-btn:hover {
+.hublink {
     text-decoration: underline;
     text-underline-offset: 4px;
 }
