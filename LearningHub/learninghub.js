@@ -1,5 +1,15 @@
+// Load course banner
+$(document).ready(function () {
+    if ($("body").data("page-type") === "course") {
+        $("#course-placeholder").load("coursebanner.html", function () {
+            if (typeof initCoursePage === "function") {
+                initCoursePage();
+            }
+        });
+    }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
-    initCoursePage();
     initLessonPage();
 });
 

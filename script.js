@@ -12,7 +12,7 @@ $(document).ready(function () {
         $(".banner-title").text($("body").data("title"));
 
         if (!$("body").data("button")) {
-            $(".back-btn").hide();
+            $(".hublink").hide();
         }
     });
 });
