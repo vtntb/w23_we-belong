@@ -650,3 +650,60 @@ body {
         font-size: 16px;
     }
 }
+/* ===== FACT SHEETS ===== */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 20px 80px;
+}
+
+.card {
+    max-width: 240px; 
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img {
+    width: 100%;
+    aspect-ratio: 1 / 1.414;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 16px 16px 50px;
+}
+
+.card-type {
+    font-size: 13px;
+    color: #777;
+}
+
+.card-title {
+    font-size: 17px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #5a2ca0;
+}
+
+.download-btn {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #6c2bd9;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+}
