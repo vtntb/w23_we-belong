@@ -30,7 +30,7 @@ function updateLoginLink() {
                 e.preventDefault();
 
                 localStorage.removeItem("isLoggedIn");
-                localStorage.removeItem("awarenessEnrolled");
+                localStorage.removeItem("courseEnrolled");
 
                 window.location.reload();
             };
@@ -45,7 +45,7 @@ function updateLoginLink() {
 /* ===== COURSE STATE ===== */
 function updateCourseState() {
     const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-    const isEnrolled = localStorage.getItem("awarenessEnrolled") === "true";
+    const isEnrolled = localStorage.getItem("courseEnrolled") === "true";
 
     const btn = document.getElementById("enrolBtn");
     const status = document.getElementById("courseStatus");
@@ -66,6 +66,7 @@ function updateCourseState() {
             lesson.classList.remove("locked");
             lesson.style.cursor = "pointer";
 
+            /* to change in future */
             lesson.onclick = function () {
                 alert("Opening lesson...");
             };
@@ -97,7 +98,7 @@ function updateCourseState() {
         lockLessons();
 
         btn.onclick = function () {
-            localStorage.setItem("awarenessEnrolled", "true");
+            localStorage.setItem("courseEnrolled", "true");
             alert("Successfully enrolled!");
             location.reload();
         };
@@ -108,7 +109,7 @@ function updateCourseState() {
         status.innerText = "ENROLLED";
         status.className = "status enrolled";
 
-        btn.innerText = "Go to Course";
+        btn.innerText = "Enrolled";
         unlockLessons();
 
         btn.onclick = function () {
