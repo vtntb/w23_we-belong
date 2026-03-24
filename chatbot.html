@@ -1,210 +1,219 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>We Belong Chatbot</title>
-  <link rel="stylesheet" href="chatbot.css" />
-  <style>
-    * {
-        box-sizing: border-box;
-        }
+<style>
+.wb-chatbot .chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #6f2c91;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
 
-        body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: #f7f7f7;
-        }
+.wb-chatbot .chat-toggle:hover {
+  background: #5c2379;
+}
 
-        /* Floating button */
-        .chat-toggle {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: #6f2c91;
-        color: white;
-        border: none;
-        border-radius: 999px;
-        padding: 14px 22px;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-        z-index: 1000;
-        }
+.wb-chatbot .chatbot-window {
+  position: fixed;
+  bottom: 85px;
+  right: 20px;
+  width: 380px;
+  max-width: calc(100vw - 30px);
+  height: 540px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+  border: 1px solid #ddd;
+}
 
-        .chat-toggle:hover {
-        background: #5c2379;
-        }
+.wb-chatbot .chatbot-window[hidden] {
+  display: none !important;
+}
 
-        /* Chat window */
-        .chatbot-window {
-        position: fixed;
-        bottom: 85px;
-        right: 20px;
-        width: 360px;
-        max-width: calc(100vw - 30px);
-        height: 540px;
-        background: #ffffff;
-        border-radius: 18px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        z-index: 1000;
-        border: 1px solid #ddd;
-        }
+.wb-chatbot .chat-header {
+  background: #6f2c91;
+  color: white;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
 
-        /* Header */
-        .chat-header {
-        background: #6f2c91;
-        color: white;
-        padding: 16px;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        }
+.wb-chatbot .chat-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
 
-        .chat-header h2 {
-        margin: 0;
-        font-size: 20px;
-        }
+.wb-chatbot .chat-header p {
+  margin: 6px 0 0;
+  font-size: 13px;
+}
 
-        .chat-header p {
-        margin: 6px 0 0;
-        font-size: 13px;
-        }
+.wb-chatbot .close-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+}
 
-        .close-btn {
-        background: transparent;
-        border: none;
-        color: white;
-        font-size: 28px;
-        cursor: pointer;
-        line-height: 1;
-        }
+.wb-chatbot .chat-body {
+  flex: 1;
+  padding: 16px;
+  padding-right: 10px;
+  overflow-y: auto;
+  background: #fafafa;
+}
 
-        /* Chat body */
-        .chat-body {
-        flex: 1;
-        padding: 16px;
-        overflow-y: auto;
-        background: #fafafa;
-        }
+.wb-chatbot .bot-message,
+.wb-chatbot .user-message {
+  max-width: 85%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  font-size: 15px;
+  word-wrap: break-word;
+}
 
-        .bot-message,
-        .user-message {
-        max-width: 85%;
-        padding: 12px 14px;
-        border-radius: 14px;
-        margin-bottom: 12px;
-        line-height: 1.5;
-        font-size: 15px;
-        }
+.wb-chatbot .bot-message {
+  background: #eee;
+  color: #222;
+  border-top-left-radius: 4px;
+}
 
-        .bot-message {
-        background: #eee;
-        color: #222;
-        border-top-left-radius: 4px;
-        }
+.wb-chatbot .user-message {
+  background: #6f2c91;
+  color: white;
+  margin-left: auto;
+  border-top-right-radius: 4px;
+}
 
-        .user-message {
-        background: #6f2c91;
-        color: white;
-        margin-left: auto;
-        border-top-right-radius: 4px;
-        }
+.wb-chatbot .consent-box {
+  background: #f3e9f9;
+  border: 1px solid #d6b8ea;
+}
 
-        .consent-box {
-        background: #f3e9f9;
-        border: 1px solid #d6b8ea;
-        }
+.wb-chatbot .quick-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
 
-        /* Quick buttons */
-        .quick-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 10px;
-        }
+.wb-chatbot .quick-buttons button {
+  background: white;
+  color: #6f2c91;
+  border: 1px solid #6f2c91;
+  border-radius: 999px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
 
-        .quick-buttons button {
-        background: white;
-        color: #6f2c91;
-        border: 1px solid #6f2c91;
-        border-radius: 999px;
-        padding: 8px 12px;
-        cursor: pointer;
-        font-size: 14px;
-        }
+.wb-chatbot .quick-buttons button:hover {
+  background: #6f2c91;
+  color: white;
+}
 
-        .quick-buttons button:hover {
-        background: #6f2c91;
-        color: white;
-        }
+.wb-chatbot .chat-input-area {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  align-items: center;
+  flex-shrink: 0;
+}
 
-        /* Input area */
-        .chat-input-area {
-        display: flex;
-        gap: 8px;
-        padding: 12px;
-        border-top: 1px solid #ddd;
-        background: #fff;
-        }
+.wb-chatbot .chat-input-area input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  outline: none;
+}
 
-        .chat-input-area input {
-        flex: 1;
-        padding: 12px;
-        font-size: 15px;
-        border: 1px solid #bbb;
-        border-radius: 10px;
-        outline: none;
-        }
+.wb-chatbot .chat-input-area input:focus {
+  border-color: #6f2c91;
+}
 
-        .chat-input-area input:focus {
-        border-color: #6f2c91;
-        }
+.wb-chatbot .send-btn {
+  background: #6f2c91;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
 
-        .chat-input-area button {
-        background: #6f2c91;
-        color: white;
-        border: none;
-        border-radius: 10px;
-        padding: 0 16px;
-        font-size: 15px;
-        cursor: pointer;
-        }
+.wb-chatbot .send-btn:hover {
+  background: #5c2379;
+}
 
-        .chat-input-area button:hover {
-        background: #5c2379;
-        }
+.wb-chatbot .clear-btn {
+  background: #999;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
 
-        /* Mobile */
-        @media (max-width: 480px) {
-        .chatbot-window {
-            right: 10px;
-            left: 10px;
-            bottom: 80px;
-            width: auto;
-            height: 70vh;
-        }
+.wb-chatbot .clear-btn:hover {
+  background: #777;
+}
 
-        .chat-toggle {
-            right: 10px;
-            bottom: 15px;
-        }
-        }
-  </style>
-    
-</head>
-<body>
+@media (max-width: 480px) {
+  .wb-chatbot .chatbot-window {
+    right: 10px;
+    left: 10px;
+    bottom: 80px;
+    width: auto;
+    height: 70vh;
+  }
 
-  <!-- Floating Chat Button -->
+  .wb-chatbot .chat-toggle {
+    right: 10px;
+    bottom: 15px;
+  }
+
+  .wb-chatbot .chat-input-area {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .wb-chatbot .send-btn,
+  .wb-chatbot .clear-btn {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
+</style>
+
+<div class="wb-chatbot">
   <button class="chat-toggle" id="chatToggle" aria-label="Open chatbot">
     Need Help?
   </button>
 
-  <!-- Chat Window -->
   <section class="chatbot-window" id="chatWindow" aria-label="Chatbot" hidden>
     <div class="chat-header">
       <div>
@@ -222,18 +231,18 @@
       <div class="bot-message consent-box">
         I can answer questions. I only save information if you say yes.
         <div class="quick-buttons">
-          <button>OK</button>
-          <button>Tell me more</button>
+          <button type="button" onclick="sendQuickReply('OK')">OK</button>
+          <button type="button" onclick="sendQuickReply('Tell me more')">Tell me more</button>
         </div>
       </div>
 
       <div class="bot-message">
         What would you like help with?
         <div class="quick-buttons">
-          <button onclick="sendQuickReply('Find a sport group')">Find a sport group</button>
-          <button onclick="sendQuickReply('How do I join?')">How do I join?</button>
-          <button onclick="sendQuickReply('Tell my story')">Tell my story</button>
-          <button onclick="sendQuickReply('Help for clubs/coaches')">Help for clubs/coaches</button>
+          <button type="button" onclick="sendQuickReply('Find a sport group')">Find a sport group</button>
+          <button type="button" onclick="sendQuickReply('How do I join?')">How do I join?</button>
+          <button type="button" onclick="sendQuickReply('Tell my story')">Tell my story</button>
+          <button type="button" onclick="sendQuickReply('Help for clubs/coaches')">Help for clubs/coaches</button>
         </div>
       </div>
     </div>
@@ -245,10 +254,8 @@
         placeholder="Type your question here..."
         aria-label="Type your message"
       />
-      <button type="submit">Send</button>
+      <button type="submit" class="send-btn">Send</button>
+      <button type="button" class="clear-btn" onclick="clearChatHistory()">Clear</button>
     </form>
   </section>
-
-  <script src="chatbot.js"></script>
-</body>
-</html>
+</div>

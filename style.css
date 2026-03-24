@@ -3,6 +3,105 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* KEYBOARD NAVIGATION */
+body.keyboard-nav *:focus {
+  outline: 3px solid #ffcc00 !important;
+  outline-offset: 2px;
+}
+
+/* DISABLE ANIMATIONS */
+body.disable-animations *,
+body.disable-animations *::before,
+body.disable-animations *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
+/* HIGH CONTRAST */
+body.high-contrast {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+body.high-contrast p,
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast h4,
+body.high-contrast h5,
+body.high-contrast h6,
+body.high-contrast li,
+body.high-contrast span,
+body.high-contrast div,
+body.high-contrast label {
+  color: #fff !important;
+}
+
+body.high-contrast a {
+  color: #00ffff !important;
+}
+
+body.high-contrast .toolbar,
+body.high-contrast .chatbot-window,
+body.high-contrast .course-info,
+body.high-contrast .lesson,
+body.high-contrast .card,
+body.high-contrast section,
+body.high-contrast article,
+body.high-contrast main,
+body.high-contrast nav,
+body.high-contrast header,
+body.high-contrast footer,
+body.high-contrast .content,
+body.high-contrast .info-left,
+body.high-contrast .info-right {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+/* READABLE FONT */
+body.readable-font,
+body.readable-font * {
+  font-family: Arial, Helvetica, sans-serif !important;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+}
+
+/* MARK TITLES */
+body.mark-titles h1,
+body.mark-titles h2,
+body.mark-titles h3,
+body.mark-titles h4,
+body.mark-titles h5,
+body.mark-titles h6 {
+  background: yellow !important;
+  color: black !important;
+  padding: 4px 8px !important;
+  display: inline-block;
+}
+
+/* HIGHLIGHT LINKS & BUTTONS */
+body.highlight-links a,
+body.highlight-links button,
+body.highlight-links .btn,
+body.highlight-links input[type="submit"],
+body.highlight-links input[type="button"] {
+  background: yellow !important;
+  color: black !important;
+  border: 2px solid black !important;
+  text-decoration: underline !important;
+}
+
+/* Optional: make highlighted nav items more obvious */
+body.highlight-links nav a,
+body.highlight-links .topbar a,
+body.highlight-links .navbar a {
+  padding: 4px 8px !important;
+  display: inline-block;
+}
+
 /* ===== HEADER ===== */
 .site-header {
     width: 100%;
@@ -435,7 +534,7 @@ body {
     margin-bottom: 10px;
 }
 
-.hublink {
+.hublink:hover {
     text-decoration: underline;
     text-underline-offset: 4px;
 }
