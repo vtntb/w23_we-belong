@@ -435,7 +435,7 @@ body {
     margin-bottom: 10px;
 }
 
-.hublink {
+.hublink:hover {
     text-decoration: underline;
     text-underline-offset: 4px;
 }

@@ -106,6 +106,12 @@ function initCoursePage() {
         lessons.forEach((lesson) => {
             lesson.classList.remove("locked");
             lesson.classList.add("unlocked");
+            const link = lesson.querySelector("a");
+            if (link) {
+                lesson.onclick = function () {
+                    window.location.href = link.href;
+                };
+            }
         });
     }
 
@@ -153,7 +159,7 @@ function initCoursePage() {
     status.innerText = "ENROLLED";
     status.className = "status enrolled";
 
-    btn.innerText = "Go to Course";
+    btn.innerText = "Start Learning";
     btn.onclick = function () {
         const firstLessonLink = document.querySelector(".lesson a");
         if (firstLessonLink) {
