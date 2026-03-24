@@ -168,6 +168,18 @@ function initCoursePage() {
     };
 
     unlockLessons();
+
+    // Green Circle confirm
+    const completedLessons = getCompletedLessons(courseId);
+
+    lessons.forEach((lesson, index) => {
+        const lessonNumber = index + 1;
+
+        if (completedLessons.includes(lessonNumber)) {
+            lesson.classList.add("completed");
+        }
+    });
+
     updateProgressUI();
 }
 

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lesson 3 – Lived Experience Video</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../learninghub.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/script.js" defer></script>
+    <script src="../learninghub.js" defer></script>
+    <style>
+        .lessonnav {
+            padding: 15px 180px;
+            background: #eceaea;
+            font-size: 15px;
+        }
+
+        .lessonnav a {
+            color: #6f2c91;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .lessonnav a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .lesson-video {
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        /* title */
+        .video-title {
+            color: red;
+            font-style: italic;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        iframe {
+            width: 80%;
+            max-width: 1200px;
+            height: 700px;
+        }
+
+        /* complete button */
+        .lesson-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 60px 0;
+        }
+
+        #lessonDoneMsg {
+            margin-top: 15px;
+            color: green;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body 
+    data-page-type="lesson"
+    data-course-id="awareness"
+    data-total-lessons="8"
+    data-lesson-number="3"
+    data-title="Lesson 3 – Lived Experience Video"
+    data-button="true"
+>
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <!-- navibar -->
+    <div class="lessonnav">
+        <a href="/learnhub.html">Learning Hub</a>
+        <span>&gt;</span>
+        <a href="/LearningHub/awarenesstraining.html">Disability Awareness Training</a>
+        <span>&gt;</span>
+        <a href="/LearningHub/Awareness/lesson2.html">Lesson 3 – Types of Disability</a>
+    </div>
+
+    <div class="lessonwrap">
+
+    </div>
+
+    <div class="lesson-video">
+        <p class="video-title">Lived Experience video of disability</p>
+        <iframe src="https://www.youtube.com/embed/HV-CmVQZIiA" title="YouTube video" frameborder="0" allowfullscreen id="ytbvid"></iframe>
+    </div> 
+
+    <!-- complete button -->
+    <div class="lesson-actions">
+        <button id="markCompleteBtn" class="enrol-btn">Mark Complete</button>
+
+        <p id="lessonDoneMsg" style="display:none;">
+            Lesson marked as complete.
+        </p>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>
