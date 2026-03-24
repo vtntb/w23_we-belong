@@ -1,20 +1,208 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>We Belong Project - Disability Support, Employment & Inclusion</title>
+    <title>Volunteering - We Belong</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css" type="text/css">
+
+    <!-- Shared libraries -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        /* ================= VOLUNTEERING PAGE ================= */
+
+        .volunteering-page {
+            background: #f5f5f5;
+            padding: 40px 0 70px;
+        }
+
+        .volunteering-section {
+            width: 100%;
+        }
+
+        .volunteering-wrapper {
+            width: 96%;
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+
+        .volunteering-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 90px;
+            align-items: start;
+        }
+
+        .volunteering-column {
+            padding: 10px 10px 0;
+        }
+
+        .volunteering-intro,
+        .volunteering-subtitle {
+            font-size: 26px;
+            line-height: 1.5;
+            color: #1f1f1f;
+            margin-bottom: 28px;
+        }
+
+        .volunteering-subtitle {
+            margin-top: 42px;
+        }
+
+        .volunteering-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .volunteering-list li {
+            position: relative;
+            padding-left: 48px;
+            margin-bottom: 28px;
+            font-size: 24px;
+            line-height: 1.5;
+            color: #1f1f1f;
+        }
+
+        .volunteering-list li::before {
+            content: "";
+            position: absolute;
+            left: 12px;
+            top: 13px;
+            width: 18px;
+            height: 18px;
+            background: #6f2c91;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 1200px) {
+            .volunteering-grid {
+                gap: 50px;
+            }
+
+            .volunteering-intro,
+            .volunteering-subtitle {
+                font-size: 22px;
+            }
+
+            .volunteering-list li {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .volunteering-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .volunteering-page {
+                padding: 30px 0 50px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .volunteering-wrapper {
+                width: 92%;
+            }
+
+            .volunteering-intro,
+            .volunteering-subtitle {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+
+            .volunteering-subtitle {
+                margin-top: 28px;
+            }
+
+            .volunteering-list li {
+                font-size: 17px;
+                padding-left: 38px;
+                margin-bottom: 18px;
+            }
+
+            .volunteering-list li::before {
+                width: 14px;
+                height: 14px;
+                top: 10px;
+                left: 10px;
+            }
+        }
+    </style>
+
+    <!-- Shared script -->
     <script src="/script.js" defer></script>
 </head>
-<body data-title="Enter Title">
-  
-    <div id="header-placeholder"></div>
-    <div id="banner-placeholder"></div>  
-    <!-- page content -->
 
+<body data-title="Volunteering">
+
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Banner -->
+    <div id="banner-placeholder"></div>
+
+    <!-- ================= PAGE CONTENT ================= -->
+    <main class="volunteering-page">
+        <section class="volunteering-section">
+            <div class="volunteering-wrapper">
+
+                <!-- Two-column content -->
+                <div class="volunteering-grid">
+
+                    <!-- Left column -->
+                    <div class="volunteering-column">
+                        <p class="volunteering-intro">
+                            Volunteering can have a big impact on not only your life, but someone else’s life too.
+                            As a volunteer, you can:
+                        </p>
+
+                        <ul class="volunteering-list">
+                            <li>Create new friendships.</li>
+                            <li>Learn new skills.</li>
+                            <li>Make a difference.</li>
+                        </ul>
+
+                        <p class="volunteering-subtitle">
+                            For the person receiving, it can help:
+                        </p>
+
+                        <ul class="volunteering-list">
+                            <li>Meet basic needs like clothing and hygiene.</li>
+                            <li>Improve happiness, wellbeing and life satisfaction.</li>
+                            <li>Create a sense of belonging in the community.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Right column -->
+                    <div class="volunteering-column">
+                        <p class="volunteering-intro">
+                            If you would like to volunteer, here are some ideas:
+                        </p>
+
+                        <ul class="volunteering-list">
+                            <li>Op-shop</li>
+                            <li>Landcare</li>
+                            <li>Service Groups</li>
+                            <li>Resident Committees</li>
+                            <li>Shelters</li>
+                            <li>Food Charities</li>
+                            <li>Not for Profit organisations</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <!-- ================= END PAGE CONTENT ================= -->
+
+    <!-- Footer -->
     <div id="footer-placeholder"></div>
+
 </body>
 </html>

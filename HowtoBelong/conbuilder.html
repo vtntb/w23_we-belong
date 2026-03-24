@@ -1,20 +1,176 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>We Belong Project - Disability Support, Employment & Inclusion</title>
+    <title>Building Confidence - We Belong</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css" type="text/css">
+
+    <!-- Shared libraries -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="/script.js" defer></script>
-</head>
-<body data-title="Enter Title">
-  
-    <div id="header-placeholder"></div>
-    <div id="banner-placeholder"></div>  
-    <!-- page content -->
 
+    <!-- Shared script -->
+    <script src="/script.js" defer></script>
+    <style>
+        /* ================= BUILDING CONFIDENCE PAGE ================= */
+
+        .confidence-page {
+            background: #f7f7f7;
+            padding: 50px 0 70px;
+        }
+
+        .confidence-section {
+            width: 100%;
+        }
+
+        .confidence-wrapper {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .confidence-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .confidence-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .confidence-text p {
+            font-size: 20px;
+            line-height: 1.9;
+            color: #222;
+            margin-bottom: 28px;
+        }
+
+        .confidence-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .confidence-note {
+            margin-top: 40px;
+            text-align: center;
+            background: #ffffff;
+            padding: 28px 24px;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        .confidence-note h3 {
+            font-size: 30px;
+            color: #6f2c91;
+            margin-bottom: 12px;
+        }
+
+        .confidence-note p {
+            font-size: 17px;
+            color: #444;
+            line-height: 1.8;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 900px) {
+            .confidence-flex {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .confidence-text p {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .confidence-page {
+                padding: 35px 0 50px;
+            }
+
+            .confidence-text p {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            .confidence-note h3 {
+                font-size: 24px;
+            }
+
+            .confidence-note p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body data-title="Building Confidence">
+
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Banner -->
+    <div id="banner-placeholder"></div>
+
+    <!-- ================= PAGE CONTENT ================= -->
+    <main class="confidence-page">
+        <section class="confidence-section">
+            <div class="confidence-wrapper">
+
+                <!-- Main content: text on left, image on right -->
+                <div class="confidence-flex">
+
+                    <!-- Left text -->
+                    <div class="confidence-text">
+                        <p>
+                            Confidence is all about believing in yourself and trusting that you can do what you want to do.
+                        </p>
+
+                        <p>
+                            Confidence is a skill that we develop over time and with practice.
+                        </p>
+
+                        <p>
+                            To grow our confidence, we must step outside of our comfort zones.
+                        </p>
+
+                        <p>
+                            Even small steps can help us become stronger, more confident, and more ready to try new things.
+                        </p>
+                    </div>
+
+                    <!-- Right image -->
+                    <div class="confidence-image">
+                        <img src="../AdditionalIMG/how_to_build_confidence.webp"
+                             alt="Comfort zone, discomfort zone and breakout zone"
+                             style="width: 100%; height: 320px; display: block; margin: 0 auto; border-radius: 100px;">
+                    </div>
+
+                </div>
+
+                <!-- Bottom message -->
+                <div class="confidence-note">
+                    <h3>Remember</h3>
+                    <p>
+                        Building confidence does not happen all at once. It grows when we keep trying, learning, and giving ourselves a chance.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <!-- ================= END PAGE CONTENT ================= -->
+
+    <!-- Footer -->
     <div id="footer-placeholder"></div>
+
 </body>
 </html>
