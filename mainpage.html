@@ -1,19 +1,296 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>We Belong Project - Disability Support, Employment & Inclusion</title>
+    <title>We Belong - Main Page</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-</head>
-<body data-title="Enter Title">
-  
-    <div id="header-placeholder"></div>
-    <!-- page content -->
+    <style>
+        /* ================= MAIN PAGE ================= */
 
+        .main-home {
+            background: #f6f6f6;
+            padding: 40px 60px 70px;
+        }
+
+        .main-hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .main-hero-left {
+            flex: 1;
+            min-width: 320px;
+        }
+
+        .main-tag {
+            display: inline-block;
+            margin-bottom: 16px;
+            padding: 8px 16px;
+            background: #ede3f7;
+            color: #6f2c91;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .main-hero-left h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .main-desc {
+            font-size: 19px;
+            line-height: 1.8;
+            color: #444;
+            max-width: 650px;
+        }
+
+        .main-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .main-btn {
+            text-decoration: none;
+            padding: 14px 24px;
+            border-radius: 14px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .primary-btn {
+            background: #6f2c91;
+            color: white;
+        }
+
+        .primary-btn:hover {
+            background: #572176;
+        }
+
+        .secondary-btn {
+            background: white;
+            color: #6f2c91;
+            border: 2px solid #6f2c91;
+        }
+
+        .secondary-btn:hover {
+            background: #f3ebfa;
+        }
+
+        .main-hero-right {
+            flex: 1;
+            min-width: 320px;
+            text-align: center;
+        }
+
+        .main-hero-right img {
+            width: 100%;
+            max-width: 580px;
+            height: 360px;
+            object-fit: cover;
+            border-radius: 28px;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+        }
+
+        .main-links-section h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .main-subtext {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .main-links-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .main-link-card {
+            display: block;
+            text-decoration: none;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .main-link-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.10);
+        }
+
+        .main-link-image img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .main-link-content {
+            padding: 22px 20px 24px;
+        }
+
+        .main-link-content h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            color: #6f2c91;
+        }
+
+        .main-link-content p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #444;
+            margin: 0;
+        }
+
+        @media (max-width: 1200px) {
+            .main-links-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-home {
+                padding: 30px 20px 50px;
+            }
+
+            .main-hero-left h1 {
+                font-size: 34px;
+            }
+
+            .main-desc {
+                font-size: 17px;
+            }
+
+            .main-links-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .main-hero-right img {
+                height: 260px;
+            }
+        }
+    </style>
+</head>
+
+<body data-title="Main Page">
+  
+    <!-- Shared header -->
+    <div id="header-placeholder"></div>
+
+    <!-- ================= PAGE CONTENT ================= -->
+    <main class="main-home">
+
+        <!-- Hero section -->
+        <section class="main-hero">
+            <div class="main-hero-left">
+                <p class="main-tag">We Belong</p>
+                <h1>Learn, connect and belong in your community</h1>
+                <p class="main-desc">
+                    This platform was designed to support people with disability through
+                    simple learning materials, helpful resources, and inclusive community content.
+                </p>
+
+                <div class="main-buttons">
+                    <a href="HowtoBelong/aboutbelong.html" class="main-btn primary-btn">Start Here</a>
+                    <a href="learnhub.html" class="main-btn secondary-btn">Go to Learning Hub</a>
+                </div>
+            </div>
+
+            <div class="main-hero-right">
+                <img src="AdditionalIMG/about-we-belong.jpg" alt="We Belong community">
+            </div>
+        </section>
+
+        <!-- Navigation cards -->
+        <section class="main-links-section">
+            <h2>Explore the Platform</h2>
+            <p class="main-subtext">
+                Choose a section below to continue.
+            </p>
+
+            <div class="main-links-grid">
+
+                <!-- Card 1 -->
+                <a href="HowtoBelong/aboutbelong.html" class="main-link-card">
+                    <div class="main-link-image">
+                        <img src="AdditionalIMG/about-we-belong.jpg" alt="How to Belong">
+                    </div>
+                    <div class="main-link-content">
+                        <h3>How to Belong</h3>
+                        <p>
+                            Explore confidence, resilience, volunteering, social connection, and guest speaking.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="disaware.html" class="main-link-card">
+                    <div class="main-link-image">
+                        <img src="AdditionalIMG/SupportIMG.jpg" alt="Disability Awareness">
+                    </div>
+                    <div class="main-link-content">
+                        <h3>Disability Awareness</h3>
+                        <p>
+                            Learn simple ideas and practical ways to understand disability and inclusion.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="incsport.html" class="main-link-card">
+                    <div class="main-link-image">
+                        <img src="AdditionalIMG/IncludeIMG.jpg" alt="Inclusive Sport">
+                    </div>
+                    <div class="main-link-content">
+                        <h3>Inclusive Sport</h3>
+                        <p>
+                            Discover how sport can become more welcoming, accessible, and inclusive for everyone.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Card 4 -->
+                <a href="learnhub.html" class="main-link-card">
+                    <div class="main-link-image">
+                        <img src="AdditionalIMG/LearningHubIMG.jpg" alt="Learning Hub">
+                    </div>
+                    <div class="main-link-content">
+                        <h3>Learning Hub</h3>
+                        <p>
+                            Access learning content, support materials, and tools in one place.
+                        </p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+    <!-- ================= END PAGE CONTENT ================= -->
+
+    <!-- Shared footer -->
     <div id="footer-placeholder"></div>
+
 </body>
 </html>
