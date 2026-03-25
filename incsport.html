@@ -8,12 +8,192 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <style>
+        .inclusive-sport {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            padding: 40px 180px;
+            background: #ffffff;
+            align-items: center;
+        }
+
+        .sport-left h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .sport-left p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .sport-left ul {
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        .sport-left li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .sport-left li::marker {
+            color: #6f2c91;
+            font-size: 20px;
+        }
+
+        .sport-right img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .inclusive-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            padding: 40px 180px;
+            background: #fbfafa;
+        }
+
+        .inclusive-details h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .inclusive-details p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .inclusive-details ul {
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        .inclusive-details li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .inclusive-details li::marker {
+            color: #6f2c91;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body data-title="Enter Title">
   
     <div id="header-placeholder"></div>
-    <div id="banner-placeholder"></div>  
-    <!-- page content -->
+    <div id="banner-placeholder"></div>
+
+    <div class="inclusive-sport">
+
+        <div class="sport-left">
+            <h1>Inclusive Sport</h1>
+
+            <p>
+                Sporting and recreation clubs are important to local communities as they bring
+                people of different backgrounds, abilities and ages together.
+            </p>
+
+            <p>
+                When clubs are welcoming and inclusive, they grow stronger, allowing people to
+                connect and build positive relationships with others.
+            </p>
+
+            <p>Everyone has a part to play. This means:</p>
+
+            <ul>
+                <li>Welcoming all teammates</li>
+                <li>Using kind and respectful language</li>
+                <li>Staying calm about decisions</li>
+                <li>Asking for help or support when needed</li>
+            </ul>
+
+            <p>
+                These actions help create fairness, respect and a sense of belonging.
+            </p>
+
+            <p>
+                When spectators, teammates, coaches and clubs act with care, sport becomes
+                more than a game, it becomes a place where everyone feels included, respected
+                and valued.
+            </p>
+        </div>
+
+        <div class="sport-right">
+            <img src="/AdditionalIMG/three-participants-smiling-holding-sport-equipment.jpg" alt="Inclusive Sport">
+        </div>
+    </div>
+
+    <div class="inclusive-details">
+
+        <!-- LEFT -->
+        <div class="detail-left">
+            <h2>Why Be Inclusive</h2>
+
+            <p>
+                Being inclusive has many benefits for your community or workplace. Being inclusive can:
+            </p>
+
+            <ul>
+                <li>Help attract new members</li>
+                <li>Welcome more customers and participants</li>
+                <li>Build a strong sense of community</li>
+                <li>Show that your organisation is inclusive and welcoming</li>
+                <li>Encourage more people to visit your website or premises</li>
+                <li>Help you understand individual needs and supports</li>
+                <li>Help meet safety and duty of care requirements.</li>
+            </ul>
+
+            <p>
+                Inclusion can help communities grow and change in positive ways. It creates chances to work together through events, groups and shared activities.
+            </p>
+
+            <p>
+                Showing care and respect for individual needs builds trust. This helps people feel connected and supports long-lasting relationships.
+            </p>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="detail-right">
+            <h2>Challenges for People with Disability in Community Clubs</h2>
+
+            <p>
+                People with disability should have the same chance as everyone else to join local clubs and take part in activities.
+            </p>
+
+            <p>
+                Joining a sport or recreation club can help people stay active, make new friends and feel connected to their community.
+            </p>
+
+            <p>
+                But sometimes people with disability can face barriers to joining a club, such as:
+            </p>
+
+            <ul>
+                <li>People making assumptions about what someone can or cannot do</li>
+                <li>Activities that are not changed to include everyone</li>
+                <li>Locations that are difficult to move in</li>
+                <li>Bathrooms or change rooms that are not accessible to all</li>
+                <li>Information that is unclear, hard to understand or not shared in accessible ways</li>
+            </ul>
+
+            <p>
+                These barriers can stop people from joining or enjoying a club.
+            </p>
+
+            <p>
+                When clubs understand these barriers and work to remove them, more people can take part. This helps create clubs where everyone feels welcome, supported and included.
+            </p>
+        </div>
+
+    </div>
 
     <div id="accessibility-container"></div>
     <script src="/accessibility.js" defer></script> 
