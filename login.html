@@ -326,7 +326,7 @@
 
                     <p class="register-text">
                         Don’t have an account?
-                        <a href="signup.html">Create one here</a>
+                        <a href="register.html">Create one here</a>
                     </p>
                 </div>
 
@@ -346,23 +346,34 @@
         document.getElementById("loginForm").addEventListener("submit", function(e) {
             e.preventDefault();
 
-            const email = document.getElementById("email").value.trim();
-            const password = document.getElementById("password").value.trim();
+            const email = document.getElementById("email").value.trim().toLowerCase();
+            const password = document.getElementById("password").value;
             const errorMessage = document.getElementById("errorMessage");
 
-            if (email === "user@mail.com" && password === "1234") {
-                errorMessage.style.display = "none";
-            } else {
+            errorMessage.style.display = "none";
+            errorMessage.textContent = "";
+
+            if (!email || !password) {
+                errorMessage.textContent = "Please enter both email and password.";
                 errorMessage.style.display = "block";
                 return;
             }
 
-            errorMessage.style.display = "none";
+            const users = JSON.parse(localStorage.getItem("users")) || [];
+            const matchedUser = users.find(user => user.email === email && user.password === password);
+
+            if (!matchedUser) {
+                errorMessage.textContent = "Invalid email or password.";
+                errorMessage.style.display = "block";
+                return;
+            }
 
             localStorage.setItem("isLoggedIn", "true");
-            localStorage.setItem("userEmail", email);
+            localStorage.setItem("userEmail", matchedUser.email);
+            localStorage.setItem("userFirstName", matchedUser.firstName);
+            localStorage.setItem("userLastName", matchedUser.lastName);
 
-            window.location.href = "account.html";
+            window.location.href = "/account.html";
         });
     </script>
 </body>
