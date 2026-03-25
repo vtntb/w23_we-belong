@@ -759,7 +759,7 @@ body.highlight-links .navbar a {
 }
 
 .card {
-    max-width: 240px; 
+    max-width: 400px; 
     position: relative;
     background: #fff;
     border-radius: 12px;
