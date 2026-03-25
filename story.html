@@ -5,15 +5,208 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/script.js" defer></script>
 </head>
-<body data-title="Enter Title">
+<body data-title="Stories & Resources">
   
     <div id="header-placeholder"></div>
     <div id="banner-placeholder"></div>  
-    <!-- page content -->
+        <section class="wb-stories-section">
+        <style>
+            .wb-stories-section {
+            background: #f2f2f4;
+            padding: 60px 20px;
+            }
+
+            .wb-stories-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            }
+
+            .wb-stories-block {
+            background: #fff;
+            padding: 35px 40px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            }
+
+            .wb-stories-intro p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: #333;
+            font-size: 16px;
+            }
+
+            .wb-stories-content {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+            }
+
+            .wb-stories-text p {
+            margin-bottom: 18px;
+            line-height: 1.8;
+            font-size: 15px;
+            color: #333;
+            }
+
+            .wb-stories-image img {
+            width: 100%;
+            display: block;
+            border-radius: 4px;
+            }
+
+            /* Responsive */
+            @media (max-width: 992px) {
+            .wb-stories-content {
+                grid-template-columns: 1fr;
+            }
+
+            .wb-stories-image {
+                margin-top: 20px;
+            }
+            }
+        </style>
+
+        <div class="wb-stories-container">
+
+            <div class="wb-stories-block wb-stories-intro">
+            <p><strong>Real voices. Real stories.</strong></p>
+
+            <p>
+                Every story matters. By sharing real experiences, we learn to see the world in new ways and help create a place where everyone belongs.
+            </p>
+
+            <p>
+                Read or listen to stories from people with disability as they share their experiences, challenges and personal growth.
+            </p>
+            </div>
+
+            <div class="wb-stories-block">
+            <div class="wb-stories-content">
+
+                <div class="wb-stories-text">
+                <p>
+                    If you’re looking for tips on our online courses such as Road Safety or Powering Up Women you can use the free resources below.
+                </p>
+
+                <p>
+                    Click on the below boxes to find out more.
+                </p>
+                </div>
+
+                <div class="wb-stories-image">
+                <img src="../AdditionalIMG/storiesnresources.jpg" alt="Stories Image">
+                </div>
+
+            </div>
+            </div>
+
+        </div>
+        </section>
+
+
+        <section class="wb-simple-cards-section">
+        <style>
+            .wb-simple-cards-section {
+            background: #f2f2f4;
+            padding: 40px 20px 80px;
+            }
+
+            .wb-simple-cards-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            }
+
+            .wb-simple-cards-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            }
+
+            /* Card */
+            .wb-simple-card {
+            background: #fff;
+            border-radius: 6px;
+            padding: 40px 35px 35px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            min-height: 260px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            }
+
+            /* Title */
+            .wb-simple-card-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 15px;
+            }
+
+            /* Description */
+            .wb-simple-card-text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 25px;
+            }
+
+            /* Button */
+            .wb-simple-card-btn {
+            display: inline-block;
+            background: #6a2c91;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 25px;
+            font-size: 14px;
+            width: fit-content;
+            transition: all 0.3s ease;
+            }
+
+            .wb-simple-card-btn:hover {
+            background: #4e1f6b;
+            }
+
+            /* Responsive */
+            @media (max-width: 768px) {
+            .wb-simple-cards-grid {
+                grid-template-columns: 1fr;
+            }
+            }
+        </style>
+
+        <div class="wb-simple-cards-container">
+            <div class="wb-simple-cards-grid">
+
+            <!-- Card 1 -->
+            <div class="wb-simple-card">
+                <div>
+                <div class="wb-simple-card-title">We Belong Podcast</div>
+                </div>
+                <a href="#" class="wb-simple-card-btn">read more</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="wb-simple-card">
+                <div>
+                <div class="wb-simple-card-title">Stories</div>
+                <div class="wb-simple-card-text">
+                    Emily’s Story: Growing with the We Belong Program Emily joined the We Belong Program to grow her skills and build…
+                </div>
+                </div>
+                <a href="Stories/stories.html" class="wb-simple-card-btn">read more</a>
+            </div>
+
+            </div>
+        </div>
+        </section>
+
+
 
     <div id="accessibility-container"></div>
     <script src="/accessibility.js" defer></script> 
