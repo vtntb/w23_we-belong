@@ -133,24 +133,39 @@ function restoreAccessibilitySettings() {
 }
 
 function changeFontScale(step) {
-  let size = parseInt(localStorage.getItem(ACCESSIBILITY_FONT_KEY)) || 16;
+  let scale = parseFloat(localStorage.getItem(ACCESSIBILITY_FONT_KEY)) || 1;
 
-  size += step * 2; // increase by 2px each click
+  scale += step * 0.1; // 10% each click
+  if (scale < 0.9) scale = 0.9;
+  if (scale > 1.2) scale = 1.2;
 
-  if (size < 12) size = 12;
-  if (size > 24) size = 24;
+  scale = parseFloat(scale.toFixed(2));
 
-  localStorage.setItem(ACCESSIBILITY_FONT_KEY, size);
-  applyFontScale(size);
+  localStorage.setItem(ACCESSIBILITY_FONT_KEY, scale);
+  applyFontScale(scale);
 }
 
 function restoreFontScale() {
-  const size = parseInt(localStorage.getItem(ACCESSIBILITY_FONT_KEY)) || 16;
-  applyFontScale(size);
+  const scale = parseFloat(localStorage.getItem(ACCESSIBILITY_FONT_KEY)) || 1;
+  applyFontScale(scale);
 }
 
-function applyFontScale(size) {
-  document.body.style.zoom = size / 16;
+function applyFontScale(scale) {
+  const textElements = document.querySelectorAll(
+    "h1, h2, h3, h4, h5, h6, p, a, li, span, label, input, textarea, select, button, td, th"
+  );
+
+  textElements.forEach((el) => {
+    // do not resize the accessibility toolbar itself
+    if (el.closest(".wb-accessibility")) return;
+
+    if (!el.dataset.originalFontSize) {
+      el.dataset.originalFontSize = window.getComputedStyle(el).fontSize;
+    }
+
+    const originalSize = parseFloat(el.dataset.originalFontSize);
+    el.style.fontSize = `${originalSize * scale}px`;
+  });
 }
 
 document.addEventListener("DOMContentLoaded", loadAccessibility);
