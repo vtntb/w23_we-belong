@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lesson 8 – Employment</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../learninghub.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/script.js" defer></script>
+    <script src="../learninghub.js" defer></script>
+
+    <style>
+        .lessonnav {
+            padding: 15px 180px;
+            background: #eceaea;
+            font-size: 15px;
+        }
+
+        .lessonnav a {
+            color: #6f2c91;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .lessonnav a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .lessonwrap {
+            display: flex;
+            padding: 40px 180px;
+            background: #ffffff;
+            gap: 100px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        img {
+            height: auto;
+            width: 50%;
+        }
+
+        .comBoardInfo p {
+            font-size: 18px;
+        }
+
+        .heading {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* complete button */
+        .lesson-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 60px 0;
+        }
+
+        #lessonDoneMsg {
+            margin-top: 15px;
+            color: green;
+            font-size: 18px;
+        }
+
+        .navigationdiv {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1600px;
+        }
+
+        .naviBar {
+            width: 100%;
+            height: 1px;
+            background: #aba8a8;
+            margin: 20px auto 30px;
+            max-width: 1600px;
+        }
+
+        .buttonDiv {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            width: 100%;
+        }
+
+        .buttonDiv a:first-child {
+            justify-self: start;
+        }
+
+        .buttonDiv a:nth-child(2) {
+            justify-self: center;
+        }
+
+        .buttonDiv a:last-child {
+            justify-self: end;
+        }
+
+        .naviButt {
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        .naviButt:hover {
+            background: #4f186b;
+        }
+
+        /* vid container */
+        .viddiv {
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .vidTitle {
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+
+        iframe {
+            width: 80%;
+            max-width: 1200px;
+            height: 700px;
+        }
+    </style>
+</head>
+
+<body 
+    data-page-type="lesson"
+    data-course-id="awareness"
+    data-total-lessons="8"
+    data-lesson-number="8"
+    data-title="Lesson 8 – Employment"
+    data-button="true"
+>
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <!-- navibar -->
+    <div class="lessonnav">
+        <a href="/learnhub.html">Learning Hub</a>
+        <span>&gt;</span>
+        <a href="/LearningHub/awarenesstraining.html">Disability Awareness Training</a>
+        <span>&gt;</span>
+        <a href="/LearningHub/Awareness/lesson8.html">Lesson 8 – Employment</a>
+    </div>
+    
+    <div class="lessonwrap">
+        <img src="/AdditionalIMG/employment-1.png" alt="Employment Picture">
+
+        <div class="comBoardInfo">
+            <h2 class="heading">Disability Inclusive Employment</h2>
+            <p>People with a disability take less sick days, have higher retention rates and are rated more productive.</p>
+            <p>When employee health and wellness is managed well, their engagement increases from 7% to 55%.</p>
+
+            <h2 class="heading">People with a disability in employment:</h2>
+            <ul>
+                <li>37% are professionals, managers and administrators</li>
+                <li>30% are clerical sales and service workers</li>
+                <li>33% are tradespersons, production, and transport workers as well as labourers and related workers</li>
+            </ul>
+
+            <h2 class="heading">The Benefits of Disability Inclusive Employment</h2>
+            <ul>
+                <li>Increased employee engagement</li>
+                <li>Positive organisational reputation</li>
+                <li>Increased customer base</li>
+                <li>Possible subsidies and support</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="naviBar"></div>
+
+    <div class="viddiv">
+        <p class="vidTitle">Please watch the video below</p>
+        <iframe src="https://www.youtube.com/embed/K_ybYC-lpr0" title="YouTube video" frameborder="0" allowfullscreen id="ytbvid2"></iframe>
+    </div>
+
+    <!-- complete button -->
+    <div class="lesson-actions">
+        <button id="markCompleteBtn" class="enrol-btn">Mark Complete</button>
+
+        <p id="lessonDoneMsg" style="display:none;">
+            Lesson marked as complete.
+        </p>
+
+        <!-- lesson navigation -->
+        <div class="navigationdiv">
+            <div class="naviBar"></div>
+            <div class="buttonDiv">
+                <a href="lesson7.html" class="naviButt">← Previous</a>
+                <a href="/LearningHub/awarenesstraining.html" class="naviButt" id="backButt">Back to Course</a>
+                <a href="/LearningHub/awarenesstraining.html" class="naviButt">Next →</a>
+            </div>
+        </div>
+    </div>   
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>

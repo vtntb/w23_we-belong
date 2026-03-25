@@ -302,15 +302,15 @@
                     <h2 class="section-title">Your Progress</h2>
                     <div class="stats-grid">
                         <div class="stat-box">
-                            <h3>3</h3>
+                            <h3 id="coursesStarted">0</h3>
                             <p>Courses Started</p>
                         </div>
                         <div class="stat-box">
-                            <h3>1</h3>
+                            <h3 id="coursesCompleted">0</h3>
                             <p>Courses Completed</p>
                         </div>
                         <div class="stat-box">
-                            <h3>67%</h3>
+                            <h3 id="averageProgress">0%</h3>
                             <p>Average Progress</p>
                         </div>
                     </div>
@@ -324,36 +324,36 @@
                             <h3>Disability Awareness Training</h3>
                             <p>Learn the basics of disability awareness and inclusive communication.</p>
                             <div class="progress-bar">
-                                <div class="progress-fill" style="width: 100%;"></div>
+                                <div class="progress-fill" id="progress-awareness-bar"></div>
                             </div>
-                            <div class="course-meta">Completed</div>
+                            <div class="course-meta" id="progress-awareness-text">0% Complete</div>
                         </div>
 
                         <div class="course-item">
                             <h3>Inclusive Sport</h3>
                             <p>Explore how clubs, coaches, teammates and spectators can create inclusive sport environments.</p>
                             <div class="progress-bar">
-                                <div class="progress-fill" style="width: 65%;"></div>
+                                <div class="progress-fill" id="progress-inclusive-sport-bar"></div>
                             </div>
-                            <div class="course-meta">65% Complete</div>
+                            <div class="course-meta" id="progress-inclusive-sport-text">0% Complete</div>
                         </div>
 
                         <div class="course-item">
                             <h3>Building Confidence</h3>
                             <p>Develop confidence to join activities, meet new people, and try new opportunities.</p>
                             <div class="progress-bar">
-                                <div class="progress-fill" style="width: 35%;"></div>
+                                <div class="progress-fill" id="progress-confidence-bar"></div>
                             </div>
-                            <div class="course-meta">35% Complete</div>
+                            <div class="course-meta" id="progress-confidence-text">0% Complete</div>
                         </div>
 
                         <div class="course-item">
                             <h3>My Goals</h3>
                             <p>Track personal goals and small steps toward joining groups and activities in the community.</p>
                             <div class="progress-bar">
-                                <div class="progress-fill" style="width: 70%;"></div>
+                                <div class="progress-fill" id="progress-goals-bar"></div>
                             </div>
-                            <div class="course-meta">70% Complete</div>
+                            <div class="course-meta" id="progress-goals-text">0% Complete</div>
                         </div>
                     </div>
                 </div>
@@ -390,22 +390,111 @@
     <script>
         const isLoggedIn = localStorage.getItem("isLoggedIn");
         const userEmail = localStorage.getItem("userEmail");
+        const userFirstName = localStorage.getItem("userFirstName");
 
         if (isLoggedIn !== "true") {
             window.location.href = "/login.html";
         }
 
-        const emailText = userEmail ? userEmail : "user@email.com";
-        const nameText = userEmail ? userEmail.split("@")[0] : "Welcome";
-
-        document.getElementById("accountEmail").innerText = emailText;
-        document.getElementById("accountName").innerText = "Hi, " + nameText;
+        document.getElementById("accountEmail").innerText = userEmail || "user@email.com";
+        document.getElementById("accountName").innerText = userFirstName ? "Hi, " + userFirstName : "Hi, Welcome";
 
         document.getElementById("logoutBtn").addEventListener("click", function () {
             localStorage.removeItem("isLoggedIn");
             localStorage.removeItem("userEmail");
+            localStorage.removeItem("userFirstName");
+            localStorage.removeItem("userLastName");
             window.location.href = "/login.html";
         });
+
+        function getCompletedLessons(courseId) {
+            const raw = localStorage.getItem(courseId + "_completedLessons");
+            if (!raw) return [];
+
+            try {
+                return JSON.parse(raw);
+            } catch {
+                return [];
+            }
+        }
+
+        function getProgressPercent(courseId, totalLessons) {
+            const done = getCompletedLessons(courseId).length;
+            if (totalLessons === 0) return 0;
+            return Math.round((done / totalLessons) * 100);
+        }
+
+        function updateCourseProgress(courseId, totalLessons, barId, textId) {
+            const progress = getProgressPercent(courseId, totalLessons);
+            const completedLessons = getCompletedLessons(courseId).length;
+
+            const bar = document.getElementById(barId);
+            const text = document.getElementById(textId);
+
+            if (bar) {
+                bar.style.width = progress + "%";
+            }
+
+            if (text) {
+                if (progress === 100) {
+                    text.innerText = "Completed";
+                } else if (progress > 0) {
+                    text.innerText = progress + "% Complete";
+                } else {
+                    text.innerText = "Not Started";
+                }
+            }
+
+            return {
+                progress: progress,
+                completedLessons: completedLessons
+            };
+        }
+
+        const awareness = updateCourseProgress(
+            "awareness",
+            8,
+            "progress-awareness-bar",
+            "progress-awareness-text"
+        );
+
+        const inclusiveSport = updateCourseProgress(
+            "inclusive_sport",
+            8,
+            "progress-inclusive-sport-bar",
+            "progress-inclusive-sport-text"
+        );
+
+        const confidence = updateCourseProgress(
+            "building_confidence",
+            8,
+            "progress-confidence-bar",
+            "progress-confidence-text"
+        );
+
+        const goals = updateCourseProgress(
+            "my_goals",
+            8,
+            "progress-goals-bar",
+            "progress-goals-text"
+        );
+
+        const allCourses = [
+            awareness.progress,
+            inclusiveSport.progress,
+            confidence.progress,
+            goals.progress
+        ];
+
+        const startedCourses = allCourses.filter(progress => progress > 0).length;
+        const completedCourses = allCourses.filter(progress => progress === 100).length;
+        const averageProgress = allCourses.length > 0
+            ? Math.round(allCourses.reduce((sum, progress) => sum + progress, 0) / allCourses.length)
+            : 0;
+
+        document.getElementById("coursesStarted").innerText = startedCourses;
+        document.getElementById("coursesCompleted").innerText = completedCourses;
+        document.getElementById("averageProgress").innerText = averageProgress + "%";
     </script>
 </body>
 </html>
