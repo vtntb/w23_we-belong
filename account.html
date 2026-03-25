@@ -318,43 +318,8 @@
 
                 <div class="accountcard">
                     <h2 class="section-title">My Courses</h2>
-
-                    <div class="courses-list">
-                        <div class="course-item">
-                            <h3>Disability Awareness Training</h3>
-                            <p>Learn the basics of disability awareness and inclusive communication.</p>
-                            <div class="progress-bar">
-                                <div class="progress-fill" id="progress-awareness-bar"></div>
-                            </div>
-                            <div class="course-meta" id="progress-awareness-text">0% Complete</div>
-                        </div>
-
-                        <div class="course-item">
-                            <h3>Inclusive Sport</h3>
-                            <p>Explore how clubs, coaches, teammates and spectators can create inclusive sport environments.</p>
-                            <div class="progress-bar">
-                                <div class="progress-fill" id="progress-inclusive-sport-bar"></div>
-                            </div>
-                            <div class="course-meta" id="progress-inclusive-sport-text">0% Complete</div>
-                        </div>
-
-                        <div class="course-item">
-                            <h3>Building Confidence</h3>
-                            <p>Develop confidence to join activities, meet new people, and try new opportunities.</p>
-                            <div class="progress-bar">
-                                <div class="progress-fill" id="progress-confidence-bar"></div>
-                            </div>
-                            <div class="course-meta" id="progress-confidence-text">0% Complete</div>
-                        </div>
-
-                        <div class="course-item">
-                            <h3>My Goals</h3>
-                            <p>Track personal goals and small steps toward joining groups and activities in the community.</p>
-                            <div class="progress-bar">
-                                <div class="progress-fill" id="progress-goals-bar"></div>
-                            </div>
-                            <div class="course-meta" id="progress-goals-text">0% Complete</div>
-                        </div>
+                    <div class="courses-list" id="myCoursesList">
+                        <!-- Courses will be added here -->
                     </div>
                 </div>
 
@@ -397,7 +362,7 @@
         }
 
         document.getElementById("accountEmail").innerText = userEmail || "user@email.com";
-        document.getElementById("accountName").innerText = userFirstName ? "Hi, " + userFirstName : "Hi, Welcome";
+        document.getElementById("accountName").innerText = userFirstName ? "Hi, " + userFirstName : "Welcome";
 
         document.getElementById("logoutBtn").addEventListener("click", function () {
             localStorage.removeItem("isLoggedIn");
@@ -424,72 +389,90 @@
             return Math.round((done / totalLessons) * 100);
         }
 
-        function updateCourseProgress(courseId, totalLessons, barId, textId) {
-            const progress = getProgressPercent(courseId, totalLessons);
-            const completedLessons = getCompletedLessons(courseId).length;
-
-            const bar = document.getElementById(barId);
-            const text = document.getElementById(textId);
-
-            if (bar) {
-                bar.style.width = progress + "%";
-            }
-
-            if (text) {
-                if (progress === 100) {
-                    text.innerText = "Completed";
-                } else if (progress > 0) {
-                    text.innerText = progress + "% Complete";
-                } else {
-                    text.innerText = "Not Started";
-                }
-            }
-
-            return {
-                progress: progress,
-                completedLessons: completedLessons
-            };
-        }
-
-        const awareness = updateCourseProgress(
-            "awareness",
-            8,
-            "progress-awareness-bar",
-            "progress-awareness-text"
-        );
-
-        const inclusiveSport = updateCourseProgress(
-            "inclusive_sport",
-            8,
-            "progress-inclusive-sport-bar",
-            "progress-inclusive-sport-text"
-        );
-
-        const confidence = updateCourseProgress(
-            "building_confidence",
-            8,
-            "progress-confidence-bar",
-            "progress-confidence-text"
-        );
-
-        const goals = updateCourseProgress(
-            "my_goals",
-            8,
-            "progress-goals-bar",
-            "progress-goals-text"
-        );
-
         const allCourses = [
-            awareness.progress,
-            inclusiveSport.progress,
-            confidence.progress,
-            goals.progress
+            {
+                id: "awareness",
+                title: "Disability Awareness Training",
+                desc: "Learn the basics of disability awareness and inclusive communication.",
+                totalLessons: 8,
+                link: "/LearningHub/awarenesstraining.html"
+            },
+            {
+                id: "inclusive_sport",
+                title: "Inclusive Sport",
+                desc: "Learn how to create inclusive sport environments.",
+                totalLessons: 8,
+                link: "/LearningHub/InclusiveSport/lesson1.html"
+            },
+            {
+                id: "communication",
+                title: "Communication",
+                desc: "Learn effective communication skills, including how to express yourself clearly, listen actively, and interact confidently with others in different situations.",
+                totalLessons: 5,
+                link: "/LearningHub/communication.html"
+            },
+            {
+                id: "my_goals",
+                title: "My Goals",
+                desc: "Track your personal goals and progress.",
+                totalLessons: 8,
+                link: "/LearningHub/Goals/lesson1.html"
+            }
         ];
 
-        const startedCourses = allCourses.filter(progress => progress > 0).length;
-        const completedCourses = allCourses.filter(progress => progress === 100).length;
-        const averageProgress = allCourses.length > 0
-            ? Math.round(allCourses.reduce((sum, progress) => sum + progress, 0) / allCourses.length)
+        const container = document.getElementById("myCoursesList");
+        let enrolledCourses = 0;
+        let progressValues = [];
+
+        allCourses.forEach(course => {
+            const isEnrolled = localStorage.getItem(course.id + "_enrolled") === "true";
+
+            if (!isEnrolled) return;
+
+            enrolledCourses++;
+
+            const progress = getProgressPercent(course.id, course.totalLessons);
+            progressValues.push(progress);
+
+            const courseHTML = `
+                <div class="course-item">
+                    <h3>${course.title}</h3>
+                    <p>${course.desc}</p>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:${progress}%"></div>
+                    </div>
+
+                    <div class="course-meta">
+                        ${progress === 100 ? "Completed" : progress + "% Complete"}
+                    </div>
+
+                    <button onclick="window.location.href='${course.link}'"
+                            style="margin-top:10px; padding:10px 16px; border:none; background:#6f2c91; color:white; border-radius:8px; cursor:pointer;">
+                        Continue
+                    </button>
+                </div>
+            `;
+
+            container.innerHTML += courseHTML;
+        });
+
+        if (enrolledCourses === 0) {
+            container.innerHTML = `
+                <div class="empty-state">
+                    You have not enrolled in any courses yet.
+                    <br><br>
+                    <a href="/learnhub.html" style="color:#6f2c91; font-weight:bold;">
+                        Go to Learning Hub
+                    </a>
+                </div>
+            `;
+        }
+
+        const startedCourses = progressValues.filter(value => value > 0).length;
+        const completedCourses = progressValues.filter(value => value === 100).length;
+        const averageProgress = progressValues.length > 0
+            ? Math.round(progressValues.reduce((sum, value) => sum + value, 0) / progressValues.length)
             : 0;
 
         document.getElementById("coursesStarted").innerText = startedCourses;
