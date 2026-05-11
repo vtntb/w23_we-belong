@@ -13,108 +13,346 @@
 
     <!-- Shared script -->
     <script src="/script.js" defer></script>
+    <style>
+        /* ================= DEVELOPING RESILIENCE PAGE ================= */
+
+        .resilience-page {
+            background: #ffffff;
+            padding: 50px 0 70px;
+        }
+
+        .resilience-section {
+            width: 100%;
+            background: #ffffff;
+        }
+
+        .resilience-wrapper {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .resilience-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+            margin-bottom: 70px;
+        }
+
+        .resilience-text h2,
+        .resilience-full-text h2 {
+            font-size: 34px;
+            color: #111;
+            margin: 0 0 24px;
+            font-weight: 500;
+        }
+
+        .resilience-text p,
+        .resilience-full-text p {
+            font-size: 21px;
+            line-height: 1.7;
+            color: #111;
+            margin-bottom: 18px;
+        }
+
+        .resilience-text ol {
+            padding-left: 26px;
+            margin-top: 18px;
+        }
+
+        .resilience-text li {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        .resilience-image img {
+            width: 100%;
+            height: 560px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            border-radius: 4px;
+        }
+
+        .resilience-full-text {
+            background: #ffffff;
+            padding: 10px 0 45px;
+            margin-bottom: 40px;
+        }
+
+        .source-text {
+            font-size: 16px !important;
+            margin-top: 18px;
+        }
+
+        .section-divider {
+            width: 100%;
+            height: 3px;
+            background: #6f2c91;
+            opacity: 0.25;
+            margin: 10px 0 70px;
+            border-radius: 999px;
+        }
+
+        /* Last cards */
+        .resilience-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 36px;
+            margin-top: 20px;
+        }
+
+        .resilience-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 45px 34px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .resilience-card img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            margin-bottom: 18px;
+        }
+
+        .resilience-card h3 {
+            font-size: 32px;
+            margin: 0 0 16px;
+            color: #111;
+        }
+
+        .resilience-card p {
+            font-size: 22px;
+            line-height: 1.6;
+            color: #222;
+            margin: 0;
+        }
+
+        @media (max-width: 900px) {
+            .resilience-wrapper {
+                width: 92%;
+            }
+
+            .resilience-row,
+            .resilience-cards {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .resilience-row.reverse .resilience-image {
+                order: 2;
+            }
+
+            .resilience-row.reverse .resilience-text {
+                order: 1;
+            }
+
+            .resilience-image img {
+                height: 420px;
+            }
+
+            .resilience-text h2,
+            .resilience-full-text h2 {
+                font-size: 30px;
+            }
+
+            .resilience-text p,
+            .resilience-full-text p,
+            .resilience-text li {
+                font-size: 19px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .resilience-page {
+                padding: 35px 0 50px;
+            }
+
+            .resilience-image img {
+                height: 340px;
+            }
+
+            .resilience-card h3 {
+                font-size: 26px;
+            }
+
+            .resilience-card p {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 
 <body data-title="Developing Resilience">
 
-    <!-- Header -->
     <div id="header-placeholder"></div>
-
-    <!-- Banner -->
     <div id="banner-placeholder"></div>
 
-    <!-- ================= PAGE CONTENT ================= -->
-    <main class="about-page">
-        <section class="about-section">
-            <div class="about-wrapper">
+    <main class="resilience-page">
+        <section class="resilience-section">
+            <div class="resilience-wrapper">
 
-                <!-- Top section -->
-                <div class="about-flex">
-
-                    <!-- Left side text -->
-                    <div class="about-text">
+                <!-- ================= SECTION 1: WHAT IS RESILIENCE ================= -->
+                <div class="resilience-row">
+                    <div class="resilience-text">
                         <h2>What is Resilience?</h2>
 
-                        <!-- Simple intro -->
                         <p>
-                            Resilience means not giving up when life feels hard.
-                            It means keeping going, learning, and becoming stronger over time.
+                            Resilience means not giving up, even when things get hard.
                         </p>
 
                         <p>
-                            No one is born resilient. It is something we can build through
-                            support, practice, and positive experiences.
+                            It means having a strong mind, that helps you to keep going,
+                            even if something is difficult.
                         </p>
 
                         <p>
-                            Resilience helps people feel more confident, handle challenges,
-                            and keep moving forward.
+                            No one is born resilient; it is something we learn as we grow.
                         </p>
+
+                        <p>
+                            There are six things that can help us bounce back when life gets hard.
+                            They can help us remember the good things in life:
+                        </p>
+
+                        <ol>
+                            <li>
+                                <strong>Positive emotions:</strong> Good feelings help us to feel strong,
+                                but it is okay to feel sad too.
+                            </li>
+                            <li>
+                                <strong>Engagement:</strong> Do things that make you happy, like playing sports,
+                                drawing or cooking.
+                            </li>
+                            <li>
+                                <strong>Relationships:</strong> Spend time with friends and family; good relationships
+                                help you feel supported.
+                            </li>
+                            <li>
+                                <strong>Meaning:</strong> Do things that matter to you. This could be helping others
+                                or working towards your dream job.
+                            </li>
+                            <li>
+                                <strong>Accomplishments:</strong> Set goals and celebrate when you achieve them.
+                            </li>
+                            <li>
+                                <strong>Health:</strong> Look after your body — sleep, eat, and exercise.
+                            </li>
+                        </ol>
                     </div>
 
-                    <!-- Right side image -->
-                    <div class="about-image">
-                        <img src="../AdditionalIMG/about-we-belong.jpg" alt="People building confidence together">
+                    <div class="resilience-image">
+                        <img src="../AdditionalIMG/Group-shot.-Support-worker-and-three-participants-with-Art-683x1024.jpg"
+                            alt="Support worker and participants with artwork">
                     </div>
                 </div>
 
-                <!-- Two simple cards -->
-                <div class="about-cards">
+                <div class="section-divider"></div>
 
-                    <div class="about-card">
-                        <img src="../AdditionalIMG/visionIMG.png" class="about-img" alt="Strength">
+                <!-- ================= SECTION 2: POSITIVE EMOTIONS ================= -->
+                <div class="resilience-row reverse">
+                    <div class="resilience-image">
+                        <img src="../AdditionalIMG/Participants-sitting-with-finger-intertwined-682x1024.jpg"
+                            alt="Participant sitting with fingers intertwined">
+                    </div>
+
+                    <div class="resilience-text">
+                        <h2>Positive emotions</h2>
+
+                        <p>
+                            Positive feelings help us to think better and come up with new ideas
+                            as well as stay calm and solve problems.
+                        </p>
+
+                        <p>
+                            There is a method called the 3-to-1 rule, which means for one negative feeling,
+                            it is important to have three positive ones to stay strong.
+                        </p>
+
+                        <p>
+                            To feel more positive, you can practice gratitude — being thankful for all of
+                            the good things in your life. By focusing on the good, we can bounce back
+                            stronger from challenges.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <!-- ================= SECTION 3: PERSPECTIVES ================= -->
+                <div class="resilience-row">
+                    <div class="resilience-text">
+                        <h2>Perspectives</h2>
+
+                        <p>
+                            The way you see things is called perspective. It is shaped by what you have
+                            experienced, what you believe in, and how you understand the world.
+                        </p>
+
+                        <p>
+                            Your perspective changes depending on how we feel.
+                        </p>
+
+                        <p>
+                            For example, if you focus on the bad, you can feel more stressed.
+                            But if you see the good and learn from challenges, you become stronger.
+                            This thinking can help you grow and be more resilient.
+                        </p>
+                    </div>
+
+                    <div class="resilience-image">
+                        <img src="../AdditionalIMG/Participants-are-arm-wrestling-682x1024.jpg"
+                            alt="Participants arm wrestling">
+                    </div>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <!-- ================= SECTION 4: POSITIVE RELATIONSHIPS ================= -->
+                <div class="resilience-full-text">
+                    <h2>Positive Relationships</h2>
+
+                    <p>
+                        When people treat you with kindness and respect, you feel confident and happy.
+                    </p>
+
+                    <p>
+                        By having friends and family you trust, it gives you a safe space,
+                        making it easier to try new things and learn.
+                        Strong relationships help us feel brave and build resilience.
+                    </p>
+
+                    <p class="source-text">
+                        <em>This information has been sourced by Jodie Cooper, 2024.</em>
+                    </p>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <!-- ================= LAST CARDS: KEEP THIS ================= -->
+                <div class="resilience-cards">
+
+                    <div class="resilience-card">
+                        <img src="../AdditionalIMG/visionIMG.png" alt="Inner strength icon">
                         <h3>Inner Strength</h3>
                         <p>
                             Resilience helps you stay calm, keep trying, and believe in yourself.
                         </p>
                     </div>
 
-                    <div class="about-card">
-                        <img src="../AdditionalIMG/purposeIMG.png" class="about-img" alt="Growth">
+                    <div class="resilience-card">
+                        <img src="../AdditionalIMG/purposeIMG.png" alt="Personal growth icon">
                         <h3>Personal Growth</h3>
                         <p>
                             Every challenge can teach you something and help you grow stronger.
                         </p>
                     </div>
 
-                </div>
-
-                <!-- Main points -->
-                <div class="values-box">
-                    <h2>What Can Build Resilience?</h2>
-
-                    <div class="values-grid">
-
-                        <div class="value-card">
-                            <img src="../AdditionalIMG/SupportIMG.jpg" class="value-img" alt="Positive emotions">
-                            <h4>Positive Emotions</h4>
-                            <p>
-                                Good feelings can help you feel stronger, even when life is difficult.
-                            </p>
-                        </div>
-
-                        <div class="value-card">
-                            <img src="../AdditionalIMG/Developing Resilience.jpg" style="width: 230px;" class="value-img" alt="Relationships">
-                            <h4>Relationships</h4>
-                            <p>
-                                Friends, family, and kind people around you can help you feel supported.
-                            </p>
-                        </div>
-
-                        <div class="value-card">
-                            <img src="../AdditionalIMG/CelebrateIMG.jpg" class="value-img" alt="Achievement">
-                            <h4>Achievement</h4>
-                            <p>
-                                Small wins matter. Reaching goals can build confidence and motivation.
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Final button -->
-                <div class="about-button-box">
-                    <a href="/HowtoBelong/conbuilder.html" class="about-btn">Keep Developing Resilience</a>
                 </div>
 
             </div>

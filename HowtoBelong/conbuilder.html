@@ -14,79 +14,109 @@
     <!-- Shared script -->
     <script src="/script.js" defer></script>
     <style>
-        /* ================= BUILDING CONFIDENCE PAGE ================= */
-
         .confidence-page {
-            background: #f7f7f7;
+            background: #ffffff;
             padding: 50px 0 70px;
         }
 
         .confidence-section {
             width: 100%;
+            background: #ffffff;
         }
 
         .confidence-wrapper {
             width: 90%;
-            max-width: 1200px;
+            max-width: 1500px;
             margin: 0 auto;
         }
 
+        /* Top section */
         .confidence-flex {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
             align-items: center;
-            justify-content: space-between;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-
-        .confidence-text {
-            flex: 1;
-            min-width: 300px;
+            margin-bottom: 60px;
         }
 
         .confidence-text p {
             font-size: 20px;
-            line-height: 1.9;
-            color: #222;
-            margin-bottom: 28px;
+            line-height: 1.7;
+            color: #1f1f1f;
+            margin-bottom: 22px;
         }
 
         .confidence-image {
-            flex: 1;
-            min-width: 300px;
             text-align: center;
         }
 
-        .confidence-note {
-            margin-top: 40px;
-            text-align: center;
-            background: #ffffff;
-            padding: 28px 24px;
-            border-radius: 20px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-        }
-
-        .confidence-note h3 {
-            font-size: 30px;
-            color: #6f2c91;
-            margin-bottom: 12px;
-        }
-
-        .confidence-note p {
-            font-size: 17px;
-            color: #444;
-            line-height: 1.8;
-            max-width: 760px;
+        .confidence-zone-img {
+            width: 100%;
+            max-width: 520px;
+            height: auto;
+            display: block;
             margin: 0 auto;
         }
 
+        /* Second section */
+        .confidence-build-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+            background: #f5f5f5;
+        }
+
+        .confidence-build-image img {
+            width: 100%;
+            height: 560px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .confidence-build-text p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #1f1f1f;
+            margin-bottom: 18px;
+        }
+
+        .confidence-build-text ol {
+            margin: 0;
+            padding-left: 28px;
+        }
+
+        .confidence-build-text li {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #1f1f1f;
+            margin-bottom: 12px;
+        }
+
+        .confidence-build-text strong {
+            font-weight: 700;
+        }
+
+        /* Mobile responsive */
         @media (max-width: 900px) {
-            .confidence-flex {
-                flex-direction: column;
-                align-items: center;
+            .confidence-wrapper {
+                width: 92%;
             }
 
-            .confidence-text p {
+            .confidence-flex,
+            .confidence-build-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .confidence-build-image img {
+                height: 420px;
+            }
+
+            .confidence-text p,
+            .confidence-build-text p,
+            .confidence-build-text li {
                 font-size: 18px;
             }
         }
@@ -96,17 +126,14 @@
                 padding: 35px 0 50px;
             }
 
-            .confidence-text p {
+            .confidence-build-image img {
+                height: 320px;
+            }
+
+            .confidence-text p,
+            .confidence-build-text p,
+            .confidence-build-text li {
                 font-size: 16px;
-                margin-bottom: 20px;
-            }
-
-            .confidence-note h3 {
-                font-size: 24px;
-            }
-
-            .confidence-note p {
-                font-size: 15px;
             }
         }
     </style>
@@ -125,43 +152,71 @@
         <section class="confidence-section">
             <div class="confidence-wrapper">
 
-                <!-- Main content: text on left, image on right -->
-                <div class="confidence-flex">
+                <!-- ================= TOP SECTION ================= -->
+                <div class="confidence-flex confidence-top">
 
                     <!-- Left text -->
                     <div class="confidence-text">
-                        <p>
-                            Confidence is all about believing in yourself and trusting that you can do what you want to do.
-                        </p>
-
-                        <p>
-                            Confidence is a skill that we develop over time and with practice.
-                        </p>
-
-                        <p>
-                            To grow our confidence, we must step outside of our comfort zones.
-                        </p>
-
-                        <p>
-                            Even small steps can help us become stronger, more confident, and more ready to try new things.
-                        </p>
+                        <p>Confidence is all about believing in yourself and trusting that you can do what you want to do.</p>
+                        <p>Confidence is a skill that we develop over time and with practice.</p>
+                        <p>To grow our confidence, we must step outside of our comfort zones.</p>
                     </div>
 
                     <!-- Right image -->
                     <div class="confidence-image">
-                        <img src="../AdditionalIMG/how_to_build_confidence.webp"
-                             alt="Comfort zone, discomfort zone and breakout zone"
-                             style="width: 100%; height: 320px; display: block; margin: 0 auto; border-radius: 100px;">
+                        <img src="../AdditionalIMG/emotionzone.webp"
+                            alt="Comfort zone, discomfort zone and freakout zone diagram"
+                            class="confidence-zone-img">
                     </div>
 
                 </div>
 
-                <!-- Bottom message -->
-                <div class="confidence-note">
-                    <h3>Remember</h3>
-                    <p>
-                        Building confidence does not happen all at once. It grows when we keep trying, learning, and giving ourselves a chance.
-                    </p>
+                <!-- ================= SECOND SECTION ================= -->
+                <div class="confidence-build-section">
+
+                    <!-- Left image -->
+                    <div class="confidence-build-image">
+                        <img src="../AdditionalIMG/Close-up-of-participant-interviewing-819x1024.jpg"
+                            alt="Participant being interviewed">
+                    </div>
+
+                    <!-- Right text -->
+                    <div class="confidence-build-text">
+                        <p>
+                            To build our confidence, we can:
+                        </p>
+
+                        <ol>
+                            <li>
+                                <strong>Positive Mindset:</strong> allows us to grow and improve how we think about ourselves and the world around us.
+                            </li>
+
+                            <li>
+                                <strong>Positive Self Talk:</strong> positively speak about yourself to boost confidence, motivation and resilience.
+                            </li>
+
+                            <li>
+                                <strong>Reflect on your progress.</strong>
+                            </li>
+
+                            <li>
+                                <strong>Practice self-compassion:</strong> treat yourself with kindness.
+                            </li>
+
+                            <li>
+                                <strong>Positive relationships:</strong> Good relationships help us feel happy, safe and supported.
+                            </li>
+
+                            <li>
+                                <strong>Embrace challenges.</strong>
+                            </li>
+
+                            <li>
+                                <strong>Recognise your achievement.</strong>
+                            </li>
+                        </ol>
+                    </div>
+
                 </div>
 
             </div>
