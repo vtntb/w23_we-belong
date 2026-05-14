@@ -1,107 +1,204 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>We Belong Project - Disability Support, Employment & Inclusion</title>
+    <title>Communication Boards - We Belong</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css" type="text/css">
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="/script.js" defer></script>
-</head>
-<body data-title="Communication Boards">
-  
-    <div id="header-placeholder"></div>
-    <div id="banner-placeholder"></div>  
+
     <style>
-    /* SECTION */
         .cb-section-unique {
-        background-color: #ffffff;
-        padding: 60px 0;
+            background-color: #f5f5f5;
+            padding: 60px 0 70px;
         }
 
-        /* CONTAINER */
         .cb-container-unique {
-        width: 80%;
-        max-width: 1100px;
-        margin: 0 auto;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        /* TEXT */
+        .cb-content-box {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 42px 38px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            margin-bottom: 45px;
+        }
+
         .cb-text-unique {
-        font-size: 18px;
-        line-height: 1.6;
-        margin-bottom: 18px;
-        color: #444;
+            font-size: 21px;
+            line-height: 1.7;
+            margin: 0 0 22px;
+            color: #222;
+            font-weight: 500;
         }
 
-        /* DOWNLOAD TEXT */
         .cb-text-download-unique {
-        font-size: 16px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        color: #444;
-        font-style: italic;
+            font-size: 21px;
+            line-height: 1.7;
+            margin: 0;
+            color: #6f2c91;
+            font-weight: 600;
         }
 
-        /* IMAGE WRAPPER */
         .cb-boards-wrapper-unique {
-        margin-top: 50px;
-        display: flex;
-        justify-content: center;
-        gap: 60px;
-        }
-
-        /* IMAGES */
-        .cb-img-unique {
-        width: 620px;
-        height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            align-items: stretch;
         }
 
         .cb-board-item-unique {
-        background-color: #f5f5f5; 
-        padding: 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+            background-color: #ffffff;
+            border-radius: 22px;
+            padding: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
-        .cb-board-item-unique img {
-        width: 550px;
-        height: auto;
+        .cb-board-item-unique:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.10);
+        }
+
+        .cb-board-item-unique a {
+            display: block;
+            width: 100%;
+        }
+
+        .cb-img-unique {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .social-story-bottom {
+            background: #f5f5f5;
+            padding: 45px 0 55px;
+            text-align: center;
+        }
+
+        .social-story-bottom a {
+            display: inline-block;
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 14px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: 0.25s ease;
+        }
+
+        .social-story-bottom a:hover {
+            background: #572176;
+        }
+
+        @media (max-width: 900px) {
+            .cb-boards-wrapper-unique {
+                grid-template-columns: 1fr;
+            }
+
+            .cb-text-unique,
+            .cb-text-download-unique {
+                font-size: 19px;
+            }
+
+            .social-story-bottom a {
+                font-size: 16px;
+                padding: 12px 24px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .cb-section-unique {
+                padding: 40px 0 55px;
+            }
+
+            .cb-container-unique {
+                width: 92%;
+            }
+
+            .cb-content-box {
+                padding: 30px 22px;
+            }
+
+            .cb-board-item-unique {
+                padding: 18px;
+            }
+
+            .cb-text-unique,
+            .cb-text-download-unique {
+                font-size: 18px;
+            }
         }
     </style>
-        <section class="cb-section-unique">
-            <div class="cb-container-unique">
+</head>
 
+<body data-title="Communication Boards">
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <section class="cb-section-unique">
+        <div class="cb-container-unique">
+
+            <div class="cb-content-box">
                 <p class="cb-text-unique">
-                Communication Boards use pictures, symbols, words, or letters to help
-                people share their needs, wants and ideas by pointing or gesturing.
+                    Communication Boards use pictures, symbols, words, or letters to help
+                    people share their needs, wants and ideas by pointing or gesturing.
                 </p>
 
                 <p class="cb-text-unique">
-                A Communication Board supports people with limited or no speech, helping
-                them to communicate independently.
+                    A Communication Board supports people with limited or no speech, helping
+                    them to communicate independently.
                 </p>
 
                 <p class="cb-text-download-unique">
-                Download our Communication Board to support inclusive communication everywhere!
+                    Download our Communication Board to support inclusive communication everywhere!
                 </p>
+            </div>
 
-                <div class="cb-boards-wrapper-unique">
-                    <div class="cb-board-item-unique"><a href="https://webelong.org.au/storage/sites/5/2026/01/Community-Group-Communication-Board-FRONT.jpg" target="_blank"><img src="../AdditionalIMG/comboard1.jpg" alt="board1" class="cb-img-unique" />
-                    </a></div>
-                    <div class="cb-board-item-unique"><a href="https://webelong.org.au/storage/sites/5/2026/01/Community-Group-Communication-Board-FRONT.jpg" target="_blank"><img src="../AdditionalIMG/comboard2.png" alt="board2" class="cb-img-unique" />
-                    </a></div>
+            <div class="cb-boards-wrapper-unique">
+
+                <div class="cb-board-item-unique">
+                    <a href="https://webelong.org.au/storage/sites/5/2026/01/Community-Group-Communication-Board-FRONT.jpg" target="_blank">
+                        <img src="../AdditionalIMG/comboard1.jpg" alt="Communication board front" class="cb-img-unique">
+                    </a>
+                </div>
+
+                <div class="cb-board-item-unique">
+                    <a href="https://webelong.org.au/storage/sites/5/2026/01/Community-Group-Communication-Board-FRONT.jpg" target="_blank">
+                        <img src="../AdditionalIMG/comboard2.png" alt="Communication board back" class="cb-img-unique">
+                    </a>
                 </div>
 
             </div>
-        </section>
+
+        </div>
+    </section>
+
+    <div class="social-story-bottom">
+        <a href="/story.html">Back to Stories & Resources</a>
+    </div>
+
     <div id="accessibility-container"></div>
     <script src="/accessibility.js" defer></script>
 
     <div id="chatbot-container"></div>
     <script src="/chatbot.js" defer></script>
+
     <div id="footer-placeholder"></div>
+
 </body>
 </html>

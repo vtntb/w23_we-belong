@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>We Belong Project - Disability Support, Employment & Inclusion</title>
+    <title>Stories - We Belong</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css" type="text/css">
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="/script.js" defer></script>
-</head>
-<body data-title="Stories">
-  
-    <div id="header-placeholder"></div>
-    <div id="banner-placeholder"></div>  
+
     <style>
         .wb-story-page1 {
             font-family: Arial, Helvetica, sans-serif;
             background-color: #ffffff;
             color: #333;
+            padding: 45px 0;
         }
 
         .wb-story-page2 {
             font-family: Arial, Helvetica, sans-serif;
             background-color: #f5f5f5;
             color: #333;
+            padding: 45px 0;
         }
 
         .wb-story-container {
             max-width: 1200px;
-            margin: 20px auto;
+            margin: 0 auto;
             padding: 0 20px;
         }
 
@@ -76,6 +76,28 @@
             grid-column: span 2;
         }
 
+        .social-story-bottom {
+            background: #f5f5f5;
+            padding: 45px 0 55px;
+            text-align: center;
+        }
+
+        .social-story-bottom a {
+            display: inline-block;
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 14px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: 0.25s ease;
+        }
+
+        .social-story-bottom a:hover {
+            background: #572176;
+        }
+
         @media (max-width: 900px) {
             .wb-story-layout {
                 grid-template-columns: 1fr;
@@ -96,171 +118,187 @@
             .wb-story-text p {
                 font-size: 17px;
             }
+
+            .social-story-bottom a {
+                font-size: 16px;
+                padding: 12px 24px;
+            }
         }
     </style>
-        <div class="wb-story-page1">
-            <div class="wb-story-container">
-                <div class="wb-story-layout">
-                    
-                    <!-- LEFT -->
-                    <div class="wb-story-text">
-                        <div class="wb-story-title">
-                            Emily’s Story: Growing with the We Belong Program
-                        </div>
+</head>
 
-                        <p>
-                            Emily joined the We Belong Program to grow her skills and build confidence within the community. Emily loved her experience, joining iBOX Workshop, where she discovered the benefits of fitness and the joy of exercising with others.
-                        </p>
+<body data-title="Stories">
 
-                        <p>
-                            The Flagstaff team continued to support Emily’s journey, helping her enrol in a Certificate II in Applied Digital Technologies TAFE course. Whilst studying, Emily was keen to expand her communication skills and explore new ways to connect with others, so she participated in the Art of Conversation Workshop. Her enthusiasm for community involvement only grew. Emily later joined the Street Beatz Hip Hop Dancing Workshop, where she improved her coordination and learnt some new dance moves!
-                        </p>
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
 
-                        <p>
-                            By the end of the year, Emily’s growth was clear to everyone around her. With her new skills and self-assurance, she was chosen as an ambassador to speak at the Vincentia Inclusion Awareness Event. There, she shared her insights as a person with lived experience, inspiring local organisations and showing just how much the We Belong program had helped her become an active, engaged member of her community.
-                        </p>
+    <div class="wb-story-page1">
+        <div class="wb-story-container">
+            <div class="wb-story-layout">
 
-                        <p>
-                            Emily was keen to meet new people and discover new things. Thanks to We Belong, Emily exceeded her goal: she gained a newfound confidence, whilst improving her motor skills and skill set.
-                        </p>
+                <div class="wb-story-text">
+                    <div class="wb-story-title">
+                        Emily’s Story: Growing with the We Belong Program
                     </div>
 
-                    <!-- RIGHT -->
-                    <div class="wb-story-images">
-                        <img src="../AdditionalIMG/str1.jpg" alt="" class="wb-story-img">
-                        <img src="../AdditionalIMG/storiesnresources.jpg" alt="" class="wb-story-img">
-                        <img src="../AdditionalIMG/str2.jpg" alt="" class="wb-story-img wb-story-img--large">
-                    </div>
+                    <p>
+                        Emily joined the We Belong Program to grow her skills and build confidence within the community. Emily loved her experience, joining iBOX Workshop, where she discovered the benefits of fitness and the joy of exercising with others.
+                    </p>
 
+                    <p>
+                        The Flagstaff team continued to support Emily’s journey, helping her enrol in a Certificate II in Applied Digital Technologies TAFE course. Whilst studying, Emily was keen to expand her communication skills and explore new ways to connect with others, so she participated in the Art of Conversation Workshop. Her enthusiasm for community involvement only grew. Emily later joined the Street Beatz Hip Hop Dancing Workshop, where she improved her coordination and learnt some new dance moves!
+                    </p>
+
+                    <p>
+                        By the end of the year, Emily’s growth was clear to everyone around her. With her new skills and self-assurance, she was chosen as an ambassador to speak at the Vincentia Inclusion Awareness Event. There, she shared her insights as a person with lived experience, inspiring local organisations and showing just how much the We Belong program had helped her become an active, engaged member of her community.
+                    </p>
+
+                    <p>
+                        Emily was keen to meet new people and discover new things. Thanks to We Belong, Emily exceeded her goal: she gained a newfound confidence, whilst improving her motor skills and skill set.
+                    </p>
                 </div>
+
+                <div class="wb-story-images">
+                    <img src="../AdditionalIMG/str1.jpg" alt="Emily participating in the We Belong Program" class="wb-story-img">
+                    <img src="../AdditionalIMG/storiesnresources.jpg" alt="Stories and resources" class="wb-story-img">
+                    <img src="../AdditionalIMG/str2.jpg" alt="Emily joining a community activity" class="wb-story-img wb-story-img--large">
+                </div>
+
             </div>
         </div>
+    </div>
 
-        <div class="wb-story-page2">
-            <div class="wb-story-container">
-                <div class="wb-story-layout">
-                    
-                    <!-- LEFT -->
-                    <div class="wb-story-text">
-                        <div class="wb-story-title">
-                            Rachel’s Story: Taking Centre Stage
-                        </div>
+    <div class="wb-story-page2">
+        <div class="wb-story-container">
+            <div class="wb-story-layout">
 
-                        <p>
-                            Rachel loves acting! Before We Belong launched, Rachel was an active member of her community drama group, but she felt a need to grow her confidence in public speaking.                        </p>
-
-                        <p>
-                            Under We Belong, Rachel joined the Art of Conversation Workshop to develop her public speaking skills. After four weeks, Rachel felt even more confident, especially in acting on stage in front of a large audience or taking on bigger roles in her drama group.                        </p>
-
-                        <p>
-                            Congratulations Rachel on achieving your goal with We Belong!
-
-                        </p>
-
+                <div class="wb-story-text">
+                    <div class="wb-story-title">
+                        Rachel’s Story: Taking Centre Stage
                     </div>
 
-                    <!-- RIGHT -->
-                    <div class="wb-story-images">
-                        <img src="../AdditionalIMG/str3.jpg" alt="" class="wb-story-img">
+                    <p>
+                        Rachel loves acting! Before We Belong launched, Rachel was an active member of her community drama group, but she felt a need to grow her confidence in public speaking.
+                    </p>
 
+                    <p>
+                        Under We Belong, Rachel joined the Art of Conversation Workshop to develop her public speaking skills. After four weeks, Rachel felt even more confident, especially in acting on stage in front of a large audience or taking on bigger roles in her drama group.
+                    </p>
+
+                    <p>
+                        Congratulations Rachel on achieving your goal with We Belong!
+                    </p>
                 </div>
+
+                <div class="wb-story-images">
+                    <img src="../AdditionalIMG/str3.jpg" alt="Rachel taking part in a community activity" class="wb-story-img wb-story-img--large">
+                </div>
+
             </div>
         </div>
+    </div>
 
-        <div class="wb-story-page1">
-            <div class="wb-story-container">
-                <div class="wb-story-layout">
-                    
-                    <!-- LEFT -->
-                    <div class="wb-story-text">
-                        <div class="wb-story-title">
-                            Scott’s Story:
-                        </div>
+    <div class="wb-story-page1">
+        <div class="wb-story-container">
+            <div class="wb-story-layout">
 
-                        <p>
-                            Scott joined We Belong to go outside of his comfort zone and found himself participating in the Street Beatz Hip Hop Workshop. Each week, Scott was excited to dance with his friends and others out in the community. His confidence increased, so much so he even broke out into his own moves!                        </p>
-
-                        <p>
-                            Congratulations Scott! We are proud of you for gaining a newfound confidence.
-
-                        </p>
-
+                <div class="wb-story-text">
+                    <div class="wb-story-title">
+                        Scott’s Story
                     </div>
 
-                    <!-- RIGHT -->
-                    <div class="wb-story-images">
-                        <img src="../AdditionalIMG/str4.jpg" alt="" class="wb-story-img">
-                        <img src="../AdditionalIMG/str5.jpg" alt="" class="wb-story-img">
-                    </div>
+                    <p>
+                        Scott joined We Belong to go outside of his comfort zone and found himself participating in the Street Beatz Hip Hop Workshop. Each week, Scott was excited to dance with his friends and others out in the community. His confidence increased, so much so he even broke out into his own moves!
+                    </p>
 
+                    <p>
+                        Congratulations Scott! We are proud of you for gaining a newfound confidence.
+                    </p>
                 </div>
+
+                <div class="wb-story-images">
+                    <img src="../AdditionalIMG/str4.jpg" alt="Scott joining a workshop" class="wb-story-img">
+                    <img src="../AdditionalIMG/str5.jpg" alt="Scott taking part in a dance activity" class="wb-story-img">
+                </div>
+
             </div>
         </div>
+    </div>
 
-        <div class="wb-story-page2">
-            <div class="wb-story-container">
-                <div class="wb-story-layout">
-                    
-                    <!-- LEFT -->
-                    <div class="wb-story-text">
-                        <div class="wb-story-title">
-                            Shawn’s Journey: Courage, Confidence and Community.
-                        </div>
+    <div class="wb-story-page2">
+        <div class="wb-story-container">
+            <div class="wb-story-layout">
 
-                        <p>
-                            Shawn continued growing by joining Flagstaff’s Resilience Crusaders program and the Co-Design Reference Group, ensuring people with disability have a voice in shaping programs and supports. He then took part in the We Belong Speechcraft Workshop, where he developed communication skills and found a strong sense of belonging in sharing stories.
-                        <p>
-                            As Shawn progressed, he decided to improve his reading and writing skills – We Belong found a local solution, Wollongong Library’s Read and Write for Life Program which offers one-on-one tailored tutoring. The weekly sessions have transformed Shawn’s confidence and ability to engage with others.                        </p>
-                        <p>
-                            Shawn’s journey reflects the We Belong program’s commitment to breaking down barriers, fostering inclusion and empowering people with disability to share their voices. Through storytelling, workshops, co-designed resources and tailored support, We Belong creates safe pathways for people to connect, grow and participate fully in community life, building a more inclusive future, one story at a time.                        </p>
-
+                <div class="wb-story-text">
+                    <div class="wb-story-title">
+                        Shawn’s Journey: Courage, Confidence and Community
                     </div>
 
-                    <!-- RIGHT -->
-                    <div class="wb-story-images">
-                        <img src="../AdditionalIMG/str6.jpg" alt="" class="wb-story-img">
-                        <img src="../AdditionalIMG/str7.jpg" alt="" class="wb-story-img">
-                        <img src="../AdditionalIMG/str8.jpg" alt="" class="wb-story-img wb-story-img--large">
-                    </div>
+                    <p>
+                        Shawn continued growing by joining Flagstaff’s Resilience Crusaders program and the Co-Design Reference Group, ensuring people with disability have a voice in shaping programs and supports. He then took part in the We Belong Speechcraft Workshop, where he developed communication skills and found a strong sense of belonging in sharing stories.
+                    </p>
 
+                    <p>
+                        As Shawn progressed, he decided to improve his reading and writing skills – We Belong found a local solution, Wollongong Library’s Read and Write for Life Program which offers one-on-one tailored tutoring. The weekly sessions have transformed Shawn’s confidence and ability to engage with others.
+                    </p>
+
+                    <p>
+                        Shawn’s journey reflects the We Belong program’s commitment to breaking down barriers, fostering inclusion and empowering people with disability to share their voices. Through storytelling, workshops, co-designed resources and tailored support, We Belong creates safe pathways for people to connect, grow and participate fully in community life, building a more inclusive future, one story at a time.
+                    </p>
                 </div>
+
+                <div class="wb-story-images">
+                    <img src="../AdditionalIMG/str6.jpg" alt="Shawn taking part in a We Belong activity" class="wb-story-img">
+                    <img src="../AdditionalIMG/str7.jpg" alt="Shawn building confidence through community participation" class="wb-story-img">
+                    <img src="../AdditionalIMG/str8.jpg" alt="Shawn sharing his journey" class="wb-story-img wb-story-img--large">
+                </div>
+
             </div>
         </div>
+    </div>
 
-        <div class="wb-story-page1">
-            <div class="wb-story-container">
-                <div class="wb-story-layout">
-                    
-                    <!-- LEFT -->
-                    <div class="wb-story-text">
-                        <div class="wb-story-title">
-                            Tel’s Story: Dancing with Passion
-                        </div>
+    <div class="wb-story-page1">
+        <div class="wb-story-container">
+            <div class="wb-story-layout">
 
-                        <p>
-                            Tel enjoys interacting with others and loves to box and dance! When We Belong launched the iBOX Workshop and Street Beatz Hip Hop Dancing Workshop, Tel was the first person to join.                        </p>
-
-                        <p>
-                            Tel enjoyed making new friends and learning new skills in both workshops. Tel even signed up for extra dance lessons with the Dance Studio every week, connecting him to a new group in the community, doing something he is passionate about.                        </p>
-
-                        <p>
-                            Well done, Tel! Through We Belong, Tel has found new friendships, learnt new skills and connected with new parts of the community.                        </p>
+                <div class="wb-story-text">
+                    <div class="wb-story-title">
+                        Tel’s Story: Dancing with Passion
                     </div>
 
-                    <!-- RIGHT -->
-                    <div class="wb-story-images">
-                        <img src="../AdditionalIMG/str9.jpg" alt="" class="wb-story-img">
-                        <img src="../AdditionalIMG/str10.jpg" alt="" class="wb-story-img">
-                    </div>
+                    <p>
+                        Tel enjoys interacting with others and loves to box and dance! When We Belong launched the iBOX Workshop and Street Beatz Hip Hop Dancing Workshop, Tel was the first person to join.
+                    </p>
 
+                    <p>
+                        Tel enjoyed making new friends and learning new skills in both workshops. Tel even signed up for extra dance lessons with the Dance Studio every week, connecting him to a new group in the community, doing something he is passionate about.
+                    </p>
+
+                    <p>
+                        Well done, Tel! Through We Belong, Tel has found new friendships, learnt new skills and connected with new parts of the community.
+                    </p>
                 </div>
+
+                <div class="wb-story-images">
+                    <img src="../AdditionalIMG/str9.jpg" alt="Tel joining a We Belong activity" class="wb-story-img">
+                    <img src="../AdditionalIMG/str10.jpg" alt="Tel dancing and connecting with others" class="wb-story-img">
+                </div>
+
             </div>
         </div>
+    </div>
+
+    <div class="social-story-bottom">
+        <a href="/story.html">Back to Stories & Resources</a>
+    </div>
+
     <div id="accessibility-container"></div>
     <script src="/accessibility.js" defer></script>
 
     <div id="chatbot-container"></div>
     <script src="/chatbot.js" defer></script>
+
     <div id="footer-placeholder"></div>
+
 </body>
 </html>
