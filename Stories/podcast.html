@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Podcast - We Belong</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" type="text/css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/script.js" defer></script>
+
+    <style>
+        .podcast-page {
+            background-color: #ffffff;
+            padding: 60px 0 70px;
+        }
+
+        .podcast-wrapper {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.35fr 0.65fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .podcast-text p {
+            font-size: 21px;
+            line-height: 1.7;
+            color: #111;
+            font-weight: 500;
+            margin: 0 0 22px;
+        }
+
+        .podcast-links {
+            list-style: none;
+            padding: 0;
+            margin: 75px 0 0;
+        }
+
+        .podcast-links li {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+            font-size: 21px;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        .podcast-links li::before {
+            content: "";
+            width: 14px;
+            height: 14px;
+            background: #6f2c91;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .podcast-links a {
+            color: #6f2c91;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .podcast-links a:hover {
+            color: #111;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .podcast-image img {
+            width: 100%;
+            height: 620px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .social-story-bottom {
+            margin-top: 45px;
+            text-align: center;
+        }
+
+        .social-story-bottom a {
+            display: inline-block;
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 14px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: 0.25s ease;
+        }
+
+        .social-story-bottom a:hover {
+            background: #572176;
+        }
+
+        @media (max-width: 992px) {
+            .podcast-wrapper {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .podcast-text p,
+            .podcast-links li {
+                font-size: 19px;
+            }
+
+            .podcast-links {
+                margin-top: 35px;
+            }
+
+            .podcast-image img {
+                height: 420px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .podcast-page {
+                padding: 40px 0 55px;
+            }
+
+            .podcast-wrapper {
+                width: 92%;
+            }
+
+            .podcast-text p,
+            .podcast-links li {
+                font-size: 18px;
+            }
+
+            .podcast-image img {
+                height: 320px;
+            }
+
+            .social-story-bottom a {
+                font-size: 16px;
+                padding: 12px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body data-title="Podcast">
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <main class="podcast-page">
+        <section class="podcast-wrapper">
+
+            <div class="podcast-text">
+                <p>
+                    Podcasts let us explore different topics and learn from listing.
+                </p>
+
+                <p>
+                    Meet our host Chris from Flagstaff’s We Belong community who explores the life stories
+                    of people with disability, their interactions, barriers, or challenges they have faced
+                    in joining groups or activities.
+                </p>
+
+                <ul class="podcast-links">
+                    <li>
+                        <a href="chatNicolas.html">A chat with Nicolas</a>
+                    </li>
+
+                    <li>
+                        <a href="chatEmily.html">A chat with Emily</a>
+                    </li>
+
+                    <li>
+                        <a href="chatBeatrice.html">A chat with Beatrice</a>
+                    </li>
+
+                    <li>
+                        <a href="chatLaurinda.html">A chat with Laurinda</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="podcast-image">
+                <img src="../AdditionalIMG/Chris-Profile-600x750.jpg" alt="Host Chris from Flagstaff's We Belong community">
+            </div>
+
+        </section>
+
+        <div class="social-story-bottom">
+            <a href="/story.html">Back to Stories & Resources</a>
+        </div>
+    </main>
+
+    <div id="accessibility-container"></div>
+    <script src="/accessibility.js" defer></script>
+
+    <div id="chatbot-container"></div>
+    <script src="/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>

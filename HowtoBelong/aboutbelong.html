@@ -6,15 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css" type="text/css">
 
-    <!-- jQuery and shared script -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="/script.js" defer></script>
 
     <style>
-        /* ================= ABOUT WE BELONG PAGE ================= */
-
         .belong-page {
             background: #f7f7f7;
             padding-bottom: 60px;
@@ -33,7 +30,7 @@
         .belong-hero-grid {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
-            gap: 36px;
+            gap: 50px;
             align-items: center;
         }
 
@@ -41,29 +38,48 @@
             display: inline-block;
             background: #efe7f8;
             color: #6f2c91;
-            padding: 8px 14px;
+            padding: 10px 18px;
             border-radius: 999px;
-            font-size: 14px;
+            font-size: 18px;
             font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .belong-hero-text h2 {
-            font-size: 40px;
-            color: #6f2c91;
             margin-bottom: 18px;
         }
 
+        .belong-hero-text h2,
+        .belong-section-title h3,
+        .belong-info-text h3,
+        .belong-help-left h3,
+        .belong-message-card h3 {
+            font-size: 34px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        .belong-hero-text h2 {
+            color: #6f2c91;
+            margin: 0 0 20px;
+        }
+
+        .belong-hero-text p,
+        .belong-section-title p,
+        .belong-feature-card p,
+        .belong-purple-list li,
+        .belong-number-list li,
+        .belong-list li,
+        .belong-message-card p {
+            font-size: 21px;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+
         .belong-hero-text p {
-            font-size: 18px;
-            line-height: 1.8;
             color: #333;
-            margin-bottom: 14px;
+            margin-bottom: 16px;
         }
 
         .belong-hero-image img {
             width: 100%;
-            height: 360px;
+            height: 430px;
             object-fit: cover;
             border-radius: 24px;
             display: block;
@@ -71,118 +87,184 @@
         }
 
         .belong-overview {
-            padding: 20px 0 30px;
+            padding: 30px 0 40px;
         }
 
         .belong-section-title {
             text-align: center;
-            max-width: 760px;
-            margin: 0 auto 36px;
+            max-width: 860px;
+            margin: 0 auto 40px;
         }
 
         .belong-section-title h3 {
-            font-size: 32px;
             color: #6f2c91;
-            margin-bottom: 12px;
+            margin: 0 0 16px;
         }
 
         .belong-section-title p {
-            font-size: 17px;
-            line-height: 1.7;
             color: #444;
+            margin: 0;
         }
 
         .belong-feature-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
+            justify-content: center;
+            align-items: stretch;
         }
 
         .belong-feature-card {
             background: #ffffff;
             border-radius: 22px;
-            padding: 30px 24px;
+            padding: 40px 32px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-            text-align: left;
+            min-height: 210px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
 
         .belong-feature-card h4 {
-            font-size: 22px;
+            font-size: 32px;
+            font-weight: 500;
             color: #6f2c91;
-            margin-bottom: 14px;
+            margin: 0 0 16px;
+            line-height: 1.3;
+            text-align: center;
         }
 
         .belong-feature-card p {
-            font-size: 16px;
-            line-height: 1.7;
+            font-size: 22px;
+            line-height: 1.6;
             color: #444;
+            margin: 0;
+            text-align: center;
+        }
+
+        .belong-info-section {
+            background: #f7f7f7;
+            padding: 55px 0;
+        }
+
+        .belong-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .belong-info-text h3 {
+            color: #111;
+            margin: 0 0 26px;
+        }
+
+        .belong-purple-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .belong-purple-list li {
+            position: relative;
+            padding-left: 36px;
+            margin-bottom: 16px;
+            color: #111;
+        }
+
+        .belong-purple-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 14px;
+            height: 14px;
+            background: #6f2c91;
+            border-radius: 50%;
+        }
+
+        .belong-number-list {
+            margin: 0;
+            padding-left: 32px;
+        }
+
+        .belong-number-list li {
+            color: #111;
+            margin-bottom: 14px;
+        }
+
+        .belong-info-image img {
+            width: 100%;
+            height: 430px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
         }
 
         .belong-help {
-            padding: 30px 0;
+            padding: 35px 0;
         }
 
         .belong-help-box {
             background: linear-gradient(135deg, #6f2c91, #8d49b3);
             color: white;
             border-radius: 28px;
-            padding: 36px;
+            padding: 42px;
             display: grid;
             grid-template-columns: 0.8fr 1.2fr;
-            gap: 30px;
+            gap: 40px;
             align-items: center;
         }
 
         .belong-help-left h3 {
-            font-size: 32px;
             margin: 0;
+            color: white;
         }
 
         .belong-list {
             margin: 0;
-            padding-left: 20px;
+            padding-left: 28px;
         }
 
         .belong-list li {
             margin-bottom: 14px;
-            font-size: 17px;
-            line-height: 1.7;
+            color: white;
         }
 
         .belong-message {
-            padding: 36px 0 10px;
+            padding: 40px 0 10px;
         }
 
         .belong-message-card {
             background: #ffffff;
             border-radius: 28px;
-            padding: 40px 32px;
+            padding: 45px 36px;
             text-align: center;
             box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
-            max-width: 900px;
             margin: 0 auto;
         }
 
         .belong-message-card h3 {
-            font-size: 32px;
             color: #6f2c91;
-            margin-bottom: 16px;
+            margin: 0 0 18px;
         }
 
         .belong-message-card p {
-            font-size: 17px;
-            line-height: 1.8;
             color: #444;
-            margin-bottom: 24px;
+            margin: 0 0 28px;
         }
 
         .belong-btn {
             display: inline-block;
             background: #6f2c91;
             color: white;
-            padding: 14px 28px;
+            padding: 16px 32px;
             border-radius: 999px;
             text-decoration: none;
+            font-size: 20px;
             font-weight: 600;
             transition: 0.3s ease;
         }
@@ -193,20 +275,48 @@
 
         @media (max-width: 992px) {
             .belong-hero-grid,
-            .belong-help-box,
-            .belong-feature-grid {
+            .belong-feature-grid,
+            .belong-info-grid,
+            .belong-help-box {
                 grid-template-columns: 1fr;
+            }
+
+            .belong-info-grid.reverse .belong-info-image {
+                order: 2;
+            }
+
+            .belong-info-grid.reverse .belong-info-text {
+                order: 1;
             }
 
             .belong-hero-text h2,
             .belong-section-title h3,
+            .belong-info-text h3,
             .belong-help-left h3,
             .belong-message-card h3 {
+                font-size: 30px;
+            }
+
+            .belong-hero-text p,
+            .belong-section-title p,
+            .belong-feature-card p,
+            .belong-purple-list li,
+            .belong-number-list li,
+            .belong-list li,
+            .belong-message-card p {
+                font-size: 19px;
+            }
+
+            .belong-feature-card h4 {
                 font-size: 28px;
             }
 
             .belong-hero-image img {
-                height: 280px;
+                height: 320px;
+            }
+
+            .belong-info-image img {
+                height: 330px;
             }
         }
 
@@ -215,18 +325,41 @@
                 padding: 40px 0 20px;
             }
 
+            .belong-hero-text h2,
+            .belong-section-title h3,
+            .belong-info-text h3,
+            .belong-help-left h3,
+            .belong-message-card h3 {
+                font-size: 26px;
+            }
+
             .belong-hero-text p,
             .belong-section-title p,
             .belong-feature-card p,
+            .belong-purple-list li,
+            .belong-number-list li,
             .belong-list li,
             .belong-message-card p {
-                font-size: 15px;
+                font-size: 18px;
+            }
+
+            .belong-feature-card h4 {
+                font-size: 24px;
             }
 
             .belong-feature-card,
             .belong-help-box,
             .belong-message-card {
-                padding: 24px 18px;
+                padding: 26px 20px;
+            }
+
+            .belong-info-section {
+                padding: 40px 0;
+            }
+
+            .belong-hero-image img,
+            .belong-info-image img {
+                height: 280px;
             }
         }
     </style>
@@ -234,26 +367,23 @@
 
 <body data-title="About We Belong">
 
-    <!-- Shared header -->
     <div id="header-placeholder"></div>
-
-    <!-- Shared banner -->
     <div id="banner-placeholder"></div>
 
-    <!-- ================= PAGE CONTENT ================= -->
     <main class="belong-page">
 
-        <!-- Intro section -->
         <section class="belong-hero">
             <div class="belong-container belong-hero-grid">
 
                 <div class="belong-hero-text">
                     <span class="belong-tag">About the Program</span>
                     <h2>What is We Belong?</h2>
+
                     <p>
                         <strong>We Belong</strong> is a project that supports people with disability to feel included,
                         confident, and connected in the community.
                     </p>
+
                     <p>
                         It encourages people to take part in sport, hobbies, volunteering, and social activities,
                         while also helping communities become more welcoming and inclusive.
@@ -261,17 +391,19 @@
                 </div>
 
                 <div class="belong-hero-image">
-                    <img src="../AdditionalIMG/about-we-belong.jpg" alt="People taking part in a community activity">
+                    <img src="../AdditionalIMG/Group-Shot.-We-Belong-team.-Outside.jpg" 
+                         alt="Support worker and participants taking part in an activity">
                 </div>
 
             </div>
         </section>
 
-        <!-- Main points -->
         <section class="belong-overview">
             <div class="belong-container">
+
                 <div class="belong-section-title">
                     <h3>Why We Belong Matters</h3>
+
                     <p>
                         Many people with disability face barriers when trying to join community activities.
                         We Belong helps reduce those barriers through support, information, and inclusion.
@@ -305,10 +437,58 @@
             </div>
         </section>
 
-        <!-- How we help -->
+        <section class="belong-info-section">
+            <div class="belong-container belong-info-grid">
+
+                <div class="belong-info-text">
+                    <h3>Who can get involved with We Belong?</h3>
+
+                    <ul class="belong-purple-list">
+                        <li>People with a disability</li>
+                        <li>Sporting programs</li>
+                        <li>Community groups</li>
+                        <li>Local schools, colleges, TAFE’s or Universities</li>
+                        <li>Health and Fitness Industry</li>
+                        <li>Youth programs, people aged over 16</li>
+                        <li>Hobby Groups</li>
+                        <li>Service Organisations</li>
+                        <li>Not for Profits</li>
+                    </ul>
+                </div>
+
+                <div class="belong-info-image">
+                    <img src="../AdditionalIMG/Tel-Football.jpg" alt="Participant holding a football">
+                </div>
+
+            </div>
+        </section>
+
+        <section class="belong-info-section">
+            <div class="belong-container belong-info-grid reverse">
+
+                <div class="belong-info-image">
+                    <img src="../AdditionalIMG/Art.jpg" alt="Participant holding artwork">
+                </div>
+
+                <div class="belong-info-text">
+                    <h3>Top tips for creating a welcoming and inclusive environment</h3>
+
+                    <ol class="belong-number-list">
+                        <li>See the person, not their disability.</li>
+                        <li>Treat everyone with respect, dignity and equality.</li>
+                        <li>Speak directly to the person and maintain eye contact.</li>
+                        <li>Refer to the person first, not their disability. Reflect on their individuality and humanity, not their condition.</li>
+                        <li>Choose inclusive language and avoid stereotypes or labels that diminish a person.</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section>
+
         <section class="belong-help">
             <div class="belong-container">
                 <div class="belong-help-box">
+
                     <div class="belong-help-left">
                         <h3>How We Help</h3>
                     </div>
@@ -321,35 +501,37 @@
                             <li>Encouraging inclusive practice in the community</li>
                         </ul>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Final message -->
         <section class="belong-message">
             <div class="belong-container">
                 <div class="belong-message-card">
+
                     <h3>A Place to Belong</h3>
+
                     <p>
                         We Belong is not only about joining an activity. It is about feeling accepted,
                         respected, and valued. The project helps people find connection and reminds them
                         that they have a place in the community.
                     </p>
 
-                    <a href="/HowtoBelong/conbuilder.html" class="belong-btn">Start Your Journey</a>
+                    <a href="/HowtoBelong/resi.html" class="belong-btn">Start Your Journey</a>
+
                 </div>
             </div>
         </section>
 
     </main>
-    
+
     <div id="accessibility-container"></div>
-    <script src="/accessibility.js" defer></script> 
+    <script src="/accessibility.js" defer></script>
 
     <div id="chatbot-container"></div>
     <script src="/chatbot.js" defer></script>
-    
-    <!-- Shared footer -->
+
     <div id="footer-placeholder"></div>
 
 </body>

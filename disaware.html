@@ -3,24 +3,245 @@
 <head>
     <title>We Belong Project - Disability Support, Employment & Inclusion</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/script.js" defer></script>
+
+    <style>
+        .disability-menu-wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 50px 20px 70px;
+        }
+
+        .disability-menu-hero {
+            background: linear-gradient(135deg, #6f2c91, #8f58b5);
+            color: white;
+            border-radius: 26px;
+            padding: 40px 36px;
+            margin-bottom: 38px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+        }
+
+        .disability-menu-hero h2 {
+            margin: 0 0 14px;
+            font-size: 40px;
+            line-height: 1.2;
+        }
+
+        .disability-menu-hero p {
+            margin: 0;
+            max-width: 780px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .disability-menu-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .disability-menu-card {
+            display: block;
+            text-decoration: none;
+            background: #ffffff;
+            border-radius: 22px;
+            padding: 28px 24px;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            border: 2px solid transparent;
+        }
+
+        .disability-menu-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.10);
+            border-color: #6f2c91;
+        }
+
+        .disability-menu-number {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: #efe4f7;
+            color: #6f2c91;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 18px;
+        }
+
+        .disability-menu-card h3 {
+            margin: 0 0 12px;
+            font-size: 28px;
+            color: #222;
+            line-height: 1.3;
+        }
+
+        .disability-menu-card p {
+            margin: 0 0 22px;
+            color: #555;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .disability-card-btn {
+            display: inline-block;
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 999px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: 0.25s ease;
+        }
+
+        .disability-card-btn:hover {
+            background: #572176;
+        }
+
+        .disability-menu-bottom {
+            margin-top: 36px;
+            text-align: center;
+        }
+
+        .disability-menu-bottom a {
+            display: inline-block;
+            text-decoration: none;
+            background: #6f2c91;
+            color: white;
+            padding: 14px 24px;
+            border-radius: 14px;
+            font-weight: 600;
+            transition: 0.25s ease;
+        }
+
+        .disability-menu-bottom a:hover {
+            background: #572176;
+        }
+
+        @media (max-width: 992px) {
+            .disability-menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .disability-menu-hero h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .disability-menu-wrap {
+                padding: 35px 16px 50px;
+            }
+
+            .disability-menu-hero {
+                padding: 28px 22px;
+            }
+
+            .disability-menu-hero h2 {
+                font-size: 28px;
+            }
+
+            .disability-menu-hero p {
+                font-size: 16px;
+            }
+
+            .disability-menu-card h3 {
+                font-size: 24px;
+            }
+
+            .disability-menu-card p {
+                font-size: 16px;
+            }
+
+            .disability-card-btn {
+                font-size: 16px;
+                padding: 12px 24px;
+            }
+        }
+    </style>
 </head>
-<body data-title="Enter Title">
-  
+
+<body data-title="Disability Awareness">
+
     <div id="header-placeholder"></div>
-    <div id="banner-placeholder"></div>  
-    <!-- page content -->
+    <div id="banner-placeholder"></div>
+
+    <main class="about-page">
+        <section class="about-section">
+            <div class="disability-menu-wrap">
+
+                <div class="disability-menu-hero">
+                    <h2>Disability Awareness</h2>
+                    <p>
+                        Learn about disability, accessibility, inclusion, and practical ways to create
+                        welcoming environments for everyone.
+                    </p>
+                </div>
+
+                <div class="disability-menu-grid">
+
+                    <div class="disability-menu-card">
+                        <div class="disability-menu-number">1</div>
+                        <h3>Fact Sheets</h3>
+                        <p>
+                            Read simple and useful fact sheets about disability, inclusion, and accessible support.
+                        </p>
+                        <a href="DisabilitiesAware/fact.html" class="disability-card-btn">Read more</a>
+                    </div>
+
+                    <div class="disability-menu-card">
+                        <div class="disability-menu-number">2</div>
+                        <h3>Online Module</h3>
+                        <p>
+                            Complete the Disability Awareness Training module through the Learning Hub.
+                        </p>
+                        <a href="/LearningHub/awarenesstraining.html" class="disability-card-btn">Read more</a>
+                    </div>
+
+                    <div class="disability-menu-card">
+                        <div class="disability-menu-number">3</div>
+                        <h3>Access Audits</h3>
+                        <p>
+                            Learn how access audits help identify barriers and improve physical and digital spaces.
+                        </p>
+                        <a href="DisabilitiesAware/audit.html" class="disability-card-btn">Read more</a>
+                    </div>
+
+                    <div class="disability-menu-card">
+                        <div class="disability-menu-number">4</div>
+                        <h3>Accessible Marketing</h3>
+                        <p>
+                            Explore how to make marketing materials easier to read, understand, and access.
+                        </p>
+                        <a href="DisabilitiesAware/marketing.html" class="disability-card-btn">Read more</a>
+                    </div>
+
+                </div>
+
+                <div class="disability-menu-bottom">
+                    <a href="/mainpage.html">Back to Main Page</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
 
     <div id="accessibility-container"></div>
-    <script src="/accessibility.js" defer></script> 
+    <script src="/accessibility.js" defer></script>
 
     <div id="chatbot-container"></div>
     <script src="/chatbot.js" defer></script>
 
     <div id="footer-placeholder"></div>
+
 </body>
 </html>

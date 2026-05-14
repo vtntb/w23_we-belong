@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Podcast – Beatrice’s Story - We Belong</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" type="text/css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/script.js" defer></script>
+
+    <style>
+        .chat-section {
+            background: #f5f5f5;
+            padding: 55px 0 70px;
+        }
+
+        .chat-wrapper {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .chat-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .chat-header h2 {
+            font-size: 34px;
+            color: #6f2c91;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .chat-header p {
+            font-size: 21px;
+            color: #444;
+            font-weight: 500;
+        }
+
+        .chat-video {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .chat-video iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border-radius: 12px;
+        }
+
+        .chat-transcript {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #444;
+            font-weight: 500;
+            margin-top: 30px;
+        }
+
+        .chat-transcript p {
+            margin-bottom: 12px;
+        }
+
+        .chat-bottom {
+            margin-top: 45px;
+            text-align: center;
+        }
+
+        .chat-bottom a {
+            display: inline-block;
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 14px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: 0.25s ease;
+        }
+
+        .chat-bottom a:hover {
+            background: #572176;
+        }
+
+        @media (max-width: 992px) {
+            .chat-header h2 {
+                font-size: 28px;
+            }
+
+            .chat-transcript {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .chat-header h2 {
+                font-size: 24px;
+            }
+
+            .chat-transcript {
+                font-size: 14px;
+            }
+
+            .chat-bottom a {
+                font-size: 16px;
+                padding: 12px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body data-title="Podcast – Beatrice Murray">
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <main class="chat-section">
+        <section class="chat-wrapper">
+
+            <div class="chat-header">
+                <h2>A chat with Beatrice</h2>
+                <p>Join us in this episode of the podcast where we chat with Beatrice from the We Belong community.</p>
+            </div>
+
+            <div class="chat-video">
+                <!-- Embed YouTube Video -->
+                <iframe src="https://www.youtube.com/embed/zGJYO2yh89E" title="YouTube video player" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="chat-transcript">
+                <p><strong>Overview:</strong></p>
+                <p>In this episode of the We Belong podcast series, we meet Beatrice, a long-time employee of The Flagstaff Group who has worked in their laundry and office for nearly 10 years.</p>
+
+                <p>The episode provides an intimate look at the challenges of navigating a world that often overlooks “invisible” disabilities.</p>
+
+                <p><strong>Navigating Life with Dyslexia:</strong></p>
+                <p>Beatrice shares her personal experience living with dyslexia, which primarily impacts her ability to spell and write. She explains that while she “looks normal” to others, she faces significant hurdles in daily tasks, such as:</p>
+                
+                <ul>
+                    <li><strong>Communication:</strong> Difficulty writing down company names quickly enough when answering phones.</li>
+                    <li><strong>Misunderstanding:</strong> The frustration that arises when others do not understand her disability because it isn’t visible.</li>
+                    <li><strong>The Challenge of the Rental Market:</strong> A major focus of the conversation is Beatrice’s recent struggle to find a rental property. The modern requirement to apply online before inspecting a home proved particularly difficult due to the complex questions involved.</li>
+                </ul>
+
+                <p><strong>Beatrice discusses:</strong></p>
+                <ul>
+                    <li><strong>The Emotional Toll:</strong> The repeated “knockbacks” and the stress of the application process led her to a point of deep frustration and near-depression.</li>
+                    <li><strong>Logistical Barriers:</strong> Because Beatrice does not drive, she faced the added challenge of finding a home close to work and relying on friends for transport to inspections.</li>
+                    <li><strong>A Positive Outcome:</strong> With the right support to navigate the paperwork, Beatrice was eventually approved for a home — a moment of immense relief she shared while attending a coffee course at TAFE.</li>
+                    <li><strong>Community and Inclusion:</strong> The episode reinforces The Flagstaff Group’s vision of “a world that only sees abilities.” By providing life skills and employment opportunities, Flagstaff aims to help individuals like Beatrice participate fully in their communities, whether that means playing a sport, learning a new skill, or finding a dream job.</li>
+                </ul>
+
+                <p><strong>Conclusion:</strong></p>
+                <p>Beatrice’s journey highlights the vital role of support systems in overcoming barriers to independence.</p>
+                <p>Her story serves as an invitation for the community to be more inclusive and for individuals with disabilities to reach out for the help they need to achieve their goals.</p>
+            </div>
+
+            <div class="chat-bottom">
+                <a href="podcast.html">Back to Podcast</a>
+            </div>
+
+        </section>
+    </main>
+
+    <div id="accessibility-container"></div>
+    <script src="/accessibility.js" defer></script>
+
+    <div id="chatbot-container"></div>
+    <script src="/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>

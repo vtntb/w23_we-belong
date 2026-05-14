@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Social Stories Ideas - We Belong</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" type="text/css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/script.js" defer></script>
+
+    <style>
+        .social-story-page {
+            background: #f5f5f5;
+            padding: 55px 0 70px;
+        }
+
+        .social-story-wrapper {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .social-story-text p {
+            font-size: 21px;
+            line-height: 1.7;
+            color: #111;
+            font-weight: 500;
+            margin: 0 0 22px;
+        }
+
+        .social-story-links {
+            padding-left: 35px;
+            margin: 18px 0 0;
+        }
+
+        .social-story-links li {
+            font-size: 21px;
+            line-height: 1.6;
+            color: #111;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .social-story-links a {
+            color: #6f2c91;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .social-story-links a:hover {
+            color: #111;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .social-story-image img {
+            width: 100%;
+            height: 620px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .social-story-bottom {
+            margin-top: 45px;
+            text-align: center;
+        }
+
+        .social-story-bottom a {
+            display: inline-block;
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 14px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: 0.25s ease;
+        }
+
+        .social-story-bottom a:hover {
+            background: #572176;
+        }
+
+        @media (max-width: 992px) {
+            .social-story-wrapper {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .social-story-text p,
+            .social-story-links li {
+                font-size: 19px;
+            }
+
+            .social-story-image img {
+                height: 420px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .social-story-page {
+                padding: 40px 0 55px;
+            }
+
+            .social-story-wrapper {
+                width: 92%;
+            }
+
+            .social-story-text p,
+            .social-story-links li {
+                font-size: 18px;
+            }
+
+            .social-story-image img {
+                height: 320px;
+            }
+
+            .social-story-bottom a {
+                font-size: 16px;
+                padding: 12px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body data-title="Social Stories Ideas">
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <main class="social-story-page">
+        <section class="social-story-wrapper">
+
+            <div class="social-story-text">
+                <p>
+                    A social story is a visual guide or visual checklist that helps a person with disability
+                    to navigate how to participate in a specific activity.
+                </p>
+
+                <p>
+                    Social stories have been proven useful when going to places such as airports,
+                    evacuation centres, etc.
+                </p>
+
+                <p>
+                    When writing a social story, it is important to set the scene, describe the place in detail,
+                    use a character, simple language, and lots of pictures.
+                </p>
+
+                <p>
+                    To learn how to write a social story, download the following:
+                </p>
+
+                <ol class="social-story-links">
+                    <li>
+                        <a href="https://webelong.org.au/storage/sites/5/2026/01/Creating-a-social-story-for-your-club.pdf" target="_blank">
+                            Creating a social story for your club
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://webelong.org.au/storage/sites/5/2026/01/Example-Social-Story.pdf" target="_blank">
+                            Example social story
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://webelong.org.au/storage/sites/5/2026/01/Tips-for-social-stories.pdf" target="_blank">
+                            Tips for social stories
+                        </a>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="social-story-image">
+                <img src="../AdditionalIMG/Participant-drawing-600x750.jpg" alt="Participant drawing artwork">
+            </div>
+
+        </section>
+
+        <div class="social-story-bottom">
+            <a href="/story.html">Back to Stories & Resources</a>
+        </div>
+    </main>
+
+    <div id="accessibility-container"></div>
+    <script src="/accessibility.js" defer></script>
+
+    <div id="chatbot-container"></div>
+    <script src="/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>
