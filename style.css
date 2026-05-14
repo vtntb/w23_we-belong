@@ -169,15 +169,13 @@ body.highlight-links .navbar a {
 }
 
 .mainnav-left {
+    display: flex;
     align-items: center;
-    position: relative;
-    left: 150px;
 }
 
 .mainnav-right {
+    display: flex;
     align-items: center;
-    position: relative;
-    right: 150px;
 }
 
 .mainnav-menu {

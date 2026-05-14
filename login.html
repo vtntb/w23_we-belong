@@ -343,12 +343,13 @@
     <div id="footer-placeholder"></div>
 
     <script>
-        document.getElementById("loginForm").addEventListener("submit", function(e) {
+        document.getElementById("loginForm").addEventListener("submit", async function(e) {
             e.preventDefault();
 
             const email = document.getElementById("email").value.trim().toLowerCase();
             const password = document.getElementById("password").value;
             const errorMessage = document.getElementById("errorMessage");
+            const loginBtn = document.querySelector(".login-btn");
 
             errorMessage.style.display = "none";
             errorMessage.textContent = "";
@@ -359,21 +360,39 @@
                 return;
             }
 
-            const users = JSON.parse(localStorage.getItem("users")) || [];
-            const matchedUser = users.find(user => user.email === email && user.password === password);
+            loginBtn.disabled = true;
+            loginBtn.textContent = "Logging in...";
 
-            if (!matchedUser) {
-                errorMessage.textContent = "Invalid email or password.";
+            try {
+                const response = await fetch("/api/auth/login", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    errorMessage.textContent = data.error || "Invalid email or password.";
+                    errorMessage.style.display = "block";
+                    return;
+                }
+
+                localStorage.setItem("isLoggedIn", "true");
+                localStorage.setItem("authToken", data.token);
+                localStorage.setItem("userEmail", data.user.email);
+                localStorage.setItem("userFirstName", data.user.firstName);
+                localStorage.setItem("userLastName", data.user.lastName);
+                localStorage.setItem("userId", data.user.id);
+
+                window.location.href = "/account.html";
+            } catch (err) {
+                errorMessage.textContent = "Could not connect to server. Please try again.";
                 errorMessage.style.display = "block";
-                return;
+            } finally {
+                loginBtn.disabled = false;
+                loginBtn.textContent = "Log In";
             }
-
-            localStorage.setItem("isLoggedIn", "true");
-            localStorage.setItem("userEmail", matchedUser.email);
-            localStorage.setItem("userFirstName", matchedUser.firstName);
-            localStorage.setItem("userLastName", matchedUser.lastName);
-
-            window.location.href = "/account.html";
         });
     </script>
 </body>
