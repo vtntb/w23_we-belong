@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Module 3 – Body Language</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../learninghub.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/script.js" defer></script>
+    <script src="../learninghub.js" defer></script>
+
+    <style>
+        .lessonnav {
+            padding: 15px 180px;
+            background: #eceaea;
+            font-size: 15px;
+        }
+
+        .lessonnav a {
+            color: #6f2c91;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .lessonnav a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* intro section */
+        .course-intro-wrap {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+        }
+
+        .course-intro-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+        }
+
+        .course-intro-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .course-intro-content {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .course-intro-list {
+            list-style: disc;
+            padding-left: 34px;
+            margin: 0;
+        }
+
+        .course-intro-list li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+        }
+
+        .course-intro-list li::marker {
+            color: #6f2c91;
+            font-size: 1.3em;
+        }
+
+        .course-intro-image img {
+            width: 80%;
+            height: auto;
+            display: block;
+        }
+
+        /* complete button */
+        .lesson-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 60px 0;
+        }
+
+        #lessonDoneMsg {
+            margin-top: 15px;
+            color: green;
+            font-size: 18px;
+        }
+
+        .navigationdiv {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1600px;
+        }
+
+        .naviBar {
+            width: 100%;
+            height: 1px;
+            background: #aba8a8;
+            margin: 20px auto 30px;
+        }
+
+        .buttonDiv {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            width: 100%;
+        }
+
+        .buttonDiv a:first-child {
+            justify-self: start;
+        }
+
+        .buttonDiv a:nth-child(2) {
+            justify-self: center;
+        }
+
+        .buttonDiv a:last-child {
+            justify-self: end;
+        }
+
+        .naviButt {
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        .naviButt:hover {
+            background: #4f186b;
+        }
+        
+        .lesson-section {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+        }
+
+        .lesson-section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+        }
+
+        .lesson-section-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
+        .lesson-section-image {
+            text-align: center;
+        }
+
+        .lesson-section-image img {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            display: inline-block;
+        }
+
+        @media (max-width: 992px) {
+            .lesson-section {
+                width: 92%;
+            }
+
+            .lesson-section-title {
+                font-size: 28px;
+            }
+
+            .lesson-section p {
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 992px) {
+            .lessonnav {
+                padding: 15px 30px;
+            }
+
+            .course-intro-wrap {
+                width: 92%;
+            }
+
+            .course-intro-title {
+                font-size: 28px;
+            }
+
+            .course-intro-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .course-intro-image {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .course-intro-list li {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body 
+    data-page-type="lesson"
+    data-course-id="communication"
+    data-total-lessons="4"
+    data-lesson-number="3"
+    data-title="Module 3 – Body Language"
+    data-button="true"
+>
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <!-- navibar -->
+    <div class="lessonnav">
+        <a href="/learnhub.html">Learning Hub</a>
+        <span>&gt;</span>
+        <a href="/LearningHub/communication.html">Communication</a>
+        <span>&gt;</span>
+        <a href="/LearningHub/Communication/module3.html">Module 3 – Body Language</a>
+    </div>
+
+    <section class="course-intro-wrap">
+        <h2 class="course-intro-title">One dimensional communication.</h2>
+        <div class="course-intro-divider"></div>
+
+        <div class="course-intro-content">
+            <ul class="course-intro-list">
+                <li>What would happen if you could only communicate in one dimension?</li>
+                <li>You could see, but you couldn’t hear or speak.</li>
+                <li>Let’s try an experiment based on 1 D communication using only Sight. Will your message still get through?</li>
+            </ul>
+
+            <div class="course-intro-image">
+                <img src="/AdditionalIMG/body_language_1-640x480.jpg" alt="One dimensional communication">
+            </div>
+        </div>
+    </section>
+
+    <section class="course-intro-wrap">
+        <div class="course-intro-divider"></div>
+
+        <div class="course-intro-content">
+            <div>
+                <p>Luckily, we can communicate in a much more complex way.</p>
+                <p>We can combine what we say with our body language or signs to give our communications more depth.</p>
+            </div>
+
+            <div class="course-intro-image">
+                <img src="/AdditionalIMG/body_language_2.jpg" alt="Complex communication">
+            </div>
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">What you say is only the part of communication.</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>The rest lies in your body language:</p>
+
+        <ul class="course-intro-list">
+            <li>how you hold yourself</li>
+            <li>your mannerisms</li>
+            <li>Your conduct</li>
+            <li>and even how you breathe.</li>
+        </ul>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">Body language is a two way street.</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>You need to be aware of:</p>
+
+        <ul class="course-intro-list">
+            <li>Your own body language and the messages that you are giving out.</li>
+            <li>How to “read” the body language of others to determine the messages that they are giving out.</li>
+        </ul>
+    </section>
+
+    <section class="lesson-section">
+        <div class="lesson-section-divider"></div>
+
+        <p>With a little conscious effort to improve your body language, you stand a better chance of scoring that job, that date, or simply being seen as the engaging and genuine person that you are.</p>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">What is body language?</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>Body language includes more than just the slouch-factor or where you put your hands.</p>
+
+        <p>In fact, it includes:</p>
+
+        <ul class="course-intro-list">
+            <li>facial expressions</li>
+            <li>proximity to others</li>
+            <li>body position</li>
+            <li>habits</li>
+            <li>eye gestures</li>
+            <li>how we touch ourselves and others</li>
+            <li>how we interact with what we touch (i.e., fiddling)</li>
+            <li>and even breathing</li>
+        </ul>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">The science of body language.</h2>
+        <div class="lesson-section-divider"></div>
+
+        <ul class="course-intro-list">
+            <li>Scientific studies have named 3 main areas connected with body language.</li>
+            <li>Knowing a little about each can benefit your own communications.</li>
+            <li>Let’s explore some of those areas</li>
+        </ul>
+    </section>
+
+    <section class="lesson-section">
+        <div class="lesson-section-divider"></div>
+
+        <ul class="course-intro-list">
+            <li>Communication used by people and animals via touch is a form of Non-verbal communication. Touch is the most effective means to communicate feelings and emotions.</li>
+            <li>Personal Space deals with the amount of space that people feel it necessary to set between themselves and others.</li>
+            <li>Body movements and gestures serve as a form of non-verbal communication.</li>
+        </ul>
+    </section>
+
+    <section class="course-intro-wrap">
+        <h2 class="course-intro-title">Personal Space</h2>
+        <div class="course-intro-divider"></div>
+
+        <div class="course-intro-content">
+            <div>
+                <p>The study of human use of space and the effects that population density has on behaviour, communication, and social interaction.</p>
+                <p>The distance surrounding a person forms a space.</p>
+                <p>Personal space is the region surrounding a person which they regard as psychologically theirs.</p>
+                <p>Most people value their personal space and feel discomfort, anger, or anxiety when their personal space is encroached.</p>
+            </div>
+
+            <div class="course-intro-image">
+                <img src="/AdditionalIMG/body_language_4.jpg" alt="Personal space">
+            </div>
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">Personal Space</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>Another zone is used for conversations with friends, to chat with associates, and in group discussions.</p>
+
+        <p>A further zone is reserved for strangers, newly formed groups, and new acquaintances.</p>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">Personal Space</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>A fourth zone is used for speeches, lectures, and theatre; essentially, public distance is that range reserved for larger audiences.</p>
+
+        <p>How much personal space do you need?</p>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">Personal Space</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>Entering somebody’s personal space is normally an indication of familiarity and sometimes intimacy.</p>
+
+        <p>In our community, especially in crowded spaces, it can be difficult to maintain personal space, for example when in a crowded train, elevator or street.</p>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">Personal Space</h2>
+        <div class="lesson-section-divider"></div>
+
+        <ul class="course-intro-list">
+            <li>Many people find such physical closeness to be uncomfortable, even though it is accepted as a fact of modern life.</li>
+            <li>In an impersonal, crowded situation, eye contact tends to be avoided.</li>
+            <li>Even in a crowded place, preserving personal space is important, and intimate and sexual contact is unacceptable physical contact.</li>
+        </ul>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">Affect Displays</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="lesson-section-image">
+            <img src="/AdditionalIMG/body_language_9.jpg" alt="Affect Displays">
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">Regulators</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>Regulators are nonverbal messages that accompany speech to control or regulate what the speaker is saying.</p>
+
+        <p>These might include the nodding of the head to indicate you are listening or understanding something, for instance, and you are encouraging the speaker to continue.</p>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">Adaptors</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>Adaptors are forms of nonverbal communication that often occur at a low level of personal awareness.</p>
+
+        <p>They can be thought of a behaviours that are done to meet a personal need as one adapts to the specific communication situation.</p>
+
+        <p>They include behaviours like twisting your hair, tapping your pen, scratching, tugging on your ear, pushing your glasses up your nose, holding yourself, swinging your legs, etc.</p>
+
+        <p>Given the low level of awareness of these behaviours by the person doing them, the observer is sometimes more aware of the behaviours than the doer of them.</p>
+
+        <p>Adaptors serve unintentionally as clues to how a person is feeling.</p>
+
+        <p>Adaptors are not intended for use in communication, but rather may represent behaviours learned early in life that are somehow cued by the current situation and which may be increased when the level of anxiety goes up in the situation.</p>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">Quiz Let’s see how good you are at interpreting hand gestures.</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="lesson-section-image">
+            <img src="/AdditionalIMG/body_language_10.jpg" alt="Hand gestures quiz">
+        </div>
+    </section>
+
+    <!-- complete button -->
+    <div class="lesson-actions">
+        <button id="markCompleteBtn" class="enrol-btn">Mark Complete</button>
+
+        <p id="lessonDoneMsg" style="display:none;">
+            Lesson marked as complete.
+        </p>
+        
+        <!-- lesson navigation -->
+        <div class="navigationdiv">
+            <div class="naviBar"></div>
+            <div class="buttonDiv">
+                <a href="module2.html" class="naviButt">← Previous</a>
+                <a href="/LearningHub/communication.html" class="naviButt" id="backButt">Back to Course</a>
+                <a href="module4.html" class="naviButt">Next →</a>
+            </div>
+        </div>
+    </div>   
+    
+    <div id="accessibility-container"></div>
+    <script src="/accessibility.js" defer></script> 
+    
+    <div id="chatbot-container"></div>
+    <script src="/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>

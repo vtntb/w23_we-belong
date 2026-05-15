@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Module 1 – Communication in the Workplace</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../learninghub.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/script.js" defer></script>
+    <script src="../learninghub.js" defer></script>
+
+    <style>
+        .lessonnav {
+            padding: 15px 180px;
+            background: #eceaea;
+            font-size: 15px;
+        }
+
+        .lessonnav a {
+            color: #6f2c91;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .lessonnav a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* intro section */
+        .course-intro-wrap {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+        }
+
+        .course-intro-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+        }
+
+        .course-intro-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .course-intro-content {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .course-intro-list {
+            list-style: disc;
+            padding-left: 34px;
+            margin: 0;
+        }
+
+        .course-intro-list li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+        }
+
+        .course-intro-list li::marker {
+            color: #6f2c91;
+            font-size: 1.3em;
+        }
+
+        .course-intro-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* complete button */
+        .lesson-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 60px 0;
+        }
+
+        #lessonDoneMsg {
+            margin-top: 15px;
+            color: green;
+            font-size: 18px;
+        }
+
+        .navigationdiv {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1600px;
+        }
+
+        .naviBar {
+            width: 100%;
+            height: 1px;
+            background: #aba8a8;
+            margin: 20px auto 30px;
+        }
+
+        .buttonDiv {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            width: 100%;
+        }
+
+        .buttonDiv a:first-child {
+            justify-self: start;
+        }
+
+        .buttonDiv a:nth-child(2) {
+            justify-self: center;
+        }
+
+        .buttonDiv a:last-child {
+            justify-self: end;
+        }
+
+        .naviButt {
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        .naviButt:hover {
+            background: #4f186b;
+        }
+        
+        .lesson-section {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+        }
+
+        .lesson-section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+        }
+
+        .lesson-section-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
+        .lesson-section-image {
+            text-align: center;
+        }
+
+        .lesson-section-image img {
+            width: 100%;
+            max-width: 950px;
+            height: auto;
+            display: inline-block;
+        }
+
+        @media (max-width: 992px) {
+            .lesson-section {
+                width: 92%;
+            }
+
+            .lesson-section-title {
+                font-size: 28px;
+            }
+
+            .lesson-section p {
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 992px) {
+            .lessonnav {
+                padding: 15px 30px;
+            }
+
+            .course-intro-wrap {
+                width: 92%;
+            }
+
+            .course-intro-title {
+                font-size: 28px;
+            }
+
+            .course-intro-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .course-intro-image {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .course-intro-list li {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body 
+    data-page-type="lesson"
+    data-course-id="communication"
+    data-total-lessons="4"
+    data-lesson-number="1"
+    data-title="Module 1 – Communication in the Workplace"
+    data-button="true"
+>
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <!-- navibar -->
+    <div class="lessonnav">
+        <a href="/learnhub.html">Learning Hub</a>
+        <span>&gt;</span>
+        <a href="/LearningHub/communication.html">Communication</a>
+        <span>&gt;</span>
+        <a href="/LearningHub/Communication/module1.html">Module 1 – Communication in the Workplace</a>
+    </div>
+
+    <!-- intro section -->
+    <section class="course-intro-wrap">
+        <h2 class="course-intro-title">What you will learn in this module</h2>
+        <div class="course-intro-divider"></div>
+
+        <div class="course-intro-content">
+            <ul class="course-intro-list">
+                <li>What is communication?</li>
+                <li>How we communicate to each other</li>
+                <li>What is effective and ineffective communication</li>
+                <li>What is active listening</li>
+                <li>What are some barriers of communication</li>
+                <li>How to be a good communicator</li>
+            </ul>
+
+            <div class="course-intro-image">
+                <img src="/AdditionalIMG/communication_1-640x446.jpg" alt="Two women about to high-five">
+            </div>
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">What is Communication?</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>Communication is sending and receiving information from one place to another.</p>
+
+        <div class="lesson-section-image">
+            <img src="/AdditionalIMG/communication_2.jpg" alt="Communication">
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">Forms of Communication</h2>
+        <div class="lesson-section-divider"></div>
+
+        <ul class="course-intro-list">
+            <li><strong>Verbal</strong> – Speech, sounds, language, tone of voice</li>
+            <li><strong>Non-verbal</strong> – Facial expression and body language</li>
+            <li><strong>Written</strong> – Emails, text messages, letters, articles</li>
+            <li><strong>Visual</strong> – Signs, symbols, pictures, images</li>
+            <li><strong>Oral</strong> – listening and hearing</li>
+        </ul>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">What is Effective Communication?</h2>
+        <div class="lesson-section-divider"></div>
+        <p>Effective communication is the successful transfer of information between people.</p>
+
+        <p>It enables problem solving, decision making, improves relationships and teamwork.</p>
+
+        <p>Difficult messages if communicated well and respectfully can avoid conflict, help with self-awareness and improve productivity.</p>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">To be an good communicator, you need to be an active listener</h2>
+        <div class="lesson-section-divider"></div>
+
+        <h3 style="font-size: 28px; font-weight: 400; color: #111; margin: 0 0 24px;">Active listening is:</h3>
+
+        <p>When you are completely focused on what the other person is saying</p>
+        <p>When you are hearing everything the other person is saying</p>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">Tips to being a good active listener</h2>
+        <div class="lesson-section-divider"></div>
+
+        <ul class="course-intro-list">
+            <li>Have good body language.</li>
+            <li>Face the speaker, maintain eye contact</li>
+            <li>Be present. Pay attention and relax</li>
+            <li>Screen out distractions such as background noise.</li>
+            <li>Keep an open mind.</li>
+            <li>Allow the speaker to speak without interruption, listen without jumping to conclusions.</li>
+            <li>Listen and picture what the speaker is saying. The speaker may be asking a question, listen to the key points the speaker is asking for.</li>
+            <li>Wait for the speaker to pause, ask for clarification. Repeat what the speaker has said back to him/her will ensure you have heard the information correctly.</li>
+        </ul>
+    </section>
+    
+    <!-- complete button -->
+    <div class="lesson-actions">
+        <button id="markCompleteBtn" class="enrol-btn">Mark Complete</button>
+
+        <p id="lessonDoneMsg" style="display:none;">
+            Lesson marked as complete.
+        </p>
+        
+        <!-- lesson navigation -->
+        <div class="navigationdiv">
+            <div class="naviBar"></div>
+            <div class="buttonDiv">
+                <a href="/LearningHub/communication.html" class="naviButt">← Previous</a>
+                <a href="/LearningHub/communication.html" class="naviButt" id="backButt">Back to Course</a>
+                <a href="module2.html" class="naviButt">Next →</a>
+            </div>
+        </div>
+    </div>   
+    
+    <div id="accessibility-container"></div>
+    <script src="/accessibility.js" defer></script> 
+    
+    <div id="chatbot-container"></div>
+    <script src="/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>
