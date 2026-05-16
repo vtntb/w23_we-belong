@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Module 4 – From the Sideline – A Guide for Spectators</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../learninghub.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/script.js" defer></script>
+    <script src="../learninghub.js" defer></script>
+
+    <style>
+        .lessonnav {
+            padding: 15px 180px;
+            background: #eceaea;
+            font-size: 15px;
+        }
+
+        .lessonnav a {
+            color: #6f2c91;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .lessonnav a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .course-intro-list {
+            list-style: disc;
+            padding-left: 34px;
+            margin: 0;
+        }
+
+        .course-intro-list li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+        }
+
+        .course-intro-list li::marker {
+            color: #6f2c91;
+            font-size: 1.3em;
+        }
+
+        .lesson-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 60px 0;
+        }
+
+        #lessonDoneMsg {
+            margin-top: 15px;
+            color: green;
+            font-size: 18px;
+        }
+
+        .navigationdiv {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1600px;
+        }
+
+        .naviBar {
+            width: 100%;
+            height: 1px;
+            background: #aba8a8;
+            margin: 20px auto 30px;
+        }
+
+        .buttonDiv {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            width: 100%;
+        }
+
+        .buttonDiv a:first-child {
+            justify-self: start;
+        }
+
+        .buttonDiv a:nth-child(2) {
+            justify-self: center;
+        }
+
+        .buttonDiv a:last-child {
+            justify-self: end;
+        }
+
+        .naviButt {
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        .naviButt:hover {
+            background: #4f186b;
+        }
+
+        .lesson-section {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+        }
+
+        .lesson-section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+        }
+
+        .lesson-section-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
+        .lesson-section-image {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section-image img {
+            width: 100%;
+            max-width: 950px;
+            height: auto;
+            display: inline-block;
+        }
+
+        .two-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 30px auto;
+            flex-wrap: wrap;
+        }
+
+        .two-images img {
+            width: 48%;
+            max-width: 500px;
+            height: auto;
+        }
+
+        .reflink {
+            text-decoration: none;
+            color:#6f2c91;
+        }
+
+        @media (max-width: 992px) {
+            .lesson-section {
+                width: 92%;
+            }
+
+            .lesson-section-title {
+                font-size: 28px;
+            }
+
+            .lesson-section p {
+                font-size: 14px;
+            }
+
+            .two-images img {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .lessonnav {
+                padding: 15px 30px;
+            }
+
+            .course-intro-list li {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body 
+    data-page-type="lesson"
+    data-course-id="sportstraining"
+    data-total-lessons="5"
+    data-lesson-number="4"
+    data-title="Module 4 – From the Sideline – A Guide for Spectators"
+    data-button="true"
+>
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <div class="lessonnav">
+        <a href="/learnhub.html">Learning Hub</a>
+        <span>&gt;</span>
+
+        <a href="/LearningHub/sportstraining.html">
+            Inclusive Sports Training
+        </a>
+
+        <span>&gt;</span>
+
+        <a href="/LearningHub/Inclusive/module4.html">
+            Module 4 – From the Sideline – A Guide for Spectators
+        </a>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Training Objective</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>By the end of this module, you will be able to:</p>
+
+        <ul class="course-intro-list">
+            <li>Understand how <strong>spectators and volunteers shape the tone, safety, and welcome</strong> of a club.</li>
+            <li>Use <strong>positive, respectful language</strong> that encourages all players—without placing pressure or blame.</li>
+            <li>Recognise and support <strong>individual sensory needs</strong>, including players who may need quiet or calm.</li>
+            <li>Foster <strong>family and community connection</strong> so that everyone—on or off the field—feels seen, safe, and included.</li>
+        </ul>
+
+        <p><em>“The sideline should be a place of support, not stress. Everyone deserves to be cheered on with kindness.”</em></p>
+
+        <div class="two-images">
+            <img src="/AdditionalIMG/AdobeStock_923324113-640x359.jpeg" alt="Inclusive spectators illustration">
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Creating a Respectful Sideline</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>
+            Inclusion isn’t just something we do on the field, it lives in the tone, behaviour, and attitude of those around it.
+            What we say and how we say it matters.
+        </p>
+
+        <p>
+            As someone in the crowd, watching a sports game and players, consider that there are many types of abilities on the field or court.
+        </p>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Use Positive and Inclusive Language</h2>
+        <div class="lesson-section-divider"></div>
+
+        <ul class="course-intro-list">
+            <li>Say things like <strong>“Great effort!”</strong>, “Well played!” or “You’re doing awesome!”</li>
+            <li>Avoid negative or demanding comments like “Try harder” or “What are you doing?”</li>
+            <li>Remember, even good intentions can cause harm. Some encouragements may feel overwhelming if the player can’t complete the task in that moment.</li>
+        </ul>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Be Mindful of Sensory Differences</h2>
+        <div class="lesson-section-divider"></div>
+
+        <ul class="course-intro-list">
+            <li>Loud or unpredictable cheering, whistles, or music can be distressing for some players, especially those who are autistic or have sensory sensitivities.</li>
+            <li>Consider the environment. Clapping is better than shouting, and calmer praise may be more meaningful.</li>
+        </ul>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Keep the Focus on Support – Not Control</h2>
+        <div class="lesson-section-divider"></div>
+
+        <ul class="course-intro-list">
+            <li>It’s natural to want to cheer and offer advice but giving instructions like “Kick it now!” or “Run faster!” can cause pressure and confusion to some players.</li>
+            <li>Let the coach, coach. Let the player play. You’re here to encourage, not direct.</li>
+        </ul>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Model Respect—for Everyone</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>
+            We model inclusion not just by cheering, but by the way we treat everyone involved.
+        </p>
+
+        <ul class="course-intro-list">
+            <li>Do not shout at or about referees, umpires, coaches or officials. Mistakes happen—they’re human, too.</li>
+            <li>Never ridicule, swear at, or criticise any player, coach, official or spectator.</li>
+            <li>Comments that are racist, sexist, ableist, or discriminatory are never acceptable.</li>
+            <li>Be aware of body language and tone. How we <em>look</em> and <em>react</em> can speak just as loudly as words.</li>
+        </ul>
+
+        <p>
+            If you see behaviour that puts others at risk, or undermines the club’s inclusive culture,
+            let an official or coach know quietly and respectfully.
+        </p>
+
+        <div class="lesson-section-image">
+            <img src="/AdditionalIMG/AdobeStock_1306631217-640x427.jpeg" alt="Crowd cheering at sports event">
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Spectator Tips for Inclusive Sidelines</h2>
+        <div class="lesson-section-divider"></div>
+
+        <ul class="course-intro-list">
+            <li>Say positive things—or say nothing at all.</li>
+            <li>Cheer in a way that feels safe for everyone.</li>
+            <li>Let coaches coach, and players make their own decisions.</li>
+            <li>Avoid advice that might confuse or embarrass.</li>
+            <li>Never shout at referees, coaches, or players.</li>
+            <li>Report any unsafe or inappropriate behaviour to a club official.</li>
+        </ul>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Consistency for Spectators Too</h2>
+        <div class="lesson-section-divider"></div>
+
+        <ul class="course-intro-list">
+            <li>
+                Let spectators know the routine of the day, especially if families of people with disability are attending for the first time.
+                A simple “What to expect” flyer or social story can help reduce anxiety.
+            </li>
+            <li>
+                Include clear signage at the venue, especially for entry, toilets, quiet areas, or accessible viewing spots.
+            </li>
+        </ul>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Designated Viewing Areas</h2>
+        <div class="lesson-section-divider"></div>
+
+        <ul class="course-intro-list">
+            <li>
+                Some families or individuals may prefer a quieter space.
+                Consider setting up an optional “low-sensory zone” near the field or court with shade, minimal crowd noise,
+                and fewer distractions can make a big difference.
+            </li>
+            <li>
+                Ensure accessible seating for wheelchair users, older spectators, or those who may fatigue easily.
+            </li>
+        </ul>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Inclusive Language in Announcements and Programs</h2>
+        <div class="lesson-section-divider"></div>
+
+        <ul class="course-intro-list">
+            <li>
+                If your club has printed materials or a PA system, use person-first and inclusive language when introducing teams or players.
+                That is, the person before the disability or not mention the disability at all. E.g. player with disability or just a team player.
+            </li>
+            <li>
+                Encourage match day announcers to highlight participation and effort, not just competitive outcomes.
+            </li>
+        </ul>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Welcoming New Spectators and Families</h2>
+        <div class="lesson-section-divider"></div>
+
+        <ul class="course-intro-list">
+            <li>
+                Consider assigning a club volunteer or buddy to greet new families, especially those attending with a child or adult with disability.
+                A quick “Hi, we’re here to help if you need anything” goes a long way.
+            </li>
+            <li>
+                Offer a contact person if spectators have any questions about accessibility, inclusion, or safety during the game.
+            </li>
+        </ul>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Include Families in Club Culture</h2>
+        <div class="lesson-section-divider"></div>
+
+        <ul class="course-intro-list">
+            <li>
+                Encourage families of players with disability to join in post-game activities, social events, and team photos—not just “watch from the car.”
+            </li>
+            <li>
+                Make sure social media and newsletters include photos and stories of all team members with consent. Representation matters.
+            </li>
+        </ul>
+
+        <p>
+            <strong>Thank you for completing this module. We hope that you will encourage all spectators to be respectful and positive on the sideline.</strong>
+        </p>
+    </div>
+
+    <div class="lesson-actions">
+        <button id="markCompleteBtn" class="enrol-btn">
+            Mark Complete
+        </button>
+
+        <p id="lessonDoneMsg" style="display:none;">
+            Lesson marked as complete.
+        </p>
+        
+        <div class="navigationdiv">
+            <div class="naviBar"></div>
+            <div class="buttonDiv">
+                <a href="module3.html" class="naviButt">← Previous</a>
+                <a href="/LearningHub/sportstraining.html" class="naviButt" id="backButt">Back to Course</a>
+                <a href="module5.html" class="naviButt">Next →</a>
+            </div>
+        </div>
+    </div>   
+    
+    <div id="accessibility-container"></div>
+    <script src="/accessibility.js" defer></script> 
+    
+    <div id="chatbot-container"></div>
+    <script src="/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>
