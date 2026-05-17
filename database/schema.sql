@@ -1,0 +1,20 @@
+CREATE DATABASE IF NOT EXISTS we_belong;
+
+USE we_belong;
+
+CREATE TABLE IF NOT EXISTS chatbot_faqs (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  question VARCHAR(255) NOT NULL,
+  answer TEXT NOT NULL,
+  keywords TEXT,
+  category VARCHAR(100),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS chatbot_logs (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_query TEXT NOT NULL,
+  bot_response TEXT NOT NULL,
+  matched_faq_id INT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
