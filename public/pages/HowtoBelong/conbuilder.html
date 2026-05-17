@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Building Confidence - We Belong</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../../css/style.css" type="text/css">
+
+    <!-- Shared libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Shared script -->
+    <script src="../../js/script.js" defer></script>
+
+    <style>
+        .confidence-page {
+            background: #ffffff;
+            padding: 50px 0 70px;
+        }
+
+        .confidence-section {
+            width: 100%;
+            background: #ffffff;
+        }
+
+        .confidence-wrapper {
+            width: 90%;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Top section */
+        .confidence-flex {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .confidence-text p {
+            font-size: 20px;
+            line-height: 1.7;
+            color: #1f1f1f;
+            margin-bottom: 22px;
+        }
+
+        .confidence-image {
+            text-align: center;
+        }
+
+        .confidence-zone-img {
+            width: 100%;
+            max-width: 520px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Second section */
+        .confidence-build-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+            background: #f5f5f5;
+        }
+
+        .confidence-build-image img {
+            width: 100%;
+            height: 560px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .confidence-build-text p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #1f1f1f;
+            margin-bottom: 18px;
+        }
+
+        .confidence-build-text ol {
+            margin: 0;
+            padding-left: 28px;
+        }
+
+        .confidence-build-text li {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #1f1f1f;
+            margin-bottom: 12px;
+        }
+
+        .confidence-build-text strong {
+            font-weight: 700;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 900px) {
+            .confidence-wrapper {
+                width: 92%;
+            }
+
+            .confidence-flex,
+            .confidence-build-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .confidence-build-image img {
+                height: 420px;
+            }
+
+            .confidence-text p,
+            .confidence-build-text p,
+            .confidence-build-text li {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .confidence-page {
+                padding: 35px 0 50px;
+            }
+
+            .confidence-build-image img {
+                height: 320px;
+            }
+
+            .confidence-text p,
+            .confidence-build-text p,
+            .confidence-build-text li {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body data-title="Building Confidence">
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <main class="confidence-page">
+        <section class="confidence-section">
+            <div class="confidence-wrapper">
+
+                <div class="confidence-flex confidence-top">
+
+                    <div class="confidence-text">
+                        <p>Confidence is all about believing in yourself and trusting that you can do what you want to do.</p>
+                        <p>Confidence is a skill that we develop over time and with practice.</p>
+                        <p>To grow our confidence, we must step outside of our comfort zones.</p>
+                    </div>
+
+                    <div class="confidence-image">
+                        <img src="../../images/AdditionalIMG/emotionzone.webp"
+                            alt="Comfort zone, discomfort zone and freakout zone diagram"
+                            class="confidence-zone-img">
+                    </div>
+
+                </div>
+
+                <div class="confidence-build-section">
+
+                    <div class="confidence-build-image">
+                        <img src="../../images/AdditionalIMG/Close-up-of-participant-interviewing-819x1024.jpg"
+                            alt="Participant being interviewed">
+                    </div>
+
+                    <div class="confidence-build-text">
+                        <p>
+                            To build our confidence, we can:
+                        </p>
+
+                        <ol>
+                            <li>
+                                <strong>Positive Mindset:</strong> allows us to grow and improve how we think about ourselves and the world around us.
+                            </li>
+
+                            <li>
+                                <strong>Positive Self Talk:</strong> positively speak about yourself to boost confidence, motivation and resilience.
+                            </li>
+
+                            <li>
+                                <strong>Reflect on your progress.</strong>
+                            </li>
+
+                            <li>
+                                <strong>Practice self-compassion:</strong> treat yourself with kindness.
+                            </li>
+
+                            <li>
+                                <strong>Positive relationships:</strong> Good relationships help us feel happy, safe and supported.
+                            </li>
+
+                            <li>
+                                <strong>Embrace challenges.</strong>
+                            </li>
+
+                            <li>
+                                <strong>Recognise your achievement.</strong>
+                            </li>
+                        </ol>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="accessibility-container"></div>
+    <script src="../../js/accessibility.js" defer></script> 
+
+    <div id="chatbot-container"></div>
+    <script src="../../js/chatbot.js" defer></script>
+    
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volunteering - We Belong</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../../css/style.css" type="text/css">
+
+    <!-- Shared libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Shared script -->
+    <script src="../../js/script.js" defer></script>
+
+    <style>
+        .volunteering-page {
+            background: #ffffff;
+            padding: 50px 0 70px;
+        }
+
+        .volunteering-section {
+            width: 100%;
+        }
+
+        .volunteering-wrapper {
+            width: 90%;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Top intro section */
+        .volunteering-top-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .volunteering-top-text p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #1f1f1f;
+            margin-bottom: 22px;
+        }
+
+        .volunteering-top-image img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            border-radius: 4px;
+            display: block;
+        }
+
+        /* Bottom content section */
+        .volunteering-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .volunteering-column {
+            padding: 0;
+        }
+
+        .volunteering-intro,
+        .volunteering-subtitle {
+            font-size: 20px;
+            line-height: 1.5;
+            color: #1f1f1f;
+            margin-bottom: 24px;
+        }
+
+        .volunteering-subtitle {
+            margin-top: 24px;
+        }
+
+        /* Remove black bullet points */
+        .volunteering-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .volunteering-list li {
+            position: relative;
+            list-style: none;
+            padding-left: 40px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.5;
+            color: #1f1f1f;
+        }
+
+        /* Purple custom bullet only */
+        .volunteering-list li::before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 14px;
+            height: 14px;
+            background: #6f2c91;
+            border-radius: 50%;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 900px) {
+            .volunteering-page {
+                padding: 35px 0 60px;
+            }
+
+            .volunteering-wrapper {
+                width: 92%;
+            }
+
+            .volunteering-top-grid,
+            .volunteering-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .volunteering-top-image img {
+                height: 320px;
+            }
+
+            .volunteering-top-text p,
+            .volunteering-intro,
+            .volunteering-subtitle,
+            .volunteering-list li {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body data-title="Volunteering">
+
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Banner -->
+    <div id="banner-placeholder"></div>
+
+    <!-- ================= PAGE CONTENT ================= -->
+    <main class="volunteering-page">
+        <section class="volunteering-section">
+            <div class="volunteering-wrapper">
+
+                <!-- ================= TOP INTRO SECTION ================= -->
+                <div class="volunteering-top-grid">
+
+                    <!-- Top left text -->
+                    <div class="volunteering-top-text">
+                        <p>
+                            Volunteering is when a person gives their time and skills to support others
+                            without being paid. Volunteering can have a positive, fulfilling and rewarding
+                            impact on not only your life, but others.
+                        </p>
+
+                        <p>
+                            You can volunteer in a way that suits you best, for example based on how much
+                            time you have and what you enjoy doing. This could be fundraising or serving a
+                            warm meal at a local shelter. You should feel proud of helping, no matter how big
+                            or small!
+                        </p>
+                    </div>
+
+                    <!-- Top right image -->
+                    <div class="volunteering-top-image">
+                        <img src="../../images/AdditionalIMG/Volunteer-playing-catch-with-participant-1024x819.jpg"
+                            alt="Volunteer playing catch with participant">
+                    </div>
+
+                </div>
+
+                <!-- ================= EXISTING TWO-COLUMN CONTENT ================= -->
+                <div class="volunteering-grid">
+
+                    <!-- Left column -->
+                    <div class="volunteering-column">
+                        <p class="volunteering-intro">
+                            Volunteering can have a big impact on not only your life, but someone else’s life too.
+                            As a volunteer, you can:
+                        </p>
+
+                        <ul class="volunteering-list">
+                            <li>Create new friendships.</li>
+                            <li>Learn new skills.</li>
+                            <li>Make a difference.</li>
+                        </ul>
+
+                        <p class="volunteering-subtitle">
+                            For the person receiving, it can help:
+                        </p>
+
+                        <ul class="volunteering-list">
+                            <li>Meet basic needs like clothing and hygiene.</li>
+                            <li>Improve happiness, wellbeing and life satisfaction.</li>
+                            <li>Create a sense of belonging in the community.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Right column -->
+                    <div class="volunteering-column">
+                        <p class="volunteering-intro">
+                            If you would like to volunteer, here are some ideas:
+                        </p>
+
+                        <ul class="volunteering-list">
+                            <li>Op-shop</li>
+                            <li>Landcare</li>
+                            <li>Service Groups</li>
+                            <li>Resident Committees</li>
+                            <li>Shelters</li>
+                            <li>Food Charities</li>
+                            <li>Not for Profit organisations</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+    
+    <div id="accessibility-container"></div>
+    <script src="../../js/accessibility.js" defer></script> 
+
+    <div id="chatbot-container"></div>
+    <script src="../../js/chatbot.js" defer></script>
+    
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>

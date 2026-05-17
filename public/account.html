@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Account - We Belong Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js" defer></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f4fb;
+            color: #222;
+        }
+
+        .account-hero {
+            background: linear-gradient(rgba(111, 44, 145, 0.88), rgba(111, 44, 145, 0.88)),
+                        url("images/home-page-banner.jpg") center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 70px 20px 90px;
+        }
+
+        .account-hero h1 {
+            font-size: 48px;
+            margin: 0 0 12px;
+        }
+
+        .account-hero p {
+            font-size: 22px;
+            margin: 0 auto;
+            max-width: 850px;
+            line-height: 1.6;
+        }
+
+        .account-wrapper {
+            max-width: 1250px;
+            margin: -40px auto 60px;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .account-grid {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        .accountcard {
+            background: white;
+            border-radius: 22px;
+            box-shadow: 0 10px 28px rgba(0,0,0,0.10);
+            padding: 28px;
+            box-sizing: border-box;
+        }
+
+        .profile-card {
+            text-align: center;
+        }
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #ead9f6;
+            margin-bottom: 18px;
+        }
+
+        .profile-card h2 {
+            margin: 0 0 8px;
+            color: #6f2c91;
+            font-size: 30px;
+        }
+
+        .profile-card p {
+            margin: 8px 0;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .profile-badge {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 18px;
+            border-radius: 999px;
+            background: #f2e9fb;
+            color: #6f2c91;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .quick-actions {
+            margin-top: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .quick-actions a,
+        .quick-actions button {
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 14px;
+            padding: 15px 16px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .quick-actions a:hover,
+        .quick-actions button:hover {
+            background: #582273;
+        }
+
+        .main-column {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .section-title {
+            font-size: 30px;
+            color: #6f2c91;
+            margin: 0 0 18px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .stat-box {
+            background: #faf7fd;
+            border: 2px solid #eadcf6;
+            border-radius: 18px;
+            padding: 22px;
+            text-align: center;
+        }
+
+        .stat-box h3 {
+            margin: 0;
+            font-size: 38px;
+            color: #6f2c91;
+        }
+
+        .stat-box p {
+            margin: 10px 0 0;
+            font-size: 18px;
+        }
+
+        .courses-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .course-item {
+            border: 2px solid #eadcf6;
+            border-radius: 18px;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .course-item h3 {
+            margin: 0 0 10px;
+            font-size: 24px;
+            color: #6f2c91;
+        }
+
+        .course-item p {
+            margin: 0 0 14px;
+            font-size: 17px;
+            line-height: 1.5;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 14px;
+            background: #e9e1f1;
+            border-radius: 999px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 999px;
+            background: #6f2c91;
+        }
+
+        .course-meta {
+            font-size: 16px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .continue-btn {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 16px;
+            border: none;
+            background: #6f2c91;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .continue-btn:hover {
+            background: #582273;
+        }
+
+        .help-box {
+            background: #f6eefc;
+            border-left: 6px solid #6f2c91;
+            border-radius: 16px;
+            padding: 22px;
+        }
+
+        .help-box p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0 0 12px;
+        }
+
+        .help-box a {
+            color: #6f2c91;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .help-box a:hover {
+            text-decoration: underline;
+        }
+
+        .empty-state {
+            font-size: 19px;
+            line-height: 1.6;
+            background: #faf7fd;
+            border: 2px dashed #d8c2ea;
+            border-radius: 18px;
+            padding: 24px;
+        }
+
+        @media (max-width: 1000px) {
+            .account-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid,
+            .courses-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .account-hero h1 {
+                font-size: 36px;
+            }
+
+            .account-hero p {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 26px;
+            }
+
+            .profile-card h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body data-title="My Account">
+
+    <div id="header-placeholder"></div>
+
+    <section class="account-hero">
+        <h1>My Account</h1>
+        <p>
+            View your profile, check your course progress, and continue learning with We Belong.
+        </p>
+    </section>
+
+    <main class="account-wrapper">
+        <div class="account-grid">
+
+            <aside class="accountcard profile-card">
+                <img src="images/AdditionalIMG/account-user.png" alt="User profile picture" class="profile-avatar">
+
+                <h2 id="accountName">Welcome</h2>
+                <p id="accountEmail">user@email.com</p>
+                <p>Keep learning and building confidence step by step.</p>
+                <span class="profile-badge">Active Learner</span>
+
+                <div class="quick-actions">
+                    <a href="learnhub.html">Go to Learning Hub</a>
+                    <a href="contact.html">Get Support</a>
+                    <button id="logoutBtn">Logout</button>
+                </div>
+            </aside>
+
+            <section class="main-column">
+
+                <div class="accountcard">
+                    <h2 class="section-title">Your Progress</h2>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <h3 id="coursesStarted">0</h3>
+                            <p>Courses Started</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3 id="coursesCompleted">0</h3>
+                            <p>Courses Completed</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3 id="averageProgress">0%</h3>
+                            <p>Average Progress</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accountcard">
+                    <h2 class="section-title">My Courses</h2>
+                    <div class="courses-list" id="myCoursesList">
+                        <!-- Courses will be added here -->
+                    </div>
+                </div>
+
+                <div class="accountcard">
+                    <h2 class="section-title">Achievements</h2>
+                    <div class="empty-state">
+                        You completed your first course. Great job. Keep going to unlock more achievements and build confidence.
+                    </div>
+                </div>
+
+                <div class="accountcard help-box">
+                    <p>
+                        Need help with your account or learning progress?
+                    </p>
+                    <p>
+                        Visit our <a href="contact.html">Contact Us</a> page or return to the
+                        <a href="learnhub.html">Learning Hub</a>.
+                    </p>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <div id="accessibility-container"></div>
+    <script src="js/accessibility.js" defer></script> 
+
+    <div id="chatbot-container"></div>
+    <script src="js/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        const isLoggedIn = localStorage.getItem("isLoggedIn");
+        const userEmail = localStorage.getItem("userEmail");
+        const userFirstName = localStorage.getItem("userFirstName");
+
+        if (isLoggedIn !== "true") {
+            window.location.href = "login.html";
+        }
+
+        document.getElementById("accountEmail").innerText = userEmail || "user@email.com";
+        document.getElementById("accountName").innerText = userFirstName ? "Hi, " + userFirstName : "Welcome";
+
+        document.getElementById("logoutBtn").addEventListener("click", function () {
+            localStorage.removeItem("isLoggedIn");
+            localStorage.removeItem("authToken");
+            localStorage.removeItem("userEmail");
+            localStorage.removeItem("userFirstName");
+            localStorage.removeItem("userLastName");
+            localStorage.removeItem("userId");
+
+            window.location.href = "login.html";
+        });
+
+        function getCompletedLessons(courseId) {
+            const raw = localStorage.getItem(courseId + "_completedLessons");
+
+            if (!raw) {
+                return [];
+            }
+
+            try {
+                return JSON.parse(raw);
+            } catch {
+                return [];
+            }
+        }
+
+        function getProgressPercent(courseId, totalLessons) {
+            const done = getCompletedLessons(courseId).length;
+
+            if (totalLessons === 0) {
+                return 0;
+            }
+
+            return Math.round((done / totalLessons) * 100);
+        }
+
+        const allCourses = [
+            {
+                id: "awareness",
+                title: "Disability Awareness Training",
+                desc: "Learn the basics of disability awareness and inclusive communication.",
+                totalLessons: 8,
+                link: "pages/LearningHub/awarenesstraining.html"
+            },
+            {
+                id: "communication",
+                title: "Communication",
+                desc: "Learn effective communication skills, including how to express yourself clearly, listen actively, and interact confidently with others in different situations.",
+                totalLessons: 4,
+                link: "pages/LearningHub/communication.html"
+            },
+            {
+                id: "sportstraining",
+                title: "Inclusive Sports Training",
+                desc: "Learn how to create inclusive sporting environments, support people with disabilities in sport, and promote participation, teamwork, and belonging within clubs and communities.",
+                totalLessons: 5,
+                link: "pages/LearningHub/sportstraining.html"
+            },
+            {
+                id: "money",
+                title: "Money",
+                desc: "Learn about budgeting, pay slips, banking, moving out of home, savings tips, and loans.",
+                totalLessons: 6,
+                link: "pages/LearningHub/money.html"
+            },
+            {
+                id: "cybersafety",
+                title: "Cybersafety",
+                desc: "Learn what cybersafety is, what can happen when you do not stay safe online, how to protect yourself, and what to do about cyberbullying.",
+                totalLessons: 4,
+                link: "pages/LearningHub/cybersafety.html"
+            },
+            {
+                id: "selfcareemergency",
+                title: "Self-care During Emergencies",
+                desc: "Learn what an emergency is, how to remain calm, signs you may need extra support, and where to find support services and resources.",
+                totalLessons: 4,
+                link: "pages/LearningHub/selfcareemergency.html"
+            }
+        ];
+
+        const container = document.getElementById("myCoursesList");
+        let enrolledCourses = 0;
+        let progressValues = [];
+
+        allCourses.forEach(course => {
+            const isEnrolled = localStorage.getItem(course.id + "_enrolled") === "true";
+
+            if (!isEnrolled) {
+                return;
+            }
+
+            enrolledCourses++;
+
+            const progress = getProgressPercent(course.id, course.totalLessons);
+            progressValues.push(progress);
+
+            container.innerHTML += `
+                <div class="course-item">
+                    <h3>${course.title}</h3>
+                    <p>${course.desc}</p>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:${progress}%"></div>
+                    </div>
+
+                    <div class="course-meta">
+                        ${progress === 100 ? "Completed" : progress + "% Complete"}
+                    </div>
+
+                    <a href="${course.link}" class="continue-btn">
+                        Continue
+                    </a>
+                </div>
+            `;
+        });
+
+        if (enrolledCourses === 0) {
+            container.innerHTML = `
+                <div class="empty-state">
+                    You have not enrolled in any courses yet.
+                    <br><br>
+                    <a href="learnhub.html" style="color:#6f2c91; font-weight:bold;">
+                        Go to Learning Hub
+                    </a>
+                </div>
+            `;
+        }
+
+        const coursesStarted = progressValues.filter(value => value > 0).length;
+        const coursesCompleted = progressValues.filter(value => value === 100).length;
+        const averageProgress = progressValues.length > 0
+            ? Math.round(progressValues.reduce((a, b) => a + b, 0) / progressValues.length)
+            : 0;
+
+        document.getElementById("coursesStarted").innerText = coursesStarted;
+        document.getElementById("coursesCompleted").innerText = coursesCompleted;
+        document.getElementById("averageProgress").innerText = averageProgress + "%";
+    </script>
+</body>
+</html>

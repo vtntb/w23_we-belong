@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>We Belong Project - Disability Support, Employment & Inclusion</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js" defer></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body data-title="Contact Us">
+  
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>  
+
+    <!-- page content -->
+    <main class="contact-page">
+        <section class="contact-section">
+            <div class="contact-wrapper">
+
+                <div class="contact-left">
+                    <h2>Contact Us</h2>
+
+                    <p class="contact-intro">
+                        Get in touch with us to learn more about We Belong programs, support, and opportunities.
+                    </p>
+
+                    <div class="contact-info-box">
+                        <h3>The Flagstaff Group</h3>
+
+                        <div class="contact-item">
+                            <span class="contact-label">Address:</span>
+                            <p>254 Nolan St, Unanderra NSW 2526</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="contact-label">Phone:</span>
+                            <p><a href="tel:0242720222">(02) 4272 0222</a></p>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="contact-label">Email:</span>
+                            <p>
+                                <a href="mailto:lifechoices.illawarra@flagstaffgroup.com.au">
+                                    lifechoices.illawarra@flagstaffgroup.com.au
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/flagstaffgroup/" target="_blank" class="facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/company/the-flagstaff-group/" target="_blank" class="linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/flagstaff_group/" target="_blank" class="instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.youtube.com/user/TheFlagstaffGroup" target="_blank" class="youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <form class="contact-form">
+                        <h3>Send us a message</h3>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fname">First Name *</label>
+                                <input type="text" id="fname" name="fname" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lname">Last Name *</label>
+                                <input type="text" id="lname" name="lname" required>
+                            </div>
+                        </div>
+
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="program">Program of Interest</label>
+                        <select id="program" name="program">
+                            <option value="">Select a program</option>
+                            <option>Learning Hub</option>
+                            <option>Inclusive Employment</option>
+                            <option>Sport & Recreation</option>
+                            <option>Disability Awareness</option>
+                        </select>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="accessibility-container"></div>
+    <script src="js/accessibility.js" defer></script> 
+
+    <div id="chatbot-container"></div>
+    <script src="js/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+</body>
+</html>

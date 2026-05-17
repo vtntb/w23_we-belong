@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>How to Belong - We Belong</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/script.js" defer></script>
+
+    <style>
+        /* Small extra style only for this page */
+        .belong-menu-wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 50px 20px 70px;
+        }
+
+        .belong-menu-hero {
+            background: linear-gradient(135deg, #6f2c91, #8f58b5);
+            color: white;
+            border-radius: 26px;
+            padding: 40px 36px;
+            margin-bottom: 38px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+        }
+
+        .belong-menu-hero h2 {
+            margin: 0 0 14px;
+            font-size: 40px;
+            line-height: 1.2;
+        }
+
+        .belong-menu-hero p {
+            margin: 0;
+            max-width: 780px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .belong-menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .belong-menu-card {
+            display: block;
+            text-decoration: none;
+            background: #ffffff;
+            border-radius: 22px;
+            padding: 28px 24px;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            border: 2px solid transparent;
+        }
+
+        .belong-menu-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.10);
+            border-color: #6f2c91;
+        }
+
+        .belong-menu-number {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: #efe4f7;
+            color: #6f2c91;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 18px;
+        }
+
+        .belong-menu-card h3 {
+            margin: 0 0 12px;
+            font-size: 24px;
+            color: #222;
+            line-height: 1.3;
+        }
+
+        .belong-menu-card p {
+            margin: 0;
+            color: #555;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .belong-menu-bottom {
+            margin-top: 36px;
+            text-align: center;
+        }
+
+        .belong-menu-bottom a {
+            display: inline-block;
+            text-decoration: none;
+            background: #6f2c91;
+            color: white;
+            padding: 14px 24px;
+            border-radius: 14px;
+            font-weight: 600;
+            transition: 0.25s ease;
+        }
+
+        .belong-menu-bottom a:hover {
+            background: #572176;
+        }
+
+        @media (max-width: 992px) {
+            .belong-menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .belong-menu-hero h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .belong-menu-wrap {
+                padding: 35px 16px 50px;
+            }
+
+            .belong-menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .belong-menu-hero {
+                padding: 28px 22px;
+            }
+
+            .belong-menu-hero h2 {
+                font-size: 28px;
+            }
+
+            .belong-menu-hero p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body data-title="How to Belong">
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <!-- ================= PAGE CONTENT ================= -->
+    <main class="about-page">
+        <section class="about-section">
+            <div class="belong-menu-wrap">
+
+                <!-- Intro -->
+                <div class="belong-menu-hero">
+                    <h2>How to Belong</h2>
+                    <p>
+                        Explore different parts of the We Belong journey. Each section below
+                        supports confidence, resilience, social connection, and inclusion in
+                        simple and practical ways.
+                    </p>
+                </div>
+
+                <!-- 6 linked cards -->
+                <div class="belong-menu-grid">
+
+                    <a href="pages/HowtoBelong/aboutbelong.html" class="belong-menu-card">
+                        <div class="belong-menu-number">1</div>
+                        <h3>About We Belong</h3>
+                        <p>
+                            Learn what the program is about and how it supports people to feel included and connected.
+                        </p>
+                    </a>
+
+                    <a href="pages/HowtoBelong/resi.html" class="belong-menu-card">
+                        <div class="belong-menu-number">2</div>
+                        <h3>Developing Resilience</h3>
+                        <p>
+                            Discover how resilience helps people face challenges, grow stronger, and keep going.
+                        </p>
+                    </a>
+
+                    <a href="pages/HowtoBelong/conbuilder.html" class="belong-menu-card">
+                        <div class="belong-menu-number">3</div>
+                        <h3>Building Confidence</h3>
+                        <p>
+                            Learn how small steps, practice, and support can help build confidence over time.
+                        </p>
+                    </a>
+
+                    <a href="pages/HowtoBelong/volun.html" class="belong-menu-card">
+                        <div class="belong-menu-number">4</div>
+                        <h3>Volunteering</h3>
+                        <p>
+                            See how volunteering can help people make friends, learn skills, and support others.
+                        </p>
+                    </a>
+
+                    <a href="pages/HowtoBelong/social.html" class="belong-menu-card">
+                        <div class="belong-menu-number">5</div>
+                        <h3>Being Social</h3>
+                        <p>
+                            Explore why social connection is important for happiness, safety, and belonging.
+                        </p>
+                    </a>
+
+                    <a href="pages/HowtoBelong/guest.html" class="belong-menu-card">
+                        <div class="belong-menu-number">6</div>
+                        <h3>Guest Speaking</h3>
+                        <p>
+                            Hear lived experiences and learn how inclusion ambassadors share their stories.
+                        </p>
+                    </a>
+
+                </div>
+
+                <!-- Bottom button -->
+                <div class="belong-menu-bottom">
+                    <a href="mainpage.html">Back to Main Page</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <!-- ================= END PAGE CONTENT ================= -->
+
+    <div id="accessibility-container"></div>
+    <script src="js/accessibility.js" defer></script> 
+
+    <div id="chatbot-container"></div>
+    <script src="js/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>
