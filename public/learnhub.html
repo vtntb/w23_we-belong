@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>We Belong Project - Disability Support, Employment & Inclusion</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <style>
+          /* ===== LEARNING HUB INFO ===== */
+          .learnhub-section {
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-start;
+              gap: 60px;
+              padding: 60px 180px;
+              background: #f5f5f5;
+              box-sizing: border-box;
+          }
+
+          /* left text */
+          .learnhub-text {
+              flex: 1;
+              max-width: 700px;
+          }
+
+          .learnhub-text h2 {
+              margin-top: 0;
+              margin-bottom: 20px;
+              font-size: 34px;
+              color: #111;
+          }
+
+          .learnhub-text p {
+              font-size: 20px;
+              line-height: 1.6;
+              margin-bottom: 18px;
+              color: #222;
+          }
+
+          .learnhub-text ul {
+              padding-left: 28px;
+              margin: 20px 0;
+          }
+
+          .learnhub-text li {
+              font-size: 18px;
+              line-height: 1.5;
+              margin-bottom: 10px;
+          }
+
+          .learnhub-text li::marker {
+              color: #6f2c91;
+              font-size: 1.2em;
+          }
+
+          .phone {
+              color: #6f2c91;
+              text-decoration: none;
+              font-weight: 600;
+          }
+
+          .phone:hover {
+              color: black;
+              text-decoration: underline;
+              text-underline-offset: 3px;
+          }
+
+          /* right image */
+          .learnhub-image {
+              flex: 0 0 420px;
+              display: flex;
+              justify-content: center;
+              align-items: flex-start;
+          }
+
+          .learnhub-image img {
+              width: 100%;
+              max-width: 420px;
+              height: auto;
+              margin-top: 10px;
+              border-radius: 10px;
+              display: block;
+              transition: box-shadow 0.2s ease, transform 0.2s ease;
+          }
+
+          .learnhub-image img:hover {
+              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+              transform: translateY(-3px);
+          }
+
+          /* ===== LEARNING COURSES ===== */
+          .course-list {
+              padding: 40px 180px 70px;
+              background: #f5f5f5;
+              display: grid;
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+              gap: 24px;
+              box-sizing: border-box;
+          }
+
+          .course-item {
+              background: #ffffff;
+              padding: 24px 26px;
+              border-radius: 10px;
+              box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+              transition: box-shadow 0.2s ease, transform 0.2s ease;
+          }
+
+          .course-item:hover {
+              box-shadow: 0 12px 24px rgba(53, 2, 70, 0.12);
+              transform: translateY(-3px);
+          }
+
+          .course-top {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 18px;
+          }
+
+          .course-title {
+              font-size: 23px;
+              font-weight: bold;
+              text-decoration: none;
+              color: #111;
+              line-height: 1.3;
+          }
+
+          .course-title:hover {
+              text-decoration: underline;
+              text-underline-offset: 4px;
+              color: #4f186b;
+          }
+
+          .course-btn {
+              background: #6f2c91;
+              color: white;
+              text-decoration: none;
+              padding: 10px 20px;
+              border-radius: 999px;
+              font-size: 16px;
+              font-weight: 600;
+              white-space: nowrap;
+              transition: background 0.2s ease;
+          }
+
+          .course-btn:hover {
+              background: #4f186b;
+          }
+
+          .course-desc {
+              margin-top: 14px;
+              margin-bottom: 0;
+              font-size: 17px;
+              line-height: 1.5;
+              color: #555;
+          }
+
+          /* ===== RESPONSIVE ===== */
+          @media screen and (max-width: 1200px) {
+              .learnhub-section,
+              .course-list {
+                  padding-left: 60px;
+                  padding-right: 60px;
+              }
+
+              .learnhub-image {
+                  flex: 0 0 350px;
+              }
+          }
+
+          @media screen and (max-width: 900px) {
+              .learnhub-section {
+                  flex-direction: column;
+                  padding: 40px 25px;
+                  gap: 30px;
+              }
+
+              .learnhub-text {
+                  max-width: 100%;
+              }
+
+              .learnhub-image {
+                  width: 100%;
+                  flex: none;
+              }
+
+              .learnhub-image img {
+                  max-width: 100%;
+              }
+
+              .course-list {
+                  grid-template-columns: 1fr;
+                  padding: 30px 25px 60px;
+              }
+
+              .course-top {
+                  flex-direction: column;
+                  align-items: flex-start;
+              }
+
+              .course-btn {
+                  margin-top: 8px;
+              }
+          }
+
+          @media screen and (max-width: 500px) {
+              .learnhub-text h2 {
+                  font-size: 28px;
+              }
+
+              .learnhub-text p,
+              .learnhub-text li {
+                  font-size: 16px;
+              }
+
+              .course-title {
+                  font-size: 20px;
+              }
+
+              .course-desc {
+                  font-size: 15px;
+              }
+          }
+    </style>
+
+</head>
+
+<body data-title="Learning Hub">
+  
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <!-- page content -->
+    <div class="learnhub-section">
+        <div class="learnhub-text">
+            <h2>Online learning</h2>
+
+            <p>Do you prefer learning from home?</p>
+
+            <p>
+                Flagstaff have put together the below resources for you to access in your spare time:
+            </p>
+
+            <ul>
+                <li>Disability Awareness Training</li>
+                <li>Communication</li>
+                <li>Inclusive Sports Training</li>
+                <li>etc</li>
+            </ul>
+
+            <p>
+                Don’t forget to ask your manager, support worker or support coordinator if you have any
+                questions about the courses available. Additional information regards courses have been provided below.
+            </p>
+            <p>
+                
+            </p>
+            <p>
+                If you have additional information you’d like to see on this page contact Alison Turner on 
+                <a href="tel:0242720203" class="phone">02 4272 0203</a>
+            </p>
+        </div>
+
+        <div class="learnhub-image">
+            <img src="images/AdditionalIMG/LearningHubIMG.jpg" alt="Learning Hub">
+        </div>
+    </div>
+
+    <div class="course-list">
+
+        <div class="course-item">
+            <div class="course-top">
+                <a href="pages/LearningHub/awarenesstraining.html" class="course-title">Disability Awareness Training</a>
+                <a href="pages/LearningHub/awarenesstraining.html" class="course-btn">View Course</a>
+            </div>
+            <p class="course-desc">Open to access this content</p>
+        </div>
+
+        <div class="course-item">
+            <div class="course-top">
+                <a href="pages/LearningHub/communication.html" class="course-title">Communication</a>
+                <a href="pages/LearningHub/communication.html" class="course-btn">View Course</a>
+            </div>
+            <p class="course-desc">Open to access this content</p>
+        </div>
+
+        <div class="course-item">
+            <div class="course-top">
+                <a href="pages/LearningHub/sportstraining.html" class="course-title">Inclusive Sports Training</a>
+                <a href="pages/LearningHub/sportstraining.html" class="course-btn">View Course</a>
+            </div>
+            <p class="course-desc">Open to access this content</p>
+        </div>
+
+        <div class="course-item">
+            <div class="course-top">
+                <a href="pages/LearningHub/money.html" class="course-title">Money</a>
+                <a href="pages/LearningHub/money.html" class="course-btn">View Course</a>
+            </div>
+            <p class="course-desc">Open to access this content</p>
+        </div>
+
+        <div class="course-item">
+            <div class="course-top">
+                <a href="pages/LearningHub/cybersafety.html" class="course-title">Cybersafety</a>
+                <a href="pages/LearningHub/cybersafety.html" class="course-btn">View Course</a>
+            </div>
+            <p class="course-desc">Open to access this content</p>
+        </div>
+
+        <div class="course-item">
+            <div class="course-top">
+                <a href="pages/LearningHub/selfcareemergency.html" class="course-title">Self-Care During Emergencies</a>
+                <a href="pages/LearningHub/selfcareemergency.html" class="course-btn">View Course</a>
+            </div>
+            <p class="course-desc">Open to access this content</p>
+        </div>
+    </div>
+
+
+    <div class="course-list" id="course-list">
+        <p style="font-size:18px; color:#555;">Loading courses...</p>
+    </div>
+
+    <script>
+        fetch('/api/courses')
+            .then(res => res.json())
+            .then(courses => {
+                const list = document.getElementById('course-list');
+               
+                if (!courses.length) {
+                    list.innerHTML = '<p>No courses available.</p>';
+                    return;
+                }
+
+                list.innerHTML = courses.map(course => {
+                    let courseUrl = course.course_url;
+
+                    if (courseUrl.startsWith('/LearningHub/')) {
+                        courseUrl = 'pages' + courseUrl;
+                    } else if (courseUrl.startsWith('LearningHub/')) {
+                        courseUrl = 'pages/' + courseUrl;
+                    }
+
+                    return `
+                        <div class="course-item">
+                            <div class="course-top">
+                                <a href="${courseUrl}" class="course-title">${course.title}</a>
+                                <a href="${courseUrl}" class="course-btn">View Course</a>
+                            </div>
+                            <p class="course-desc">${course.description}</p>
+                        </div>
+                    `;
+                }).join('');
+            })
+            .catch(() => {
+                document.getElementById('course-list').innerHTML = '<p>Could not load courses. Please try again later.</p>';
+            });
+    </script>
+    
+    <div id="accessibility-container"></div>
+    <script src="js/accessibility.js" defer></script> 
+
+    <div id="chatbot-container"></div>
+    <script src="js/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+</body>
+</html>
