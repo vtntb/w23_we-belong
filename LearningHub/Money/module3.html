@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Module 3 – Banking</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../learninghub.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/script.js" defer></script>
+    <script src="../learninghub.js" defer></script>
+
+    <style>
+        .lessonnav {
+            padding: 15px 180px;
+            background: #eceaea;
+            font-size: 15px;
+        }
+
+        .lessonnav a {
+            color: #6f2c91;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .lessonnav a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .course-intro-list {
+            list-style: disc;
+            padding-left: 34px;
+            margin: 0;
+        }
+
+        .course-intro-list li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+        }
+
+        .course-intro-list li::marker {
+            color: #6f2c91;
+            font-size: 1.3em;
+        }
+
+        .lesson-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 60px 0;
+        }
+
+        #lessonDoneMsg {
+            margin-top: 15px;
+            color: green;
+            font-size: 18px;
+        }
+
+        .navigationdiv {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1600px;
+        }
+
+        .naviBar {
+            width: 100%;
+            height: 1px;
+            background: #aba8a8;
+            margin: 20px auto 30px;
+        }
+
+        .buttonDiv {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            width: 100%;
+        }
+
+        .buttonDiv a:first-child {
+            justify-self: start;
+        }
+
+        .buttonDiv a:nth-child(2) {
+            justify-self: center;
+        }
+
+        .buttonDiv a:last-child {
+            justify-self: end;
+        }
+
+        .naviButt {
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        .naviButt:hover {
+            background: #4f186b;
+        }
+
+        .lesson-section {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+        }
+
+        .lesson-section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+        }
+
+        .lesson-section-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
+        .lesson-section-image {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section-image img {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            display: inline-block;
+        }
+
+        .two-column-section {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .small-image img {
+            max-width: 300px;
+        }
+
+        .medium-image img {
+            max-width: 450px;
+        }
+
+        .large-image img {
+            max-width: 850px;
+        }
+
+        .highlight-word {
+            display: inline-block;
+            background: #6f2c91;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin: 8px 0;
+        }
+
+        .reflink {
+            text-decoration: none;
+            color:#6f2c91;
+        }
+
+        @media (max-width: 992px) {
+            .lesson-section {
+                width: 92%;
+            }
+
+            .lesson-section-title {
+                font-size: 28px;
+            }
+
+            .lesson-section p {
+                font-size: 14px;
+            }
+
+            .two-column-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .lessonnav {
+                padding: 15px 30px;
+            }
+
+            .course-intro-list li {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body 
+    data-page-type="lesson"
+    data-course-id="money"
+    data-total-lessons="6"
+    data-lesson-number="3"
+    data-title="Module 3 – Banking"
+    data-button="true"
+>
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <div class="lessonnav">
+        <a href="/learnhub.html">Learning Hub</a>
+        <span>&gt;</span>
+
+        <a href="/LearningHub/money.html">
+            Money
+        </a>
+
+        <span>&gt;</span>
+
+        <a href="/LearningHub/Money/module3.html">
+            Module 3 – Banking
+        </a>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">What you’ll learn...</h2>
+        <div class="lesson-section-divider"></div>
+
+        <ul class="course-intro-list">
+            <li>What a bank account is.</li>
+            <li>Choosing and applying for a bank account.</li>
+            <li>How to read a bank statement.</li>
+            <li>Setting up a few accounts to help you save.</li>
+        </ul>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">What’s a bank account?</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <p>A bank account is a financial account between a bank customer and a financial institution.</p>
+
+                <p>A bank account can be a deposit account, a credit card, or any other type of account offered by a financial institution.</p>
+            </div>
+
+            <div class="lesson-section-image small-image">
+                <img src="/LearningHub/Money/MoneyIMG/bank.jpg" alt="Bank account">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Why do I need one?</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <ul class="course-intro-list">
+                    <li>Bank accounts are safe places to keep your money.</li>
+                    <li>Your employer needs a bank account to pay your salary into.</li>
+                    <li>Other payments, for example Centrelink benefits, also need to be paid into a bank account.</li>
+                    <li>Money sitting in a bank account can earn interest.</li>
+                </ul>
+            </div>
+
+            <div class="lesson-section-image small-image">
+                <img src="/LearningHub/Money/MoneyIMG/banking_logos.jpg" alt="Australian bank logos">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Types of bank accounts</h2>
+        <div class="lesson-section-divider"></div>
+
+        <ul class="course-intro-list">
+            <li>Savings Account</li>
+            <li>Cheque Account</li>
+            <li>Credit Account</li>
+        </ul>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">How do I open a bank account?</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <p>You will need an application form from the bank.</p>
+
+                <p>You will need to complete a 100 point check for identification.</p>
+
+                <ul class="course-intro-list">
+                    <li>Birth certificate = 100 points</li>
+                    <li>Student ID = 40 points</li>
+                    <li>Medicare card = 25 points</li>
+                </ul>
+            </div>
+
+            <div class="lesson-section-image medium-image">
+                <img src="/LearningHub/Money/MoneyIMG/banking_points.png" alt="Banking identification points">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">How can I access my money?</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <ul class="course-intro-list">
+                    <li>Visit the bank</li>
+                    <li>Automatic Transaction Machines (ATM)</li>
+                    <li>Internet Banking</li>
+                    <li>EFTPOS</li>
+                </ul>
+            </div>
+
+            <div class="lesson-section-image medium-image">
+                <img src="/LearningHub/Money/MoneyIMG/banking_atm.jpg" alt="ATM machines">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Checking bank records</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>
+            It is important to check your bank records and ensure they are correct as there may be errors including:
+        </p>
+
+        <p>Incorrect deposits and withdrawals.</p>
+
+        <p>Unauthorised access on your account.</p>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">How to check a bank statement</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>Keep details of deposits and withdrawals.</p>
+
+        <p>Check the date, amount, interest, fees, deposits and withdrawals.</p>
+
+        <p>Keep records for taxation and Centrelink.</p>
+
+        <p>Keep all bank statements in a hardcopy file or save them online.</p>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Example</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <ul class="course-intro-list">
+                    <li>Description = who paid you money or where funds were taken out of your bank account.</li>
+                    <li>Withdrawals = is the money taken out of your account.</li>
+                    <li>Deposits = this is the money placed into your account. Deposits are usually called Credits.</li>
+                    <li>Balance = money left in your bank account.</li>
+                </ul>
+            </div>
+
+            <div class="lesson-section-image medium-image">
+                <img src="/LearningHub/Money/MoneyIMG/banking_example.png" alt="Bank statement example">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Types of bank accounts</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="lesson-section-image large-image">
+            <img src="/LearningHub/Money/MoneyIMG/banking_accounts.jpg" alt="Types of bank accounts">
+        </div>
+
+        <ul class="course-intro-list">
+            <li>Add up all yearly expenses and divide the amount by the number of times you are paid each year.</li>
+            <li>Establish a budget and set up your pay so it automatically goes into separate accounts.</li>
+            <li>Keep a record of all spending in notebook, diary or spreadsheet.</li>
+        </ul>
+    </div>
+
+    <div class="lesson-actions">
+        <button id="markCompleteBtn" class="enrol-btn">
+            Mark Complete
+        </button>
+
+        <p id="lessonDoneMsg" style="display:none;">
+            Lesson marked as complete.
+        </p>
+        
+        <div class="navigationdiv">
+            <div class="naviBar"></div>
+
+            <div class="buttonDiv">
+
+                <a href="module2.html" class="naviButt">
+                    ← Previous
+                </a>
+
+                <a href="/LearningHub/money.html"
+                   class="naviButt"
+                   id="backButt">
+                    Back to Course
+                </a>
+
+                <a href="module4.html" class="naviButt">
+                    Next →
+                </a>
+
+            </div>
+        </div>
+    </div>   
+    
+    <div id="accessibility-container"></div>
+    <script src="/accessibility.js" defer></script> 
+    
+    <div id="chatbot-container"></div>
+    <script src="/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>

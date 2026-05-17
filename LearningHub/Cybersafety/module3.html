@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Module 3 – Cybersafety : How to stay safe online?</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../learninghub.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/script.js" defer></script>
+    <script src="../learninghub.js" defer></script>
+
+    <style>
+        .lessonnav {
+            padding: 15px 180px;
+            background: #eceaea;
+            font-size: 15px;
+        }
+
+        .lessonnav a {
+            color: #6f2c91;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .lessonnav a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .course-intro-list {
+            list-style: disc;
+            padding-left: 34px;
+            margin: 0;
+        }
+
+        .course-intro-list li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+        }
+
+        .course-intro-list li::marker {
+            color: #6f2c91;
+            font-size: 1.3em;
+        }
+
+        .lesson-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 60px 0;
+        }
+
+        #lessonDoneMsg {
+            margin-top: 15px;
+            color: green;
+            font-size: 18px;
+        }
+
+        .navigationdiv {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1600px;
+        }
+
+        .naviBar {
+            width: 100%;
+            height: 1px;
+            background: #aba8a8;
+            margin: 20px auto 30px;
+        }
+
+        .buttonDiv {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            width: 100%;
+        }
+
+        .buttonDiv a:first-child {
+            justify-self: start;
+        }
+
+        .buttonDiv a:nth-child(2) {
+            justify-self: center;
+        }
+
+        .buttonDiv a:last-child {
+            justify-self: end;
+        }
+
+        .naviButt {
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        .naviButt:hover {
+            background: #4f186b;
+        }
+
+        .lesson-section {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+        }
+
+        .lesson-section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+        }
+
+        .lesson-section-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
+        .lesson-section-image {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section-image img {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            display: inline-block;
+        }
+
+        .two-column-section {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .medium-image img {
+            max-width: 430px;
+        }
+
+        .reflink {
+            text-decoration: none;
+            color:#6f2c91;
+        }
+
+        @media (max-width: 992px) {
+            .lesson-section {
+                width: 92%;
+            }
+
+            .lesson-section-title {
+                font-size: 28px;
+            }
+
+            .lesson-section p {
+                font-size: 14px;
+            }
+
+            .two-column-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .lessonnav {
+                padding: 15px 30px;
+            }
+
+            .course-intro-list li {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body 
+    data-page-type="lesson"
+    data-course-id="cybersafety"
+    data-total-lessons="4"
+    data-lesson-number="3"
+    data-title="Module 3 – Cybersafety : How to stay safe online?"
+    data-button="true"
+>
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <div class="lessonnav">
+        <a href="/learnhub.html">Learning Hub</a>
+        <span>&gt;</span>
+
+        <a href="/LearningHub/cybersafety.html">
+            Cybersafety
+        </a>
+
+        <span>&gt;</span>
+
+        <a href="/LearningHub/Cybersafety/module3.html">
+            Module 3 – Cybersafety : How to stay safe online?
+        </a>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">How to keep yourself safe online</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <ul class="course-intro-list">
+                    <li>Don’t post personal information online</li>
+                    <li>Think carefully about posting pictures or videos of yourself online</li>
+                    <li>Keep your privacy settings as high as possible</li>
+                    <li>Never give out your passwords</li>
+                    <li>Don’t befriend people online you don’t know</li>
+                    <li>Don’t meet up with people you have met online</li>
+                    <li>Remember that not everyone online is who they say they are</li>
+                </ul>
+            </div>
+
+            <div class="lesson-section-image medium-image">
+                <img src="/LearningHub/Cybersafety/CyberIMG/module3-1.jpg" alt="Online safety">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Other cybersafety tips</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <ul class="course-intro-list">
+                    <li>Check the privacy settings on your mobile and social media</li>
+                    <li>Clear your browsing history regularly</li>
+                    <li>Don’t open pop-ups or spam emails EVER</li>
+                    <li>Don’t send rude pics on your phone</li>
+                    <li>Never give out your address or mobile number online</li>
+                    <li>Don’t share your passwords</li>
+                    <li>Be careful of people who are not real friends online</li>
+                    <li>Learn how to block people on your phone or on Facebook</li>
+                    <li>Turn your mobile phone off every now and then</li>
+                    <li>Get help if you get rude or pushy messages from strangers wanting to meet up</li>
+                    <li>Check if any strange apps have been added to your phone by someone else, tracking or stalking apps</li>
+                </ul>
+            </div>
+
+            <div class="lesson-section-image medium-image">
+                <img src="/LearningHub/Cybersafety/CyberIMG/module3-2.jpg" alt="Cybersecurity tips">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Smartphone Rules</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <ul class="course-intro-list">
+                    <li>Lock your keypad</li>
+                    <li>Delete browsing history</li>
+                    <li>Don’t post unkind messages about friends or other people</li>
+                    <li>Don’t exchange nude, inappropriate nor embarrassing pictures</li>
+                    <li>Respect others, do not post photos of people without their knowledge</li>
+                    <li>Don’t take photos in changing rooms, bathrooms or pool toilets</li>
+                    <li>Don’t share other people’s photos especially rude ones</li>
+                </ul>
+            </div>
+
+            <div class="lesson-section-image medium-image">
+                <img src="/LearningHub/Cybersafety/CyberIMG/module3-3.jpg" alt="Smartphone safety rules">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-actions">
+        <button id="markCompleteBtn" class="enrol-btn">
+            Mark Complete
+        </button>
+
+        <p id="lessonDoneMsg" style="display:none;">
+            Lesson marked as complete.
+        </p>
+        
+        <div class="navigationdiv">
+            <div class="naviBar"></div>
+
+            <div class="buttonDiv">
+
+                <a href="module2.html" class="naviButt">
+                    ← Previous
+                </a>
+
+                <a href="/LearningHub/cybersafety.html"
+                   class="naviButt"
+                   id="backButt">
+                    Back to Course
+                </a>
+
+                <a href="module4.html" class="naviButt">
+                    Next →
+                </a>
+
+            </div>
+        </div>
+    </div>   
+    
+    <div id="accessibility-container"></div>
+    <script src="/accessibility.js" defer></script> 
+    
+    <div id="chatbot-container"></div>
+    <script src="/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>

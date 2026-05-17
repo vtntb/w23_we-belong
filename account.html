@@ -383,6 +383,85 @@
         .then(courses => {
             const container = document.getElementById("myCoursesList");
 
+            try {
+                return JSON.parse(raw);
+            } catch {
+                return [];
+            }
+        }
+
+        function getProgressPercent(courseId, totalLessons) {
+            const done = getCompletedLessons(courseId).length;
+            if (totalLessons === 0) return 0;
+            return Math.round((done / totalLessons) * 100);
+        }
+
+        const allCourses = [
+            {
+                id: "awareness",
+                title: "Disability Awareness Training",
+                desc: "Learn the basics of disability awareness and inclusive communication.",
+                totalLessons: 8,
+                link: "/LearningHub/awarenesstraining.html"
+            },
+            {
+                id: "communication",
+                title: "Communication",
+                desc: "Learn effective communication skills, including how to express yourself clearly, listen actively, and interact confidently with others in different situations.",
+                totalLessons: 4,
+                link: "/LearningHub/communication.html"
+            },
+            {
+                id: "sportstraining",
+                title: "Inclusive Sports Training",
+                desc: "Learn how to create inclusive sporting environments, support people with disabilities in sport, and promote participation, teamwork, and belonging within clubs and communities.",
+                totalLessons: 5,
+                link: "/LearningHub/sportstraining.html"
+            },
+            {
+                id: "money",
+                title: "Money",
+                desc: "Learn about budgeting, pay slips, banking, moving out of home, savings tips, and loans.",
+                totalLessons: 6,
+                link: "/LearningHub/money.html"
+            },
+            {
+                id: "cybersafety",
+                title: "Cybersafety",
+                desc: "Learn what cybersafety is, what can happen when you do not stay safe online, how to protect yourself, and what to do about cyberbullying.",
+                totalLessons: 4,
+                link: "/LearningHub/cybersafety.html"
+            },
+            {
+                id: "selfcareemergency",
+                title: "Self-care During Emergencies",
+                desc: "Learn what an emergency is, how to remain calm, signs you may need extra support, and where to find support services and resources.",
+                totalLessons: 4,
+                link: "/LearningHub/selfcareemergency.html"
+            }
+        ];
+
+        const container = document.getElementById("myCoursesList");
+        let enrolledCourses = 0;
+        let progressValues = [];
+
+        allCourses.forEach(course => {
+            const isEnrolled = localStorage.getItem(course.id + "_enrolled") === "true";
+
+            if (!isEnrolled) return;
+
+            enrolledCourses++;
+
+            const progress = getProgressPercent(course.id, course.totalLessons);
+            progressValues.push(progress);
+
+            const courseHTML = `
+                <div class="course-item">
+                    <h3>${course.title}</h3>
+                    <p>${course.desc}</p>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:${progress}%"></div>
             if (!courses.length) {
                 container.innerHTML = `
                     <div class="empty-state">

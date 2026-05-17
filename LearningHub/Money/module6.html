@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Module 6 – Loans</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../learninghub.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/script.js" defer></script>
+    <script src="../learninghub.js" defer></script>
+
+    <style>
+        .lessonnav {
+            padding: 15px 180px;
+            background: #eceaea;
+            font-size: 15px;
+        }
+
+        .lessonnav a {
+            color: #6f2c91;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .lessonnav a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .course-intro-list {
+            list-style: disc;
+            padding-left: 34px;
+            margin: 0;
+        }
+
+        .course-intro-list li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+        }
+
+        .course-intro-list li::marker {
+            color: #6f2c91;
+            font-size: 1.3em;
+        }
+
+        .lesson-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 60px 0;
+        }
+
+        #lessonDoneMsg {
+            margin-top: 15px;
+            color: green;
+            font-size: 18px;
+        }
+
+        .navigationdiv {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1600px;
+        }
+
+        .naviBar {
+            width: 100%;
+            height: 1px;
+            background: #aba8a8;
+            margin: 20px auto 30px;
+        }
+
+        .buttonDiv {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            width: 100%;
+        }
+
+        .buttonDiv a:first-child {
+            justify-self: start;
+        }
+
+        .buttonDiv a:nth-child(2) {
+            justify-self: center;
+        }
+
+        .buttonDiv a:last-child {
+            justify-self: end;
+        }
+
+        .naviButt {
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        .naviButt:hover {
+            background: #4f186b;
+        }
+
+        .lesson-section {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+        }
+
+        .lesson-section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+        }
+
+        .lesson-section-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
+        .lesson-section-image {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section-image img {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            display: inline-block;
+        }
+
+        .two-column-section {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .small-image img {
+            max-width: 280px;
+        }
+
+        .medium-image img {
+            max-width: 450px;
+        }
+
+        .lesson-video {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .lesson-video iframe {
+            width: 100%;
+            max-width: 700px;
+            height: 390px;
+        }
+
+        .purple-link-btn {
+            display: inline-block;
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .purple-link-btn:hover {
+            background: #4f186b;
+        }
+
+        .reflink {
+            text-decoration: none;
+            color:#6f2c91;
+        }
+
+        @media (max-width: 992px) {
+            .lesson-section {
+                width: 92%;
+            }
+
+            .lesson-section-title {
+                font-size: 28px;
+            }
+
+            .lesson-section p {
+                font-size: 14px;
+            }
+
+            .two-column-section {
+                grid-template-columns: 1fr;
+            }
+
+            .lesson-video iframe {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .lessonnav {
+                padding: 15px 30px;
+            }
+
+            .course-intro-list li {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body 
+    data-page-type="lesson"
+    data-course-id="money"
+    data-total-lessons="6"
+    data-lesson-number="6"
+    data-title="Module 6 – Loans"
+    data-button="true"
+>
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <div class="lessonnav">
+        <a href="/learnhub.html">Learning Hub</a>
+        <span>&gt;</span>
+
+        <a href="/LearningHub/money.html">
+            Money
+        </a>
+
+        <span>&gt;</span>
+
+        <a href="/LearningHub/Money/module6.html">
+            Module 6 – Loans
+        </a>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">What you’ll learn...</h2>
+        <div class="lesson-section-divider"></div>
+
+        <ul class="course-intro-list">
+            <li>What a loan is</li>
+            <li>Types of loans</li>
+            <li>How interest works</li>
+        </ul>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">What’s a loan?</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>
+            Money that is borrowed which is expected to be paid back with interest.
+        </p>
+
+        <div class="two-column-section">
+            <div class="lesson-video">
+                <iframe 
+                    src="https://www.youtube.com/embed/8tQXfFSO8hA"
+                    title="Introduction to loans"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="lesson-section-image small-image">
+                <img src="/LearningHub/Money/MoneyIMG/loans1.jpg" alt="Borrow and afford">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Before you get a loan</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>
+            The things to consider before applying for a loan are:
+        </p>
+
+        <ol style="font-size:18px; line-height:1.6;">
+            <li>Can I pay it back?</li>
+            <li>How long will it take me to pay it back?</li>
+            <li>Will the reason I have the loan still be important in 5 years time?</li>
+            <li>Can I source the money from elsewhere?</li>
+            <li>Is the bank going to giving me a fair deal?</li>
+        </ol>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Applying for a loan</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>
+            The credit provider may look at your credit report and ask for:
+        </p>
+
+        <ul class="course-intro-list">
+            <li>Payslips</li>
+            <li>Bank account statements</li>
+            <li>Copies of other credit contracts or bills</li>
+            <li>This is so they can verify your ability to meet the loan repayments without financial hardship.</li>
+        </ul>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Affordability and Repayments</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>
+            What will my monthly payment be, and can I afford them?
+        </p>
+
+        <p>
+            Make sure you only borrow what you can afford to repay.
+        </p>
+
+        <p>
+            Investigate how to set up a direct debit from your bank account to make repayments.
+        </p>
+
+        <div class="lesson-video">
+            <iframe 
+                src="https://www.youtube.com/embed/oN0FV9abIqE"
+                title="Loan repayments"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Interest</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <p>
+                    Interest is money you owe on top of the amount borrowed.
+                </p>
+
+                <p>
+                    The higher the interest rate the higher the amount owing.
+                </p>
+            </div>
+
+            <div class="lesson-section-image medium-image">
+                <img src="/LearningHub/Money/MoneyIMG/loans2.jpg" alt="Loan interest chart">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Interest Calculation</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>
+            So lets pretend we have to get a $50,000 dollar loan for a house or car.
+        </p>
+
+        <p>
+            We’ll pretend that we earn $40,000 annually and get approximately $650 a week.
+        </p>
+
+        <a href="https://moneysmart.gov.au/loans/personal-loan-calculator" 
+           target="_blank" 
+           class="purple-link-btn">
+            Loan Calculator
+        </a>
+    </div>
+
+    <div class="lesson-actions">
+        <button id="markCompleteBtn" class="enrol-btn">
+            Mark Complete
+        </button>
+
+        <p id="lessonDoneMsg" style="display:none;">
+            Lesson marked as complete.
+        </p>
+        
+        <div class="navigationdiv">
+            <div class="naviBar"></div>
+
+            <div class="buttonDiv">
+
+                <a href="module5.html" class="naviButt">
+                    ← Previous
+                </a>
+
+                <a href="/LearningHub/money.html"
+                   class="naviButt"
+                   id="backButt">
+                    Back to Course
+                </a>
+
+                <a href="/LearningHub/money.html" class="naviButt">
+                    Finish
+                </a>
+
+            </div>
+        </div>
+    </div>   
+    
+    <div id="accessibility-container"></div>
+    <script src="/accessibility.js" defer></script> 
+    
+    <div id="chatbot-container"></div>
+    <script src="/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Module 5 – Savings tips</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../learninghub.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/script.js" defer></script>
+    <script src="../learninghub.js" defer></script>
+
+    <style>
+        .lessonnav {
+            padding: 15px 180px;
+            background: #eceaea;
+            font-size: 15px;
+        }
+
+        .lessonnav a {
+            color: #6f2c91;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .lessonnav a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .course-intro-list {
+            list-style: disc;
+            padding-left: 34px;
+            margin: 0;
+        }
+
+        .course-intro-list li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+        }
+
+        .course-intro-list li::marker {
+            color: #6f2c91;
+            font-size: 1.3em;
+        }
+
+        .lesson-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 60px 0;
+        }
+
+        #lessonDoneMsg {
+            margin-top: 15px;
+            color: green;
+            font-size: 18px;
+        }
+
+        .navigationdiv {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1600px;
+        }
+
+        .naviBar {
+            width: 100%;
+            height: 1px;
+            background: #aba8a8;
+            margin: 20px auto 30px;
+        }
+
+        .buttonDiv {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            width: 100%;
+        }
+
+        .buttonDiv a:first-child {
+            justify-self: start;
+        }
+
+        .buttonDiv a:nth-child(2) {
+            justify-self: center;
+        }
+
+        .buttonDiv a:last-child {
+            justify-self: end;
+        }
+
+        .naviButt {
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        .naviButt:hover {
+            background: #4f186b;
+        }
+
+        .lesson-section {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+        }
+
+        .lesson-section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+        }
+
+        .lesson-section-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
+        .lesson-section-image {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section-image img {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            display: inline-block;
+        }
+
+        .two-column-section {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .small-image img {
+            max-width: 220px;
+        }
+
+        .medium-image img {
+            max-width: 420px;
+        }
+
+        .reflink {
+            text-decoration: none;
+            color:#6f2c91;
+        }
+
+        @media (max-width: 992px) {
+            .lesson-section {
+                width: 92%;
+            }
+
+            .lesson-section-title {
+                font-size: 28px;
+            }
+
+            .lesson-section p {
+                font-size: 14px;
+            }
+
+            .two-column-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .lessonnav {
+                padding: 15px 30px;
+            }
+
+            .course-intro-list li {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body 
+    data-page-type="lesson"
+    data-course-id="money"
+    data-total-lessons="6"
+    data-lesson-number="5"
+    data-title="Module 5 – Savings tips"
+    data-button="true"
+>
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <div class="lessonnav">
+        <a href="/learnhub.html">Learning Hub</a>
+        <span>&gt;</span>
+
+        <a href="/LearningHub/money.html">
+            Money
+        </a>
+
+        <span>&gt;</span>
+
+        <a href="/LearningHub/Money/module5.html">
+            Module 5 – Savings tips
+        </a>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">What you’ll learn...</h2>
+        <div class="lesson-section-divider"></div>
+
+        <ul class="course-intro-list">
+            <li>What an emergency fund is</li>
+            <li>Ways to save money</li>
+            <li>Think before you spend</li>
+            <li>Tips if you’re in financial trouble</li>
+        </ul>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">What you’ll learn...</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <p>
+                    An emergency fund is money you save to cover urgent or unexpected costs such as:
+                </p>
+
+                <ul class="course-intro-list">
+                    <li>car repairs</li>
+                    <li>unexpected travel</li>
+                    <li>urgent medical bills</li>
+                </ul>
+
+                <p>
+                    An emergency fund can save you from using your credit card.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Set up a bank account</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>
+            Create a bank account without having a card linked to it. This will prevent you from accessing these emergency funds.
+            All banks offer these accounts.
+        </p>
+
+        <p>
+            Set up automatic transfers that send money to your emergency bank account after you get paid.
+        </p>
+
+        <p>
+            Watch the Commbank video on how to transfer funds.
+        </p>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Beware of ATMs...</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>
+            Use only the ATMs of your bank or credit union.
+        </p>
+
+        <p>
+            While major banks have removed ATM fees from accounts that are not their own,
+            there are some ATM machines that may still charge you a transaction fee.
+        </p>
+
+        <p>
+            To avoid being charged, make sure you visit your bank to take out the funds you need.
+        </p>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Create a savings plan</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>
+            People with a savings plan are twice as likely to save successfully.
+        </p>
+
+        <p>
+            Start small with a short-term goal — save small amounts on a shelf.
+        </p>
+
+        <p>
+            Once you reach your goal, you’ll have created a habit of saving you can be proud of.
+            You’ll be able to keep going strong with a new goal.
+        </p>
+
+        <p style="text-align:center;">
+            <strong>What is a goal you want to save?</strong>
+        </p>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Tax refunds</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>
+            Every year in July we prepare tax returns to be sent to the Australian Taxation Office.
+        </p>
+
+        <p>
+            Refunds may be given after tax returns have been processed.
+            If you receive a refund put that amount into an emergency fund.
+        </p>
+
+        <p style="text-align:center;">
+            <strong>What are some other things that give you a big money break?</strong>
+        </p>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Save loose change</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <p>
+                    Save your loose change. Some banks will round up your items of food,
+                    payments or money they take from you, why shouldn’t we do the same?
+                </p>
+
+                <p>
+                    You can also use a piggy bank or empty tin of tomatoes if you like.
+                    Every cent counts!
+                </p>
+            </div>
+
+            <div class="lesson-section-image medium-image">
+                <img src="/LearningHub/Money/MoneyIMG/change.jpg" alt="Loose change">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">The Envelope Method</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <p>
+                    Find an envelope and place 10% of your money in it that you use for everyday spending.
+                </p>
+
+                <p>
+                    Everyday spending means a hot chocolate, gas in the car, travel expenses and random purchases.
+                </p>
+
+                <p>
+                    Example: If you get paid $300, put away $30 (10%) for everyday expenses.
+                </p>
+            </div>
+
+            <div class="lesson-section-image medium-image">
+                <img src="/LearningHub/Money/MoneyIMG/envelope.jpg" alt="Envelope method">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Buy generic brands</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>
+            Go generic. Ask your doctor or chemist if generic prescription drugs are a good option for you.
+            Generic drugs can cost several hundred dollars less to purchase annually than brand-name drugs.
+        </p>
+
+        <p>
+            Example: Panadol and Nurofen can be bought as Paracetamol and Ibuprofen for $3–$4 cheaper!
+        </p>
+
+        <p>
+            Also look for generic brands while shopping at the supermarket.
+        </p>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Have a meal plan</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <p>
+                    Plan meals in advance and stick to a list while grocery shopping.
+                </p>
+
+                <p>
+                    Choose meals that can be saved for leftovers.
+                </p>
+
+                <p>
+                    Choose something you enjoy eating!
+                </p>
+            </div>
+
+            <div class="lesson-section-image small-image">
+                <img src="/LearningHub/Money/MoneyIMG/mealPlan.jpg" alt="Meal plan">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Class task...</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>
+            Step 1: Figure out something you want to save for.
+        </p>
+
+        <p>
+            Step 2: How much will it cost?
+        </p>
+
+        <p>
+            Step 3: How much do you have to save to get it?
+        </p>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">The 24 hour rule</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <p>
+                    The 24 hour rule helps avoid purchasing expensive or unnecessary items on impulse.
+                </p>
+
+                <p>
+                    Think over each non-essential purchase for at least 24 hours.
+                </p>
+
+                <p>
+                    If you don’t really need or want the item — don’t buy it!
+                </p>
+            </div>
+
+            <div class="lesson-section-image small-image">
+                <img src="/LearningHub/Money/MoneyIMG/wait-for-it.png" alt="Wait for it">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Money as work time</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <p>
+                    Calculate purchases by hours worked instead of cost.
+                </p>
+
+                <p>
+                    Take the amount of the item you’re considering purchasing and divide it by your hourly wage.
+                </p>
+
+                <p>
+                    If it is a $50 pair of shoes and you make $10 an hour,
+                    ask yourself if those shoes are really worth five long hours of work.
+                </p>
+            </div>
+
+            <div class="lesson-section-image small-image">
+                <img src="/LearningHub/Money/MoneyIMG/balance.jpg" alt="Work life balance">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Getting out of trouble...</h2>
+        <div class="lesson-section-divider"></div>
+
+        <ul class="course-intro-list">
+            <li>Freeze your credit – call your bank and ask them to put a stop on your credit card until your finances are sorted.</li>
+            <li>Take one debt at a time. Find the debt with the highest interest rate and tackle that one first.</li>
+            <li>Speak to an expert such as a bank manager or financial planner to help you put a plan in place.</li>
+        </ul>
+    </div>
+
+    <div class="lesson-actions">
+        <button id="markCompleteBtn" class="enrol-btn">
+            Mark Complete
+        </button>
+
+        <p id="lessonDoneMsg" style="display:none;">
+            Lesson marked as complete.
+        </p>
+        
+        <div class="navigationdiv">
+            <div class="naviBar"></div>
+
+            <div class="buttonDiv">
+
+                <a href="module4.html" class="naviButt">
+                    ← Previous
+                </a>
+
+                <a href="/LearningHub/money.html"
+                   class="naviButt"
+                   id="backButt">
+                    Back to Course
+                </a>
+
+                <a href="module6.html" class="naviButt">
+                    Next →
+                </a>
+
+            </div>
+        </div>
+    </div>   
+    
+    <div id="accessibility-container"></div>
+    <script src="/accessibility.js" defer></script> 
+    
+    <div id="chatbot-container"></div>
+    <script src="/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>

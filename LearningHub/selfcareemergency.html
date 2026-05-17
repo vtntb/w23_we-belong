@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>We Belong Project - Self-care During Emergencies</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/script.js" defer></script>
+    <script src="learninghub.js" defer></script>
+    <link rel="stylesheet" href="learninghub.css" type="text/css">
+
+    <style>
+        .selfcare-info {
+            max-width: 1500px;
+            margin: 50px auto;
+            padding: 0 90px;
+        }
+
+        .selfcare-grid {
+            display: grid;
+            grid-template-columns: 1fr 360px;
+            gap: 90px;
+            align-items: start;
+            margin-bottom: 80px;
+        }
+
+        .selfcare-info h2 {
+            font-size: 32px;
+            margin-bottom: 25px;
+            color: #111;
+        }
+
+        .selfcare-info p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 22px;
+            color: #111;
+        }
+
+        .selfcare-info ul {
+            list-style: disc;
+            padding-left: 34px;
+            margin: 0;
+        }
+
+        .selfcare-info li {
+            margin-bottom: 14px;
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+        }
+
+        .selfcare-info li::marker {
+            color: #6f2c91;
+            font-size: 1.3em;
+        }
+
+        .koala-img {
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 992px) {
+            .selfcare-info {
+                padding: 0 25px;
+            }
+
+            .selfcare-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .koala-img {
+                max-width: 260px;
+            }
+        }
+    </style>
+</head>
+
+<body data-title="Self-care During Emergencies"
+      data-button="true"
+      data-page-type="course"
+      data-course-id="selfcareemergency"
+      data-total-lessons="4">
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+    <div id="course-placeholder"></div>
+
+    <!-- Course Information -->
+    <div class="selfcare-info">
+        <div class="selfcare-grid">
+
+            <div>
+                <h2>Course Objective</h2>
+
+                <p>
+                    This comprehensive course on Self-care During Emergencies aims to equip you with essential skills and knowledge
+                    to identify problems, manage emotions and get support during a disaster.
+                </p>
+
+                <p>Topic covered in this course:</p>
+
+                <ul>
+                    <li>What an emergency is</li>
+                    <li>How to remain calm</li>
+                    <li>Signs you need extra support</li>
+                    <li>Support services and resources</li>
+                </ul>
+            </div>
+
+            <div>
+                <img src="/AdditionalIMG/Koala_waving.png"
+                     alt="Koala waving"
+                     class="koala-img">
+            </div>
+
+        </div>
+    </div>
+
+    <h2 class="course-content-title">Course Content</h2>
+
+    <div class="lesson-list">
+        <div class="lesson locked">
+            <a href="/LearningHub/SelfCareEmergency/module1.html">
+                Module 1: What Is An Emergency?
+            </a>
+        </div>
+
+        <div class="lesson locked">
+            <a href="/LearningHub/SelfCareEmergency/module2.html">
+                Module 2: How To Remain Calm During An Emergency
+            </a>
+        </div>
+
+        <div class="lesson locked">
+            <a href="/LearningHub/SelfCareEmergency/module3.html">
+                Module 3: Signs That I Need Extra Help or Support
+            </a>
+        </div>
+
+        <div class="lesson locked">
+            <a href="/LearningHub/SelfCareEmergency/module4.html">
+                Module 4: Support Services & Resources
+            </a>
+        </div>
+    </div>
+
+    <div id="accessibility-container"></div>
+    <script src="/accessibility.js" defer></script> 
+    
+    <div id="chatbot-container"></div>
+    <script src="/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>

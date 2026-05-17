@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Module 1 – What Is An Emergency?</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../learninghub.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/script.js" defer></script>
+    <script src="../learninghub.js" defer></script>
+
+    <style>
+        .lessonnav {
+            padding: 15px 180px;
+            background: #eceaea;
+            font-size: 15px;
+        }
+
+        .lessonnav a {
+            color: #6f2c91;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .lessonnav a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .course-intro-list {
+            list-style: disc;
+            padding-left: 34px;
+            margin: 0;
+        }
+
+        .course-intro-list li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+        }
+
+        .course-intro-list li::marker {
+            color: #6f2c91;
+            font-size: 1.3em;
+        }
+
+        .lesson-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 60px 0;
+        }
+
+        #lessonDoneMsg {
+            margin-top: 15px;
+            color: green;
+            font-size: 18px;
+        }
+
+        .navigationdiv {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1600px;
+        }
+
+        .naviBar {
+            width: 100%;
+            height: 1px;
+            background: #aba8a8;
+            margin: 20px auto 30px;
+        }
+
+        .buttonDiv {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            width: 100%;
+        }
+
+        .buttonDiv a:first-child {
+            justify-self: start;
+        }
+
+        .buttonDiv a:nth-child(2) {
+            justify-self: center;
+        }
+
+        .buttonDiv a:last-child {
+            justify-self: end;
+        }
+
+        .naviButt {
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        .naviButt:hover {
+            background: #4f186b;
+        }
+
+        .lesson-section {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+        }
+
+        .lesson-section + .lesson-section {
+            border-top: 2px solid #f04b23;
+            padding-top: 50px;
+            margin-top: 50px;
+        }
+
+        .lesson-section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+        }
+
+        .lesson-section-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
+        .lesson-section-image {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section-image img {
+            width: 100%;
+            max-width: 950px;
+            height: auto;
+            display: inline-block;
+        }
+
+        .two-column-section {
+            display: grid;
+            grid-template-columns: 1fr 460px;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .large-image img {
+            max-width: 1100px;
+        }
+
+        .medium-image img {
+            max-width: 500px;
+        }
+
+        .small-image img {
+            max-width: 350px;
+        }
+
+        .lesson-video {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .lesson-video iframe {
+            width: 100%;
+            max-width: 650px;
+            height: 365px;
+        }
+
+        .reflink {
+            text-decoration: none;
+            color:#6f2c91;
+        }
+
+        @media (max-width: 992px) {
+            .lesson-section {
+                width: 92%;
+            }
+
+            .lesson-section-title {
+                font-size: 28px;
+            }
+
+            .lesson-section p {
+                font-size: 14px;
+            }
+
+            .two-column-section {
+                grid-template-columns: 1fr;
+            }
+
+            .lesson-video iframe {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .lessonnav {
+                padding: 15px 30px;
+            }
+
+            .course-intro-list li {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body 
+    data-page-type="lesson"
+    data-course-id="selfcareemergency"
+    data-total-lessons="4"
+    data-lesson-number="1"
+    data-title="Module 1 – What Is An Emergency?"
+    data-button="true"
+>
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <div class="lessonnav">
+        <a href="/learnhub.html">Learning Hub</a>
+        <span>&gt;</span>
+
+        <a href="/LearningHub/selfcareemergency.html">
+            Self-care During Emergencies
+        </a>
+
+        <span>&gt;</span>
+
+        <a href="/LearningHub/SelfCareEmergency/module1.html">
+            Module 1 – What Is An Emergency?
+        </a>
+    </div>
+
+    <div class="lesson-section">
+        <p>
+            Emergencies come in many forms. An emergency is a situation that happens suddenly and unexpectedly,
+            where there is a risk of harm to people, property, or the environment.
+        </p>
+
+        <p>
+            It is when we might need help quickly because something dangerous or very serious has happened.
+            For example, an emergency can be a severe weather event like a flood, bushfire, bad storm or cyclone.
+        </p>
+
+        <div class="lesson-section-image large-image">
+            <img src="/LearningHub/SelfCareEmergency/SelfCareIMG/m1-1.jpg" alt="Bushfire emergency">
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <div class="two-column-section">
+            <div>
+                <h2>Who Might Come to Help During an Emergency?</h2>
+
+                <p>
+                    During an emergency, there may be people who come and help you be safe.
+                </p>
+
+                <p><strong>They can include:</strong></p>
+
+                <ul class="course-intro-list">
+                    <li>Police Officers</li>
+                    <li>Fire fighters</li>
+                    <li>State Emergency Services</li>
+                    <li>Australian Defence Force</li>
+                    <li>Volunteers like Red Cross</li>
+                </ul>
+            </div>
+
+            <div class="lesson-section-image medium-image">
+                <img src="/LearningHub/SelfCareEmergency/SelfCareIMG/m1-2.jpg" alt="Emergency service workers">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <div class="two-column-section">
+            <div class="lesson-section-image large-image">
+                <img src="/LearningHub/SelfCareEmergency/SelfCareIMG/m1-3.jpg" alt="Smoke from bushfire" style="max-width: 900px;">
+            </div>
+
+            <div>
+                <h2>What To Expect During An Emergency</h2>
+
+                <p>
+                    Emergencies can be scary, but it’s important to stay as calm as you can and pay close attention
+                    to what people tell you to do.
+                </p>
+
+                <p>
+                    If you can do this well, it will ensure you are kept safe and out of any danger.
+                </p>
+
+                <p>
+                    During a flood or bushfire, there are several things you can expect and should be prepared for:
+                </p>
+
+                <p><strong>During a Flood</strong></p>
+
+                <p>
+                    <strong>Rising Water:</strong> Water levels will increase quickly, which can lead to flooding in streets,
+                    homes, and other areas.
+                </p>
+
+                <p>
+                    <strong>Power Outages:</strong> Electricity may be cut off to prevent accidents and damage to the electrical infrastructure.
+                </p>
+
+                <p>
+                    <strong>Evacuation Orders:</strong> Authorities may issue evacuation orders for certain areas that are at risk of severe flooding.
+                </p>
+
+                <p>
+                    <strong>Road Closures:</strong> Some roads may be closed due to high water levels, making travel difficult or impossible.
+                </p>
+
+                <p>
+                    <strong>Limited Services:</strong> Emergency services may be stretched, and it might be harder to get medical help, food, and water.
+                </p>
+
+                <p><strong>During a Bushfire</strong></p>
+
+                <p>
+                    <strong>Smoke and Heat:</strong> There will be a lot of smoke, which can make it hard to see and breathe,
+                    and the temperature will be very high.
+                </p>
+
+                <p>
+                    <strong>Evacuation Orders:</strong> Like with floods, emergency personnel may issue evacuation orders for areas at risk of being affected by the bushfire.
+                </p>
+
+                <p>
+                    <strong>Changing Conditions:</strong> Bushfire conditions can change rapidly with the wind,
+                    so it’s important to stay informed and ready to act quickly.
+                </p>
+
+                <p>
+                    <strong>Embers:</strong> Even if the main fire front has not reached your location,
+                    embers can be carried by the wind and start new fires.
+                </p>
+
+                <p>
+                    <strong>Loss of Services:</strong> Power, water, and communication services may be disrupted.
+                </p>
+
+                <p>
+                    For both floods and bushfires, it’s important to have an emergency plan in place,
+                    know the evacuation routes, and keep a kit of essential supplies ready.
+                    Stay informed through local news, emergency services updates,
+                    and adhere to the advice and instructions given by authorities.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <div class="two-column-section">
+            <div>
+                <h2>What Emotions Might I Feel?</h2>
+
+                <p>
+                    During an emergency, people might have different emotions such as:
+                </p>
+
+                <ul class="course-intro-list">
+                    <li>
+                        <strong>Scared:</strong> You might feel frightened or afraid because something unusual or dangerous is happening.
+                    </li>
+                    <li>
+                        <strong>Worried:</strong> You could be thinking about what’s going on and feeling concerned about your safety.
+                    </li>
+                    <li>
+                        <strong>Nervous:</strong> Your body might feel a bit shaky or jumpy because emergencies can be stressful.
+                    </li>
+                    <li>
+                        <strong>Confused:</strong> Sometimes, it’s hard to understand what’s happening, and you might feel puzzled.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="lesson-section-image medium-image">
+                <img src="/LearningHub/SelfCareEmergency/SelfCareIMG/m1-4.jpg" alt="Person sitting in wheelchair">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <div class="two-column-section">
+            <div class="lesson-section-image small-image">
+                <img src="/LearningHub/SelfCareEmergency/SelfCareIMG/m1-5.jpg" alt="Person thinking">
+            </div>
+
+            <div>
+                <h2>What Might I Be Thinking?</h2>
+
+                <p>
+                    During an emergency, people might have different thoughts such as:
+                </p>
+
+                <ul class="course-intro-list">
+                    <li>
+                        <strong>What’s happening?</strong> You might wonder about what’s happening and why things are not normal.
+                    </li>
+                    <li>
+                        <strong>Is everyone okay?</strong> You could be thinking about the people around you and hoping they’re safe.
+                    </li>
+                    <li>
+                        <strong>What should I do?</strong> You might be trying to figure out what the right thing to do is,
+                        like listening to instructions or finding a safe place.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <div class="two-column-section">
+            <div>
+                <h2>What Might Be Happening In My Body</h2>
+
+                <p>
+                    You might notice your body feeling different:
+                </p>
+
+                <ul class="course-intro-list">
+                    <li>
+                        <strong>Heart racing:</strong> Your heart might beat faster because of the adrenaline in your body.
+                    </li>
+                    <li>
+                        <strong>Breathing faster:</strong> You could be breathing more quickly because your body is getting ready to respond to the emergency.
+                    </li>
+                    <li>
+                        <strong>Feeling hot or cold:</strong> You might feel warmer or colder than usual because your body reacts to stress in different ways.
+                    </li>
+                </ul>
+
+                <p>
+                    These are normal feelings to get and will help you during an emergency to keep safe.
+                </p>
+            </div>
+
+            <div class="lesson-section-image medium-image">
+                <img src="/LearningHub/SelfCareEmergency/SelfCareIMG/m1-6.jpg" alt="Person feeling anxious">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <div class="two-column-section">
+            <div class="lesson-video">
+                <iframe 
+                    src="https://www.youtube.com/embed/jEHwB1PG_-Q"
+                    title="The Fight Flight Freeze Response"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div>
+                <h2>Fight, Flight or Freeze</h2>
+
+                <p>
+                    These emotions, thoughts and feelings are all part of our fight, flight or freeze response.
+                </p>
+
+                <p>
+                    All of this happens because our body wants to keep us safe from danger.
+                </p>
+
+                <p>
+                    It’s like our body’s way of helping us out of trouble to stay safe.
+                </p>
+
+                <div class="lesson-section-image medium-image">
+                    <img src="/LearningHub/SelfCareEmergency/SelfCareIMG/m1-7.jpg" alt="Fight, flight or freeze">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-actions">
+        <button id="markCompleteBtn" class="enrol-btn">
+            Mark Complete
+        </button>
+
+        <p id="lessonDoneMsg" style="display:none;">
+            Lesson marked as complete.
+        </p>
+        
+        <div class="navigationdiv">
+            <div class="naviBar"></div>
+
+            <div class="buttonDiv">
+
+                <a href="/LearningHub/selfcareemergency.html" class="naviButt">
+                    ← Previous
+                </a>
+
+                <a href="/LearningHub/selfcareemergency.html"
+                   class="naviButt"
+                   id="backButt">
+                    Back to Course
+                </a>
+
+                <a href="module2.html" class="naviButt">
+                    Next →
+                </a>
+
+            </div>
+        </div>
+    </div>   
+    
+    <div id="accessibility-container"></div>
+    <script src="/accessibility.js" defer></script> 
+    
+    <div id="chatbot-container"></div>
+    <script src="/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>

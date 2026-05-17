@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Module 1 – Why do we need Inclusive Sports Programs</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../learninghub.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/script.js" defer></script>
+    <script src="../learninghub.js" defer></script>
+
+    <style>
+        .lessonnav {
+            padding: 15px 180px;
+            background: #eceaea;
+            font-size: 15px;
+        }
+
+        .lessonnav a {
+            color: #6f2c91;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .lessonnav a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* intro section */
+        .course-intro-wrap {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+        }
+
+        .course-intro-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+        }
+
+        .course-intro-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .course-intro-content {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .course-intro-list {
+            list-style: disc;
+            padding-left: 34px;
+            margin: 0;
+        }
+
+        .course-intro-list li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+        }
+
+        .course-intro-list li::marker {
+            color: #6f2c91;
+            font-size: 1.3em;
+        }
+
+        .course-intro-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* complete button */
+        .lesson-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 60px 0;
+        }
+
+        #lessonDoneMsg {
+            margin-top: 15px;
+            color: green;
+            font-size: 18px;
+        }
+
+        .navigationdiv {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1600px;
+        }
+
+        .naviBar {
+            width: 100%;
+            height: 1px;
+            background: #aba8a8;
+            margin: 20px auto 30px;
+        }
+
+        .buttonDiv {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            width: 100%;
+        }
+
+        .buttonDiv a:first-child {
+            justify-self: start;
+        }
+
+        .buttonDiv a:nth-child(2) {
+            justify-self: center;
+        }
+
+        .buttonDiv a:last-child {
+            justify-self: end;
+        }
+
+        .naviButt {
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        .naviButt:hover {
+            background: #4f186b;
+        }
+        
+        .lesson-section {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+        }
+
+        .lesson-section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+        }
+
+        .lesson-section-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
+        .lesson-section-image {
+            text-align: center;
+        }
+
+        .lesson-section-image img {
+            width: 100%;
+            max-width: 950px;
+            height: auto;
+            display: inline-block;
+        }
+
+        .reflink {
+            text-decoration: none;
+            color:#6f2c91;
+        }
+        @media (max-width: 992px) {
+            .lesson-section {
+                width: 92%;
+            }
+
+            .lesson-section-title {
+                font-size: 28px;
+            }
+
+            .lesson-section p {
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 992px) {
+            .lessonnav {
+                padding: 15px 30px;
+            }
+
+            .course-intro-wrap {
+                width: 92%;
+            }
+
+            .course-intro-title {
+                font-size: 28px;
+            }
+
+            .course-intro-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .course-intro-image {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .course-intro-list li {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body 
+    data-page-type="lesson"
+    data-course-id="sportstraining"
+    data-total-lessons="5"
+    data-lesson-number="1"
+    data-title="Module 1 – Why do we need Inclusive Sports Programs"
+    data-button="true"
+>
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <div class="lessonnav">
+        <a href="/learnhub.html">Learning Hub</a>
+        <span>&gt;</span>
+        <a href="/LearningHub/sportstraining.html">Inclusive Sports Training</a>
+        <span>&gt;</span>
+        <a href="/LearningHub/Inclusive/module1.html">Module 1 – Why do we need Inclusive Sports Programs</a>
+    </div>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">Training Objectives</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>By the end of this module, you will be able to:</p>
+
+        <ul class="course-intro-list">
+            <li>Understand the value of inclusive sport on and off the field.</li>
+            <li>Recognise how sport can build confidence, connection, and community for people with disability.</li>
+            <li>Challenge assumptions and identify the barriers people face when trying to join a club.</li>
+            <li>Reflect on how your club, team, or role can create a culture of welcome.</li>
+        </ul>
+
+        <p><em>“Inclusion isn’t a side activity—it’s the main game. It starts with mindset.”</em></p>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">Reasons why we need to be inclusive in sport</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>Inclusive Sports Programs provide a range of benefits to people with disability.</p>
+
+        <ul class="course-intro-list">
+            <li><strong>3 out of 4</strong> people with a disability over the age of 15 do not do enough exercise.</li>
+            <li><strong>Being active</strong> every day helps reduce the risk of type 2 diabetes, heart disease, and some cancers.</li>
+            <li>People with disabilities may face <strong>barriers to exercise</strong> due to the environment and feeling excluded.</li>
+            <li>Inclusive sports provide <strong>social benefits</strong> and help build friendships, teamwork, and a sense of belonging.</li>
+            <li><strong>Economic Benefits:</strong> More inclusive sports mean more members in clubs, leading to sustainable growth.</li>
+            <li>Physical activity improves <strong>mental health and wellbeing</strong>, reducing anxiety and depression.</li>
+        </ul>
+
+        <p>
+            Reference:
+            <a class="reflink" href="https://www.health.gov.au/topics/physical-activity-and-exercise/physical-activity-and-exercise-guidelines-for-all-australians/for-people-with-disability-or-chronic-conditions" target="_blank">
+                (https://www.health.gov.au/topics/physical-activity-and-exercise/physical-activity-and-exercise-guidelines-for-all-australians/for-people-with-disability-or-chronic-conditions);   
+            </a>
+            <a class="reflink" href="https://www.disabilitysupportguide.com.au/information/article/staying-fit-and-active-with-a-disability" target="_blank">
+                (https://www.disabilitysupportguide.com.au/information/article/staying-fit-and-active-with-a-disability)
+            </a>
+        </p>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">The Inclusion Spectrum</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>
+            The Australian Sports Commission promotes an inclusion spectrum of how clubs can engage people with a disability in sports. 
+            The elements of the spectrum are:
+        </p>
+
+        <ul class="course-intro-list">
+            <li>No modification</li>
+            <li>Minor modification</li>
+            <li>Major modification</li>
+            <li>Primarily for people with a disability</li>
+            <li>Only for people with a disability</li>
+            <li>Non-playing role</li>
+        </ul>
+
+        <div class="lesson-section-image" style="margin-top: 20px;">
+            <img src="/AdditionalIMG/inclusive-basketball.jpeg" alt="Inclusive basketball activity" style="max-width: 700px; width: 100%; height: auto;">
+        </div>
+
+        <p style="margin-top: 40px;">Here are some examples of each element in the spectrum:</p>
+
+        <ul class="course-intro-list">
+            <li>
+                <strong>No modifications:</strong>
+                A child with an intellectual disability participates in the local AFL Auskick program.
+            </li>
+
+            <li>
+                <strong>Minor modifications:</strong>
+                A lawn bowler who uses a wheelchair uses a bowling arm to bowl.
+            </li>
+
+            <li>
+                <strong>Major modifications:</strong>
+                A secured shot-putter competes under separate rules using modified equipment against other athletes with disability in an integrated track and field competition.
+            </li>
+
+            <li>
+                <strong>Primarily for people with disability:</strong>
+                Soccer players with vision impairment play blind football with people without a vision impairment who wear blindfolds.
+            </li>
+
+            <li>
+                <strong>Only for people with disability:</strong>
+                A team of adults with an intellectual disability play in the FIDA (Football Integration Development Association) league however are part of the wider club.
+            </li>
+
+            <li>
+                <strong>Non-playing role:</strong>
+                People with disability can be officials, coaches, club presidents, volunteers, and spectators.
+            </li>
+        </ul>
+
+        <p style="margin-top:40px; font-weight: 500; font-size: 26px;">
+            Adapted from Australian Sports Commission fact sheet ‘Inclusion in Sport’:
+        </p>
+
+        <div class="lesson-section-image">
+            <img src="/AdditionalIMG/inclusive-spectrum.png" alt="The Inclusion Spectrum" style="max-width: 700px; width: 100%; height: auto;">
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">Slam Down Under – Table Tennis for Adults with Intellectual Disability and Anxiety</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p><em>“I was scared to leave the house. Now I’m part of a team.”</em></p>
+
+        <p>
+            Slam Down Under is a community-based table tennis program in Victoria that supports adults with intellectual disability, 
+            many of whom also experience anxiety or mental health challenges. It was created by a local disability advocate and former 
+            table tennis coach who saw a gap for adults looking for a safe, social, and low-pressure sporting experience.
+        </p>
+
+        <p><strong>How did they do this:</strong></p>
+
+        <ul class="course-intro-list">
+            <li><strong>Co-designed the program</strong> with participants and families, ensuring it felt calm, respectful, and non-competitive.</li>
+            <li>Ran sessions at the <strong>same time and place each week</strong>, creating predictability for those with anxiety or change sensitivity.</li>
+            <li>Allowed <strong>players to join in gradually</strong> — some started by just watching, then picking up a paddle when ready.</li>
+            <li>Created a <strong>quiet entry space</strong> for players to arrive and settle in, with no noise or pressure.</li>
+            <li>Used <strong>gentle coaching</strong> — focusing on movement, confidence, and fun rather than technical perfection.</li>
+            <li>Reframed success: <em>“If you came and smiled, that’s a win.”</em></li>
+        </ul>
+    </section>
+
+    <section class="lesson-section">
+        <h2 class="lesson-section-title">The Impact</h2>
+        <div class="lesson-section-divider"></div>
+
+        <ul class="course-intro-list">
+            <li>Many players who hadn’t left home independently now attend weekly.</li>
+            <li>Several have made new friends for the first time in years.</li>
+            <li>One participant, who had not spoken in public before, led a warm-up game after a year of involvement.</li>
+            <li>Families report <strong>reduced anxiety</strong>, improved self-esteem, and a stronger sense of identity.</li>
+        </ul>
+
+        <p><em>“It’s not really about table tennis, it’s about belonging somewhere without fear.”</em> – Parent of a participant</p>
+
+        <p><strong>Thank you for completing Module 1, let’s dive into Module 2.</strong></p>
+    </section>
+
+    <div class="lesson-actions">
+        <button id="markCompleteBtn" class="enrol-btn">Mark Complete</button>
+
+        <p id="lessonDoneMsg" style="display:none;">
+            Lesson marked as complete.
+        </p>
+        
+        <div class="navigationdiv">
+            <div class="naviBar"></div>
+            <div class="buttonDiv">
+                <a href="/LearningHub/sportstraining.html" class="naviButt">← Previous</a>
+                <a href="/LearningHub/sportstraining.html" class="naviButt" id="backButt">Back to Course</a>
+                <a href="module2.html" class="naviButt">Next →</a>
+            </div>
+        </div>
+    </div>   
+    
+    <div id="accessibility-container"></div>
+    <script src="/accessibility.js" defer></script> 
+    
+    <div id="chatbot-container"></div>
+    <script src="/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>

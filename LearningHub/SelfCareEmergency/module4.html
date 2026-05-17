@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Module 4 – Support Services & Resources</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../learninghub.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/script.js" defer></script>
+    <script src="../learninghub.js" defer></script>
+
+    <style>
+        .lessonnav {
+            padding: 15px 180px;
+            background: #eceaea;
+            font-size: 15px;
+        }
+
+        .lessonnav a {
+            color: #6f2c91;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .lessonnav a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .course-intro-list {
+            list-style: disc;
+            padding-left: 34px;
+            margin: 0;
+        }
+
+        .course-intro-list li {
+            margin-bottom: 16px;
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+        }
+
+        .course-intro-list li::marker {
+            color: #6f2c91;
+            font-size: 1.3em;
+        }
+
+        .lesson-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 60px 0;
+        }
+
+        #lessonDoneMsg {
+            margin-top: 15px;
+            color: green;
+            font-size: 18px;
+        }
+
+        .navigationdiv {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1600px;
+        }
+
+        .naviBar {
+            width: 100%;
+            height: 1px;
+            background: #aba8a8;
+            margin: 20px auto 30px;
+        }
+
+        .buttonDiv {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            width: 100%;
+        }
+
+        .buttonDiv a:first-child {
+            justify-self: start;
+        }
+
+        .buttonDiv a:nth-child(2) {
+            justify-self: center;
+        }
+
+        .buttonDiv a:last-child {
+            justify-self: end;
+        }
+
+        .naviButt {
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        .naviButt:hover {
+            background: #4f186b;
+        }
+
+        .lesson-section {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+        }
+
+        .lesson-section + .lesson-section {
+            border-top: 2px solid #f04b23;
+            padding-top: 50px;
+            margin-top: 50px;
+        }
+
+        .lesson-section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+        }
+
+        .lesson-section-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
+        .lesson-section-image {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section-image img {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            display: inline-block;
+        }
+
+        .two-column-section {
+            display: grid;
+            grid-template-columns: 1fr 520px;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .medium-image img {
+            max-width: 540px;
+        }
+
+        .large-image img {
+            max-width: 650px;
+        }
+
+        .purple-link-btn {
+            display: inline-block;
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 13px 24px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 8px 0 22px;
+        }
+
+        .purple-link-btn:hover {
+            background: #4f186b;
+        }
+
+        .reflink {
+            text-decoration: none;
+            color:#6f2c91;
+        }
+
+        @media (max-width: 992px) {
+            .lesson-section {
+                width: 92%;
+            }
+
+            .lesson-section-title {
+                font-size: 28px;
+            }
+
+            .lesson-section p {
+                font-size: 14px;
+            }
+
+            .two-column-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .lessonnav {
+                padding: 15px 30px;
+            }
+
+            .course-intro-list li {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body 
+    data-page-type="lesson"
+    data-course-id="selfcareemergency"
+    data-total-lessons="4"
+    data-lesson-number="4"
+    data-title="Module 4 – Support Services & Resources"
+    data-button="true"
+>
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <div class="lessonnav">
+        <a href="/learnhub.html">Learning Hub</a>
+        <span>&gt;</span>
+
+        <a href="/LearningHub/selfcareemergency.html">
+            Self-care During Emergencies
+        </a>
+
+        <span>&gt;</span>
+
+        <a href="/LearningHub/SelfCareEmergency/module4.html">
+            Module 4 – Support Services & Resources
+        </a>
+    </div>
+
+    <div class="lesson-section">
+        <div class="two-column-section">
+            <div>
+                <h2>Self-Help Resources</h2>
+
+                <ul class="course-intro-list">
+                    <li>
+                        <a href="https://www.headtohealth.gov.au" target="_blank" class="reflink">
+                            www.headtohealth.gov.au
+                        </a>
+                        – The Head to Health National Digital Mental Health Gateway. Provides easy access to digital mental health services, information and support.
+                    </li>
+
+                    <li>
+                        Online Treatment Programs such as This Way Up
+                    </li>
+
+                    <li>
+                        Apps – such as the Calm App, Headspace App, Smiling Mind, MindShift, ReachOut
+                    </li>
+                </ul>
+
+                <p>
+                    *Please keep in mind that not all online programs and apps are of equal quality.
+                    It’s crucial to verify the evidence-based nature of any online resource you discover and plan to use.
+                    Additionally, consult with your support team to determine which ones are most suitable for your needs.
+                    The ones we have listed are all backed by evidence.
+                </p>
+            </div>
+
+            <div class="lesson-section-image large-image">
+                <img src="/LearningHub/SelfCareEmergency/SelfCareIMG/m4-1.jpeg" alt="Connected support network">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <div class="two-column-section">
+            <div class="lesson-section-image large-image">
+                <img src="/LearningHub/SelfCareEmergency/SelfCareIMG/m4-2.jpg" alt="Podcast with coffee and earphones">
+            </div>
+
+            <div>
+                <h2>Anxiety Podcasts</h2>
+
+                <p>
+                    Your Anxiety Toolkit - Anxiety &amp; OCD Strategies for Everyday – Kimberley Quinlan, LMFT.
+                </p>
+
+                <a href="https://podcasts.apple.com/us/podcast/your-anxiety-toolkit-practical-skills-for-anxiety-panic/id1098792502"
+                   target="_blank"
+                   class="purple-link-btn">
+                    Your Anxiety Toolkit – Anxiety &amp; OCD Strategies for Everyday on Apple Podcasts
+                </a>
+
+                <p>
+                    The Calmer You Podcast with Chloe Brotheridge
+                </p>
+
+                <a href="https://podcasts.apple.com/au/podcast/the-calmer-you-podcast/id1330001815"
+                   target="_blank"
+                   class="purple-link-btn">
+                    The Calmer You Podcast on Apple Podcasts
+                </a>
+
+                <p>
+                    The Anxiety Coaches Podcast with Gina Ryan
+                </p>
+
+                <a href="https://www.theanxietycoachespodcast.com/"
+                   target="_blank"
+                   class="purple-link-btn">
+                    The Anxiety Coaches Podcast
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-actions">
+        <button id="markCompleteBtn" class="enrol-btn">
+            Mark Complete
+        </button>
+
+        <p id="lessonDoneMsg" style="display:none;">
+            Lesson marked as complete.
+        </p>
+        
+        <div class="navigationdiv">
+            <div class="naviBar"></div>
+
+            <div class="buttonDiv">
+
+                <a href="module3.html" class="naviButt">
+                    ← Previous
+                </a>
+
+                <a href="/LearningHub/selfcareemergency.html"
+                   class="naviButt"
+                   id="backButt">
+                    Back to Course
+                </a>
+
+                <a href="/LearningHub/selfcareemergency.html" class="naviButt">
+                    Finish
+                </a>
+
+            </div>
+        </div>
+    </div>   
+    
+    <div id="accessibility-container"></div>
+    <script src="/accessibility.js" defer></script> 
+    
+    <div id="chatbot-container"></div>
+    <script src="/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>

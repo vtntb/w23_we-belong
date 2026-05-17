@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Module 2 – Pay Slips</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../learninghub.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/script.js" defer></script>
+    <script src="../learninghub.js" defer></script>
+
+    <style>
+        .lessonnav {
+            padding: 15px 180px;
+            background: #eceaea;
+            font-size: 15px;
+        }
+
+        .lessonnav a {
+            color: #6f2c91;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .lessonnav a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .course-intro-list {
+            list-style: disc;
+            padding-left: 34px;
+            margin: 0;
+        }
+
+        .course-intro-list li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+        }
+
+        .course-intro-list li::marker {
+            color: #6f2c91;
+            font-size: 1.3em;
+        }
+
+        .lesson-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 60px 0;
+        }
+
+        #lessonDoneMsg {
+            margin-top: 15px;
+            color: green;
+            font-size: 18px;
+        }
+
+        .navigationdiv {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1600px;
+        }
+
+        .naviBar {
+            width: 100%;
+            height: 1px;
+            background: #aba8a8;
+            margin: 20px auto 30px;
+        }
+
+        .buttonDiv {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            width: 100%;
+        }
+
+        .buttonDiv a:first-child {
+            justify-self: start;
+        }
+
+        .buttonDiv a:nth-child(2) {
+            justify-self: center;
+        }
+
+        .buttonDiv a:last-child {
+            justify-self: end;
+        }
+
+        .naviButt {
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        .naviButt:hover {
+            background: #4f186b;
+        }
+
+        .lesson-section {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+        }
+
+        .lesson-section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+        }
+
+        .lesson-section-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
+        .lesson-section-image {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section-image img {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            display: inline-block;
+        }
+
+        .two-column-section {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .purple-link-btn {
+            display: inline-block;
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin: 10px 0 20px;
+        }
+
+        .purple-link-btn:hover {
+            background: #4f186b;
+        }
+
+        .reflink {
+            text-decoration: none;
+            color:#6f2c91;
+        }
+
+        @media (max-width: 992px) {
+            .lesson-section {
+                width: 92%;
+            }
+
+            .lesson-section-title {
+                font-size: 28px;
+            }
+
+            .lesson-section p {
+                font-size: 14px;
+            }
+
+            .two-column-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .lessonnav {
+                padding: 15px 30px;
+            }
+
+            .course-intro-list li {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body 
+    data-page-type="lesson"
+    data-course-id="money"
+    data-total-lessons="6"
+    data-lesson-number="2"
+    data-title="Module 2 – Pay Slips"
+    data-button="true"
+>
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <div class="lessonnav">
+        <a href="/learnhub.html">Learning Hub</a>
+        <span>&gt;</span>
+
+        <a href="/LearningHub/money.html">
+            Money
+        </a>
+
+        <span>&gt;</span>
+
+        <a href="/LearningHub/Money/module2.html">
+            Module 2 – Pay Slips
+        </a>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">What you’ll learn...</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <ul class="course-intro-list">
+                    <li>How to read a payslip</li>
+                    <li>What income tax is</li>
+                    <li>What superannuation is</li>
+                </ul>
+            </div>
+
+            <div class="lesson-section-image">
+                <img src="/LearningHub/Money/MoneyIMG/payslips_learn.jpg" alt="Learning idea lightbulb">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">What’s a pay slip?</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>
+            Pay slip = a note given to an employee when they have been paid, detailing the amount of pay given and the tax deducted.
+        </p>
+
+        <p>
+            Pay slips are usually emailed or handed to employees when pays have been made.
+            This can occur weekly, fortnightly or monthly depending on how often the employer pays.
+        </p>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">What information is on a pay slip?</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <ul class="course-intro-list">
+                    <li>Employers name</li>
+                    <li>Your name</li>
+                    <li>The pay period (i.e. week, fortnight or month)</li>
+                    <li>Hourly rate you have been paid</li>
+                    <li>Gross and net amount you have been paid</li>
+                    <li>Tax deducted (PAYG)</li>
+                    <li>Superannuation payments</li>
+                    <li>Any accrued leave you have</li>
+                </ul>
+            </div>
+
+            <div class="lesson-section-image">
+                <img src="/LearningHub/Money/MoneyIMG/payslips_joe_blog.png" alt="Example pay slip">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">What’s a Tax File Number (TFN)?</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <p>
+                    Every Australian worker requires a tax file number when they first start work.
+                </p>
+
+                <p>
+                    Your TFN is an important part of your tax and superannuation records.
+                </p>
+
+                <p>
+                    You must apply to the Australian Taxation Office (ATO) to get your TFN.
+                </p>
+
+                <p>It’s free to apply at</p>
+
+                <a href="https://www.ato.gov.au/" target="_blank" class="purple-link-btn">
+                    http://www.ato.gov.au/
+                </a>
+
+                <p>
+                    Once you are issued a TFN it’s yours for life, regardless of whether you change jobs or move countries.
+                </p>
+            </div>
+
+            <div class="lesson-section-image">
+                <img src="/LearningHub/Money/MoneyIMG/logo_ATO.jpg" alt="Australian Taxation Office logo">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Why is tax deducted from my pay?</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <p>
+                    Income tax is the amount of money the government takes to build schools, buy medicine and create jobs.
+                </p>
+
+                <p>
+                    Tax is deducted from your gross salary.
+                </p>
+
+                <p>
+                    ($72.00 in this example)
+                </p>
+
+                <p>
+                    Watch this video to find out more...
+                </p>
+
+                <a href="https://youtu.be/GYvwGDqrg-I" target="_blank" class="purple-link-btn">
+                    https://youtu.be/GYvwGDqrg-I
+                </a>
+            </div>
+
+            <div class="lesson-section-image">
+                <img src="/LearningHub/Money/MoneyIMG/payslips_joe_blog.png" alt="Pay slip tax example">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">What is Superannuation?</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>
+            Superannuation is designed as a saving tool for retirement.
+        </p>
+
+        <p>
+            Employers will send a certain amount of money to a nominated super fund for you.
+        </p>
+
+        <p>
+            You can nominate which fund you’d like your employer to send your money to or they can pay it to a default super fund.
+            Here are some examples...
+        </p>
+
+        <div class="lesson-section-image">
+            <img src="/LearningHub/Money/MoneyIMG/super_fund_logos.jpg" alt="Super fund logos">
+        </div>
+    </div>
+
+    <div class="lesson-actions">
+        <button id="markCompleteBtn" class="enrol-btn">
+            Mark Complete
+        </button>
+
+        <p id="lessonDoneMsg" style="display:none;">
+            Lesson marked as complete.
+        </p>
+        
+        <div class="navigationdiv">
+            <div class="naviBar"></div>
+
+            <div class="buttonDiv">
+
+                <a href="module1.html" class="naviButt">
+                    ← Previous
+                </a>
+
+                <a href="/LearningHub/money.html"
+                   class="naviButt"
+                   id="backButt">
+                    Back to Course
+                </a>
+
+                <a href="module3.html" class="naviButt">
+                    Next →
+                </a>
+
+            </div>
+        </div>
+    </div>   
+    
+    <div id="accessibility-container"></div>
+    <script src="/accessibility.js" defer></script> 
+    
+    <div id="chatbot-container"></div>
+    <script src="/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Module 4 – Moving out of home</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../learninghub.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/script.js" defer></script>
+    <script src="../learninghub.js" defer></script>
+
+    <style>
+        .lessonnav {
+            padding: 15px 180px;
+            background: #eceaea;
+            font-size: 15px;
+        }
+
+        .lessonnav a {
+            color: #6f2c91;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .lessonnav a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .course-intro-list {
+            list-style: disc;
+            padding-left: 34px;
+            margin: 0;
+        }
+
+        .course-intro-list li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+        }
+
+        .course-intro-list li::marker {
+            color: #6f2c91;
+            font-size: 1.3em;
+        }
+
+        .lesson-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 60px 0;
+        }
+
+        #lessonDoneMsg {
+            margin-top: 15px;
+            color: green;
+            font-size: 18px;
+        }
+
+        .navigationdiv {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1600px;
+        }
+
+        .naviBar {
+            width: 100%;
+            height: 1px;
+            background: #aba8a8;
+            margin: 20px auto 30px;
+        }
+
+        .buttonDiv {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            width: 100%;
+        }
+
+        .buttonDiv a:first-child {
+            justify-self: start;
+        }
+
+        .buttonDiv a:nth-child(2) {
+            justify-self: center;
+        }
+
+        .buttonDiv a:last-child {
+            justify-self: end;
+        }
+
+        .naviButt {
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        .naviButt:hover {
+            background: #4f186b;
+        }
+
+        .lesson-section {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+        }
+
+        .lesson-section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+        }
+
+        .lesson-section-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
+        .lesson-section-image {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section-image img {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            display: inline-block;
+        }
+
+        .two-column-section {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .small-image img {
+            max-width: 300px;
+        }
+
+        .medium-image img {
+            max-width: 450px;
+        }
+
+        .purple-link-btn {
+            display: inline-block;
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .purple-link-btn:hover {
+            background: #4f186b;
+        }
+
+        .reflink {
+            text-decoration: none;
+            color:#6f2c91;
+        }
+
+        @media (max-width: 992px) {
+            .lesson-section {
+                width: 92%;
+            }
+
+            .lesson-section-title {
+                font-size: 28px;
+            }
+
+            .lesson-section p {
+                font-size: 14px;
+            }
+
+            .two-column-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .lessonnav {
+                padding: 15px 30px;
+            }
+
+            .course-intro-list li {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body 
+    data-page-type="lesson"
+    data-course-id="money"
+    data-total-lessons="6"
+    data-lesson-number="4"
+    data-title="Module 4 – Moving out of home"
+    data-button="true"
+>
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <div class="lessonnav">
+        <a href="/learnhub.html">Learning Hub</a>
+        <span>&gt;</span>
+
+        <a href="/LearningHub/money.html">
+            Money
+        </a>
+
+        <span>&gt;</span>
+
+        <a href="/LearningHub/Money/module4.html">
+            Module 4 – Moving out of home
+        </a>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">What you’ll learn...</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <ul class="course-intro-list">
+                    <li>Types of expenses and cost for living out of home</li>
+                    <li>The basic items required to move out of home</li>
+                </ul>
+            </div>
+
+            <div class="lesson-section-image medium-image">
+                <img src="/LearningHub/Money/MoneyIMG/moving_out.jpg" alt="Moving out of home">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Moving out of home</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <p>
+                    Moving out of home for the first time can be exciting and a little scary.
+                    Before you make the move you need to be aware of the following costs.
+                </p>
+
+                <ul class="course-intro-list">
+                    <li>Upfront bond payment</li>
+                    <li>Regular weekly payments</li>
+                    <li>Electricity, gas, water and other bills</li>
+                    <li>Groceries</li>
+                    <li>Personal expenses – mobile bill, clothes, travel, entertainment, etc.</li>
+                </ul>
+            </div>
+
+            <div class="lesson-section-image medium-image">
+                <img src="/LearningHub/Money/MoneyIMG/moving_out_expenses.jpg" alt="Moving out expenses">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">What will you take with you?</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <p>
+                    Whether you’re moving out by yourself or with other people,
+                    you will need to make sure you have a:
+                </p>
+
+                <ul class="course-intro-list">
+                    <li>Bed</li>
+                    <li>Fridge/freezer</li>
+                    <li>Table and chairs</li>
+                    <li>Lounge and TV</li>
+                </ul>
+            </div>
+
+            <div class="lesson-section-image medium-image">
+                <img src="/LearningHub/Money/MoneyIMG/moving_out_furniture.jpg" alt="Moving furniture">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">How much will I need for bond?</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>
+            Bond is a sum of money requested from tenants on behalf of building owners or real estate agents.
+        </p>
+
+        <p>
+            Real estate agents generally ask for a bond amount of 4 weeks rent plus 2 weeks payment in advance.
+        </p>
+
+        <p>
+            Example: If a flat or house is $200 a week to rent, the bond will be:
+        </p>
+
+        <p>
+            Bond = 4 x $200 = $800
+        </p>
+
+        <p>
+            Two weeks rent = 2 x $200 = $400
+        </p>
+
+        <p>
+            <strong>Total to pay: $800 + $400 = $1200</strong>
+        </p>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Ongoing costs</h2>
+        <div class="lesson-section-divider"></div>
+
+        <div class="two-column-section">
+            <div>
+                <p>
+                    While living out of home you will need to save money for:
+                </p>
+
+                <ul class="course-intro-list">
+                    <li>Rent – work out how much you have to pay each week.</li>
+                    <li>Bills – write down when bills are due to avoid unnecessary surprises.</li>
+                    <li>Groceries – look at meal plans and online shopping to help you stick to a budget.</li>
+                    <li>Having fun – make sure you spend a little bit on yourself.</li>
+                </ul>
+            </div>
+
+            <div class="lesson-section-image medium-image">
+                <img src="/LearningHub/Money/MoneyIMG/budget.jpg" alt="Budget blocks">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2 class="lesson-section-title">Finding a place</h2>
+        <div class="lesson-section-divider"></div>
+
+        <p>
+            If you’re not sure what’s available to rent or if you’re looking for a flat mate,
+            visit these websites:
+        </p>
+
+        <a href="https://www.realestate.com.au/rent/" target="_blank" class="purple-link-btn">
+            https://www.realestate.com.au/rent/
+        </a>
+
+        <br>
+
+        <a href="https://flatmates.com.au/" target="_blank" class="purple-link-btn">
+            https://flatmates.com.au/
+        </a>
+
+        <p>
+            Ask a friend or family member to help you with the search.
+        </p>
+    </div>
+
+    <div class="lesson-actions">
+        <button id="markCompleteBtn" class="enrol-btn">
+            Mark Complete
+        </button>
+
+        <p id="lessonDoneMsg" style="display:none;">
+            Lesson marked as complete.
+        </p>
+        
+        <div class="navigationdiv">
+            <div class="naviBar"></div>
+
+            <div class="buttonDiv">
+
+                <a href="module3.html" class="naviButt">
+                    ← Previous
+                </a>
+
+                <a href="/LearningHub/money.html"
+                   class="naviButt"
+                   id="backButt">
+                    Back to Course
+                </a>
+
+                <a href="module5.html" class="naviButt">
+                    Next →
+                </a>
+
+            </div>
+        </div>
+    </div>   
+    
+    <div id="accessibility-container"></div>
+    <script src="/accessibility.js" defer></script> 
+    
+    <div id="chatbot-container"></div>
+    <script src="/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>
