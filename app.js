@@ -4,6 +4,7 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const mysql = require("mysql2/promise");
+const levenshtein = require("fast-levenshtein");
 
 const app = express();
 
@@ -24,6 +25,23 @@ const db = mysql.createPool({
 app.get("/", (req, res) => {
   res.send("We Belong backend is running with MySQL chatbot.");
 });
+
+function normaliseText(text) {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s]/g, "") // remove punctuation like ? ! .
+    .replace(/\s+/g, " ")    // remove extra spaces
+    .trim();
+}
+
+function similarity(a, b) {
+  const distance = levenshtein.get(a, b);
+  const maxLength = Math.max(a.length, b.length);
+
+  if (maxLength === 0) return 1;
+
+  return 1 - distance / maxLength;
+}
 
 function emergencyFallback(query) {
   const emergencyWords = [
@@ -64,11 +82,12 @@ async function saveChatLog(userQuery, botResponse, matchedFaqId = null) {
 
 app.post("/get-ai-response", async (req, res) => {
   const originalQuery = req.body.query;
-  const query = originalQuery?.trim().toLowerCase();
 
-  if (!query) {
+  if (!originalQuery || originalQuery.trim() === "") {
     return res.status(400).json({ error: "Query is required" });
   }
+
+  const query = normaliseText(originalQuery);
 
   try {
     if (emergencyFallback(query)) {
@@ -84,6 +103,39 @@ app.post("/get-ai-response", async (req, res) => {
         "I cannot help with that. I can only help with We Belong, disability awareness, accessibility, learning resources, registration, and contact information.";
 
       await saveChatLog(originalQuery, answer, null);
+      return res.json({ answer });
+    }
+
+    const [allFaqs] = await db.query(
+      "SELECT id, question, answer, keywords FROM chatbot_faqs"
+    );
+
+    let bestMatch = null;
+    let bestScore = 0;
+
+    allFaqs.forEach(faq => {
+      const normalQuestion = normaliseText(faq.question);
+      const normalKeywords = normaliseText(faq.keywords || "");
+
+      const questionScore = similarity(query, normalQuestion);
+
+      const keywordScores = normalKeywords
+        .split(",")
+        .map(keyword => similarity(query, normaliseText(keyword)));
+
+      const keywordScore = keywordScores.length > 0 ? Math.max(...keywordScores) : 0;
+
+      const score = Math.max(questionScore, keywordScore);
+
+      if (score > bestScore) {
+        bestScore = score;
+        bestMatch = faq;
+      }
+    });
+
+    if (bestMatch && bestScore >= 0.72) {
+      const answer = bestMatch.answer;
+      await saveChatLog(originalQuery, answer, bestMatch.id);
       return res.json({ answer });
     }
 
