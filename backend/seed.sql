@@ -11,13 +11,13 @@ INSERT IGNORE INTO courses (id, title, description, category, image_url, total_l
 
 INSERT IGNORE INTO lessons (course_id, title, content_url, lesson_order) VALUES
 ('awareness', 'What is Disability?', '/DisabilitiesAware/lesson1.html', 1),
-('awareness', 'Types of Disability', '/DisabilitiesAware/lesson2.html', 2),
+('awareness', 'Types of D);isability', '/DisabilitiesAware/lesson2.html', 2),
 ('awareness', 'Social Model vs Medical Model', '/DisabilitiesAware/lesson3.html', 3),
 ('awareness', 'Disability in Everyday Life', '/DisabilitiesAware/lesson4.html', 4),
 ('awareness', 'Language and Respect', '/DisabilitiesAware/lesson5.html', 5),
 ('awareness', 'Accessibility in Public Spaces', '/DisabilitiesAware/lesson6.html', 6),
 ('awareness', 'Supporting People with Disabilities', '/DisabilitiesAware/lesson7.html', 7),
-('awareness', 'Being an Ally', '/DisabilitiesAware/lesson8.html', 8);
+('awareness', 'Being an Ally', '/DisabilitiesAware/lesson8.html', 8
 
 INSERT IGNORE INTO chatbot_faqs (question, answer, keywords) VALUES
 ('How do I join a sport group?', 'To join, first choose an activity, then read the group details, and use the contact form or sign-up button.', 'join,sport,group'),
