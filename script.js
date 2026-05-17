@@ -19,8 +19,6 @@ $(document).ready(function () {
     $("#course-placeholder").load("/course-box.html", function () {
         initCourseProgress();
     });
-
-    updateEnrolButton();
 });
 
 /* ===== LOGIN / LOGOUT ===== */

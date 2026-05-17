@@ -25,9 +25,7 @@ function initChatbot() {
   const chatForm = document.getElementById("chatForm");
   const userInput = document.getElementById("userInput");
 
-  if (!chatToggle || !chatWindow || !closeChat || !chatForm || !userInput) {
-    return;
-  }
+  if (!chatToggle || !chatWindow || !closeChat || !chatForm || !userInput) return;
 
   chatWindow.hidden = true;
 
@@ -42,16 +40,59 @@ function initChatbot() {
     localStorage.setItem(CHAT_OPEN_KEY, "false");
   });
 
-  chatForm.addEventListener("submit", function (e) {
+  chatForm.addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const text = userInput.value.trim();
-    if (text === "") return;
+    if (!text) return;
 
     addUserMessage(text, true);
-    addBotReply(getBotReply(text), true);
     userInput.value = "";
+
+    addBotReply("Thinking...", false);
+
+    const reply = await getAIReply(text);
+
+    removeLastThinkingMessage();
+    addBotReply(reply, true);
   });
+}
+
+function sendQuickReply(text) {
+  const userInput = document.getElementById("userInput");
+  if (userInput) userInput.value = "";
+
+  addUserMessage(text, true);
+  addBotReply("Thinking...", false);
+
+  getAIReply(text).then(reply => {
+    removeLastThinkingMessage();
+    addBotReply(reply, true);
+  });
+}
+
+async function getAIReply(message) {
+  try {
+    const response = await fetch("/get-ai-response", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ query: message })
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      console.error("Backend error:", data);
+      return "Sorry, something went wrong with the chatbot server.";
+    }
+
+    return data.answer || "Sorry, I could not find an answer.";
+  } catch (error) {
+    console.error("Error from chatbot backend:", error);
+    return "Sorry, something went wrong. Please try again.";
+  }
 }
 
 function addUserMessage(text, save = false) {
@@ -62,11 +103,10 @@ function addUserMessage(text, save = false) {
   msg.className = "user-message";
   msg.textContent = text;
   chatBody.appendChild(msg);
+
   scrollToBottom();
 
-  if (save) {
-    saveMessage("user", text);
-  }
+  if (save) saveMessage("user", text);
 }
 
 function addBotReply(text, save = false) {
@@ -77,46 +117,22 @@ function addBotReply(text, save = false) {
   msg.className = "bot-message";
   msg.textContent = text;
   chatBody.appendChild(msg);
+
   scrollToBottom();
 
-  if (save) {
-    saveMessage("bot", text);
-  }
+  if (save) saveMessage("bot", text);
 }
 
-function sendQuickReply(text) {
-  addUserMessage(text, true);
-  addBotReply(getBotReply(text), true);
-}
+function removeLastThinkingMessage() {
+  const chatBody = document.getElementById("chatBody");
+  if (!chatBody) return;
 
-function getBotReply(input) {
-  const text = input.toLowerCase();
+  const messages = chatBody.querySelectorAll(".bot-message");
+  const last = messages[messages.length - 1];
 
-  if (text.includes("sport")) {
-    return "I can help you find a sport group. Please choose a sport or activity you are interested in.";
+  if (last && last.textContent === "Thinking...") {
+    last.remove();
   }
-
-  if (text.includes("join")) {
-    return "To join, first choose an activity, then read the group details, and then use the contact form or sign-up button.";
-  }
-
-  if (text.includes("story")) {
-    return "You can share your story in simple steps. We can guide you with prompts and easy questions.";
-  }
-
-  if (text.includes("coach") || text.includes("club")) {
-    return "We can help clubs and coaches with inclusive communication, accessibility tips, and support resources.";
-  }
-
-  if (text.includes("tell me more")) {
-    return "This chatbot only stores information when you give permission. It is designed to protect your privacy.";
-  }
-
-  if (text === "ok") {
-    return "Great. What would you like help with today?";
-  }
-
-  return "Thanks for your message. I can help with joining activities, finding support, sharing stories, and helping clubs or coaches.";
 }
 
 function saveMessage(sender, text) {
@@ -130,15 +146,16 @@ function restoreChatHistory() {
   if (!chatBody) return;
 
   const history = JSON.parse(localStorage.getItem(CHAT_STORAGE_KEY)) || [];
+
   if (history.length === 0) return;
 
   chatBody.innerHTML = "";
 
-  history.forEach((message) => {
-    const msg = document.createElement("div");
-    msg.className = message.sender === "user" ? "user-message" : "bot-message";
-    msg.textContent = message.text;
-    chatBody.appendChild(msg);
+  history.forEach(msg => {
+    const div = document.createElement("div");
+    div.className = msg.sender === "user" ? "user-message" : "bot-message";
+    div.textContent = msg.text;
+    chatBody.appendChild(div);
   });
 
   scrollToBottom();
@@ -147,14 +164,14 @@ function restoreChatHistory() {
 function restoreChatWindowState() {
   const chatWindow = document.getElementById("chatWindow");
   const userInput = document.getElementById("userInput");
+
   if (!chatWindow) return;
 
   const isOpen = localStorage.getItem(CHAT_OPEN_KEY);
-  if (isOpen === "true") {
-    chatWindow.hidden = false;
-    if (userInput) userInput.focus();
-  } else {
-    chatWindow.hidden = true;
+  chatWindow.hidden = isOpen !== "true";
+
+  if (isOpen === "true" && userInput) {
+    userInput.focus();
   }
 }
 
@@ -167,6 +184,7 @@ function clearChatHistory() {
 function scrollToBottom() {
   const chatBody = document.getElementById("chatBody");
   if (!chatBody) return;
+
   chatBody.scrollTop = chatBody.scrollHeight;
 }
 
