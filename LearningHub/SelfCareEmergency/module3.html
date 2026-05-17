@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Module 3 – Signs That I Need Extra Help or Support</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../learninghub.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/script.js" defer></script>
+    <script src="../learninghub.js" defer></script>
+
+    <style>
+        .lessonnav {
+            padding: 15px 180px;
+            background: #eceaea;
+            font-size: 15px;
+        }
+
+        .lessonnav a {
+            color: #6f2c91;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .lessonnav a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .course-intro-list {
+            list-style: disc;
+            padding-left: 34px;
+            margin: 0;
+        }
+
+        .course-intro-list li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+        }
+
+        .course-intro-list li::marker {
+            color: #6f2c91;
+            font-size: 1.3em;
+        }
+
+        .lesson-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 60px 0;
+        }
+
+        #lessonDoneMsg {
+            margin-top: 15px;
+            color: green;
+            font-size: 18px;
+        }
+
+        .navigationdiv {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1600px;
+        }
+
+        .naviBar {
+            width: 100%;
+            height: 1px;
+            background: #aba8a8;
+            margin: 20px auto 30px;
+        }
+
+        .buttonDiv {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            width: 100%;
+        }
+
+        .buttonDiv a:first-child {
+            justify-self: start;
+        }
+
+        .buttonDiv a:nth-child(2) {
+            justify-self: center;
+        }
+
+        .buttonDiv a:last-child {
+            justify-self: end;
+        }
+
+        .naviButt {
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        .naviButt:hover {
+            background: #4f186b;
+        }
+
+        .lesson-section {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+        }
+
+        .lesson-section + .lesson-section {
+            border-top: 2px solid #f04b23;
+            padding-top: 50px;
+            margin-top: 50px;
+        }
+
+        .lesson-section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+        }
+
+        .lesson-section-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
+        .lesson-section-image {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section-image img {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            display: inline-block;
+        }
+
+        .two-column-section {
+            display: grid;
+            grid-template-columns: 1fr 460px;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px 70px;
+            align-items: start;
+        }
+
+        .medium-image img {
+            max-width: 500px;
+        }
+
+        .wide-image img {
+            max-width: 900px;
+        }
+
+        .reflink {
+            text-decoration: none;
+            color:#6f2c91;
+        }
+
+        .support-list li {
+            margin-bottom: 22px;
+        }
+
+        @media (max-width: 992px) {
+            .lesson-section {
+                width: 92%;
+            }
+
+            .lesson-section-title {
+                font-size: 28px;
+            }
+
+            .lesson-section p {
+                font-size: 14px;
+            }
+
+            .two-column-section,
+            .support-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .lessonnav {
+                padding: 15px 30px;
+            }
+
+            .course-intro-list li {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body 
+    data-page-type="lesson"
+    data-course-id="selfcareemergency"
+    data-total-lessons="4"
+    data-lesson-number="3"
+    data-title="Module 3 – Signs That I Need Extra Help or Support"
+    data-button="true"
+>
+
+    <div id="header-placeholder"></div>
+    <div id="banner-placeholder"></div>
+
+    <div class="lessonnav">
+        <a href="/learnhub.html">Learning Hub</a>
+        <span>&gt;</span>
+
+        <a href="/LearningHub/selfcareemergency.html">
+            Self-care During Emergencies
+        </a>
+
+        <span>&gt;</span>
+
+        <a href="/LearningHub/SelfCareEmergency/module3.html">
+            Module 3 – Signs That I Need Extra Help or Support
+        </a>
+    </div>
+
+    <div class="lesson-section">
+        <div class="two-column-section">
+            <div>
+                <h2>Signs That I Need Extra Help or Support</h2>
+
+                <p>
+                    It can take some people longer than others to feel safe or back to their old self
+                    following a significant event.
+                </p>
+
+                <p>
+                    There might be signs you need some extra support to help you feel better again.
+                </p>
+
+                <p>They include:</p>
+
+                <ul class="course-intro-list">
+                    <li>Not wanting to go out and do things</li>
+                    <li>Not wanting to be around other people</li>
+                    <li>Being extra jumpy or sensitive</li>
+                    <li>Having a short temper or getting frustrated easily</li>
+                    <li>Seeing images of the emergency repeatedly in your mind</li>
+                    <li>Trouble sleeping or having regular nightmares</li>
+                    <li>Having no energy or being tired all the time</li>
+                </ul>
+            </div>
+
+            <div class="lesson-section-image medium-image">
+                <img src="/LearningHub/SelfCareEmergency/SelfCareIMG/m3-1.jpg" alt="Warning sign">
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <div class="two-column-section">
+            <div class="lesson-section-image wide-image">
+                <img src="/LearningHub/SelfCareEmergency/SelfCareIMG/m3-2.jpg" alt="Mental health scale">
+            </div>
+
+            <div>
+                <h2>Mental Health Is On A Scale</h2>
+
+                <ul class="course-intro-list">
+                    <li>Mental health exists on a scale</li>
+                    <li>Our mental health can change over time based on what we experience or are facing</li>
+                    <li>It’s important to pay attention to your mental well-being, observing how you feel and your level of stress</li>
+                    <li>Seeking help when we are on the lower end of the scale is important</li>
+                    <li>Self-care is important when on the higher end of the scale</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-section">
+        <h2>Where Can I Reach Out for Help</h2>
+
+        <div class="support-grid">
+            <div>
+                <ul class="course-intro-list">
+                    <li>Your GP or doctor</li>
+                    <li>Mental health professionals such as psychologists, psychiatrists, and counsellors</li>
+                    <li>Support workers and Support Coordinators</li>
+                    <li>Family or friends</li>
+                </ul>
+
+                <p>
+                    For people who need support with depression, anxiety or suicidal thoughts:
+                </p>
+                <p>
+                    Reaching out for help is a positive step. You do not need to wait until things feel too hard.
+                    Talking with someone early can help you feel supported, safe, and understood.
+                </p>
+
+                <p>
+                    If you are in immediate danger or need urgent help, call emergency services.
+                </p>
+            </div>
+
+            <div>
+                <ul class="course-intro-list support-list">
+                    <li>
+                        Lifeline provides 24-hour crisis counselling, support groups and suicide prevention services.
+                        Call <span class="reflink">13 11 14</span>, text <span class="reflink">0477 13 11 14</span> or chat online.
+                    </li>
+
+                    <li>
+                        Suicide Call Back Service provides 24/7 support if you or someone you know is feeling suicidal.
+                        Call <span class="reflink">1300 659 467</span>.
+                    </li>
+
+                    <li>
+                        Beyond Blue aims to increase awareness of depression and anxiety and reduce stigma.
+                        If you or a loved one need help, you can call <span class="reflink">1300 22 4636</span>,
+                        24 hours/7 days a week or chat online.
+                    </li>
+
+                    <li>
+                        MindSpot is a free telephone and online service for people with anxiety, stress, low mood or depression.
+                        It provides online assessment and treatment for anxiety and depression.
+                        MindSpot is not an emergency or instant response service.
+                        Call <span class="reflink">1800 61 44 34</span>.
+                    </li>
+
+                    <li>
+                        Head to Health gives advice and will connect you to local mental health services.
+                        Call <span class="reflink">1800 595 212</span>.
+                    </li>
+
+                    <li>
+                        If you’re feeling lonely, FriendLine supports anyone who’s feeling lonely, needs to reconnect or just wants a chat.
+                        You can call them 7 days a week on <span class="reflink">1800 424 287</span>,
+                        or chat online with one of their trained volunteers. All conversations with FriendLine are anonymous.
+                    </li>
+
+                    <li>
+                        For young people who need mental health support, and their parents or carers:
+                        Kids Helpline is Australia’s only free 24/7 confidential and private counselling service specifically for children
+                        and young people aged 5 – 25.
+                        Call <span class="reflink">1800 55 1800</span>.
+                    </li>
+
+                    <li>
+                        Headspace provides free online and telephone support and counselling to young people 12 – 25
+                        and their families and friends.
+                        Call <span class="reflink">1800 650 890</span>, or chat online.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-actions">
+        <button id="markCompleteBtn" class="enrol-btn">
+            Mark Complete
+        </button>
+
+        <p id="lessonDoneMsg" style="display:none;">
+            Lesson marked as complete.
+        </p>
+        
+        <div class="navigationdiv">
+            <div class="naviBar"></div>
+
+            <div class="buttonDiv">
+
+                <a href="module2.html" class="naviButt">
+                    ← Previous
+                </a>
+
+                <a href="/LearningHub/selfcareemergency.html"
+                   class="naviButt"
+                   id="backButt">
+                    Back to Course
+                </a>
+
+                <a href="module4.html" class="naviButt">
+                    Next →
+                </a>
+
+            </div>
+        </div>
+    </div>   
+    
+    <div id="accessibility-container"></div>
+    <script src="/accessibility.js" defer></script> 
+    
+    <div id="chatbot-container"></div>
+    <script src="/chatbot.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>
