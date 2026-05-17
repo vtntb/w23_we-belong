@@ -323,7 +323,33 @@
 
 
 
+    <div class="course-list" id="course-list">
+        <p style="font-size:18px; color:#555;">Loading courses...</p>
     </div>
+
+    <script>
+        fetch('/api/courses')
+            .then(res => res.json())
+            .then(courses => {
+                const list = document.getElementById('course-list');
+                if (!courses.length) {
+                    list.innerHTML = '<p>No courses available.</p>';
+                    return;
+                }
+                list.innerHTML = courses.map(course => `
+                    <div class="course-item">
+                        <div class="course-top">
+                            <a href="${course.course_url}" class="course-title">${course.title}</a>
+                            <a href="${course.course_url}" class="course-btn">View Course</a>
+                        </div>
+                        <p class="course-desc">${course.description}</p>
+                    </div>
+                `).join('');
+            })
+            .catch(() => {
+                document.getElementById('course-list').innerHTML = '<p>Could not load courses. Please try again later.</p>';
+            });
+    </script>
     
     <div id="accessibility-container"></div>
     <script src="/accessibility.js" defer></script> 

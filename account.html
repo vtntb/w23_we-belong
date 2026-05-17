@@ -356,8 +356,9 @@
         const isLoggedIn = localStorage.getItem("isLoggedIn");
         const userEmail = localStorage.getItem("userEmail");
         const userFirstName = localStorage.getItem("userFirstName");
+        const authToken = localStorage.getItem("authToken");
 
-        if (isLoggedIn !== "true") {
+        if (isLoggedIn !== "true" || !authToken) {
             window.location.href = "/login.html";
         }
 
@@ -366,15 +367,21 @@
 
         document.getElementById("logoutBtn").addEventListener("click", function () {
             localStorage.removeItem("isLoggedIn");
+            localStorage.removeItem("authToken");
             localStorage.removeItem("userEmail");
             localStorage.removeItem("userFirstName");
             localStorage.removeItem("userLastName");
+            localStorage.removeItem("userId");
             window.location.href = "/login.html";
         });
 
-        function getCompletedLessons(courseId) {
-            const raw = localStorage.getItem(courseId + "_completedLessons");
-            if (!raw) return [];
+        // Load progress from backend
+        fetch("/api/progress", {
+            headers: { "Authorization": "Bearer " + authToken }
+        })
+        .then(res => res.json())
+        .then(courses => {
+            const container = document.getElementById("myCoursesList");
 
             try {
                 return JSON.parse(raw);
@@ -455,43 +462,58 @@
 
                     <div class="progress-bar">
                         <div class="progress-fill" style="width:${progress}%"></div>
+            if (!courses.length) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        You have not enrolled in any courses yet.
+                        <br><br>
+                        <a href="/learnhub.html" style="color:#6f2c91; font-weight:bold;">
+                            Go to Learning Hub
+                        </a>
                     </div>
+                `;
+                return;
+            }
 
-                    <div class="course-meta">
-                        ${progress === 100 ? "Completed" : progress + "% Complete"}
+            const progressValues = courses.map(course => {
+                const percent = course.total_lessons > 0
+                    ? Math.round((course.lessons_completed / course.total_lessons) * 100)
+                    : 0;
+                return percent;
+            });
+
+            container.innerHTML = courses.map((course, i) => {
+                const percent = progressValues[i];
+                return `
+                    <div class="course-item">
+                        <h3>${course.title}</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width:${percent}%"></div>
+                        </div>
+                        <div class="course-meta">
+                            ${percent === 100 ? "Completed" : percent + "% Complete"}
+                        </div>
+                        <button onclick="window.location.href='/LearningHub/${course.course_id}.html'"
+                                style="margin-top:10px; padding:10px 16px; border:none; background:#6f2c91; color:white; border-radius:8px; cursor:pointer;">
+                            Continue
+                        </button>
                     </div>
+                `;
+            }).join("");
 
-                    <button onclick="window.location.href='${course.link}'"
-                            style="margin-top:10px; padding:10px 16px; border:none; background:#6f2c91; color:white; border-radius:8px; cursor:pointer;">
-                        Continue
-                    </button>
-                </div>
+            const started = progressValues.filter(v => v > 0).length;
+            const completed = progressValues.filter(v => v === 100).length;
+            const average = Math.round(progressValues.reduce((a, b) => a + b, 0) / progressValues.length);
+
+            document.getElementById("coursesStarted").innerText = started;
+            document.getElementById("coursesCompleted").innerText = completed;
+            document.getElementById("averageProgress").innerText = average + "%";
+        })
+        .catch(() => {
+            document.getElementById("myCoursesList").innerHTML = `
+                <div class="empty-state">Could not load courses. Please try again later.</div>
             `;
-
-            container.innerHTML += courseHTML;
         });
-
-        if (enrolledCourses === 0) {
-            container.innerHTML = `
-                <div class="empty-state">
-                    You have not enrolled in any courses yet.
-                    <br><br>
-                    <a href="/learnhub.html" style="color:#6f2c91; font-weight:bold;">
-                        Go to Learning Hub
-                    </a>
-                </div>
-            `;
-        }
-
-        const startedCourses = progressValues.filter(value => value > 0).length;
-        const completedCourses = progressValues.filter(value => value === 100).length;
-        const averageProgress = progressValues.length > 0
-            ? Math.round(progressValues.reduce((sum, value) => sum + value, 0) / progressValues.length)
-            : 0;
-
-        document.getElementById("coursesStarted").innerText = startedCourses;
-        document.getElementById("coursesCompleted").innerText = completedCourses;
-        document.getElementById("averageProgress").innerText = averageProgress + "%";
     </script>
 </body>
 </html>

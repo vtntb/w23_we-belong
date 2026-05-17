@@ -251,7 +251,7 @@
     <div id="footer-placeholder"></div>
 
     <script>
-        document.getElementById("registerForm").addEventListener("submit", function (e) {
+        document.getElementById("registerForm").addEventListener("submit", async function (e) {
             e.preventDefault();
 
             const firstName = document.getElementById("firstName").value.trim();
@@ -263,6 +263,7 @@
 
             const errorMessage = document.getElementById("errorMessage");
             const successMessage = document.getElementById("successMessage");
+            const registerBtn = document.querySelector(".register-btn");
 
             errorMessage.style.display = "none";
             successMessage.style.display = "none";
@@ -292,30 +293,36 @@
                 return;
             }
 
-            const users = JSON.parse(localStorage.getItem("users")) || [];
+            registerBtn.disabled = true;
+            registerBtn.textContent = "Creating account...";
 
-            const existingUser = users.find(user => user.email === email);
-            if (existingUser) {
-                errorMessage.textContent = "An account with this email already exists.";
+            try {
+                const response = await fetch("/api/auth/register", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ firstName, lastName, email, password })
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    errorMessage.textContent = data.error || "Registration failed. Please try again.";
+                    errorMessage.style.display = "block";
+                    return;
+                }
+
+                successMessage.style.display = "block";
+
+                setTimeout(function () {
+                    window.location.href = "/login.html";
+                }, 1200);
+            } catch (err) {
+                errorMessage.textContent = "Could not connect to server. Please try again.";
                 errorMessage.style.display = "block";
-                return;
+            } finally {
+                registerBtn.disabled = false;
+                registerBtn.textContent = "Create Account";
             }
-
-            const newUser = {
-                firstName: firstName,
-                lastName: lastName,
-                email: email,
-                password: password
-            };
-
-            users.push(newUser);
-            localStorage.setItem("users", JSON.stringify(users));
-
-            successMessage.style.display = "block";
-
-            setTimeout(function () {
-                window.location.href = "/login.html";
-            }, 1200);
         });
     </script>
 </body>

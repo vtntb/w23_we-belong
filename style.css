@@ -174,11 +174,13 @@ body.highlight-links .navbar a {
 
 .mainnav-left {
     display: flex;
+    display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
 .mainnav-right {
+    display: flex;
     display: flex;
     align-items: center;
     justify-content: flex-end;
