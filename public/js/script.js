@@ -1,14 +1,14 @@
 $(document).ready(function () {
     // load header
-    $("#header-placeholder").load("/public/components/header.html", function () {
+    $("#header-placeholder").load("/components/header.html", function () {
         updateLoginLink();
     });
 
     // load footer
-    $("#footer-placeholder").load("/public/components/footer.html");
+    $("#footer-placeholder").load("/components/footer.html");
 
     // load banner and check if is a course
-    $("#banner-placeholder").load("/public/components/banner.html", function () {
+    $("#banner-placeholder").load("/components/banner.html", function () {
         $(".banner-title").text($("body").data("title"));
 
         if (!$("body").data("button")) {
@@ -35,11 +35,11 @@ function updateLoginLink() {
                 e.preventDefault();
 
                 localStorage.removeItem("isLoggedIn");
-                window.location.href = "/public/login.html";
+                window.location.href = "/login.html";
             };
         } else {
             loginLink.innerText = "Login";
-            loginLink.href = "/public/login.html";
+            loginLink.href = "/login.html";
             loginLink.onclick = null;
         }
     }
@@ -141,7 +141,7 @@ function initCourseProgress() {
 
     enrolBtn.onclick = function () {
         if (!isLoggedIn) {
-            window.location.href = "/public/login.html";
+            window.location.href = "/login.html";
             return;
         }
 
