@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 // Serve the frontend static files
-app.use(express.static(path.join(__dirname, "..")));
+app.use(express.static(path.join(__dirname, "..", "public")));
 
 // API routes
 app.use("/api/auth", authRoutes);
@@ -30,7 +30,7 @@ app.use("/api/*", (req, res) => {
 
 // Catch-all: serve main page for any other unmatched route
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "mainpage.html"));
+  res.sendFile(path.join(__dirname, "..", "public", "mainpage.html"));
 });
 
 app.listen(PORT, () => {
