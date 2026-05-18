@@ -1,7 +1,7 @@
 // Load course banner
 $(document).ready(function () {
     if ($("body").data("page-type") === "course") {
-        $("#course-placeholder").load("/public/pages/LearningHub/coursebanner.html", function () {
+        $("#course-placeholder").load("/pages/LearningHub/coursebanner.html", function () {
             if (typeof initCoursePage === "function") {
                 initCoursePage();
             }

@@ -6,7 +6,7 @@ async function loadAccessibility() {
   if (!container) return;
 
   try {
-    const response = await fetch("/public/components/accessibility.html");
+    const response = await fetch("/components/accessibility.html");
     const html = await response.text();
     container.innerHTML = html;
 
