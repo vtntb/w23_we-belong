@@ -15,10 +15,6 @@ $(document).ready(function () {
             $(".hublink").hide();
         }
     });
-
-    $("#course-placeholder").load("/course-box.html", function () {
-        initCourseProgress();
-    });
 });
 
 /* ===== LOGIN / LOGOUT ===== */

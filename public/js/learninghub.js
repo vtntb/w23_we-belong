@@ -133,7 +133,7 @@ function initCoursePage() {
 
         btn.innerText = "Register to Enroll";
         btn.onclick = function () {
-            window.location.href = "public/login.html";
+            window.location.href = "/login.html";
         };
 
         if (progressWrap) progressWrap.style.display = "none";
