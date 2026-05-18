@@ -6,7 +6,7 @@ async function loadChatbot() {
   if (!container) return;
 
   try {
-    const response = await fetch("/public/components/chatbot.html");
+    const response = await fetch("/components/chatbot.html");
     const html = await response.text();
     container.innerHTML = html;
 
