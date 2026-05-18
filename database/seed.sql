@@ -1,3 +1,9 @@
+INSERT INTO courses (title, description, image, link, total_lessons)
+VALUES
+('Disability Awareness Training', 'Learn the basics of disability awareness and inclusive communication.', '/LearningHub/awarenesstraining.html', '/LearningHub/awarenesstraining.html', 8),
+('Communication', 'Learn effective communication skills for everyday situations.', '/LearningHub/communication.html', '/LearningHub/communication.html', 5),
+('Inclusive Sports Training', 'Learn how sport can be more inclusive and accessible.', '/LearningHub/sportstraining.html', '/LearningHub/sportstraining.html', 5);
+
 INSERT INTO chatbot_faqs (question, answer, keywords, category)
 VALUES
 
