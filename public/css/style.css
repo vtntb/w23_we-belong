@@ -398,7 +398,7 @@ body.highlight-links .navbar a {
     position: relative;
     height: 200px;
 
-    background-image: url("/public/images/home-page-banner.jpg");
+    background-image: url("/images/home-page-banner.jpg");
     background-size: cover;
     background-position: center;
 
