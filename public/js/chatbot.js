@@ -73,12 +73,14 @@ function sendQuickReply(text) {
 
 async function getAIReply(message) {
   try {
-    const response = await fetch("/get-ai-response", {
+    const response = await fetch("/api/chatbot/message", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({ query: message })
+      body: JSON.stringify({
+        message: message
+      })
     });
 
     const data = await response.json();
@@ -88,7 +90,7 @@ async function getAIReply(message) {
       return "Sorry, something went wrong with the chatbot server.";
     }
 
-    return data.answer || "Sorry, I could not find an answer.";
+    return data.reply || "Sorry, I could not find an answer.";
   } catch (error) {
     console.error("Error from chatbot backend:", error);
     return "Sorry, something went wrong. Please try again.";

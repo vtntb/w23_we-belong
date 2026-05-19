@@ -57,8 +57,8 @@ router.post("/message", async (req, res) => {
 
     // Save to chatbot_logs
     await db.query(
-      "INSERT INTO chatbot_logs (user_id, message, response) VALUES (?, ?, ?)",
-      [userId || null, message.trim(), reply]
+      "INSERT INTO chatbot_logs (user_query, bot_response, matched_faq_id) VALUES (?, ?, ?)",
+      [message.trim(), reply, null]
     );
 
     res.json({ reply });
