@@ -107,7 +107,7 @@
 
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="4"></textarea>
-
+                        <p id="contactFormMessage" style="display:none;"></p>
                         <button type="submit">Submit</button>
                     </form>
                 </div>
@@ -148,16 +148,25 @@
 
                 const data = await response.json();
 
+                const messageBox = document.getElementById("contactFormMessage");
+
                 if (!response.ok) {
-                    alert(data.error || "Something went wrong. Please try again.");
+                    messageBox.style.display = "block";
+                    messageBox.style.color = "red";
+                    messageBox.innerText = data.error || "Something went wrong. Please try again.";
                     return;
                 }
 
-                alert("Thank you. Your message has been submitted.");
+                messageBox.style.display = "block";
+                messageBox.style.color = "green";
+                messageBox.innerText = "Thank you. Your message has been submitted.";
+
                 this.reset();
             } catch (err) {
-                console.error("Contact form submit error:", err);
-                alert("Could not submit message. Please try again later.");
+                const messageBox = document.getElementById("contactFormMessage");
+                messageBox.style.display = "block";
+                messageBox.style.color = "red";
+                messageBox.innerText = "Could not submit message. Please try again later.";
             }
         });
     </script>
