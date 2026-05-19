@@ -30,55 +30,47 @@ function isLoggedIn() {
     return localStorage.getItem("isLoggedIn") === "true";
 }
 
-function getEnrollKey(courseId) {
-    return courseId + "_enrolled";
+function getAuthHeaders() {
+    return {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer " + localStorage.getItem("authToken")
+    };
 }
 
-function getLessonsKey(courseId) {
-    return courseId + "_completedLessons";
+async function fetchCourseProgress(courseId) {
+    const response = await fetch("/api/progress/" + courseId, {
+        method: "GET",
+        headers: getAuthHeaders()
+    });
+
+    return await response.json();
 }
 
-function isEnrolled(courseId) {
-    return localStorage.getItem(getEnrollKey(courseId)) === "true";
+async function enrolInCourse(courseId) {
+    const response = await fetch("/api/progress/enrol", {
+        method: "POST",
+        headers: getAuthHeaders(),
+        body: JSON.stringify({ courseId: courseId })
+    });
+
+    return await response.json();
 }
 
-function setEnrolled(courseId, value) {
-    localStorage.setItem(getEnrollKey(courseId), value ? "true" : "false");
-}
+async function completeLesson(courseId, lessonNumber) {
+    const response = await fetch("/api/progress/complete-lesson", {
+        method: "POST",
+        headers: getAuthHeaders(),
+        body: JSON.stringify({
+            courseId: courseId,
+            lessonNumber: lessonNumber
+        })
+    });
 
-function getCompletedLessons(courseId) {
-    const raw = localStorage.getItem(getLessonsKey(courseId));
-    if (!raw) return [];
-
-    try {
-        return JSON.parse(raw);
-    } catch {
-        return [];
-    }
-}
-
-function setCompletedLessons(courseId, lessons) {
-    localStorage.setItem(getLessonsKey(courseId), JSON.stringify(lessons));
-}
-
-function markLessonComplete(courseId, lessonNumber) {
-    const completed = getCompletedLessons(courseId);
-
-    if (!completed.includes(lessonNumber)) {
-        completed.push(lessonNumber);
-        completed.sort((a, b) => a - b);
-        setCompletedLessons(courseId, completed);
-    }
-}
-
-function getProgressPercent(courseId, totalLessons) {
-    const done = getCompletedLessons(courseId).length;
-    if (totalLessons === 0) return 0;
-    return Math.round((done / totalLessons) * 100);
+    return await response.json();
 }
 
 /* ===== COURSE PAGE ===== */
-function initCoursePage() {
+async function initCoursePage() {
     if (document.body.dataset.pageType !== "course") return;
 
     const courseId = getCourseId();
@@ -115,15 +107,14 @@ function initCoursePage() {
         });
     }
 
-    function updateProgressUI() {
-        const completedCount = getCompletedLessons(courseId).length;
-        const percent = getProgressPercent(courseId, totalLessons);
-
+    function updateProgressUI(progress) {
         if (progressWrap) progressWrap.style.display = "block";
-        if (progressFill) progressFill.style.width = percent + "%";
-        if (progressText) progressText.textContent = `${completedCount}/${totalLessons} lessons completed`;
+        if (progressFill) progressFill.style.width = progress.percent + "%";
+        if (progressText) {
+            progressText.textContent = `${progress.completedCount}/${progress.totalLessons} lessons completed`;
+        }
         if (progressBadge) {
-            progressBadge.textContent = percent === 100 ? "COMPLETED" : "IN PROGRESS";
+            progressBadge.textContent = progress.percent === 100 ? "COMPLETED" : "IN PROGRESS";
         }
     }
 
@@ -141,13 +132,15 @@ function initCoursePage() {
         return;
     }
 
-    if (!isEnrolled(courseId)) {
+    const progress = await fetchCourseProgress(courseId);
+
+    if (!progress.isEnrolled) {
         status.innerText = "NOT ENROLLED";
         status.className = "status not-enrolled";
 
         btn.innerText = "Enroll Now";
-        btn.onclick = function () {
-            setEnrolled(courseId, true);
+        btn.onclick = async function () {
+            await enrolInCourse(courseId);
             location.reload();
         };
 
@@ -170,7 +163,7 @@ function initCoursePage() {
     unlockLessons();
 
     // Green Circle confirm
-    const completedLessons = getCompletedLessons(courseId);
+    const completedLessons = progress.completedLessons;
 
     lessons.forEach((lesson, index) => {
         const lessonNumber = index + 1;
@@ -180,11 +173,11 @@ function initCoursePage() {
         }
     });
 
-    updateProgressUI();
+    updateProgressUI(progress);
 }
 
 /* ===== LESSON PAGE ===== */
-function initLessonPage() {
+async function initLessonPage() {
     if (document.body.dataset.pageType !== "lesson") return;
 
     const courseId = getCourseId();
@@ -195,26 +188,41 @@ function initLessonPage() {
 
     if (!markBtn || !courseId || !lessonNumber) return;
 
-    if (!isLoggedIn() || !isEnrolled(courseId)) {
+    if (!isLoggedIn()) {
+        markBtn.innerText = "Login to Access";
+        markBtn.disabled = true;
+        return;
+    }
+
+    const progress = await fetchCourseProgress(courseId);
+
+    if (!progress.isEnrolled) {
         markBtn.innerText = "Enroll to Access";
         markBtn.disabled = true;
         return;
     }
 
-    const completed = getCompletedLessons(courseId);
-    const alreadyCompleted = completed.includes(lessonNumber);
+    const alreadyCompleted = progress.completedLessons.includes(lessonNumber);
 
     if (alreadyCompleted) {
         markBtn.innerText = "Completed";
         markBtn.disabled = true;
-        if (doneMsg) doneMsg.style.display = "block";
+
+        if (doneMsg) {
+            doneMsg.style.display = "block";
+        }
+
         return;
     }
 
-    markBtn.onclick = function () {
-        markLessonComplete(courseId, lessonNumber);
+    markBtn.onclick = async function () {
+        await completeLesson(courseId, lessonNumber);
+
         markBtn.innerText = "Completed";
         markBtn.disabled = true;
-        if (doneMsg) doneMsg.style.display = "block";
+
+        if (doneMsg) {
+            doneMsg.style.display = "block";
+        }
     };
 }

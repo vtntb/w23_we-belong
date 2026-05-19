@@ -32,13 +32,25 @@ CREATE TABLE IF NOT EXISTS progress (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT NOT NULL,
   course_id VARCHAR(50) NOT NULL,
-  lessons_completed INT DEFAULT 0,
   is_enrolled BOOLEAN DEFAULT TRUE,
   enrolled_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   UNIQUE KEY unique_user_course (user_id, course_id),
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
   FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS lesson_progress (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    course_id VARCHAR(50) NOT NULL,
+    lesson_number INT NOT NULL,
+    completed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    UNIQUE KEY unique_lesson_progress (user_id, course_id, lesson_number),
+
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS chatbot_faqs (
