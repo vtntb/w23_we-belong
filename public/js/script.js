@@ -31,6 +31,11 @@ function updateLoginLink() {
                 e.preventDefault();
 
                 localStorage.removeItem("isLoggedIn");
+                localStorage.removeItem("authToken");
+                localStorage.removeItem("userEmail");
+                localStorage.removeItem("userFirstName");
+                localStorage.removeItem("userLastName");
+                localStorage.removeItem("userId");
                 window.location.href = "/login.html";
             };
         } else {

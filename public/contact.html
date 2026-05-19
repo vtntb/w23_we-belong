@@ -107,7 +107,7 @@
 
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="4"></textarea>
-
+                        <p id="contactFormMessage" style="display:none;"></p>
                         <button type="submit">Submit</button>
                     </form>
                 </div>
@@ -123,5 +123,52 @@
     <script src="js/chatbot.js" defer></script>
 
     <div id="footer-placeholder"></div>
+
+    <script>
+        document.querySelector(".contact-form").addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            const formData = {
+                firstName: document.getElementById("fname").value,
+                lastName: document.getElementById("lname").value,
+                phone: document.getElementById("phone").value,
+                email: document.getElementById("email").value,
+                program: document.getElementById("program").value,
+                message: document.getElementById("message").value
+            };
+
+            try {
+                const response = await fetch("/api/contact", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+
+                const messageBox = document.getElementById("contactFormMessage");
+
+                if (!response.ok) {
+                    messageBox.style.display = "block";
+                    messageBox.style.color = "red";
+                    messageBox.innerText = data.error || "Something went wrong. Please try again.";
+                    return;
+                }
+
+                messageBox.style.display = "block";
+                messageBox.style.color = "green";
+                messageBox.innerText = "Thank you. Your message has been submitted.";
+
+                this.reset();
+            } catch (err) {
+                const messageBox = document.getElementById("contactFormMessage");
+                messageBox.style.display = "block";
+                messageBox.style.color = "red";
+                messageBox.innerText = "Could not submit message. Please try again later.";
+            }
+        });
+    </script>
 </body>
 </html>

@@ -7,6 +7,7 @@ const authRoutes = require("./routes/auth");
 const courseRoutes = require("./routes/courses");
 const progressRoutes = require("./routes/progress");
 const chatbotRoutes = require("./routes/chatbot");
+const contactRoutes = require("./routes/contact")
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -22,6 +23,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/courses", courseRoutes);
 app.use("/api/progress", progressRoutes);
 app.use("/api/chatbot", chatbotRoutes);
+app.use("/api/contact", contactRoutes);
 
 // Return 404 JSON for unknown API routes
 app.use("/api/*", (req, res) => {
