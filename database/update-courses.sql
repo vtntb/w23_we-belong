@@ -1,10 +1,11 @@
 USE we_belong;
 
--- Add course_url column only if it does not already exist
-ALTER TABLE courses ADD COLUMN course_url VARCHAR(500);
+SET SQL_SAFE_UPDATES = 0;
 
 -- Clear existing courses
 DELETE FROM courses;
+
+SET SQL_SAFE_UPDATES = 1;
 
 -- Insert all courses with correct page links
 INSERT INTO courses (id, title, description, category, course_url, total_lessons) VALUES
