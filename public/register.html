@@ -93,7 +93,8 @@
             margin-bottom: 8px;
         }
 
-        .register-form input {
+        .register-form input,
+        .register-form select {
             width: 100%;
             padding: 15px 16px;
             font-size: 17px;
@@ -101,9 +102,11 @@
             border-radius: 12px;
             box-sizing: border-box;
             outline: none;
+            background: white;
         }
 
-        .register-form input:focus {
+        .register-form input:focus,
+        .register-form select:focus {
             border-color: #6f2c91;
             box-shadow: 0 0 0 4px rgba(111, 44, 145, 0.12);
         }
@@ -230,6 +233,22 @@
                         <input type="password" id="confirmPassword" placeholder="Re-enter password">
                     </div>
 
+                    <div>
+                        <label for="backupQuestion">Backup Question</label>
+                        <select id="backupQuestion">
+                            <option value="">Choose a backup question</option>
+                            <option value="What was the name of your first pet?">What was the name of your first pet?</option>
+                            <option value="What is your favourite food?">What is your favourite food?</option>
+                            <option value="What city were you born in?">What city were you born in?</option>
+                            <option value="What is your favourite colour?">What is your favourite colour?</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="backupAnswer">Backup Answer</label>
+                        <input type="text" id="backupAnswer" placeholder="Enter your backup answer">
+                    </div>
+
                     <label class="terms-box">
                         <input type="checkbox" id="agreeTerms">
                         <span>I agree to the terms and understand this is a demonstration account system.</span>
@@ -266,6 +285,8 @@
             const email = document.getElementById("email").value.trim().toLowerCase();
             const password = document.getElementById("password").value;
             const confirmPassword = document.getElementById("confirmPassword").value;
+            const backupQuestion = document.getElementById("backupQuestion").value;
+            const backupAnswer = document.getElementById("backupAnswer").value.trim();
             const agreeTerms = document.getElementById("agreeTerms").checked;
 
             const errorMessage = document.getElementById("errorMessage");
@@ -276,7 +297,7 @@
             successMessage.style.display = "none";
             errorMessage.textContent = "";
 
-            if (!firstName || !lastName || !email || !password || !confirmPassword) {
+            if (!firstName || !lastName || !email || !password || !confirmPassword || !backupQuestion || !backupAnswer) {
                 errorMessage.textContent = "Please complete all fields.";
                 errorMessage.style.display = "block";
                 return;
@@ -307,7 +328,9 @@
                         firstName,
                         lastName,
                         email,
-                        password
+                        password,
+                        backupQuestion,
+                        backupAnswer
                     })
                 });
 
