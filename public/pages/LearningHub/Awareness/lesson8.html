@@ -3,7 +3,7 @@
 <head>
     <title>Lesson 8 – Employment</title>
     <meta charset="UTF-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="stylesheet" href="../../../css/learninghub.css">
 
@@ -16,6 +16,8 @@
             padding: 15px 180px;
             background: #eceaea;
             font-size: 15px;
+            box-sizing: border-box;
+            line-height: 1.5;
         }
 
         .lessonnav a {
@@ -31,43 +33,109 @@
 
         .lessonwrap {
             display: flex;
+            gap: 80px;
             padding: 40px 180px;
             background: #ffffff;
-            gap: 100px;
+            box-sizing: border-box;
+            align-items: flex-start;
         }
 
-        li {
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-        
-        img {
-            height: auto;
+        .lessonwrap img {
             width: 50%;
+            max-width: 550px;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .comBoardInfo {
+            flex: 1;
+            min-width: 0;
         }
 
         .comBoardInfo p {
             font-size: 18px;
+            line-height: 1.6;
         }
 
         .heading {
             font-size: 20px;
             font-weight: bold;
+            line-height: 1.4;
+            margin-top: 0;
         }
 
-        /* complete button */
+        .lessonwrap ul {
+            padding-left: 25px;
+        }
+
+        .lessonwrap li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .lessonwrap li::marker {
+            color: #6f2c91;
+            font-size: 28px;
+        }
+
+        .section-divider {
+            width: calc(100% - 360px);
+            height: 1px;
+            background: #aba8a8;
+            margin: 20px auto 30px;
+            max-width: 1600px;
+        }
+
+        /* Video container */
+        .viddiv {
+            text-align: center;
+            margin: 60px auto;
+            padding: 0 180px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .vidTitle {
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 25px;
+            line-height: 1.4;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            aspect-ratio: 16 / 9;
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* Complete button section */
         .lesson-actions {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             margin: 60px 0;
+            padding: 0 180px;
+            box-sizing: border-box;
         }
 
         #lessonDoneMsg {
             margin-top: 15px;
             color: green;
             font-size: 18px;
+            text-align: center;
         }
 
         .navigationdiv {
@@ -89,6 +157,7 @@
             grid-template-columns: 1fr auto 1fr;
             align-items: center;
             width: 100%;
+            gap: 15px;
         }
 
         .buttonDiv a:first-child {
@@ -111,29 +180,169 @@
             border-radius: 25px;
             font-size: 16px;
             transition: 0.2s;
+            text-align: center;
+            box-sizing: border-box;
         }
 
         .naviButt:hover {
             background: #4f186b;
         }
 
-        /* vid container */
-        .viddiv {
-            text-align: center;
-            margin: 60px 0;
+        @media screen and (max-width: 768px) {
+            .lessonnav {
+                padding: 14px 20px;
+                font-size: 14px;
+            }
+
+            .lessonnav a,
+            .lessonnav span {
+                display: inline;
+                overflow-wrap: break-word;
+            }
+
+            .lessonwrap {
+                flex-direction: column;
+                padding: 30px 20px;
+                gap: 28px;
+            }
+
+            .lessonwrap img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                margin: 0 auto;
+            }
+
+            .comBoardInfo {
+                width: 100%;
+            }
+
+            .heading {
+                font-size: 19px;
+                line-height: 1.4;
+            }
+
+            .comBoardInfo p {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            .lessonwrap ul {
+                padding-left: 22px;
+            }
+
+            .lessonwrap li {
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 12px;
+            }
+
+            .lessonwrap li::marker {
+                font-size: 22px;
+            }
+
+            .section-divider {
+                width: calc(100% - 40px);
+                margin: 10px auto 20px;
+            }
+
+            .viddiv {
+                padding: 0 20px;
+                margin: 40px auto;
+            }
+
+            .vidTitle {
+                font-size: 22px;
+                margin-bottom: 16px;
+            }
+
+            .video-wrapper {
+                width: 100%;
+                max-width: 100%;
+                aspect-ratio: 16 / 9;
+            }
+
+            .lesson-actions {
+                margin: 40px 0;
+                padding: 0 20px;
+            }
+
+            #markCompleteBtn {
+                width: fit-content;
+                max-width: 100%;
+                text-align: center;
+            }
+
+            #lessonDoneMsg {
+                font-size: 16px;
+            }
+
+            .navigationdiv {
+                width: 100%;
+                margin-top: 25px;
+            }
+
+            .buttonDiv {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                width: 100%;
+            }
+
+            .buttonDiv a:first-child,
+            .buttonDiv a:nth-child(2),
+            .buttonDiv a:last-child {
+                justify-self: unset;
+            }
+
+            .naviButt {
+                display: block;
+                width: 100%;
+                max-width: 260px;
+                padding: 12px 18px;
+            }
         }
 
-        .vidTitle {
-            color: rgb(0, 0, 0);
-            font-weight: bold;
-            margin-bottom: 20px;
-            font-size: 25px;
-        }
+        @media screen and (max-width: 480px) {
+            .lessonnav {
+                padding: 12px 16px;
+                font-size: 13px;
+            }
 
-        iframe {
-            width: 80%;
-            max-width: 1200px;
-            height: 700px;
+            .lessonwrap {
+                padding: 25px 16px;
+            }
+
+            .heading {
+                font-size: 18px;
+            }
+
+            .comBoardInfo p,
+            .lessonwrap li {
+                font-size: 15px;
+            }
+
+            .section-divider {
+                width: calc(100% - 32px);
+            }
+
+            .viddiv {
+                padding: 0 16px;
+                margin: 35px auto;
+            }
+
+            .vidTitle {
+                font-size: 20px;
+            }
+
+            .lesson-actions {
+                padding: 0 16px;
+            }
+
+            .naviButt {
+                max-width: 100%;
+                font-size: 15px;
+            }
         }
     </style>
 </head>
@@ -164,10 +373,17 @@
 
         <div class="comBoardInfo">
             <h2 class="heading">Disability Inclusive Employment</h2>
-            <p>People with a disability take less sick days, have higher retention rates and are rated more productive.</p>
-            <p>When employee health and wellness is managed well, their engagement increases from 7% to 55%.</p>
+
+            <p>
+                People with a disability take less sick days, have higher retention rates and are rated more productive.
+            </p>
+
+            <p>
+                When employee health and wellness is managed well, their engagement increases from 7% to 55%.
+            </p>
 
             <h2 class="heading">People with a disability in employment:</h2>
+
             <ul>
                 <li>37% are professionals, managers and administrators</li>
                 <li>30% are clerical sales and service workers</li>
@@ -175,6 +391,7 @@
             </ul>
 
             <h2 class="heading">The Benefits of Disability Inclusive Employment</h2>
+
             <ul>
                 <li>Increased employee engagement</li>
                 <li>Positive organisational reputation</li>
@@ -184,11 +401,19 @@
         </div>
     </div>
 
-    <div class="naviBar"></div>
+    <div class="section-divider"></div>
 
     <div class="viddiv">
         <p class="vidTitle">Please watch the video below</p>
-        <iframe src="https://www.youtube.com/embed/K_ybYC-lpr0" title="YouTube video" frameborder="0" allowfullscreen id="ytbvid2"></iframe>
+
+        <div class="video-wrapper">
+            <iframe 
+                src="https://www.youtube.com/embed/K_ybYC-lpr0" 
+                title="YouTube video" 
+                allowfullscreen 
+                id="ytbvid2">
+            </iframe>
+        </div>
     </div>
 
     <!-- complete button -->
@@ -202,6 +427,7 @@
         <!-- lesson navigation -->
         <div class="navigationdiv">
             <div class="naviBar"></div>
+
             <div class="buttonDiv">
                 <a href="lesson7.html" class="naviButt">← Previous</a>
                 <a href="../awarenesstraining.html" class="naviButt" id="backButt">Back to Course</a>

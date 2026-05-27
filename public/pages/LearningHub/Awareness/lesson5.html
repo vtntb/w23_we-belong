@@ -3,7 +3,7 @@
 <head>
     <title>Lesson 5 – Face-to-Face Communication</title>
     <meta charset="UTF-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="stylesheet" href="../../../css/learninghub.css">
 
@@ -16,6 +16,8 @@
             padding: 15px 180px;
             background: #eceaea;
             font-size: 15px;
+            box-sizing: border-box;
+            line-height: 1.5;
         }
 
         .lessonnav a {
@@ -34,51 +36,73 @@
             align-items: center;
             padding: 40px 180px;
             background: #ffffff;
+            box-sizing: border-box;
         }
 
-        li {
+        .lessonwrap ul {
+            padding-left: 25px;
+            margin: 0;
+        }
+
+        .lessonwrap li {
             font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 12px;
         }
 
-        /* 3 card */
+        .lessonwrap li::marker {
+            color: #6f2c91;
+            font-size: 28px;
+        }
+
+        /* 3 communication cards */
         .communicationDiv {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 40px;
             padding: 40px 180px;
             background: #ffffff;
+            box-sizing: border-box;
         }
 
         .communicationCard {
             text-align: center;
+            box-sizing: border-box;
         }
 
         .communicationCard img {
             width: 190px;
+            max-width: 100%;
+            height: auto;
+            display: block;
             margin: 0 auto 20px;
         }
 
         .communicationCard p {
             font-size: 18px;
-            line-height: 1.4;
+            line-height: 1.5;
+            margin: 0;
         }
 
-        /* complete button */
+        /* Complete button section */
         .lesson-actions {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             margin: 60px 0;
+            padding: 0 180px;
+            box-sizing: border-box;
         }
 
         #lessonDoneMsg {
             margin-top: 15px;
             color: green;
             font-size: 18px;
+            text-align: center;
         }
 
-        /* navigation button */
+        /* Navigation buttons */
         .navigationdiv {
             margin-top: 20px;
             width: 100%;
@@ -97,6 +121,7 @@
             grid-template-columns: 1fr auto 1fr;
             align-items: center;
             width: 100%;
+            gap: 15px;
         }
 
         .buttonDiv a:first-child {
@@ -119,10 +144,143 @@
             border-radius: 25px;
             font-size: 16px;
             transition: 0.2s;
+            text-align: center;
+            box-sizing: border-box;
         }
 
         .naviButt:hover {
             background: #4f186b;
+        }
+
+        @media screen and (max-width: 768px) {
+            .lessonnav {
+                padding: 14px 20px;
+                font-size: 14px;
+            }
+
+            .lessonnav a,
+            .lessonnav span {
+                display: inline;
+                overflow-wrap: break-word;
+            }
+
+            .lessonwrap {
+                padding: 30px 20px;
+                display: block;
+            }
+
+            .lessonwrap ul {
+                padding-left: 22px;
+            }
+
+            .lessonwrap li {
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 12px;
+            }
+
+            .lessonwrap li::marker {
+                font-size: 22px;
+            }
+
+            .communicationDiv {
+                grid-template-columns: 1fr;
+                gap: 35px;
+                padding: 30px 20px;
+            }
+
+            .communicationCard {
+                width: 100%;
+                max-width: 360px;
+                margin: 0 auto;
+            }
+
+            .communicationCard img {
+                width: 150px;
+                margin-bottom: 16px;
+            }
+
+            .communicationCard p {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            .lesson-actions {
+                margin: 40px 0;
+                padding: 0 20px;
+            }
+
+            #markCompleteBtn {
+                width: fit-content;
+                max-width: 100%;
+                text-align: center;
+            }
+
+            #lessonDoneMsg {
+                font-size: 16px;
+            }
+
+            .navigationdiv {
+                width: 100%;
+                margin-top: 25px;
+            }
+
+            .buttonDiv {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                width: 100%;
+            }
+
+            .buttonDiv a:first-child,
+            .buttonDiv a:nth-child(2),
+            .buttonDiv a:last-child {
+                justify-self: unset;
+            }
+
+            .naviButt {
+                display: block;
+                width: 100%;
+                max-width: 260px;
+                padding: 12px 18px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .lessonnav {
+                padding: 12px 16px;
+                font-size: 13px;
+            }
+
+            .lessonwrap {
+                padding: 25px 16px;
+            }
+
+            .lessonwrap li {
+                font-size: 15px;
+            }
+
+            .communicationDiv {
+                padding: 25px 16px;
+                gap: 32px;
+            }
+
+            .communicationCard img {
+                width: 135px;
+            }
+
+            .communicationCard p {
+                font-size: 15px;
+            }
+
+            .lesson-actions {
+                padding: 0 16px;
+            }
+
+            .naviButt {
+                max-width: 100%;
+                font-size: 15px;
+            }
         }
     </style>
 </head>
@@ -152,19 +310,30 @@
         <ul>
             <li>Avoid asking personal questions about someone’s disability.</li>
             <li>Be considerate of the extra time it might take for a person to do or say something.</li>
-            <li>Be polite and patient when offering assistance, and wait until your offer is accepted. 
-              Listen or ask for specific instructions. Be prepared for your offer to be refused.</li>
-            <li>Relax. Anyone can make mistakes. Offer an apology if you feel you’ve caused embarrassment. 
-              Keep a sense of humour and be willing to communicate.</li>
-            <li>Use a normal tone of voice when welcoming a person with disability. 
-              Do not raise your voice unless you are asked to.</li>
-            <li>Shake hands even if the person has limited hand use or wears an artificial limb. A left-hand shake is acceptable. 
-              If the person cannot shake hands, acknowledge them with a smile and a spoken greeting. <em>*Due to COVID alternatives such as elbow bumps or even fist bumps have become popular.</em></li>
+            <li>
+                Be polite and patient when offering assistance, and wait until your offer is accepted. 
+                Listen or ask for specific instructions. Be prepared for your offer to be refused.
+            </li>
+            <li>
+                Relax. Anyone can make mistakes. Offer an apology if you feel you’ve caused embarrassment. 
+                Keep a sense of humour and be willing to communicate.
+            </li>
+            <li>
+                Use a normal tone of voice when welcoming a person with disability. 
+                Do not raise your voice unless you are asked to.
+            </li>
+            <li>
+                Shake hands even if the person has limited hand use or wears an artificial limb. A left-hand shake is acceptable. 
+                If the person cannot shake hands, acknowledge them with a smile and a spoken greeting. 
+                <em>*Due to COVID alternatives such as elbow bumps or even fist bumps have become popular.</em>
+            </li>
             <li>Look and speak directly to the person with disability, not just to the people accompanying them, including interpreters.</li>
             <li>Don’t patronise or talk down to people with disability. Treat people with respect and dignity.</li>
             <li>Be patient and give your undivided attention, especially with someone who speaks slowly or with great effort.</li>
-            <li>Never pretend to understand what a person is saying if you don’t. 
-              Ask the person to repeat or rephrase, or offer them a pen and paper.</li>
+            <li>
+                Never pretend to understand what a person is saying if you don’t. 
+                Ask the person to repeat or rephrase, or offer them a pen and paper.
+            </li>
             <li>If requested to by the individual, offer a person who is blind or has low vision your elbow or shoulder, to guide rather than propel them.</li>
             <li>It is okay to use common expressions like “see you soon” or “I’d better be running along”.</li>
         </ul>
@@ -216,6 +385,7 @@
         <!-- lesson navigation -->
         <div class="navigationdiv">
             <div class="naviBar"></div>
+
             <div class="buttonDiv">
                 <a href="lesson4.html" class="naviButt">← Previous</a>
                 <a href="../awarenesstraining.html" class="naviButt" id="backButt">Back to Course</a>

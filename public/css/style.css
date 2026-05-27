@@ -1061,4 +1061,54 @@ body.highlight-links .navbar a {
   margin-top: 10px;
 }
 
-/* Please create a new css for future purpose */
+.simple-banner {
+    position: relative;
+    width: 100%;
+    min-height: 190px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+
+    .simple-banner {
+        min-height: auto;
+    }
+
+    .banner-content {
+        width: 100%;
+        padding: 28px 20px;
+    }
+
+    .banner-title {
+        font-size: 34px;
+        line-height: 1.15;
+        margin: 12px 0 14px;
+    }
+
+    .banner-content .home-link,
+    .banner-content .hublink,
+    .banner-content span {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .hublink {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .banner-content {
+        padding: 24px 18px;
+    }
+
+    .banner-title {
+        font-size: 30px;
+        line-height: 1.15;
+    }
+}
+/* All members note: CREATE a new css for future purpose */
