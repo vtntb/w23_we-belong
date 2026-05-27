@@ -45,3 +45,21 @@ function updateLoginLink() {
         }
     }
 }
+
+document.addEventListener("click", function (event) {
+    const menuButton = document.getElementById("mobileMenuBtn");
+    const menu = document.getElementById("mainnavMenu");
+
+    if (!menuButton || !menu) {
+        return;
+    }
+
+    if (menuButton.contains(event.target)) {
+        menu.classList.toggle("show");
+        return;
+    }
+
+    if (!menu.contains(event.target)) {
+        menu.classList.remove("show");
+    }
+});

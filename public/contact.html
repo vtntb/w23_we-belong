@@ -13,6 +13,222 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    .contact-page,
+    .contact-section,
+    .contact-wrapper,
+    .contact-left,
+    .contact-right,
+    .contact-form {
+        box-sizing: border-box;
+    }
+
+    .contact-page {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .contact-section {
+        width: 100%;
+        padding: 50px 20px;
+    }
+
+    .contact-wrapper {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 100%;
+        padding: 35px;
+        background: #ffffff;
+        border-radius: 10px;
+    }
+
+    .form-row {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .form-group {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .contact-form label {
+        display: block;
+        margin: 16px 0 8px;
+        font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 12px 14px;
+        font-size: 16px;
+        border: 1px solid #cfcfcf;
+        border-radius: 6px;
+    }
+
+    .contact-form textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    .contact-form button {
+        margin-top: 20px;
+        background: #6f2c91;
+        color: white;
+        border: none;
+        padding: 12px 28px;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+
+    .contact-form button:hover {
+        background: #4f186b;
+    }
+
+    .contact-info-box,
+    .contact-item,
+    .contact-item p,
+    .contact-item a {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    @media screen and (max-width: 768px) {
+
+        .contact-section {
+            padding: 30px 16px;
+        }
+
+        .contact-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .contact-left,
+        .contact-right {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .contact-left h2 {
+            font-size: 28px;
+            margin-top: 0;
+        }
+
+        .contact-intro {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .contact-info-box {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .contact-form {
+            width: 100%;
+            max-width: 100%;
+            padding: 24px 18px;
+            border-radius: 8px;
+        }
+
+        .contact-form h3 {
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 18px;
+        }
+
+        .form-row {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .form-group {
+            width: 100%;
+        }
+
+        .contact-form label {
+            font-size: 16px;
+            margin: 14px 0 7px;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            max-width: 100%;
+            font-size: 16px;
+            padding: 12px;
+        }
+
+        .contact-form textarea {
+            min-height: 110px;
+        }
+
+        .contact-form button {
+            display: block;
+            width: 100%;
+            max-width: 220px;
+            margin: 22px auto 0;
+            text-align: center;
+        }
+
+        .social-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+
+        .contact-section {
+            padding: 25px 12px;
+        }
+
+        .contact-form {
+            padding: 22px 14px;
+        }
+
+        .contact-form h3 {
+            font-size: 22px;
+        }
+
+        .contact-left h2 {
+            font-size: 26px;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            font-size: 15px;
+        }
+    }
+</style>
 </head>
 
 <body data-title="Contact Us">
