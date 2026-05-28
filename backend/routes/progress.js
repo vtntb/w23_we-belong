@@ -124,7 +124,7 @@ router.get("/:courseId", authenticateToken, async (req, res) => {
 
   try {
     const [courseRows] = await db.query(
-      "SELECT id, title, total_lessons FROM courses WHERE id = ?",
+      "SELECT id, title, course_url, total_lessons FROM courses WHERE id = ?",
       [courseId]
     );
 
@@ -159,6 +159,7 @@ router.get("/:courseId", authenticateToken, async (req, res) => {
     res.json({
       courseId: course.id,
       title: course.title,
+      courseUrl: course.course_url,
       isEnrolled: isEnrolled,
       completedLessons: completedLessons,
       completedCount: completedCount,

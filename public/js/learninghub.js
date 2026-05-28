@@ -196,7 +196,7 @@ async function initLessonPage() {
     const progress = await fetchCourseProgress(courseId);
 
     if (!progress.isEnrolled) {
-        window.location.href = "/pages/LearningHub/" + courseId + ".html";
+        window.location.href = progress.courseUrl;
         return;
     }
 

@@ -1,3 +1,4 @@
+USE we_belong;
 INSERT INTO chatbot_faqs (question, answer, keywords, category)
 VALUES
 
