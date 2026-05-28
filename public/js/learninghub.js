@@ -186,21 +186,21 @@ async function initLessonPage() {
     const markBtn = document.getElementById("markCompleteBtn");
     const doneMsg = document.getElementById("lessonDoneMsg");
 
-    if (!markBtn || !courseId || !lessonNumber) return;
+    if (!courseId || !lessonNumber) return;
 
     if (!isLoggedIn()) {
-        markBtn.innerText = "Login to Access";
-        markBtn.disabled = true;
+        window.location.href = "/login.html";
         return;
     }
 
     const progress = await fetchCourseProgress(courseId);
 
     if (!progress.isEnrolled) {
-        markBtn.innerText = "Enroll to Access";
-        markBtn.disabled = true;
+        window.location.href = "/pages/LearningHub/" + courseId + ".html";
         return;
     }
+
+    if (!markBtn) return;
 
     const alreadyCompleted = progress.completedLessons.includes(lessonNumber);
 
