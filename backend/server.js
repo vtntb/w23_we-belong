@@ -42,7 +42,7 @@ app.use("/api/*", (req, res) => {
 
 // Catch-all: serve main page for any other unmatched route
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "public", "mainpage.html"));
+  res.sendFile(path.join(__dirname, "..", "public", "index.html"));
 });
 
 app.listen(PORT, () => {
