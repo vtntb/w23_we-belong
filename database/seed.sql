@@ -1,4 +1,159 @@
 USE we_belong;
+
+-- General FAQs
+INSERT INTO chatbot_faqs (question, answer, keywords, category)
+VALUES
+
+('What is We Belong?',
+'We Belong is an initiative of The Flagstaff Group that supports people with disability through learning resources, inclusion support, accessibility tools, stories, and community participation.',
+'we belong,about,platform,flagstaff,disability support,inclusion',
+'general'),
+
+('Who runs We Belong?',
+'We Belong is an initiative of The Flagstaff Group.',
+'who runs,we belong,flagstaff group,organisation',
+'general'),
+
+('What can I do on the We Belong website?',
+'You can access online learning courses, read stories, listen to podcasts, use disability awareness resources, learn about inclusive sport, and find contact information.',
+'website,features,what can i do,resources',
+'general'),
+
+('What is the Learning Hub?',
+'The Learning Hub is the online learning area where users can access courses and resources in their own time.',
+'learning hub,online learning,courses,study',
+'learning'),
+
+('What courses are available?',
+'Courses include Disability Awareness Training, Communication, Inclusive Sports Training, Cybersafety, Money, Learn to Drive, and emergency planning courses.',
+'courses,training,online learning,lessons',
+'learning'),
+
+('Is the online learning free?',
+'The website shows several online learning courses as open to access. Some course pages also show the price as free.',
+'free,price,cost,course access',
+'learning'),
+
+('What is Disability Awareness Training?',
+'Disability Awareness Training helps users learn about disability, inclusion, respectful communication, accessibility, and support for people with disability.',
+'disability awareness,training,inclusion,accessibility',
+'learning'),
+
+('What is Inclusive Sports Training?',
+'Inclusive Sports Training supports people of all abilities to join sports groups and helps coaches, clubs, teammates, and spectators create inclusive environments.',
+'inclusive sport,sports training,coaches,clubs,teammates,spectators',
+'inclusive_sport'),
+
+('Who is Inclusive Sport for?',
+'Inclusive Sport is for people with disability who want to join sports groups, and also for coaches, clubs, teammates, and spectators who want to support inclusion.',
+'inclusive sport,who is it for,clubs,coaches',
+'inclusive_sport'),
+
+('What is Learn to Drive?',
+'Learn to Drive is an online course that covers licences, road safety, safe driving, car functions, right of way, road signs, lines, and markings.',
+'learn to drive,road safety,licence,driving',
+'learning'),
+
+('What is Communication?',
+'Communication resources help users learn how to express themselves, listen, interact with others, and communicate more confidently.',
+'communication,communication skills,speaking,listening',
+'learning'),
+
+('What are Communication Boards?',
+'Communication Boards use pictures, symbols, words, or letters to help people share needs, wants, and ideas by pointing or gesturing.',
+'communication boards,pictures,symbols,limited speech,no speech',
+'disability_awareness'),
+
+('Who can use Communication Boards?',
+'Communication Boards can support people with limited or no speech so they can communicate more independently.',
+'communication board,limited speech,no speech,independent communication',
+'disability_awareness'),
+
+('What are the podcasts about?',
+'The podcasts share life stories from people with disability, including their experiences, barriers, and challenges when joining groups or community activities.',
+'podcast,stories,lived experience,barriers,challenges',
+'stories'),
+
+('Who hosts the We Belong podcast?',
+'The podcast is hosted by Chris from Flagstaff’s We Belong community.',
+'podcast host,chris,stories',
+'stories'),
+
+('Can I read stories from people with disability?',
+'Yes. The Stories and Resources section includes real experiences and stories from people with disability.',
+'stories,resources,lived experience,community stories',
+'stories'),
+
+('How do I register?',
+'You can register by going to the Register page, creating an account, and then logging in to access learning content and your account area.',
+'register,sign up,join,create account',
+'account'),
+
+('How do I log in?',
+'Use the Login page and enter your registered email address and password.',
+'login,sign in,email,password',
+'account'),
+
+('Can I track my progress?',
+'Yes. Your account area can show learning progress and enrolled courses in the prototype system.',
+'progress,track progress,my account,courses',
+'account'),
+
+('How do I contact We Belong?',
+'You can contact The Flagstaff Group through the Contact Us page. The website lists the phone number as (02) 4272 0222.',
+'contact,phone,email,support,help',
+'contact'),
+
+('Where is The Flagstaff Group located?',
+'The website lists the contact address as 254 Nolan St, Unanderra NSW 2526.',
+'address,location,where,flagstaff',
+'contact'),
+
+('What accessibility tools are available?',
+'The website includes an accessibility toolbar with options such as keyboard navigation, disabling animations, contrast, text size changes, readable font, marking titles, and highlighting links and buttons.',
+'accessibility toolbar,keyboard navigation,contrast,text size,readable font',
+'accessibility'),
+
+('How do I make the text easier to read?',
+'Open the accessibility toolbar and use options such as Increase Text, Readable Font, Contrast, or Mark Titles.',
+'text size,increase text,readable font,easy read',
+'accessibility'),
+
+('Can I use keyboard navigation?',
+'Yes. The accessibility toolbar includes a Keyboard Navigation option to help users navigate more easily.',
+'keyboard navigation,accessibility,tab',
+'accessibility'),
+
+('Can the chatbot give medical advice?',
+'No. The chatbot cannot provide medical advice. Please speak with a doctor, healthcare professional, support worker, or emergency service if you need medical help.',
+'medical advice,doctor,diagnosis,medicine',
+'safety'),
+
+('What should I do in an emergency?',
+'If you are in immediate danger, call emergency services. In Australia, call 000.',
+'emergency,danger,urgent,000',
+'safety'),
+
+('I want to hurt myself',
+'I am sorry you are feeling this way. If you are in immediate danger, call 000 in Australia. You can also contact Lifeline on 13 11 14 for crisis support.',
+'hurt myself,self harm,suicide,kill myself,lifeline',
+'safety'),
+
+('Can the chatbot help with hacking or illegal activity?',
+'No. I cannot help with hacking, malware, or illegal activity. I can help with We Belong, accessibility, disability awareness, learning resources, and contact information.',
+'hack,malware,illegal,unsafe',
+'safety'),
+
+('What can you help me with?',
+'I can help with We Belong information, online learning, accessibility tools, disability awareness, inclusive sport, communication boards, stories, podcasts, registration, and contact details.',
+'help,what can you do,chatbot,topics',
+'general'),
+
+('I asked something unrelated',
+'I can only help with We Belong, disability awareness, accessibility, online learning, inclusive sport, stories, podcasts, registration, and contact information.',
+'out of scope,unrelated,other topic',
+'fallback');
+
 INSERT INTO chatbot_faqs (question, answer, keywords, category)
 VALUES
 
