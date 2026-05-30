@@ -17,24 +17,14 @@ CREATE TABLE IF NOT EXISTS courses (
   title VARCHAR(255) NOT NULL,
   description TEXT,
   category VARCHAR(100),
-  image_url VARCHAR(500),
+  course_url VARCHAR(500),
   total_lessons INT DEFAULT 0
-);
-
-CREATE TABLE IF NOT EXISTS lessons (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  course_id VARCHAR(50) NOT NULL,
-  title VARCHAR(255) NOT NULL,
-  content_url VARCHAR(500),
-  lesson_order INT NOT NULL,
-  FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS progress (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT NOT NULL,
   course_id VARCHAR(50) NOT NULL,
-  lessons_completed INT DEFAULT 0,
   is_enrolled BOOLEAN DEFAULT TRUE,
   enrolled_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
