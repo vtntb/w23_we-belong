@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Module 3 – Coaching and Supporting People with different types of Disabilities in sport</title>
+    <title>Module 3 – Coaching and Supporting People with Different Types of Disabilities in Sport</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/images/Logo/WeBelong.png">
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="stylesheet" href="../../../css/learninghub.css">
 
@@ -16,6 +17,8 @@
             padding: 15px 180px;
             background: #eceaea;
             font-size: 15px;
+            box-sizing: border-box;
+            line-height: 1.5;
         }
 
         .lessonnav a {
@@ -29,16 +32,54 @@
             text-underline-offset: 4px;
         }
 
+        .lesson-section {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+            box-sizing: border-box;
+        }
+
+        .lesson-section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+            line-height: 1.3;
+        }
+
+        .lesson-section-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
+        .lesson-section h3 {
+            font-size: 26px;
+            font-weight: 500;
+            color: #111;
+            margin: 0 0 20px;
+            line-height: 1.3;
+        }
+
         .course-intro-list {
             list-style: disc;
             padding-left: 34px;
-            margin: 0;
+            margin: 0 0 28px;
         }
 
         .course-intro-list li {
             margin-bottom: 10px;
             font-size: 18px;
-            line-height: 1.4;
+            line-height: 1.5;
             color: #111;
         }
 
@@ -47,18 +88,69 @@
             font-size: 1.3em;
         }
 
+        .lesson-section-image {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section-image img {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            display: inline-block;
+            border-radius: 8px;
+        }
+
+        .small-image img {
+            max-width: 220px;
+        }
+
+        .medium-image img {
+            max-width: 540px;
+        }
+
+        .large-image img {
+            max-width: 700px;
+        }
+
+        .video-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 30px auto 0;
+            aspect-ratio: 16 / 9;
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .reflink {
+            text-decoration: none;
+            color: #6f2c91;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+
         .lesson-actions {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             margin: 60px 0;
+            padding: 0 180px;
+            box-sizing: border-box;
         }
 
         #lessonDoneMsg {
             margin-top: 15px;
             color: green;
             font-size: 18px;
+            text-align: center;
         }
 
         .navigationdiv {
@@ -79,6 +171,7 @@
             grid-template-columns: 1fr auto 1fr;
             align-items: center;
             width: 100%;
+            gap: 15px;
         }
 
         .buttonDiv a:first-child {
@@ -101,75 +194,165 @@
             border-radius: 25px;
             font-size: 16px;
             transition: 0.2s;
+            text-align: center;
+            box-sizing: border-box;
         }
 
         .naviButt:hover {
             background: #4f186b;
         }
 
-        .lesson-section {
-            width: 86%;
-            max-width: 1400px;
-            margin: 40px auto 20px;
-        }
-
-        .lesson-section-title {
-            text-align: center;
-            font-size: 34px;
-            font-weight: 400;
-            color: #111;
-            margin: 0 0 24px;
-        }
-
-        .lesson-section-divider {
-            width: 100%;
-            height: 2px;
-            background: #f04b23;
-            margin-bottom: 42px;
-        }
-
-        .lesson-section p {
-            font-size: 18px;
-            line-height: 1.4;
-            color: #111;
-            margin: 0 0 28px;
-        }
-
-        .lesson-section-image {
-            text-align: center;
-        }
-
-        .lesson-section-image img {
-            width: 100%;
-            max-width: 950px;
-            height: auto;
-            display: inline-block;
-        }
-
-        .reflink {
-            text-decoration: none;
-            color: #6f2c91;
-        }
-
-        @media (max-width: 992px) {
-            .lesson-section {
-                width: 92%;
-            }
-
-            .lesson-section-title {
-                font-size: 28px;
-            }
-
-            .lesson-section p {
+        @media screen and (max-width: 768px) {
+            .lessonnav {
+                padding: 14px 20px;
                 font-size: 14px;
             }
 
-            .lessonnav {
-                padding: 15px 30px;
+            .lessonnav a,
+            .lessonnav span {
+                display: inline;
+                overflow-wrap: break-word;
+            }
+
+            .lesson-section {
+                width: 100%;
+                max-width: 100%;
+                padding: 0 20px;
+                margin: 35px auto 20px;
+            }
+
+            .lesson-section-title {
+                font-size: 25px;
+                line-height: 1.3;
+                margin-bottom: 18px;
+            }
+
+            .lesson-section-divider {
+                margin-bottom: 28px;
+            }
+
+            .lesson-section p {
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 22px;
+            }
+
+            .lesson-section h3 {
+                font-size: 22px;
+                line-height: 1.4;
+            }
+
+            .course-intro-list {
+                padding-left: 24px;
+                margin-bottom: 24px;
             }
 
             .course-intro-list li {
-                font-size: 19px;
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 12px;
+            }
+
+            .course-intro-list li::marker {
+                font-size: 1.15em;
+            }
+
+            .lesson-section-image {
+                width: 100%;
+                max-width: 100%;
+                margin: 24px auto 28px;
+            }
+
+            .lesson-section-image img {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .small-image img {
+                max-width: 190px;
+            }
+
+            .video-wrapper {
+                max-width: 100%;
+                margin-top: 24px;
+            }
+
+            .lesson-actions {
+                margin: 40px 0;
+                padding: 0 20px;
+            }
+
+            #markCompleteBtn {
+                width: fit-content;
+                max-width: 100%;
+                text-align: center;
+            }
+
+            #lessonDoneMsg {
+                font-size: 16px;
+            }
+
+            .navigationdiv {
+                width: 100%;
+                margin-top: 25px;
+            }
+
+            .buttonDiv {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                width: 100%;
+            }
+
+            .buttonDiv a:first-child,
+            .buttonDiv a:nth-child(2),
+            .buttonDiv a:last-child {
+                justify-self: unset;
+            }
+
+            .naviButt {
+                display: block;
+                width: 100%;
+                max-width: 260px;
+                padding: 12px 18px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .lessonnav {
+                padding: 12px 16px;
+                font-size: 13px;
+            }
+
+            .lesson-section {
+                padding: 0 16px;
+                margin: 30px auto 18px;
+            }
+
+            .lesson-section-title {
+                font-size: 23px;
+            }
+
+            .lesson-section p,
+            .course-intro-list li {
+                font-size: 15px;
+            }
+
+            .lesson-section h3 {
+                font-size: 20px;
+            }
+
+            .small-image img {
+                max-width: 160px;
+            }
+
+            .lesson-actions {
+                padding: 0 16px;
+            }
+
+            .naviButt {
+                max-width: 100%;
+                font-size: 15px;
             }
         }
     </style>
@@ -180,7 +363,7 @@
     data-course-id="sportstraining"
     data-total-lessons="5"
     data-lesson-number="3"
-    data-title="Module 3 – Coaching and Supporting People with different types of Disabilities in sport"
+    data-title="Module 3 – Coaching and Supporting People with Different Types of Disabilities in Sport"
     data-button="true"
 >
 
@@ -190,16 +373,9 @@
     <div class="lessonnav">
         <a href="../../../learnhub.html">Learning Hub</a>
         <span>&gt;</span>
-
-        <a href="../sportstraining.html">
-            Inclusive Sports Training
-        </a>
-
+        <a href="../sportstraining.html">Inclusive Sports Training</a>
         <span>&gt;</span>
-
-        <a href="module3.html">
-            Module 3 – Coaching and Supporting People with different types of Disabilities in sport
-        </a>
+        <a href="module3.html">Module 3 – Coaching and Supporting People with Different Types of Disabilities in Sport</a>
     </div>
 
     <div class="lesson-section">
@@ -215,54 +391,47 @@
             <li>Reflect on your own coaching style and how to model inclusion for your team.</li>
         </ul>
 
-        <p><em>“Great coaches don’t coach a drill—they coach the person.</em></p>
+        <p><em>“Great coaches don’t coach a drill—they coach the person.”</em></p>
 
-        <p><em>Meet them where they are, and they’ll rise.”</em></p>
+        <p><em>“Meet them where they are, and they’ll rise.”</em></p>
 
-        <p>Watch this video</p>
+        <p>Watch this video:</p>
 
-        <div style="text-align:center; margin-top:30px;">
-            <iframe width="900"
-                    height="500"
-                    src="https://www.youtube.com/embed/w1uihvD_wo4"
-                    title="Inclusive Coaching Video"
-                    frameborder="0"
-                    allowfullscreen
-                    style="max-width:100%;">
+        <div class="video-wrapper">
+            <iframe 
+                src="https://www.youtube.com/embed/w1uihvD_wo4"
+                title="Inclusive Coaching Video"
+                allowfullscreen>
             </iframe>
         </div>
     </div>
 
-    <!-- Intro -->
     <div class="lesson-section">
         <p>
             If you are a coach, supervisor or team leader, supporting a person with disability to learn and play a sport may take more time and patience.
             Here are a few tips to get you started. Remember everyone is different and everyone will need a different approach.
         </p>
 
-        <p><strong>What you need to ask?</strong></p>
+        <p><strong>What you need to ask:</strong></p>
 
         <ul class="course-intro-list">
-            <li>What communication (verbal, visual, and demonstration) method is best for the individual’s learning</li>
-            <li>What is the preferred communication method.</li>
-            <li>Avoid assumptions about a person’s ability—ask before helping.</li>
+            <li>What communication method is best for the individual’s learning, such as verbal, visual, or demonstration?</li>
+            <li>What is the preferred communication method?</li>
+            <li>Avoid assumptions about a person’s ability. Ask before helping.</li>
         </ul>
     </div>
 
-    <!-- Checklist -->
     <div class="lesson-section">
         <h2 class="lesson-section-title">Coaching Checklist for Supporting Neurodiverse Players</h2>
         <div class="lesson-section-divider"></div>
 
-        <p><em>Helping every player feel comfortable, learn at their own pace, and enjoy being part of the team</em></p>
+        <p><em>Helping every player feel comfortable, learn at their own pace, and enjoy being part of the team.</em></p>
 
-        <div class="lesson-section-image">
-            <img src="../../../images/AdditionalIMG/AdobeStock_844803971-640x359.jpeg"
-                alt="Inclusive Coaching">
+        <div class="lesson-section-image large-image">
+            <img src="../../../images/AdditionalIMG/AdobeStock_844803971-640x359.jpeg" alt="Inclusive coaching">
         </div>
     </div>
 
-    <!-- Keep Consistent -->
     <div class="lesson-section">
         <h2 class="lesson-section-title">Keep Things Consistent</h2>
         <div class="lesson-section-divider"></div>
@@ -270,7 +439,7 @@
         <p>
             □ <strong>Have a set routine for each session.</strong><br>
             Start with a warm-up, move into drills, then a game and cool down.
-            Let players know what’s happening next—this helps them feel more prepared and less anxious.
+            Let players know what’s happening next. This helps them feel more prepared and less anxious.
         </p>
 
         <p>
@@ -285,7 +454,7 @@
 
         <p>
             □ <strong>Show what you mean.</strong><br>
-            Use hand signals, cones, or even drawings on a whiteboard to explain activities.
+            Use hand signals, cones, or drawings on a whiteboard to explain activities.
             Some players understand best by seeing, not just hearing.
         </p>
 
@@ -310,14 +479,13 @@
         </p>
     </div>
 
-    <!-- Reduce Distractions -->
     <div class="lesson-section">
         <h2 class="lesson-section-title">Reduce Distractions</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
-            □ <strong>Choose a quiet space for talking or demos.</strong><br>
-            This helps players focus and cuts down on overload from noise or activity around them.
+            □ <strong>Choose a quiet space for talking or demonstrations.</strong><br>
+            This helps players focus and reduces overload from noise or activity around them.
         </p>
 
         <p>
@@ -325,7 +493,7 @@
         </p>
 
         <p>
-            □ Talk to the person <strong>one on one/individually</strong> if they seem distracted in the team
+            □ Talk to the person <strong>one-on-one</strong> if they seem distracted in the team.
         </p>
     </div>
 
@@ -339,7 +507,7 @@
         </p>
 
         <p>
-            □ <strong>Stay calm, even if things feel chaotic</strong><br>
+            □ <strong>Stay calm, even if things feel chaotic.</strong><br>
             If someone gets upset, use a quiet voice, give them space, let them go to a quiet spot, and let them know you’re there when they’re ready.
         </p>
     </div>
@@ -347,6 +515,7 @@
     <div class="lesson-section">
         <h2 class="lesson-section-title">Allow Breaks</h2>
         <div class="lesson-section-divider"></div>
+
         <p>
             □ <strong>Build short breaks into the session.</strong><br>
             This could be a drink, a breather, or sitting quietly for a moment.
@@ -359,7 +528,6 @@
         </p>
     </div>
 
-    <!-- Flexible -->
     <div class="lesson-section">
         <h2 class="lesson-section-title">Be Flexible</h2>
         <div class="lesson-section-divider"></div>
@@ -391,7 +559,7 @@
         </p>
 
         <p>
-            Be someone your players can trust—especially when they’re having a tough moment.
+            Be someone your players can trust, especially when they’re having a tough moment.
         </p>
 
         <p>
@@ -400,12 +568,11 @@
         </p>
     </div>
 
-    <!-- Tips Depending on Disability -->
     <div class="lesson-section">
         <h2 class="lesson-section-title">Tips Depending on the Disability</h2>
         <div class="lesson-section-divider"></div>
 
-        <h3>Hearing Impaired/Deaf</h3>
+        <h3>Hearing Impaired or Deaf</h3>
 
         <p>
             Use visual aids like boards and pictures, explain things clearly, and stand closer to ensure everyone can hear better.
@@ -413,12 +580,12 @@
 
         <p>
             <u>Case Study:</u>
-            Australia’s most watched sporting event was the Matilda’s World Cup Campaign in 2023.
-            But did you know the hero of their quarter final win was an athlete with a disability?
+            Australia’s most watched sporting event was the Matildas’ World Cup campaign in 2023.
+            But did you know the hero of their quarter-final win was an athlete with disability?
         </p>
 
         <p>
-            Matilda’s goalkeeper, Mackenzie Arnold, has always had a hard time hearing and finally started using a hearing aid for daily life after years of trying to avoid it.
+            Matildas goalkeeper Mackenzie Arnold has always had a hard time hearing and finally started using a hearing aid for daily life after years of trying to avoid it.
         </p>
 
         <p>
@@ -427,27 +594,26 @@
 
         <p>
             <u>How to help:</u>
-            If you notice a player not following along or misunderstanding instructions it may be due to hearing loss combined with other factors such as background noise or wind conditions.
+            If you notice a player not following along or misunderstanding instructions, it may be due to hearing loss combined with other factors such as background noise or wind conditions.
             Some players might not even know they have worse hearing than others who are next to them.
             To counter this, make sure that you have a range of techniques to make sure the message can be understood.
         </p>
     </div>
 
-    <!-- Vision -->
     <div class="lesson-section">
         <h2 class="lesson-section-title">Vision Impairment</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
-            People who have a vision impairment will need more audible cues and instructions in a conversation manner.
-            Some with low vision impairment may find it useful to have visual aids like large posters and whiteboards,
+            People who have a vision impairment will need more audible cues and instructions in a conversational manner.
+            Some with low vision may find it useful to have visual aids like large posters and whiteboards,
             use bright-coloured equipment, and bring players closer to the visual aids.
         </p>
 
         <p>
             <u>Case Study:</u>
             There are a vast number of athletes with different levels of vision impairment.
-            This can be from athletes who need to wear modified eyewear when competing such as Edgar Davis,
+            This can be from athletes who need to wear modified eyewear when competing, such as Edgar Davids,
             Kareem Abdul-Jabbar and Mack Horton.
         </p>
 
@@ -457,25 +623,24 @@
 
         <p>
             <u>How to help:</u>
-            At training, coaches can ensure they provide verbal cues and talk through the instructions including letting the person know about the environment around them.
-            Example do they need to watch the tree at the end of the field, a big hole on the field.
+            At training, coaches can provide verbal cues and talk through the instructions, including letting the person know about the environment around them.
+            For example, they may need to know about a tree at the end of the field or a big hole on the field.
         </p>
 
         <p>
             For people with low vision, create large format visual aids such as large posters and whiteboards to explain the training.
-            If anybody does have a visual impairment, bring them closer to the visual aid and make sure they can understand its importance.
+            If anybody has a visual impairment, bring them closer to the visual aid and make sure they can understand its importance.
         </p>
 
         <p>
-            There are also other tools to help such as modified equipment such as balls with bells inside and bright coloured equipment such as bright pink cricket balls.
+            There are also other tools to help such as modified equipment, including balls with bells inside and bright-coloured equipment such as bright pink cricket balls.
         </p>
 
         <p>
-            In sports such as blind soccer each team has several coaches that describe game play in real time to help the player’s performance.
+            In sports such as blind soccer, each team has several coaches that describe gameplay in real time to help the player’s performance.
         </p>
     </div>
 
-    <!-- Speech -->
     <div class="lesson-section">
         <h2 class="lesson-section-title">Speech Impediments</h2>
         <div class="lesson-section-divider"></div>
@@ -486,14 +651,14 @@
 
         <p>
             <u>Example:</u>
-            Tiger Woods is the most famous golfer of all time but severely struggled with a stutter as a child.
+            Tiger Woods is one of the most famous golfers of all time but severely struggled with a stutter as a child.
             He used to sit at the back of the classroom and never speak.
         </p>
 
         <p>
-            After years of classes and practicing talking to his dog until it fell asleep,
+            After years of classes and practising talking to his dog until it fell asleep,
             Tiger’s hard work paid off and he overcame his condition and became fully confident in his ability to speak.
-            But, if Tiger Woods had been in a team sport where coaches asked him questions in front of a team,
+            But if Tiger Woods had been in a team sport where coaches asked him questions in front of a team,
             he may have quit and never become an athlete.
         </p>
 
@@ -501,7 +666,7 @@
             <u>How to help:</u>
             People with speech impediments can feel embarrassed to express themselves in front of their peers.
             Understanding this might mean that if somebody is confused about the training,
-            they might be too scared to ask questions, due to the reaction of the coach and teammates.
+            they might be too scared to ask questions due to the reaction of the coach and teammates.
         </p>
 
         <p>
@@ -513,19 +678,18 @@
         </p>
 
         <p>
-            Look for opportunities to provide the participant with options to use nonverbal communication where needed.
-            This could include them pointing to where they need to go, using hand signals, raising their hand and even the use of clapping to draw attention to themselves if they cannot speak.
-            Communication Boards or cards could also help in this scenario.
+            Look for opportunities to provide the participant with options to use non-verbal communication where needed.
+            This could include them pointing to where they need to go, using hand signals, raising their hand, or clapping to draw attention to themselves if they cannot speak.
+            Communication boards or cards could also help in this scenario.
         </p>
     </div>
 
-    <!-- Cognitive -->
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Cognitive/Neuro Diversity/Autism/Down Syndrome</h2>
+        <h2 class="lesson-section-title">Cognitive, Neurodiverse, Autism, or Down Syndrome</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
-            Remember each person is different, talk to them first to see what they need help with.
+            Remember each person is different. Talk to them first to see what they need help with.
         </p>
 
         <p><strong>This could mean:</strong></p>
@@ -545,51 +709,45 @@
         <p>
             <u>Example:</u>
             With the improvement of inclusive sports programs, equipment and support,
-            we have seen more and more groundbreaking sporting achievements for people with a disability.
+            we have seen more and more groundbreaking sporting achievements for people with disability.
         </p>
 
         <p>
-            In the last few years, we have seen the first ever person with down syndrome become an Ironman athlete (Chris Nikic),
-            the first athlete with down syndrome to play and score in a college football match (Cayden Cox)
-            and the first runners with down syndrome to complete the New York Marathon.
+            In the last few years, we have seen the first person with Down syndrome become an Ironman athlete,
+            the first athlete with Down syndrome to play and score in a college football match,
+            and the first runners with Down syndrome to complete the New York Marathon.
         </p>
 
-        <div class="lesson-section-image">
-            <img src="../../../images/AdditionalIMG/inclusive-coaching-neurodiverse-640x427.jpeg"
-                alt="Inclusive Neurodiverse Coaching"
-                style="max-width:540px;">
+        <div class="lesson-section-image medium-image">
+            <img src="../../../images/AdditionalIMG/inclusive-coaching-neurodiverse-640x427.jpeg" alt="Inclusive neurodiverse coaching">
         </div>
 
         <p>
-            These are only some of the examples of sporting achievements since 2020, and it will only increase.
+            These are only some examples of sporting achievements since 2020, and it will only increase.
         </p>
 
         <p>
             <u>How to help:</u>
-            Down syndrome can lead to learning disabilities, reduced muscle tone and issues with sight and hearing.
-            Due to the range of impacts down syndrome can cause,
+            Down syndrome can lead to learning disabilities, reduced muscle tone, and issues with sight and hearing.
+            Due to the range of impacts Down syndrome can cause,
             the participant may need help in both physical and cognitive ways.
         </p>
 
         <p>
             This can include slow and clear explanations when giving instructions,
-            breaking down skills into smaller steps and making sure you are heard easily while trying to avoid areas with background noise in a well-lit area.
+            breaking down skills into smaller steps, and making sure you are heard easily while trying to avoid areas with background noise in a well-lit area.
         </p>
 
-        <div class="lesson-section-image">
-            <img src="../../../images/AdditionalIMG/inclusive-coaching-cognitive.jpg"
-                alt="Inclusive Cognitive Coaching"
-                style="max-width:640px;">
+        <div class="lesson-section-image large-image">
+            <img src="../../../images/AdditionalIMG/inclusive-coaching-cognitive.jpg" alt="Inclusive cognitive coaching">
         </div>
     </div>
 
-    <!-- Autism -->
     <div class="lesson-section">
         <p>
             <strong>Neurodiverse:</strong>
             The word neurodiversity refers to the diversity of all people,
-            but it is often used in the context of autism spectrum disorder (ASD),
-            as well as other neurological or developmental conditions such as ADHD or learning disabilities.
+            but it is often used in the context of autism spectrum disorder, as well as other neurological or developmental conditions such as ADHD or learning disabilities.
         </p>
 
         <h2 class="lesson-section-title">Autism</h2>
@@ -599,33 +757,30 @@
             <u>Example:</u>
             Autism is a neurodevelopmental condition that affects brain function.
             Symptoms can include getting distressed by loud noises, bright lights,
-            strong tastes and smells as well as being around other people.
+            strong tastes and smells, as well as being around other people.
         </p>
 
         <p>
-            One example of an athlete who has autism is professional surfer, Clay Marzo.
+            One example of an athlete who has autism is professional surfer Clay Marzo.
             Clay has struggled socially within sport, and he finds it hard to hold conversations and make friends.
             This is why he only participated in individual sports in school, such as swimming and surfing.
         </p>
 
-        <div class="lesson-section-image">
-            <img src="../../../images/AdditionalIMG/inclusive-coaching-autism.jpeg"
-                alt="Autism in Sport"
-                style="max-width:170px;">
+        <div class="lesson-section-image small-image">
+            <img src="../../../images/AdditionalIMG/inclusive-coaching-autism.jpeg" alt="Autism in sport">
         </div>
 
         <p>
             <u>How to help:</u>
-            People with autism tend to prefer a routine so starting and finishing a training session should have some consistency.
-            For example, start every training session with a greeting, explanation of the upcoming session, and a warmup.
+            People with autism tend to prefer a routine, so starting and finishing a training session should have some consistency.
+            For example, start every training session with a greeting, explanation of the upcoming session, and a warm-up.
         </p>
 
         <p>
-            This routine will bring comfort and will allow for the best results in training.
-            Another way to ensure that somebody with autism feels safe and secure in a sporting setting is to make sure there is minimal background noise,
-            not too bright lights etc.
+            This routine will bring comfort and allow for the best results in training.
+            Another way to ensure that somebody with autism feels safe and secure in a sporting setting is to make sure there is minimal background noise and lighting is not too bright.
             This might include turning off the buzzer at basketball training,
-            training at a time when there are less people around or communicating in different ways (on whiteboard or with cue cards).
+            training at a time when there are fewer people around, or communicating in different ways such as on a whiteboard or with cue cards.
         </p>
 
         <p>
@@ -633,7 +788,6 @@
         </p>
     </div>
 
-    <!-- Physical Disability -->
     <div class="lesson-section">
         <h2 class="lesson-section-title">Physical Disability</h2>
         <div class="lesson-section-divider"></div>
@@ -645,55 +799,55 @@
 
         <p>
             <u>Example:</u>
-            Like down syndrome, Cerebral Palsy (CP) can affect both physical and cognitive ability.
-            Some common symptoms of CP are slow and withering movement,
-            floppy/rigid limbs and intellectual disabilities.
+            Like Down syndrome, cerebral palsy can affect both physical and cognitive ability.
+            Some common symptoms of cerebral palsy are slow and withering movement,
+            floppy or rigid limbs, and intellectual disabilities.
         </p>
 
         <p>
             Just because this is a severe disability that affects muscle function and strength,
             does not mean that you cannot be a successful athlete.
-            As a child, athlete, Justin Gallegos was told he would never walk unassisted,
-            due to his CP diagnosis and relied heavily on a walker and brace during school.
+            As a child, athlete Justin Gallegos was told he would never walk unassisted
+            due to his cerebral palsy diagnosis and relied heavily on a walker and brace during school.
         </p>
 
         <p>
-            Justin trained to run, becoming a professional athlete – the first with CP to be sponsored by Nike.
+            Justin trained to run, becoming a professional athlete and the first with cerebral palsy to be sponsored by Nike.
         </p>
 
         <p>
             <u>How to help:</u>
-            As CP affects the muscles, equipment can be modified to help somebody with CP.
+            As cerebral palsy affects the muscles, equipment can be modified to help somebody with cerebral palsy.
             This includes lowering the ring height at basketball training,
             using a balloon instead of a ball, or reducing the amount of space used in a training drill.
         </p>
 
         <p>
             <u>Example:</u>
-            There has been a massive rise in the popularity of sports for people with a disability,
+            There has been a massive rise in the popularity of sports for people with disability,
             which is continuing to grow.
         </p>
 
         <p>
             One example is wheelchair tennis and the rise of Dylan Alcott.
-            In 1992 the ITF’s Wheelchair Tennis Tour began with just 11 tournaments.
+            In 1992, the ITF’s Wheelchair Tennis Tour began with just 11 tournaments.
             Today there are over 160 tournaments in over 40 countries.
         </p>
 
         <p>
             Through wheelchair tennis, Dylan Alcott has won Olympic gold medals,
-            tennis grand slams, the Australian of the Year Award and created the Dylan Alcott Foundation the Order of Australia medal.
+            tennis grand slams, the Australian of the Year Award, and created the Dylan Alcott Foundation.
         </p>
 
         <p>
-            All of this wouldn’t have been able to happen if it wasn’t for inclusion in sport.
+            All of this would not have been able to happen without inclusion in sport.
         </p>
 
         <p>
             <u>How to Help:</u>
             Sport can be modified for inclusivity to ensure everybody can participate.
-            Not only do we have full wheelchair sports leagues (Basketball, Tennis, Rugby),
-            but every sport can be altered for training and game play.
+            Not only do we have full wheelchair sports leagues such as basketball, tennis, and rugby,
+            but every sport can be altered for training and gameplay.
             Even soccer, which generally requires the most leg activation,
             has an indoor wheelchair soccer competition with bumpers on the bottom of the wheelchairs.
         </p>
@@ -719,7 +873,7 @@
 
             <li>Created <strong>visual supports</strong>, such as picture schedules and simplified rule guides, to reduce anxiety and help players understand the game.</li>
 
-            <li>Provided <strong>on field support coaches</strong> to help new players settle in at their own pace.</li>
+            <li>Provided <strong>on-field support coaches</strong> to help new players settle in at their own pace.</li>
 
             <li>Designed <strong>autism-friendly club templates</strong>, including registration forms that asked about sensory sensitivities or communication preferences.</li>
 

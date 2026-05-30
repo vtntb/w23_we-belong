@@ -4,6 +4,7 @@
     <title>Module 4 – From the Sideline – A Guide for Spectators</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/images/Logo/WeBelong.png">
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="stylesheet" href="../../../css/learninghub.css">
 
@@ -16,6 +17,8 @@
             padding: 15px 180px;
             background: #eceaea;
             font-size: 15px;
+            box-sizing: border-box;
+            line-height: 1.5;
         }
 
         .lessonnav a {
@@ -29,16 +32,46 @@
             text-underline-offset: 4px;
         }
 
+        .lesson-section {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+            box-sizing: border-box;
+        }
+
+        .lesson-section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+            line-height: 1.3;
+        }
+
+        .lesson-section-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
         .course-intro-list {
             list-style: disc;
             padding-left: 34px;
-            margin: 0;
+            margin: 0 0 28px;
         }
 
         .course-intro-list li {
             margin-bottom: 10px;
             font-size: 18px;
-            line-height: 1.4;
+            line-height: 1.5;
             color: #111;
         }
 
@@ -47,18 +80,58 @@
             font-size: 1.3em;
         }
 
+        .lesson-section-image {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section-image img {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            display: inline-block;
+            border-radius: 8px;
+        }
+
+        .two-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            margin: 30px auto;
+            flex-wrap: wrap;
+        }
+
+        .two-images img {
+            width: 100%;
+            max-width: 640px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .reflink {
+            text-decoration: none;
+            color: #6f2c91;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+
         .lesson-actions {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             margin: 60px 0;
+            padding: 0 180px;
+            box-sizing: border-box;
         }
 
         #lessonDoneMsg {
             margin-top: 15px;
             color: green;
             font-size: 18px;
+            text-align: center;
         }
 
         .navigationdiv {
@@ -79,6 +152,7 @@
             grid-template-columns: 1fr auto 1fr;
             align-items: center;
             width: 100%;
+            gap: 15px;
         }
 
         .buttonDiv a:first-child {
@@ -101,96 +175,149 @@
             border-radius: 25px;
             font-size: 16px;
             transition: 0.2s;
+            text-align: center;
+            box-sizing: border-box;
         }
 
         .naviButt:hover {
             background: #4f186b;
         }
 
-        .lesson-section {
-            width: 86%;
-            max-width: 1400px;
-            margin: 40px auto 20px;
-        }
-
-        .lesson-section-title {
-            text-align: center;
-            font-size: 34px;
-            font-weight: 400;
-            color: #111;
-            margin: 0 0 24px;
-        }
-
-        .lesson-section-divider {
-            width: 100%;
-            height: 2px;
-            background: #f04b23;
-            margin-bottom: 42px;
-        }
-
-        .lesson-section p {
-            font-size: 18px;
-            line-height: 1.4;
-            color: #111;
-            margin: 0 0 28px;
-        }
-
-        .lesson-section-image {
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
-
-        .lesson-section-image img {
-            width: 100%;
-            max-width: 950px;
-            height: auto;
-            display: inline-block;
-        }
-
-        .two-images {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            margin: 30px auto;
-            flex-wrap: wrap;
-        }
-
-        .two-images img {
-            width: 48%;
-            max-width: 500px;
-            height: auto;
-        }
-
-        .reflink {
-            text-decoration: none;
-            color: #6f2c91;
-        }
-
-        @media (max-width: 992px) {
-            .lesson-section {
-                width: 92%;
-            }
-
-            .lesson-section-title {
-                font-size: 28px;
-            }
-
-            .lesson-section p {
+        @media screen and (max-width: 768px) {
+            .lessonnav {
+                padding: 14px 20px;
                 font-size: 14px;
             }
 
-            .two-images img {
-                width: 100%;
+            .lessonnav a,
+            .lessonnav span {
+                display: inline;
+                overflow-wrap: break-word;
             }
 
-            .lessonnav {
-                padding: 15px 30px;
+            .lesson-section {
+                width: 100%;
+                max-width: 100%;
+                padding: 0 20px;
+                margin: 35px auto 20px;
+            }
+
+            .lesson-section-title {
+                font-size: 25px;
+                line-height: 1.3;
+                margin-bottom: 18px;
+            }
+
+            .lesson-section-divider {
+                margin-bottom: 28px;
+            }
+
+            .lesson-section p {
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 22px;
+            }
+
+            .course-intro-list {
+                padding-left: 24px;
+                margin-bottom: 24px;
             }
 
             .course-intro-list li {
-                font-size: 19px;
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 12px;
+            }
+
+            .course-intro-list li::marker {
+                font-size: 1.15em;
+            }
+
+            .lesson-section-image {
+                width: 100%;
+                max-width: 100%;
+                margin: 24px auto 28px;
+            }
+
+            .lesson-section-image img,
+            .two-images img {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .two-images {
+                gap: 18px;
+                margin: 24px auto;
+            }
+
+            .lesson-actions {
+                margin: 40px 0;
+                padding: 0 20px;
+            }
+
+            #markCompleteBtn {
+                width: fit-content;
+                max-width: 100%;
+                text-align: center;
+            }
+
+            #lessonDoneMsg {
+                font-size: 16px;
+            }
+
+            .navigationdiv {
+                width: 100%;
+                margin-top: 25px;
+            }
+
+            .buttonDiv {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                width: 100%;
+            }
+
+            .buttonDiv a:first-child,
+            .buttonDiv a:nth-child(2),
+            .buttonDiv a:last-child {
+                justify-self: unset;
+            }
+
+            .naviButt {
+                display: block;
+                width: 100%;
+                max-width: 260px;
+                padding: 12px 18px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .lessonnav {
+                padding: 12px 16px;
+                font-size: 13px;
+            }
+
+            .lesson-section {
+                padding: 0 16px;
+                margin: 30px auto 18px;
+            }
+
+            .lesson-section-title {
+                font-size: 23px;
+            }
+
+            .lesson-section p,
+            .course-intro-list li {
+                font-size: 15px;
+            }
+
+            .lesson-actions {
+                padding: 0 16px;
+            }
+
+            .naviButt {
+                max-width: 100%;
+                font-size: 15px;
             }
         }
     </style>
@@ -211,16 +338,9 @@
     <div class="lessonnav">
         <a href="../../../learnhub.html">Learning Hub</a>
         <span>&gt;</span>
-
-        <a href="../sportstraining.html">
-            Inclusive Sports Training
-        </a>
-
+        <a href="../sportstraining.html">Inclusive Sports Training</a>
         <span>&gt;</span>
-
-        <a href="module4.html">
-            Module 4 – From the Sideline – A Guide for Spectators
-        </a>
+        <a href="module4.html">Module 4 – From the Sideline – A Guide for Spectators</a>
     </div>
 
     <div class="lesson-section">
@@ -231,9 +351,9 @@
 
         <ul class="course-intro-list">
             <li>Understand how <strong>spectators and volunteers shape the tone, safety, and welcome</strong> of a club.</li>
-            <li>Use <strong>positive, respectful language</strong> that encourages all players—without placing pressure or blame.</li>
+            <li>Use <strong>positive, respectful language</strong> that encourages all players without placing pressure or blame.</li>
             <li>Recognise and support <strong>individual sensory needs</strong>, including players who may need quiet or calm.</li>
-            <li>Foster <strong>family and community connection</strong> so that everyone—on or off the field—feels seen, safe, and included.</li>
+            <li>Foster <strong>family and community connection</strong> so that everyone on or off the field feels seen, safe, and included.</li>
         </ul>
 
         <p><em>“The sideline should be a place of support, not stress. Everyone deserves to be cheered on with kindness.”</em></p>
@@ -253,7 +373,7 @@
         </p>
 
         <p>
-            As someone in the crowd, watching a sports game and players, consider that there are many types of abilities on the field or court.
+            As someone in the crowd watching a sports game and players, consider that there are many types of abilities on the field or court.
         </p>
     </div>
 
@@ -264,7 +384,7 @@
         <ul class="course-intro-list">
             <li>Say things like <strong>“Great effort!”</strong>, “Well played!” or “You’re doing awesome!”</li>
             <li>Avoid negative or demanding comments like “Try harder” or “What are you doing?”</li>
-            <li>Remember, even good intentions can cause harm. Some encouragements may feel overwhelming if the player can’t complete the task in that moment.</li>
+            <li>Remember, even good intentions can cause harm. Some encouragement may feel overwhelming if the player can’t complete the task in that moment.</li>
         </ul>
     </div>
 
@@ -279,17 +399,17 @@
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Keep the Focus on Support – Not Control</h2>
+        <h2 class="lesson-section-title">Keep the Focus on Support, Not Control</h2>
         <div class="lesson-section-divider"></div>
 
         <ul class="course-intro-list">
-            <li>It’s natural to want to cheer and offer advice but giving instructions like “Kick it now!” or “Run faster!” can cause pressure and confusion to some players.</li>
-            <li>Let the coach, coach. Let the player play. You’re here to encourage, not direct.</li>
+            <li>It’s natural to want to cheer and offer advice, but giving instructions like “Kick it now!” or “Run faster!” can cause pressure and confusion for some players.</li>
+            <li>Let the coach coach. Let the player play. You’re here to encourage, not direct.</li>
         </ul>
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Model Respect—for Everyone</h2>
+        <h2 class="lesson-section-title">Model Respect for Everyone</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
@@ -297,14 +417,14 @@
         </p>
 
         <ul class="course-intro-list">
-            <li>Do not shout at or about referees, umpires, coaches or officials. Mistakes happen—they’re human, too.</li>
+            <li>Do not shout at or about referees, umpires, coaches or officials. Mistakes happen because they’re human too.</li>
             <li>Never ridicule, swear at, or criticise any player, coach, official or spectator.</li>
             <li>Comments that are racist, sexist, ableist, or discriminatory are never acceptable.</li>
             <li>Be aware of body language and tone. How we <em>look</em> and <em>react</em> can speak just as loudly as words.</li>
         </ul>
 
         <p>
-            If you see behaviour that puts others at risk, or undermines the club’s inclusive culture,
+            If you see behaviour that puts others at risk or undermines the club’s inclusive culture,
             let an official or coach know quietly and respectfully.
         </p>
 
@@ -318,7 +438,7 @@
         <div class="lesson-section-divider"></div>
 
         <ul class="course-intro-list">
-            <li>Say positive things—or say nothing at all.</li>
+            <li>Say positive things, or say nothing at all.</li>
             <li>Cheer in a way that feels safe for everyone.</li>
             <li>Let coaches coach, and players make their own decisions.</li>
             <li>Avoid advice that might confuse or embarrass.</li>
@@ -349,8 +469,8 @@
         <ul class="course-intro-list">
             <li>
                 Some families or individuals may prefer a quieter space.
-                Consider setting up an optional “low-sensory zone” near the field or court with shade, minimal crowd noise,
-                and fewer distractions can make a big difference.
+                Consider setting up an optional low-sensory zone near the field or court with shade, minimal crowd noise,
+                and fewer distractions. This can make a big difference.
             </li>
             <li>
                 Ensure accessible seating for wheelchair users, older spectators, or those who may fatigue easily.
@@ -365,7 +485,7 @@
         <ul class="course-intro-list">
             <li>
                 If your club has printed materials or a PA system, use person-first and inclusive language when introducing teams or players.
-                That is, the person before the disability or not mention the disability at all. E.g. player with disability or just a team player.
+                Put the person before the disability, or do not mention the disability at all. For example, say “player with disability” or just “team player”.
             </li>
             <li>
                 Encourage match day announcers to highlight participation and effort, not just competitive outcomes.
@@ -394,7 +514,7 @@
 
         <ul class="course-intro-list">
             <li>
-                Encourage families of players with disability to join in post-game activities, social events, and team photos—not just “watch from the car.”
+                Encourage families of players with disability to join in post-game activities, social events, and team photos, not just “watch from the car”.
             </li>
             <li>
                 Make sure social media and newsletters include photos and stories of all team members with consent. Representation matters.
@@ -417,9 +537,14 @@
         
         <div class="navigationdiv">
             <div class="naviBar"></div>
+
             <div class="buttonDiv">
                 <a href="module3.html" class="naviButt">← Previous</a>
-                <a href="../sportstraining.html" class="naviButt" id="backButt">Back to Course</a>
+
+                <a href="../sportstraining.html" class="naviButt" id="backButt">
+                    Back to Course
+                </a>
+
                 <a href="module5.html" class="naviButt">Next →</a>
             </div>
         </div>

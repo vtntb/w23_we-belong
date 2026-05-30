@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Module 2 – Appropriate Communication in the workplace</title>
+    <title>Module 2 – Appropriate Communication in the Workplace</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/images/Logo/WeBelong.png">
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="stylesheet" href="../../../css/learninghub.css">
 
@@ -16,6 +17,8 @@
             padding: 15px 180px;
             background: #eceaea;
             font-size: 15px;
+            box-sizing: border-box;
+            line-height: 1.5;
         }
 
         .lessonnav a {
@@ -29,22 +32,26 @@
             text-underline-offset: 4px;
         }
 
-        /* intro section */
-        .course-intro-wrap {
+        .course-intro-wrap,
+        .lesson-section {
             width: 86%;
             max-width: 1400px;
             margin: 40px auto 20px;
+            box-sizing: border-box;
         }
 
-        .course-intro-title {
+        .course-intro-title,
+        .lesson-section-title {
             text-align: center;
             font-size: 34px;
             font-weight: 400;
             color: #111;
             margin: 0 0 24px;
+            line-height: 1.3;
         }
 
-        .course-intro-divider {
+        .course-intro-divider,
+        .lesson-section-divider {
             width: 100%;
             height: 2px;
             background: #f04b23;
@@ -67,7 +74,7 @@
         .course-intro-list li {
             margin-bottom: 10px;
             font-size: 18px;
-            line-height: 1.4;
+            line-height: 1.5;
             color: #111;
         }
 
@@ -77,24 +84,43 @@
         }
 
         .course-intro-image img {
-            width: 80%;
+            width: 100%;
+            max-width: 420px;
             height: auto;
             display: block;
+            border-radius: 8px;
         }
 
-        /* complete button */
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
+        .lesson-section h3 {
+            font-size: 28px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+            line-height: 1.3;
+        }
+
         .lesson-actions {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             margin: 60px 0;
+            padding: 0 180px;
+            box-sizing: border-box;
         }
 
         #lessonDoneMsg {
             margin-top: 15px;
             color: green;
             font-size: 18px;
+            text-align: center;
         }
 
         .navigationdiv {
@@ -115,6 +141,7 @@
             grid-template-columns: 1fr auto 1fr;
             align-items: center;
             width: 100%;
+            gap: 15px;
         }
 
         .buttonDiv a:first-child {
@@ -137,88 +164,162 @@
             border-radius: 25px;
             font-size: 16px;
             transition: 0.2s;
+            text-align: center;
+            box-sizing: border-box;
         }
 
         .naviButt:hover {
             background: #4f186b;
         }
-        
-        .lesson-section {
-            width: 86%;
-            max-width: 1400px;
-            margin: 40px auto 20px;
-        }
 
-        .lesson-section-title {
-            text-align: center;
-            font-size: 34px;
-            font-weight: 400;
-            color: #111;
-            margin: 0 0 24px;
-        }
-
-        .lesson-section-divider {
-            width: 100%;
-            height: 2px;
-            background: #f04b23;
-            margin-bottom: 42px;
-        }
-
-        .lesson-section p {
-            font-size: 18px;
-            line-height: 1.4;
-            color: #111;
-            margin: 0 0 28px;
-        }
-
-        .lesson-section-image {
-            text-align: center;
-        }
-
-        .lesson-section-image img {
-            width: 100%;
-            max-width: 100px;
-            height: auto;
-            display: inline-block;
-        }
-
-        @media (max-width: 992px) {
-            .lesson-section {
-                width: 92%;
-            }
-
-            .lesson-section-title {
-                font-size: 28px;
-            }
-
-            .lesson-section p {
+        @media screen and (max-width: 768px) {
+            .lessonnav {
+                padding: 14px 20px;
                 font-size: 14px;
             }
 
-            .lessonnav {
-                padding: 15px 30px;
+            .lessonnav a,
+            .lessonnav span {
+                display: inline;
+                overflow-wrap: break-word;
             }
 
-            .course-intro-wrap {
-                width: 92%;
+            .course-intro-wrap,
+            .lesson-section {
+                width: 100%;
+                max-width: 100%;
+                padding: 0 20px;
+                margin: 35px auto 20px;
             }
 
-            .course-intro-title {
-                font-size: 28px;
+            .course-intro-title,
+            .lesson-section-title {
+                font-size: 25px;
+                line-height: 1.3;
+                margin-bottom: 18px;
+            }
+
+            .course-intro-divider,
+            .lesson-section-divider {
+                margin-bottom: 28px;
             }
 
             .course-intro-content {
-                grid-template-columns: 1fr;
-                gap: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 28px;
             }
 
-            .course-intro-image {
-                max-width: 500px;
-                margin: 0 auto;
+            .course-intro-list {
+                padding-left: 24px;
             }
 
             .course-intro-list li {
-                font-size: 19px;
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 12px;
+            }
+
+            .course-intro-list li::marker {
+                font-size: 1.15em;
+            }
+
+            .course-intro-image {
+                width: 100%;
+                max-width: 420px;
+                margin: 0 auto;
+            }
+
+            .course-intro-image img {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .lesson-section p {
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 22px;
+            }
+
+            .lesson-section h3 {
+                font-size: 22px;
+                line-height: 1.4;
+            }
+
+            .lesson-actions {
+                margin: 40px 0;
+                padding: 0 20px;
+            }
+
+            #markCompleteBtn {
+                width: fit-content;
+                max-width: 100%;
+                text-align: center;
+            }
+
+            #lessonDoneMsg {
+                font-size: 16px;
+            }
+
+            .navigationdiv {
+                width: 100%;
+                margin-top: 25px;
+            }
+
+            .buttonDiv {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                width: 100%;
+            }
+
+            .buttonDiv a:first-child,
+            .buttonDiv a:nth-child(2),
+            .buttonDiv a:last-child {
+                justify-self: unset;
+            }
+
+            .naviButt {
+                display: block;
+                width: 100%;
+                max-width: 260px;
+                padding: 12px 18px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .lessonnav {
+                padding: 12px 16px;
+                font-size: 13px;
+            }
+
+            .course-intro-wrap,
+            .lesson-section {
+                padding: 0 16px;
+                margin: 30px auto 18px;
+            }
+
+            .course-intro-title,
+            .lesson-section-title {
+                font-size: 23px;
+            }
+
+            .course-intro-list li,
+            .lesson-section p {
+                font-size: 15px;
+            }
+
+            .lesson-section h3 {
+                font-size: 20px;
+            }
+
+            .lesson-actions {
+                padding: 0 16px;
+            }
+
+            .naviButt {
+                max-width: 100%;
+                font-size: 15px;
             }
         }
     </style>
@@ -229,20 +330,19 @@
     data-course-id="communication"
     data-total-lessons="4"
     data-lesson-number="2"
-    data-title="Module 2 – Appropriate Communication in the workplace"
+    data-title="Module 2 – Appropriate Communication in the Workplace"
     data-button="true"
 >
 
     <div id="header-placeholder"></div>
     <div id="banner-placeholder"></div>
 
-    <!-- navibar -->
     <div class="lessonnav">
         <a href="../../../learnhub.html">Learning Hub</a>
         <span>&gt;</span>
         <a href="../communication.html">Communication</a>
         <span>&gt;</span>
-        <a href="module2.html">Module 2 – Appropriate Communication in the workplace</a>
+        <a href="module2.html">Module 2 – Appropriate Communication in the Workplace</a>
     </div>
 
     <section class="course-intro-wrap">
@@ -265,7 +365,7 @@
     </section>
 
     <section class="course-intro-wrap">
-        <h2 class="course-intro-title">What are some examples of Non-Verbal communication?</h2>
+        <h2 class="course-intro-title">What are some examples of Non-Verbal Communication?</h2>
         <div class="course-intro-divider"></div>
 
         <div class="course-intro-content">
@@ -286,13 +386,13 @@
     </section>
 
     <section class="lesson-section">
-        <h2 class="lesson-section-title">It is important that when we are communicating in the workplace and don’t ask inappropriate questions about:</h2>
+        <h2 class="lesson-section-title">It is important that when we are communicating in the workplace, we don’t ask inappropriate questions about:</h2>
         <div class="lesson-section-divider"></div>
 
         <ul class="course-intro-list">
             <li>Family problems at home</li>
             <li>Relationship problems</li>
-            <li>Try and give relationship advice</li>
+            <li>Relationship advice</li>
             <li>Religion</li>
             <li>Health concerns</li>
             <li>Politics</li>
@@ -300,16 +400,16 @@
     </section>
 
     <section class="course-intro-wrap">
-        <h2 class="course-intro-title">Always think before you speak</h2>
+        <h2 class="course-intro-title">Always Think Before You Speak</h2>
         <div class="course-intro-divider"></div>
 
         <div class="course-intro-content">
             <ul class="course-intro-list">
-                <li>If it isn’t nice to say don’t say it at all</li>
-                <li>Always pay attention and listen if someone is speaking to you</li>
-                <li>Make and maintain eye contact</li>
-                <li>Use the correct body language</li>
-                <li>don’t hold grudges in the workplace you don’t want there to be any conflict, it can take a toll on the way people work</li>
+                <li>If it isn’t nice to say, don’t say it at all.</li>
+                <li>Always pay attention and listen if someone is speaking to you.</li>
+                <li>Make and maintain eye contact.</li>
+                <li>Use the correct body language.</li>
+                <li>Don’t hold grudges in the workplace. You don’t want conflict because it can affect how people work.</li>
             </ul>
 
             <div class="course-intro-image">
@@ -322,11 +422,11 @@
         <h2 class="lesson-section-title">Conflict</h2>
         <div class="lesson-section-divider"></div>
 
-        <h3 style="font-size: 28px; font-weight: 400; color: #111; margin: 0 0 24px;">Why is it important that we keep conflict away from the workplace?</h3>
+        <h3>Why is it important that we keep conflict away from the workplace?</h3>
 
         <ul class="course-intro-list">
-            <li>Be aware that in some point in the workplace that there are going to be some sort of a misunderstanding and this is why we have to use our communication to work it out</li>
-            <li>It is important to keep conflict away so we can work to the best of our ability at work.</li><br>
+            <li>Sometimes in the workplace there may be misunderstandings. This is why we need to use communication to work things out.</li>
+            <li>It is important to keep conflict away so we can work to the best of our ability.</li>
         </ul>
     </section>
 
@@ -335,15 +435,14 @@
         <div class="lesson-section-divider"></div>
 
         <ul class="course-intro-list">
-            <li>Make sure that you resolve the issue at work so that it doesn’t because a bigger matter than it should be.</li>
-            <li>Control your emotion and behaviour in the situation</li>
-            <li>Pay attention to the feelings that are being expressed as well as the words spoken by other</li>
-            <li>Respect the differences of the other people</li>
-            <li>Don’t continue the conflict once you have communicated and fixed the problem</li>
+            <li>Make sure that you resolve the issue at work so that it doesn’t become a bigger matter than it should be.</li>
+            <li>Control your emotions and behaviour in the situation.</li>
+            <li>Pay attention to the feelings being expressed as well as the words spoken by others.</li>
+            <li>Respect the differences of other people.</li>
+            <li>Don’t continue the conflict once you have communicated and fixed the problem.</li>
         </ul>
     </section>
 
-    <!-- complete button -->
     <div class="lesson-actions">
         <button id="markCompleteBtn" class="enrol-btn">Mark Complete</button>
 
@@ -351,9 +450,9 @@
             Lesson marked as complete.
         </p>
         
-        <!-- lesson navigation -->
         <div class="navigationdiv">
             <div class="naviBar"></div>
+
             <div class="buttonDiv">
                 <a href="module1.html" class="naviButt">← Previous</a>
                 <a href="../communication.html" class="naviButt" id="backButt">Back to Course</a>

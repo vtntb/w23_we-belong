@@ -47,19 +47,39 @@ function updateLoginLink() {
 }
 
 document.addEventListener("click", function (event) {
-    const menuButton = document.getElementById("mobileMenuBtn");
-    const menu = document.getElementById("mainnavMenu");
+    const menuBtn = event.target.closest("#mobileMenuBtn");
+    const mainMenu = document.querySelector("#mainnavMenu");
+    const dropdownLink = event.target.closest(".dropdown > a");
 
-    if (!menuButton || !menu) {
+    if (!mainMenu) {
         return;
     }
 
-    if (menuButton.contains(event.target)) {
-        menu.classList.toggle("show");
+    if (menuBtn) {
+        mainMenu.classList.toggle("show");
         return;
     }
 
-    if (!menu.contains(event.target)) {
-        menu.classList.remove("show");
+    if (dropdownLink && window.innerWidth <= 768) {
+        event.preventDefault();
+
+        const dropdown = dropdownLink.parentElement;
+
+        document.querySelectorAll(".dropdown").forEach(function (item) {
+            if (item !== dropdown) {
+                item.classList.remove("open");
+            }
+        });
+
+        dropdown.classList.toggle("open");
+        return;
+    }
+
+    if (!mainMenu.contains(event.target)) {
+        mainMenu.classList.remove("show");
+
+        document.querySelectorAll(".dropdown").forEach(function (item) {
+            item.classList.remove("open");
+        });
     }
 });

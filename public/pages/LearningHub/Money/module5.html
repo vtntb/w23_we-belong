@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Module 5 – Savings tips</title>
+    <title>Module 5 – Savings Tips</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/images/Logo/WeBelong.png">
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="stylesheet" href="../../../css/learninghub.css">
 
@@ -16,6 +17,8 @@
             padding: 15px 180px;
             background: #eceaea;
             font-size: 15px;
+            box-sizing: border-box;
+            line-height: 1.5;
         }
 
         .lessonnav a {
@@ -29,16 +32,46 @@
             text-underline-offset: 4px;
         }
 
+        .lesson-section {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+            box-sizing: border-box;
+        }
+
+        .lesson-section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+            line-height: 1.3;
+        }
+
+        .lesson-section-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
         .course-intro-list {
             list-style: disc;
             padding-left: 34px;
-            margin: 0;
+            margin: 0 0 28px;
         }
 
         .course-intro-list li {
             margin-bottom: 10px;
             font-size: 18px;
-            line-height: 1.4;
+            line-height: 1.5;
             color: #111;
         }
 
@@ -47,18 +80,57 @@
             font-size: 1.3em;
         }
 
+        .two-column-section {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .lesson-section-image {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section-image img {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            display: inline-block;
+            border-radius: 8px;
+        }
+
+        .small-image img {
+            max-width: 220px;
+        }
+
+        .medium-image img {
+            max-width: 420px;
+        }
+
+        .reflink {
+            text-decoration: none;
+            color: #6f2c91;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+
         .lesson-actions {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             margin: 60px 0;
+            padding: 0 180px;
+            box-sizing: border-box;
         }
 
         #lessonDoneMsg {
             margin-top: 15px;
             color: green;
             font-size: 18px;
+            text-align: center;
         }
 
         .navigationdiv {
@@ -79,6 +151,7 @@
             grid-template-columns: 1fr auto 1fr;
             align-items: center;
             width: 100%;
+            gap: 15px;
         }
 
         .buttonDiv a:first-child {
@@ -101,96 +174,151 @@
             border-radius: 25px;
             font-size: 16px;
             transition: 0.2s;
+            text-align: center;
+            box-sizing: border-box;
         }
 
         .naviButt:hover {
             background: #4f186b;
         }
 
-        .lesson-section {
-            width: 86%;
-            max-width: 1400px;
-            margin: 40px auto 20px;
-        }
-
-        .lesson-section-title {
-            text-align: center;
-            font-size: 34px;
-            font-weight: 400;
-            color: #111;
-            margin: 0 0 24px;
-        }
-
-        .lesson-section-divider {
-            width: 100%;
-            height: 2px;
-            background: #f04b23;
-            margin-bottom: 42px;
-        }
-
-        .lesson-section p {
-            font-size: 18px;
-            line-height: 1.4;
-            color: #111;
-            margin: 0 0 28px;
-        }
-
-        .lesson-section-image {
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
-
-        .lesson-section-image img {
-            width: 100%;
-            max-width: 750px;
-            height: auto;
-            display: inline-block;
-        }
-
-        .two-column-section {
-            display: grid;
-            grid-template-columns: 1fr 350px;
-            gap: 60px;
-            align-items: start;
-        }
-
-        .small-image img {
-            max-width: 220px;
-        }
-
-        .medium-image img {
-            max-width: 420px;
-        }
-
-        .reflink {
-            text-decoration: none;
-            color: #6f2c91;
-        }
-
-        @media (max-width: 992px) {
-            .lesson-section {
-                width: 92%;
-            }
-
-            .lesson-section-title {
-                font-size: 28px;
-            }
-
-            .lesson-section p {
+        @media screen and (max-width: 768px) {
+            .lessonnav {
+                padding: 14px 20px;
                 font-size: 14px;
             }
 
-            .two-column-section {
-                grid-template-columns: 1fr;
+            .lessonnav a,
+            .lessonnav span {
+                display: inline;
+                overflow-wrap: break-word;
             }
 
-            .lessonnav {
-                padding: 15px 30px;
+            .lesson-section {
+                width: 100%;
+                max-width: 100%;
+                padding: 0 20px;
+                margin: 35px auto 20px;
+            }
+
+            .lesson-section-title {
+                font-size: 25px;
+                line-height: 1.3;
+                margin-bottom: 18px;
+            }
+
+            .lesson-section-divider {
+                margin-bottom: 28px;
+            }
+
+            .lesson-section p {
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 22px;
+            }
+
+            .course-intro-list {
+                padding-left: 24px;
+                margin-bottom: 24px;
             }
 
             .course-intro-list li {
-                font-size: 19px;
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 12px;
+            }
+
+            .course-intro-list li::marker {
+                font-size: 1.15em;
+            }
+
+            .two-column-section {
+                display: flex;
+                flex-direction: column;
+                gap: 28px;
+            }
+
+            .lesson-section-image {
+                width: 100%;
+                max-width: 100%;
+                margin: 24px auto 28px;
+            }
+
+            .lesson-section-image img,
+            .small-image img,
+            .medium-image img {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .lesson-actions {
+                margin: 40px 0;
+                padding: 0 20px;
+            }
+
+            #markCompleteBtn {
+                width: fit-content;
+                max-width: 100%;
+                text-align: center;
+            }
+
+            #lessonDoneMsg {
+                font-size: 16px;
+            }
+
+            .navigationdiv {
+                width: 100%;
+                margin-top: 25px;
+            }
+
+            .buttonDiv {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                width: 100%;
+            }
+
+            .buttonDiv a:first-child,
+            .buttonDiv a:nth-child(2),
+            .buttonDiv a:last-child {
+                justify-self: unset;
+            }
+
+            .naviButt {
+                display: block;
+                width: 100%;
+                max-width: 260px;
+                padding: 12px 18px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .lessonnav {
+                padding: 12px 16px;
+                font-size: 13px;
+            }
+
+            .lesson-section {
+                padding: 0 16px;
+                margin: 30px auto 18px;
+            }
+
+            .lesson-section-title {
+                font-size: 23px;
+            }
+
+            .lesson-section p,
+            .course-intro-list li {
+                font-size: 15px;
+            }
+
+            .lesson-actions {
+                padding: 0 16px;
+            }
+
+            .naviButt {
+                max-width: 100%;
+                font-size: 15px;
             }
         }
     </style>
@@ -201,7 +329,7 @@
     data-course-id="money"
     data-total-lessons="6"
     data-lesson-number="5"
-    data-title="Module 5 – Savings tips"
+    data-title="Module 5 – Savings Tips"
     data-button="true"
 >
 
@@ -211,27 +339,20 @@
     <div class="lessonnav">
         <a href="../../../learnhub.html">Learning Hub</a>
         <span>&gt;</span>
-
-        <a href="../money.html">
-            Money
-        </a>
-
+        <a href="../money.html">Money</a>
         <span>&gt;</span>
-
-        <a href="module5.html">
-            Module 5 – Savings tips
-        </a>
+        <a href="module5.html">Module 5 – Savings Tips</a>
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">What you’ll learn...</h2>
+        <h2 class="lesson-section-title">What You’ll Learn</h2>
         <div class="lesson-section-divider"></div>
 
         <ul class="course-intro-list">
-            <li>What an emergency fund is</li>
-            <li>Ways to save money</li>
-            <li>Think before you spend</li>
-            <li>Tips if you’re in financial trouble</li>
+            <li>What an emergency fund is.</li>
+            <li>Ways to save money.</li>
+            <li>Think before you spend.</li>
+            <li>Tips if you’re in financial trouble.</li>
         </ul>
     </div>
 
@@ -246,9 +367,9 @@
                 </p>
 
                 <ul class="course-intro-list">
-                    <li>car repairs</li>
-                    <li>unexpected travel</li>
-                    <li>urgent medical bills</li>
+                    <li>Car repairs</li>
+                    <li>Unexpected travel</li>
+                    <li>Urgent medical bills</li>
                 </ul>
 
                 <p>
@@ -259,7 +380,7 @@
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Set up a bank account</h2>
+        <h2 class="lesson-section-title">Set Up a Bank Account</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
@@ -272,12 +393,12 @@
         </p>
 
         <p>
-            Watch the Commbank video on how to transfer funds.
+            Watch the CommBank video on how to transfer funds.
         </p>
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Beware of ATMs...</h2>
+        <h2 class="lesson-section-title">Beware of ATMs</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
@@ -295,7 +416,7 @@
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Create a savings plan</h2>
+        <h2 class="lesson-section-title">Create a Savings Plan</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
@@ -303,7 +424,7 @@
         </p>
 
         <p>
-            Start small with a short-term goal — save small amounts on a shelf.
+            Start small with a short-term goal. Save small amounts first.
         </p>
 
         <p>
@@ -312,21 +433,21 @@
         </p>
 
         <p style="text-align:center;">
-            <strong>What is a goal you want to save?</strong>
+            <strong>What is a goal you want to save for?</strong>
         </p>
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Tax refunds</h2>
+        <h2 class="lesson-section-title">Tax Refunds</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
-            Every year in July we prepare tax returns to be sent to the Australian Taxation Office.
+            Every year in July, we prepare tax returns to be sent to the Australian Taxation Office.
         </p>
 
         <p>
             Refunds may be given after tax returns have been processed.
-            If you receive a refund put that amount into an emergency fund.
+            If you receive a refund, put that amount into an emergency fund.
         </p>
 
         <p style="text-align:center;">
@@ -335,14 +456,14 @@
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Save loose change</h2>
+        <h2 class="lesson-section-title">Save Loose Change</h2>
         <div class="lesson-section-divider"></div>
 
         <div class="two-column-section">
             <div>
                 <p>
                     Save your loose change. Some banks will round up your items of food,
-                    payments or money they take from you, why shouldn’t we do the same?
+                    payments or money they take from you, so why shouldn’t we do the same?
                 </p>
 
                 <p>
@@ -368,11 +489,11 @@
                 </p>
 
                 <p>
-                    Everyday spending means a hot chocolate, gas in the car, travel expenses and random purchases.
+                    Everyday spending means a hot chocolate, petrol for the car, travel expenses and random purchases.
                 </p>
 
                 <p>
-                    Example: If you get paid $300, put away $30 (10%) for everyday expenses.
+                    Example: If you get paid $300, put away $30, which is 10%, for everyday expenses.
                 </p>
             </div>
 
@@ -383,16 +504,16 @@
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Buy generic brands</h2>
+        <h2 class="lesson-section-title">Buy Generic Brands</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
             Go generic. Ask your doctor or chemist if generic prescription drugs are a good option for you.
-            Generic drugs can cost several hundred dollars less to purchase annually than brand-name drugs.
+            Generic drugs can cost several hundred dollars less annually than brand-name drugs.
         </p>
 
         <p>
-            Example: Panadol and Nurofen can be bought as Paracetamol and Ibuprofen for $3–$4 cheaper!
+            Example: Panadol and Nurofen can be bought as paracetamol and ibuprofen for $3–$4 cheaper.
         </p>
 
         <p>
@@ -401,7 +522,7 @@
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Have a meal plan</h2>
+        <h2 class="lesson-section-title">Have a Meal Plan</h2>
         <div class="lesson-section-divider"></div>
 
         <div class="two-column-section">
@@ -426,7 +547,7 @@
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Class task...</h2>
+        <h2 class="lesson-section-title">Class Task</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
@@ -443,7 +564,7 @@
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">The 24 hour rule</h2>
+        <h2 class="lesson-section-title">The 24 Hour Rule</h2>
         <div class="lesson-section-divider"></div>
 
         <div class="two-column-section">
@@ -457,7 +578,7 @@
                 </p>
 
                 <p>
-                    If you don’t really need or want the item — don’t buy it!
+                    If you don’t really need or want the item, don’t buy it!
                 </p>
             </div>
 
@@ -468,7 +589,7 @@
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Money as work time</h2>
+        <h2 class="lesson-section-title">Money as Work Time</h2>
         <div class="lesson-section-divider"></div>
 
         <div class="two-column-section">
@@ -494,11 +615,11 @@
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Getting out of trouble...</h2>
+        <h2 class="lesson-section-title">Getting Out of Trouble</h2>
         <div class="lesson-section-divider"></div>
 
         <ul class="course-intro-list">
-            <li>Freeze your credit – call your bank and ask them to put a stop on your credit card until your finances are sorted.</li>
+            <li>Freeze your credit. Call your bank and ask them to put a stop on your credit card until your finances are sorted.</li>
             <li>Take one debt at a time. Find the debt with the highest interest rate and tackle that one first.</li>
             <li>Speak to an expert such as a bank manager or financial planner to help you put a plan in place.</li>
         </ul>
@@ -517,21 +638,17 @@
             <div class="naviBar"></div>
 
             <div class="buttonDiv">
-
                 <a href="module4.html" class="naviButt">
                     ← Previous
                 </a>
 
-                <a href="../money.html"
-                   class="naviButt"
-                   id="backButt">
+                <a href="../money.html" class="naviButt" id="backButt">
                     Back to Course
                 </a>
 
                 <a href="module6.html" class="naviButt">
                     Next →
                 </a>
-
             </div>
         </div>
     </div>   

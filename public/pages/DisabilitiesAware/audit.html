@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css" type="text/css">
+    <link rel="icon" type="image/png" href="/images/Logo/WeBelong.png">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
@@ -14,12 +15,152 @@
     <script src="../../js/script.js" defer></script>
 
     <style>
-        p {
-            font-size: 22px;
+        .access-audit-page {
+            background: #eeeeee;
+            padding: 60px 0;
+            box-sizing: border-box;
         }
 
-        li {
+        .access-audit-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            gap: 50px;
+            box-sizing: border-box;
+        }
+
+        .access-audit-content {
+            flex: 1;
+        }
+
+        .access-audit-content p {
+            font-size: 22px;
+            line-height: 1.6;
+            color: #333333;
+            margin: 0 0 22px;
+        }
+
+        .access-audit-content strong {
+            color: #111111;
+        }
+
+        .access-audit-bullet-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 20px 0 28px;
+        }
+
+        .access-audit-bullet-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 14px;
             font-size: 20px;
+            line-height: 1.5;
+            color: #333333;
+        }
+
+        .access-audit-bullet-list li::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background: #6f2c91;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 10px;
+        }
+
+        .access-audit-link-list {
+            padding-left: 24px;
+            margin: 20px 0 0;
+        }
+
+        .access-audit-link-list li {
+            margin-bottom: 14px;
+            font-size: 20px;
+            line-height: 1.5;
+            color: #333333;
+        }
+
+        .access-audit-link-list a {
+            color: #6f2c91;
+            text-decoration: none;
+            font-weight: 600;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+
+        .access-audit-link-list a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .access-audit-image {
+            flex: 1;
+        }
+
+        .access-audit-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        @media screen and (max-width: 900px) {
+            .access-audit-page {
+                padding: 40px 0;
+            }
+
+            .access-audit-container {
+                flex-direction: column;
+                gap: 30px;
+                width: 92%;
+            }
+
+            .access-audit-content p {
+                font-size: 18px;
+                line-height: 1.6;
+            }
+
+            .access-audit-bullet-list li,
+            .access-audit-link-list li {
+                font-size: 18px;
+            }
+
+            .access-audit-image {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .access-audit-page {
+                padding: 30px 0;
+            }
+
+            .access-audit-container {
+                width: 94%;
+            }
+
+            .access-audit-content p {
+                font-size: 16px;
+            }
+
+            .access-audit-bullet-list li,
+            .access-audit-link-list li {
+                font-size: 16px;
+            }
+
+            .access-audit-bullet-list li {
+                padding-left: 24px;
+            }
+
+            .access-audit-bullet-list li::before {
+                width: 8px;
+                height: 8px;
+                top: 9px;
+            }
         }
     </style>
 </head>
@@ -29,13 +170,12 @@
     <div id="header-placeholder"></div>
     <div id="banner-placeholder"></div>  
 
-    <main class="aa-wrapper">
+    <main class="access-audit-page">
 
-        <section class="aa-hero-content">
-            <div class="aa-container aa-flex">
+        <section class="access-audit-section">
+            <div class="access-audit-container">
 
-                <!-- LEFT CONTENT -->
-                <div class="aa-left">
+                <div class="access-audit-content">
                     <p>
                         An access audit checks how accessible and easy a workplace is to use for everyone.<br><br>
                         It looks at buildings, information, technology and everyday practices and compares 
@@ -44,7 +184,7 @@
 
                     <p>An access audit helps identify:</p>
 
-                    <ul class="aa-bullet">
+                    <ul class="access-audit-bullet-list">
                         <li>physical access barriers</li>
                         <li>practical issues that affect how people use a space</li>
                         <li>clear actions to improve access for all</li>
@@ -62,7 +202,7 @@
 
                     <p><strong>Download our accessibility checklists today:</strong></p>
 
-                    <ol class="aa-links">
+                    <ol class="access-audit-link-list">
                         <li>
                             <a href="https://webelong.org.au/storage/sites/5/2026/01/1.-Access-Audit-Checklists-We-Belong-WaitingReception.pdf" target="_blank">
                                 Waiting/Reception areas
@@ -81,8 +221,7 @@
                     </ol>
                 </div>
 
-                <!-- RIGHT IMAGE -->
-                <div class="aa-right">
+                <div class="access-audit-image">
                     <img src="../../images/AdditionalIMG/aa.jpg" alt="Access audit example">
                 </div>
 

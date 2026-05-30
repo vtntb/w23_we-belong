@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>We Belong Project - Disability Support, Employment & Inclusion</title>
+    <title>Teammates - We Belong</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css" type="text/css">
+    <link rel="icon" type="image/png" href="/images/Logo/WeBelong.png">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
@@ -14,8 +15,151 @@
     <script src="../../js/script.js" defer></script>
 
     <style>
-        p {
+        .inclusive-teammate-page {
+            background: #eeeeee;
+            padding: 60px 0;
+            box-sizing: border-box;
+        }
+
+        .inclusive-teammate-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            gap: 60px;
+            box-sizing: border-box;
+        }
+
+        .inclusive-teammate-content {
+            flex: 1;
+        }
+
+        .inclusive-teammate-content p {
             font-size: 20px;
+            line-height: 1.7;
+            color: #333333;
+            margin: 0 0 24px;
+        }
+
+        .inclusive-teammate-content strong {
+            color: #111111;
+        }
+
+        .inclusive-teammate-resource {
+            width: 360px;
+            flex-shrink: 0;
+        }
+
+        .inclusive-teammate-card {
+            width: 100%;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+            box-sizing: border-box;
+            transition: 0.2s;
+        }
+
+        .inclusive-teammate-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .inclusive-teammate-card-img {
+            width: 100%;
+            aspect-ratio: 1 / 1.414;
+            object-fit: cover;
+            display: block;
+        }
+
+        .inclusive-teammate-card-content {
+            padding: 16px 16px 60px;
+            box-sizing: border-box;
+        }
+
+        .inclusive-teammate-card-type {
+            font-size: 14px;
+            color: #777777;
+            margin: 0 0 8px;
+        }
+
+        .inclusive-teammate-card-title {
+            font-size: 19px;
+            line-height: 1.4;
+            font-weight: 700;
+            color: #5a2ca0;
+            margin: 0;
+        }
+
+        .inclusive-teammate-download-btn {
+            position: absolute;
+            bottom: 14px;
+            right: 14px;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #6f2c91;
+            color: white;
+            text-align: center;
+            line-height: 42px;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .inclusive-teammate-download-btn:hover {
+            background: #4f186b;
+        }
+
+        @media screen and (max-width: 900px) {
+            .inclusive-teammate-page {
+                padding: 40px 0;
+            }
+
+            .inclusive-teammate-container {
+                width: 92%;
+                flex-direction: column;
+                gap: 35px;
+            }
+
+            .inclusive-teammate-content p {
+                font-size: 18px;
+                line-height: 1.6;
+            }
+
+            .inclusive-teammate-resource {
+                width: 100%;
+                max-width: 360px;
+                margin: 0 auto;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .inclusive-teammate-page {
+                padding: 30px 0;
+            }
+
+            .inclusive-teammate-container {
+                width: 94%;
+            }
+
+            .inclusive-teammate-content p {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            .inclusive-teammate-resource {
+                max-width: 320px;
+            }
+
+            .inclusive-teammate-card-title {
+                font-size: 17px;
+            }
+
+            .inclusive-teammate-card-type {
+                font-size: 13px;
+            }
         }
     </style>
 </head>
@@ -25,41 +169,39 @@
     <div id="header-placeholder"></div>
     <div id="banner-placeholder"></div>  
 
-    <section class="aa-sport">
-        <div class="aa-container aa-sport__wrap">
+    <main class="inclusive-teammate-page">
+        <section class="inclusive-teammate-section">
+            <div class="inclusive-teammate-container">
 
-            <!-- LEFT -->
-            <div class="aa-sport__left">
-                <p>
-                    A <strong>Teammate</strong> is a member of your team. You support each other and work together to achieve a shared goal, for example winning a game. Teammates train and practice together, to improve their skills.
-                </p>
+                <div class="inclusive-teammate-content">
+                    <p>
+                        A <strong>Teammate</strong> is a member of your team. You support each other and work together to achieve a shared goal, for example winning a game. Teammates train and practice together, to improve their skills.
+                    </p>
 
-                <p>
-                    To be an inclusive Teammate, read 
-                    <strong>How to be an Inclusive Teammate.</strong>
-                </p>
-            </div>
+                    <p>
+                        To be an inclusive Teammate, read 
+                        <strong>How to be an Inclusive Teammate.</strong>
+                    </p>
+                </div>
 
-            <!-- RIGHT -->
-            <div class="aa-sport__right">
+                <div class="inclusive-teammate-resource">
+                    <div class="inclusive-teammate-card">
+                        <a href="https://webelong.org.au/storage/sites/5/2026/03/We-Belong-Factsheets-02.pdf" target="_blank">
+                            <img src="../../images/AdditionalIMG/fact2.png" class="inclusive-teammate-card-img" alt="How to be an Inclusive Teammate">
+                        </a>
 
-                <div class="card">
-                    <a href="https://webelong.org.au/storage/sites/5/2026/03/We-Belong-Factsheets-02.pdf" target="_blank">
-                        <img src="../../images/AdditionalIMG/fact2.png" class="card-img" alt="How to be an Inclusive Teammate">
-                    </a>
+                        <div class="inclusive-teammate-card-content">
+                            <p class="inclusive-teammate-card-type">Fact Sheet</p>
+                            <h3 class="inclusive-teammate-card-title">How to be an Inclusive Teammate</h3>
+                        </div>
 
-                    <div class="card-content">
-                        <p class="card-type">Fact Sheet</p>
-                        <h3 class="card-title">How to be an Inclusive Teammate</h3>
+                        <a href="https://webelong.org.au/storage/sites/5/2026/03/We-Belong-Factsheets-02.pdf" target="_blank" class="inclusive-teammate-download-btn">↓</a>
                     </div>
-
-                    <a href="https://webelong.org.au/storage/sites/5/2026/03/We-Belong-Factsheets-02.pdf" target="_blank" class="download-btn">↓</a>
                 </div>
 
             </div>
-
-        </div>
-    </section>
+        </section>
+    </main>
 
     <div id="accessibility-container"></div>
     <script src="../../js/accessibility.js" defer></script> 

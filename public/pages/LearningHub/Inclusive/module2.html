@@ -4,6 +4,7 @@
     <title>Module 2 – Tips for People with Disability to Join a Sport Club</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/images/Logo/WeBelong.png">
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="stylesheet" href="../../../css/learninghub.css">
 
@@ -16,6 +17,8 @@
             padding: 15px 180px;
             background: #eceaea;
             font-size: 15px;
+            box-sizing: border-box;
+            line-height: 1.5;
         }
 
         .lessonnav a {
@@ -29,16 +32,46 @@
             text-underline-offset: 4px;
         }
 
+        .lesson-section {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+            box-sizing: border-box;
+        }
+
+        .lesson-section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+            line-height: 1.3;
+        }
+
+        .lesson-section-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
         .course-intro-list {
             list-style: disc;
             padding-left: 34px;
-            margin: 0;
+            margin: 0 0 28px;
         }
 
         .course-intro-list li {
             margin-bottom: 10px;
             font-size: 18px;
-            line-height: 1.4;
+            line-height: 1.5;
             color: #111;
         }
 
@@ -47,18 +80,47 @@
             font-size: 1.3em;
         }
 
+        .course-intro-list .course-intro-list {
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+
+        .lesson-section-image {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section-image img {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            display: inline-block;
+            border-radius: 8px;
+        }
+
+        .reflink {
+            text-decoration: none;
+            color: #6f2c91;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+
         .lesson-actions {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             margin: 60px 0;
+            padding: 0 180px;
+            box-sizing: border-box;
         }
 
         #lessonDoneMsg {
             margin-top: 15px;
             color: green;
             font-size: 18px;
+            text-align: center;
         }
 
         .navigationdiv {
@@ -79,6 +141,7 @@
             grid-template-columns: 1fr auto 1fr;
             align-items: center;
             width: 100%;
+            gap: 15px;
         }
 
         .buttonDiv a:first-child {
@@ -101,75 +164,148 @@
             border-radius: 25px;
             font-size: 16px;
             transition: 0.2s;
+            text-align: center;
+            box-sizing: border-box;
         }
 
         .naviButt:hover {
             background: #4f186b;
         }
-        
-        .lesson-section {
-            width: 86%;
-            max-width: 1400px;
-            margin: 40px auto 20px;
-        }
 
-        .lesson-section-title {
-            text-align: center;
-            font-size: 34px;
-            font-weight: 400;
-            color: #111;
-            margin: 0 0 24px;
-        }
-
-        .lesson-section-divider {
-            width: 100%;
-            height: 2px;
-            background: #f04b23;
-            margin-bottom: 42px;
-        }
-
-        .lesson-section p {
-            font-size: 18px;
-            line-height: 1.4;
-            color: #111;
-            margin: 0 0 28px;
-        }
-
-        .lesson-section-image {
-            text-align: center;
-        }
-
-        .lesson-section-image img {
-            width: 100%;
-            max-width: 950px;
-            height: auto;
-            display: inline-block;
-        }
-
-        .reflink {
-            text-decoration: none;
-            color: #6f2c91;
-        }
-
-        @media (max-width: 992px) {
-            .lesson-section {
-                width: 92%;
-            }
-
-            .lesson-section-title {
-                font-size: 28px;
-            }
-
-            .lesson-section p {
+        @media screen and (max-width: 768px) {
+            .lessonnav {
+                padding: 14px 20px;
                 font-size: 14px;
             }
 
-            .lessonnav {
-                padding: 15px 30px;
+            .lessonnav a,
+            .lessonnav span {
+                display: inline;
+                overflow-wrap: break-word;
+            }
+
+            .lesson-section {
+                width: 100%;
+                max-width: 100%;
+                padding: 0 20px;
+                margin: 35px auto 20px;
+            }
+
+            .lesson-section-title {
+                font-size: 25px;
+                line-height: 1.3;
+                margin-bottom: 18px;
+            }
+
+            .lesson-section-divider {
+                margin-bottom: 28px;
+            }
+
+            .lesson-section p {
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 22px;
+            }
+
+            .course-intro-list {
+                padding-left: 24px;
+                margin-bottom: 24px;
             }
 
             .course-intro-list li {
-                font-size: 19px;
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 12px;
+            }
+
+            .course-intro-list li::marker {
+                font-size: 1.15em;
+            }
+
+            .course-intro-list .course-intro-list {
+                padding-left: 22px;
+                margin-top: 12px;
+            }
+
+            .lesson-section-image {
+                width: 100%;
+                max-width: 100%;
+                margin: 24px auto 28px;
+            }
+
+            .lesson-section-image img {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .lesson-actions {
+                margin: 40px 0;
+                padding: 0 20px;
+            }
+
+            #markCompleteBtn {
+                width: fit-content;
+                max-width: 100%;
+                text-align: center;
+            }
+
+            #lessonDoneMsg {
+                font-size: 16px;
+            }
+
+            .navigationdiv {
+                width: 100%;
+                margin-top: 25px;
+            }
+
+            .buttonDiv {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                width: 100%;
+            }
+
+            .buttonDiv a:first-child,
+            .buttonDiv a:nth-child(2),
+            .buttonDiv a:last-child {
+                justify-self: unset;
+            }
+
+            .naviButt {
+                display: block;
+                width: 100%;
+                max-width: 260px;
+                padding: 12px 18px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .lessonnav {
+                padding: 12px 16px;
+                font-size: 13px;
+            }
+
+            .lesson-section {
+                padding: 0 16px;
+                margin: 30px auto 18px;
+            }
+
+            .lesson-section-title {
+                font-size: 23px;
+            }
+
+            .lesson-section p,
+            .course-intro-list li {
+                font-size: 15px;
+            }
+
+            .lesson-actions {
+                padding: 0 16px;
+            }
+
+            .naviButt {
+                max-width: 100%;
+                font-size: 15px;
             }
         }
     </style>
@@ -192,9 +328,7 @@
         <span>&gt;</span>
         <a href="../sportstraining.html">Inclusive Sports Training</a>
         <span>&gt;</span>
-        <a href="module2.html">
-            Module 2 – Tips for People with Disability to Join a Sport Club
-        </a>
+        <a href="module2.html">Module 2 – Tips for People with Disability to Join a Sport Club</a>
     </div>
 
     <section class="lesson-section">
@@ -225,7 +359,7 @@
         <ul class="course-intro-list">
             <li>
                 Look for clubs that are inclusive and welcoming through internet searches, recommendations, council websites,
-                community noticeboards and sporting associations.
+                community noticeboards, and sporting associations.
             </li>
 
             <li>
@@ -240,15 +374,14 @@
             <li>Attend with a friend or family member the first time for support.</li>
 
             <li>
-                Research clubs with inclusive policies, ask about previous experiences of players with disabilities.
+                Research clubs with inclusive policies and ask about previous experiences of players with disability.
             </li>
         </ul>
 
-        <div class="lesson-section-image" style="margin-top: 30px;">
+        <div class="lesson-section-image">
             <img 
                 src="../../../images/AdditionalIMG/inclusive-soccer-child.jpeg" 
-                alt="Inclusive Soccer Child"
-                style="max-width: 750px; width: 100%; height: auto;"
+                alt="Inclusive soccer child"
             >
         </div>
     </section>
@@ -263,11 +396,11 @@
             <li>
                 How to get to the venue?
 
-                <ul class="course-intro-list" style="margin-top:15px;">
+                <ul class="course-intro-list">
                     <li>Community transport</li>
-                    <li>Family / carer</li>
+                    <li>Family or carer</li>
                     <li>Public transport</li>
-                    <li>Taxi, Uber etc</li>
+                    <li>Taxi, Uber, etc.</li>
                     <li>Travel training</li>
                     <li>Car pooling</li>
                 </ul>
@@ -275,27 +408,27 @@
 
             <li>
                 Accessible facilities:
-                Let the club know what you require. For example – a ramp, accessible bathroom,
-                visual cues or even a communication tool.
+                Let the club know what you require. For example, a ramp, accessible bathroom,
+                visual cues, or even a communication tool.
             </li>
 
             <li>
                 Building your confidence:
-                When you explore new experiences it is normal to feel uncomfortable, uncertain and anxious.
+                When you explore new experiences, it is normal to feel uncomfortable, uncertain, and anxious.
                 You are stepping outside of your comfort zone and you are not alone.
             </li>
         </ul>
 
         <p>
-            Don’t be too hard on yourself, take small steps to feel comfortable.
+            Don’t be too hard on yourself. Take small steps to feel comfortable.
             Remain positive to overcome any challenges you face.
         </p>
 
         <ul class="course-intro-list">
             <li>
                 Meeting people:
-                Clubs can offer solutions like a trainer, mentor or buddy systems.
-                Many sporting clubs also celebrate wins through recognition and have a social aspect to it,
+                Clubs can offer solutions like a trainer, mentor, or buddy system.
+                Many sporting clubs also celebrate wins through recognition and have a social aspect to them,
                 such as team bonding sessions.
             </li>
         </ul>
@@ -326,7 +459,7 @@
         <p><em>“They didn’t just make room for Joel—they made him part of the team.”</em></p>
 
         <p>
-            Joel is a 24 year old man with an intellectual disability and high social anxiety.
+            Joel is a 24-year-old man with an intellectual disability and high social anxiety.
             For years, he loved watching rugby from the sidelines but never believed he could play.
         </p>
 
@@ -353,8 +486,8 @@
 
             <li>
                 <strong>Visual guidance:</strong>
-                The coach used a visual schedule with icons to show the training plan
-                such as warmup, skills, break, and game.
+                The coach used a visual schedule with icons to show the training plan,
+                such as warm-up, skills, break, and game.
                 This helped Joel prepare and feel more in control.
             </li>
 
@@ -408,11 +541,10 @@
 
         <p><strong>End of Module 2. We hope the tips in this module will help you try a sporting club.</strong></p>
 
-        <div class="lesson-section-image" style="margin-top: 30px;">
+        <div class="lesson-section-image">
             <img 
                 src="../../../images/AdditionalIMG/inclusive-sporting-club-example.jpeg" 
-                alt="Inclusive Sporting Club Example"
-                style="max-width: 750px; width: 100%; height: auto;"
+                alt="Inclusive sporting club example"
             >
         </div>
     </section>

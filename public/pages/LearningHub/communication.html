@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>We Belong Project - Communication</title>
+    <title>Communication - We Belong</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="../../css/style.css" type="text/css">
     <link rel="stylesheet" href="../../css/learninghub.css" type="text/css">
+    <link rel="icon" type="image/png" href="/images/Logo/WeBelong.png">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
@@ -24,11 +26,13 @@
             background-color: #ffffff;
             border-radius: 12px;
             text-align: center;
+            box-sizing: border-box;
         }
 
         .course-banner img {
             width: 100%;
             height: auto;
+            display: block;
             border-radius: 12px;
             margin-bottom: 20px;
         }
@@ -38,6 +42,45 @@
             line-height: 1.6;
             color: #444;
             font-weight: 500;
+        }
+
+        @media screen and (max-width: 768px) {
+            .course-banner {
+                width: 92%;
+                margin: 25px auto;
+                padding: 14px;
+            }
+
+            .course-banner img {
+                width: 100%;
+                height: auto;
+                max-height: 220px;
+                object-fit: contain;
+                object-position: center;
+                border-radius: 10px;
+                margin-bottom: 16px;
+            }
+
+            .course-banner p {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .course-banner {
+                width: 94%;
+                margin: 20px auto;
+                padding: 12px;
+            }
+
+            .course-banner img {
+                max-height: 180px;
+            }
+
+            .course-banner p {
+                font-size: 15px;
+            }
         }
     </style>
 </head>
@@ -53,7 +96,7 @@
     <div id="course-placeholder"></div>
     
     <div class="course-banner">
-        <img src="../../images/AdditionalIMG/Communication-1536x384.jpg" alt="Communication Course Banner" style="width:100%; border-radius:12px; margin-bottom:20px;">
+        <img src="../../images/AdditionalIMG/Communication-1536x384.jpg" alt="Communication Course Banner">
         <p>Communication can take many forms: verbal, visual, and audio. In this module, you will learn about active listening, overcoming communication barriers, and effective ways of relaying messages.</p>
     </div>
 

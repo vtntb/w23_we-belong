@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>We Belong Project - Disability Support, Employment & Inclusion</title>
+    <title>Clubs - We Belong</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css" type="text/css">
+    <link rel="icon" type="image/png" href="/images/Logo/WeBelong.png">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
@@ -14,8 +15,151 @@
     <script src="../../js/script.js" defer></script>
 
     <style>
-        p {
+        .sports-club-page {
+            background: #eeeeee;
+            padding: 60px 0;
+            box-sizing: border-box;
+        }
+
+        .sports-club-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            gap: 60px;
+            box-sizing: border-box;
+        }
+
+        .sports-club-content {
+            flex: 1;
+        }
+
+        .sports-club-content p {
             font-size: 20px;
+            line-height: 1.7;
+            color: #333333;
+            margin: 0 0 24px;
+        }
+
+        .sports-club-content strong {
+            color: #111111;
+        }
+
+        .sports-club-resource {
+            width: 360px;
+            flex-shrink: 0;
+        }
+
+        .sports-club-card {
+            width: 100%;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+            box-sizing: border-box;
+            transition: 0.2s;
+        }
+
+        .sports-club-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .sports-club-card-img {
+            width: 100%;
+            aspect-ratio: 1 / 1.414;
+            object-fit: cover;
+            display: block;
+        }
+
+        .sports-club-card-content {
+            padding: 16px 16px 60px;
+            box-sizing: border-box;
+        }
+
+        .sports-club-card-type {
+            font-size: 14px;
+            color: #777777;
+            margin: 0 0 8px;
+        }
+
+        .sports-club-card-title {
+            font-size: 19px;
+            line-height: 1.4;
+            font-weight: 700;
+            color: #5a2ca0;
+            margin: 0;
+        }
+
+        .sports-club-download-btn {
+            position: absolute;
+            bottom: 14px;
+            right: 14px;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #6f2c91;
+            color: white;
+            text-align: center;
+            line-height: 42px;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .sports-club-download-btn:hover {
+            background: #4f186b;
+        }
+
+        @media screen and (max-width: 900px) {
+            .sports-club-page {
+                padding: 40px 0;
+            }
+
+            .sports-club-container {
+                width: 92%;
+                flex-direction: column;
+                gap: 35px;
+            }
+
+            .sports-club-content p {
+                font-size: 18px;
+                line-height: 1.6;
+            }
+
+            .sports-club-resource {
+                width: 100%;
+                max-width: 360px;
+                margin: 0 auto;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .sports-club-page {
+                padding: 30px 0;
+            }
+
+            .sports-club-container {
+                width: 94%;
+            }
+
+            .sports-club-content p {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            .sports-club-resource {
+                max-width: 320px;
+            }
+
+            .sports-club-card-title {
+                font-size: 17px;
+            }
+
+            .sports-club-card-type {
+                font-size: 13px;
+            }
         }
     </style>
 </head>
@@ -25,45 +169,43 @@
     <div id="header-placeholder"></div>
     <div id="banner-placeholder"></div>  
 
-    <section class="aa-sport">
-        <div class="aa-container aa-sport__wrap">
+    <main class="sports-club-page">
+        <section class="sports-club-section">
+            <div class="sports-club-container">
 
-            <!-- LEFT -->
-            <div class="aa-sport__left">
-                <p>
-                    A <strong>Sports Club</strong> can have many teams who play different sports. 
-                    They can be small with local teams or large with professional teams. 
-                    Sports Clubs will provide a facility and equipment for training and competition. 
-                    Sports Clubs are organised by volunteers and are a great place to make new friends. 
-                    This creates a community who value health and wellbeing.
-                </p>
+                <div class="sports-club-content">
+                    <p>
+                        A <strong>Sports Club</strong> can have many teams who play different sports. 
+                        They can be small with local teams or large with professional teams. 
+                        Sports Clubs will provide a facility and equipment for training and competition. 
+                        Sports Clubs are organised by volunteers and are a great place to make new friends. 
+                        This creates a community who value health and wellbeing.
+                    </p>
 
-                <p>
-                    To be an inclusive Sports Club, read 
-                    <strong>How to be an Inclusive Sports Club.</strong>
-                </p>
-            </div>
+                    <p>
+                        To be an inclusive Sports Club, read 
+                        <strong>How to be an Inclusive Sports Club.</strong>
+                    </p>
+                </div>
 
-            <!-- RIGHT -->
-            <div class="aa-sport__right">
+                <div class="sports-club-resource">
+                    <div class="sports-club-card">
+                        <a href="https://webelong.org.au/storage/sites/5/2026/03/We-Belong-Factsheets-04.pdf" target="_blank">
+                            <img src="../../images/AdditionalIMG/fact4.png" class="sports-club-card-img" alt="How to be an Inclusive Sports Club">
+                        </a>
 
-                <div class="card">
-                    <a href="https://webelong.org.au/storage/sites/5/2026/03/We-Belong-Factsheets-04.pdf" target="_blank">
-                        <img src="../../images/AdditionalIMG/fact4.png" class="card-img" alt="How to be an Inclusive Sports Club">
-                    </a>
+                        <div class="sports-club-card-content">
+                            <p class="sports-club-card-type">Fact Sheet</p>
+                            <h3 class="sports-club-card-title">How to be an Inclusive Sports Club</h3>
+                        </div>
 
-                    <div class="card-content">
-                        <p class="card-type">Fact Sheet</p>
-                        <h3 class="card-title">How to be an Inclusive Sports Club</h3>
+                        <a href="https://webelong.org.au/storage/sites/5/2026/03/We-Belong-Factsheets-04.pdf" target="_blank" class="sports-club-download-btn">↓</a>
                     </div>
-
-                    <a href="https://webelong.org.au/storage/sites/5/2026/03/We-Belong-Factsheets-04.pdf" target="_blank" class="download-btn">↓</a>
                 </div>
 
             </div>
-
-        </div>
-    </section>
+        </section>
+    </main>
 
     <div id="accessibility-container"></div>
     <script src="../../js/accessibility.js" defer></script> 

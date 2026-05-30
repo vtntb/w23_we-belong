@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Module 4 – Cyberbullying : What to do if it’s happening to you?</title>
+    <title>Module 4 – Cyberbullying: What to Do if It’s Happening to You?</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/images/Logo/WeBelong.png">
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="stylesheet" href="../../../css/learninghub.css">
 
@@ -16,6 +17,8 @@
             padding: 15px 180px;
             background: #eceaea;
             font-size: 15px;
+            box-sizing: border-box;
+            line-height: 1.5;
         }
 
         .lessonnav a {
@@ -29,6 +32,53 @@
             text-underline-offset: 4px;
         }
 
+        .lesson-section {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+            box-sizing: border-box;
+        }
+
+        .lesson-section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+            line-height: 1.3;
+        }
+
+        .lesson-section-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
+        .lesson-section ol {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #111;
+            padding-left: 34px;
+            margin: 0;
+        }
+
+        .lesson-section ol li {
+            margin-bottom: 18px;
+        }
+
+        .lesson-section ol li::marker {
+            color: #6f2c91;
+            font-weight: bold;
+        }
+
         .course-intro-list {
             list-style: disc;
             padding-left: 34px;
@@ -38,7 +88,7 @@
         .course-intro-list li {
             margin-bottom: 10px;
             font-size: 18px;
-            line-height: 1.4;
+            line-height: 1.5;
             color: #111;
         }
 
@@ -47,18 +97,26 @@
             font-size: 1.3em;
         }
 
+        .reflink {
+            text-decoration: none;
+            color: #6f2c91;
+        }
+
         .lesson-actions {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             margin: 60px 0;
+            padding: 0 180px;
+            box-sizing: border-box;
         }
 
         #lessonDoneMsg {
             margin-top: 15px;
             color: green;
             font-size: 18px;
+            text-align: center;
         }
 
         .navigationdiv {
@@ -79,6 +137,7 @@
             grid-template-columns: 1fr auto 1fr;
             align-items: center;
             width: 100%;
+            gap: 15px;
         }
 
         .buttonDiv a:first-child {
@@ -101,76 +160,146 @@
             border-radius: 25px;
             font-size: 16px;
             transition: 0.2s;
+            text-align: center;
+            box-sizing: border-box;
         }
 
         .naviButt:hover {
             background: #4f186b;
         }
 
-        .lesson-section {
-            width: 86%;
-            max-width: 1400px;
-            margin: 40px auto 20px;
-        }
-
-        .lesson-section-title {
-            text-align: center;
-            font-size: 34px;
-            font-weight: 400;
-            color: #111;
-            margin: 0 0 24px;
-        }
-
-        .lesson-section-divider {
-            width: 100%;
-            height: 2px;
-            background: #f04b23;
-            margin-bottom: 42px;
-        }
-
-        .lesson-section p {
-            font-size: 18px;
-            line-height: 1.4;
-            color: #111;
-            margin: 0 0 28px;
-        }
-
-        .lesson-section ol {
-            font-size: 18px;
-            line-height: 1.5;
-            color: #111;
-            padding-left: 34px;
-        }
-
-        .lesson-section ol li {
-            margin-bottom: 18px;
-        }
-
-        .reflink {
-            text-decoration: none;
-            color: #6f2c91;
-        }
-
-        @media (max-width: 992px) {
-            .lesson-section {
-                width: 92%;
-            }
-
-            .lesson-section-title {
-                font-size: 28px;
-            }
-
-            .lesson-section p,
-            .lesson-section ol {
+        @media screen and (max-width: 768px) {
+            .lessonnav {
+                padding: 14px 20px;
                 font-size: 14px;
             }
 
-            .lessonnav {
-                padding: 15px 30px;
+            .lessonnav a,
+            .lessonnav span {
+                display: inline;
+                overflow-wrap: break-word;
+            }
+
+            .lesson-section {
+                width: 100%;
+                max-width: 100%;
+                padding: 0 20px;
+                margin: 35px auto 20px;
+            }
+
+            .lesson-section-title {
+                font-size: 25px;
+                line-height: 1.3;
+                margin-bottom: 18px;
+            }
+
+            .lesson-section-divider {
+                margin-bottom: 28px;
+            }
+
+            .lesson-section p {
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 22px;
+            }
+
+            .lesson-section ol {
+                font-size: 16px;
+                line-height: 1.6;
+                padding-left: 24px;
+            }
+
+            .lesson-section ol li {
+                margin-bottom: 16px;
+            }
+
+            .course-intro-list {
+                padding-left: 24px;
             }
 
             .course-intro-list li {
-                font-size: 19px;
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 12px;
+            }
+
+            .course-intro-list li::marker {
+                font-size: 1.15em;
+            }
+
+            .lesson-actions {
+                margin: 40px 0;
+                padding: 0 20px;
+            }
+
+            #markCompleteBtn {
+                width: fit-content;
+                max-width: 100%;
+                text-align: center;
+            }
+
+            #lessonDoneMsg {
+                font-size: 16px;
+            }
+
+            .navigationdiv {
+                width: 100%;
+                margin-top: 25px;
+            }
+
+            .buttonDiv {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                width: 100%;
+            }
+
+            .buttonDiv a:first-child,
+            .buttonDiv a:nth-child(2),
+            .buttonDiv a:last-child {
+                justify-self: unset;
+            }
+
+            .naviButt {
+                display: block;
+                width: 100%;
+                max-width: 260px;
+                padding: 12px 18px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .lessonnav {
+                padding: 12px 16px;
+                font-size: 13px;
+            }
+
+            .lesson-section {
+                padding: 0 16px;
+                margin: 30px auto 18px;
+            }
+
+            .lesson-section-title {
+                font-size: 23px;
+            }
+
+            .lesson-section p,
+            .lesson-section ol,
+            .course-intro-list li {
+                font-size: 15px;
+            }
+
+            .lesson-section ol {
+                padding-left: 22px;
+            }
+
+            .lesson-actions {
+                padding: 0 16px;
+            }
+
+            .naviButt {
+                max-width: 100%;
+                font-size: 15px;
             }
         }
     </style>
@@ -181,7 +310,7 @@
     data-course-id="cybersafety"
     data-total-lessons="4"
     data-lesson-number="4"
-    data-title="Module 4 – Cyberbullying : What to do if it’s happening to you?"
+    data-title="Module 4 – Cyberbullying: What to Do if It’s Happening to You?"
     data-button="true"
 >
 
@@ -191,55 +320,48 @@
     <div class="lessonnav">
         <a href="../../../learnhub.html">Learning Hub</a>
         <span>&gt;</span>
-
-        <a href="../cybersafety.html">
-            Cybersafety
-        </a>
-
+        <a href="../cybersafety.html">Cybersafety</a>
         <span>&gt;</span>
-
-        <a href="module4.html">
-            Module 4 – Cyberbullying : What to do if it’s happening to you?
-        </a>
+        <a href="module4.html">Module 4 – Cyberbullying: What to Do if It’s Happening to You?</a>
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Keep calm</h2>
+        <h2 class="lesson-section-title">Keep Calm</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
             If you are having issues with your friends or someone else, whether it be at school or in other places,
-            try not to react to them via email, text or social networking sites.
+            try not to react to them via email, text, or social networking sites.
             It’s easy to say something hurtful when you’re feeling angry or upset,
             but if it’s written down or posted online, it’s permanent.
-            Nothing online is ever private, even after you delete it!
+            Nothing online is ever private, even after you delete it.
         </p>
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Talk to someone</h2>
+        <h2 class="lesson-section-title">Talk to Someone</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
-            If someone writes something or posts a photo that upsets you, scares you or makes you feel uncomfortable,
-            talk to a friend, your parents or another trusted adult.
+            If someone writes something or posts a photo that upsets you, scares you, or makes you feel uncomfortable,
+            talk to a friend, your parents, or another trusted adult.
             You don’t have to deal with hurt feelings or embarrassment on your own.
             The sooner you tell someone, the sooner something can be done about it and you can feel safer.
         </p>
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Record evidence</h2>
+        <h2 class="lesson-section-title">Record Evidence</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
-            Take screenshots or print off and bullying messages or posts.
+            Take screenshots or print off bullying messages or posts.
             Record the times and dates of any harassing phone calls.
         </p>
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Ask the person to delete it.</h2>
+        <h2 class="lesson-section-title">Ask the Person to Delete It</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
@@ -249,30 +371,30 @@
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Report it to the website</h2>
+        <h2 class="lesson-section-title">Report It to the Website</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
             You can report cyberbullying and have content removed if it violates the website’s terms of use,
-            the agreement between a user and the owner of the website.
+            which is the agreement between a user and the owner of the website.
         </p>
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Report it to your phone company</h2>
+        <h2 class="lesson-section-title">Report It to Your Phone Company</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
             If you’re getting upsetting calls or texts, you can make a complaint to the phone company.
-            The phone company may be able to trace the caller/sender and send them a warning letter.
+            The phone company may be able to trace the caller or sender and send them a warning letter.
             If the bad behaviour doesn’t stop after repeated warning letters,
             the offender’s phone number could be suspended or cancelled.
-            For more info, contact your phone company, for example Telstra, Optus or Vodafone.
+            For more information, contact your phone company, for example Telstra, Optus, or Vodafone.
         </p>
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Block the bully</h2>
+        <h2 class="lesson-section-title">Block the Bully</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
@@ -282,18 +404,18 @@
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Talk to your teacher, school counsellor or principal</h2>
+        <h2 class="lesson-section-title">Talk to Your Teacher, School Counsellor, or Principal</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
-            Most schools have anti-bullying guidelines that cover cyber bullying.
+            Most schools have anti-bullying guidelines that cover cyberbullying.
             If the person who is bullying you is a student at your school,
-            then your school may be able to help you to work things out.
+            then your school may be able to help you work things out.
         </p>
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Staying out of trouble</h2>
+        <h2 class="lesson-section-title">Staying Out of Trouble</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
@@ -301,21 +423,21 @@
             Remember that online actions have real-life consequences,
             and that anything you say can be saved and shared with others.
             If you have pretended to be someone else online,
-            it is usually best to apologise and take down any offensive material as soon as possible and talk to a trusted adult.
+            it is usually best to apologise, take down any offensive material as soon as possible, and talk to a trusted adult.
         </p>
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Reporting bullying to your school</h2>
+        <h2 class="lesson-section-title">Reporting Bullying to Your School</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
-            If someone has been or has threatened to be physically violent to you or sexually harassing you,
+            If someone has been physically violent, threatened you, or sexually harassed you,
             you can report this to the police. If your bully is over 10 years old, they could be charged with criminal offences.
         </p>
 
         <p>
-            If you have been threatened or physically harmed, you can report to the police.
+            If you have been threatened or physically harmed, you can report it to the police.
         </p>
 
         <p>
@@ -323,33 +445,33 @@
         </p>
 
         <p>
-            If the bully has indecently assaulted you, they can also report to the police.
+            If the bully has indecently assaulted you, you can also report it to the police.
         </p>
 
         <p>
-            If your things have been damaged or stolen, you can also report to the police.
+            If your things have been damaged or stolen, you can also report it to the police.
         </p>
 
         <p>
-            If the bully took away your things against your will or damages your things,
+            If the bully took away your things against your will or damaged your things,
             they can be charged with theft or damage to your property.
         </p>
 
         <p>
-            Generally, for people under 18, the police will give you a warning or caution for their bad behaviour.
-            Imprisonment is only a last resort and usually saved for cases where people repeatedly cause very serious harm to a person,
-            usually serious injury.
+            Generally, for people under 18, the police may give a warning or caution for bad behaviour.
+            Imprisonment is only a last resort and is usually saved for cases where people repeatedly cause very serious harm,
+            such as serious injury.
         </p>
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Report bullying to police</h2>
+        <h2 class="lesson-section-title">Report Bullying to Police</h2>
         <div class="lesson-section-divider"></div>
 
         <ol>
             <li>
                 <strong>Lodge a formal complaint with your school.</strong>
-                The school has a legal duty to do something about the bullying if it is happening at school.
+                The school has a legal duty to do something about bullying if it is happening at school.
                 If telling someone is not enough to stop the bully’s behaviour,
                 you can make a formal complaint to the school.
                 Ask your parents or someone you trust to help make the complaint with you,
@@ -359,10 +481,10 @@
             <li>
                 <strong>Make a complaint to the Department of Education.</strong>
                 If you’ve complained to the school but they haven’t done anything,
-                you can make a complaint to the Department Office of the Department of Education.
-                To make a complaint, you and your parents need to fill in a form.
+                you can make a complaint to the Department of Education office.
+                To make a complaint, you and your parents may need to fill in a form.
                 In your complaint, you or your parents will have to provide detailed information about incidents
-                and show why you think your school has failed to do to make the bullying stop.
+                and show why you think your school has failed to make the bullying stop.
             </li>
         </ol>
     </div>
@@ -380,21 +502,17 @@
             <div class="naviBar"></div>
 
             <div class="buttonDiv">
-
                 <a href="module3.html" class="naviButt">
                     ← Previous
                 </a>
 
-                <a href="../cybersafety.html"
-                   class="naviButt"
-                   id="backButt">
+                <a href="../cybersafety.html" class="naviButt" id="backButt">
                     Back to Course
                 </a>
 
                 <a href="../cybersafety.html" class="naviButt">
                     Finish
                 </a>
-
             </div>
         </div>
     </div>   

@@ -4,6 +4,7 @@
     <title>Module 3 – Signs That I Need Extra Help or Support</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/images/Logo/WeBelong.png">
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="stylesheet" href="../../../css/learninghub.css">
 
@@ -16,6 +17,8 @@
             padding: 15px 180px;
             background: #eceaea;
             font-size: 15px;
+            box-sizing: border-box;
+            line-height: 1.5;
         }
 
         .lessonnav a {
@@ -29,16 +32,53 @@
             text-underline-offset: 4px;
         }
 
+        .lesson-section {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+            box-sizing: border-box;
+        }
+
+        .lesson-section + .lesson-section {
+            border-top: 2px solid #f04b23;
+            padding-top: 50px;
+            margin-top: 50px;
+        }
+
+        .lesson-section h2,
+        .lesson-section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+            line-height: 1.3;
+        }
+
+        .lesson-section-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
         .course-intro-list {
             list-style: disc;
             padding-left: 34px;
-            margin: 0;
+            margin: 0 0 28px;
         }
 
         .course-intro-list li {
             margin-bottom: 10px;
             font-size: 18px;
-            line-height: 1.4;
+            line-height: 1.5;
             color: #111;
         }
 
@@ -47,18 +87,69 @@
             font-size: 1.3em;
         }
 
+        .support-list li {
+            margin-bottom: 22px;
+        }
+
+        .two-column-section {
+            display: grid;
+            grid-template-columns: 1fr 460px;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px 70px;
+            align-items: start;
+        }
+
+        .lesson-section-image {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section-image img {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            display: inline-block;
+            border-radius: 8px;
+        }
+
+        .medium-image img {
+            max-width: 500px;
+        }
+
+        .wide-image img {
+            max-width: 900px;
+        }
+
+        .reflink {
+            text-decoration: none;
+            color: #6f2c91;
+            overflow-wrap: break-word;
+            word-break: break-word;
+            font-weight: 600;
+        }
+
         .lesson-actions {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             margin: 60px 0;
+            padding: 0 180px;
+            box-sizing: border-box;
         }
 
         #lessonDoneMsg {
             margin-top: 15px;
             color: green;
             font-size: 18px;
+            text-align: center;
         }
 
         .navigationdiv {
@@ -79,6 +170,7 @@
             grid-template-columns: 1fr auto 1fr;
             align-items: center;
             width: 100%;
+            gap: 15px;
         }
 
         .buttonDiv a:first-child {
@@ -101,114 +193,163 @@
             border-radius: 25px;
             font-size: 16px;
             transition: 0.2s;
+            text-align: center;
+            box-sizing: border-box;
         }
 
         .naviButt:hover {
             background: #4f186b;
         }
 
-        .lesson-section {
-            width: 86%;
-            max-width: 1400px;
-            margin: 40px auto 20px;
-        }
-
-        .lesson-section + .lesson-section {
-            border-top: 2px solid #f04b23;
-            padding-top: 50px;
-            margin-top: 50px;
-        }
-
-        .lesson-section-title {
-            text-align: center;
-            font-size: 34px;
-            font-weight: 400;
-            color: #111;
-            margin: 0 0 24px;
-        }
-
-        .lesson-section-divider {
-            width: 100%;
-            height: 2px;
-            background: #f04b23;
-            margin-bottom: 42px;
-        }
-
-        .lesson-section p {
-            font-size: 18px;
-            line-height: 1.4;
-            color: #111;
-            margin: 0 0 28px;
-        }
-
-        .lesson-section-image {
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
-
-        .lesson-section-image img {
-            width: 100%;
-            max-width: 750px;
-            height: auto;
-            display: inline-block;
-        }
-
-        .two-column-section {
-            display: grid;
-            grid-template-columns: 1fr 460px;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .support-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px 70px;
-            align-items: start;
-        }
-
-        .medium-image img {
-            max-width: 500px;
-        }
-
-        .wide-image img {
-            max-width: 900px;
-        }
-
-        .reflink {
-            text-decoration: none;
-            color: #6f2c91;
-        }
-
-        .support-list li {
-            margin-bottom: 22px;
-        }
-
-        @media (max-width: 992px) {
-            .lesson-section {
-                width: 92%;
+        @media screen and (max-width: 768px) {
+            .lessonnav {
+                padding: 14px 20px;
+                font-size: 14px;
             }
 
+            .lessonnav a,
+            .lessonnav span {
+                display: inline;
+                overflow-wrap: break-word;
+            }
+
+            .lesson-section {
+                width: 100%;
+                max-width: 100%;
+                padding: 0 20px;
+                margin: 35px auto 20px;
+            }
+
+            .lesson-section + .lesson-section {
+                padding-top: 35px;
+                margin-top: 35px;
+            }
+
+            .lesson-section h2,
             .lesson-section-title {
-                font-size: 28px;
+                font-size: 25px;
+                line-height: 1.3;
+                margin-bottom: 18px;
+            }
+
+            .lesson-section-divider {
+                margin-bottom: 28px;
             }
 
             .lesson-section p {
-                font-size: 14px;
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 22px;
+            }
+
+            .course-intro-list {
+                padding-left: 24px;
+                margin-bottom: 24px;
+            }
+
+            .course-intro-list li {
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 12px;
+            }
+
+            .course-intro-list li::marker {
+                font-size: 1.15em;
+            }
+
+            .support-list li {
+                margin-bottom: 18px;
             }
 
             .two-column-section,
             .support-grid {
-                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
+                gap: 28px;
             }
 
+            .lesson-section-image {
+                width: 100%;
+                max-width: 100%;
+                margin: 24px auto 28px;
+            }
+
+            .lesson-section-image img,
+            .medium-image img,
+            .wide-image img {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .lesson-actions {
+                margin: 40px 0;
+                padding: 0 20px;
+            }
+
+            #markCompleteBtn {
+                width: fit-content;
+                max-width: 100%;
+                text-align: center;
+            }
+
+            #lessonDoneMsg {
+                font-size: 16px;
+            }
+
+            .navigationdiv {
+                width: 100%;
+                margin-top: 25px;
+            }
+
+            .buttonDiv {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                width: 100%;
+            }
+
+            .buttonDiv a:first-child,
+            .buttonDiv a:nth-child(2),
+            .buttonDiv a:last-child {
+                justify-self: unset;
+            }
+
+            .naviButt {
+                display: block;
+                width: 100%;
+                max-width: 260px;
+                padding: 12px 18px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
             .lessonnav {
-                padding: 15px 30px;
+                padding: 12px 16px;
+                font-size: 13px;
             }
 
+            .lesson-section {
+                padding: 0 16px;
+                margin: 30px auto 18px;
+            }
+
+            .lesson-section h2,
+            .lesson-section-title {
+                font-size: 23px;
+            }
+
+            .lesson-section p,
             .course-intro-list li {
-                font-size: 19px;
+                font-size: 15px;
+            }
+
+            .lesson-actions {
+                padding: 0 16px;
+            }
+
+            .naviButt {
+                max-width: 100%;
+                font-size: 15px;
             }
         }
     </style>
@@ -229,16 +370,9 @@
     <div class="lessonnav">
         <a href="../../../learnhub.html">Learning Hub</a>
         <span>&gt;</span>
-
-        <a href="../selfcareemergency.html">
-            Self-care During Emergencies
-        </a>
-
+        <a href="../selfcareemergency.html">Self-care During Emergencies</a>
         <span>&gt;</span>
-
-        <a href="module3.html">
-            Module 3 – Signs That I Need Extra Help or Support
-        </a>
+        <a href="module3.html">Module 3 – Signs That I Need Extra Help or Support</a>
     </div>
 
     <div class="lesson-section">
@@ -281,27 +415,27 @@
             </div>
 
             <div>
-                <h2>Mental Health Is On A Scale</h2>
+                <h2>Mental Health Is on a Scale</h2>
 
                 <ul class="course-intro-list">
-                    <li>Mental health exists on a scale</li>
-                    <li>Our mental health can change over time based on what we experience or are facing</li>
-                    <li>It’s important to pay attention to your mental well-being, observing how you feel and your level of stress</li>
-                    <li>Seeking help when we are on the lower end of the scale is important</li>
-                    <li>Self-care is important when on the higher end of the scale</li>
+                    <li>Mental health exists on a scale.</li>
+                    <li>Our mental health can change over time based on what we experience or are facing.</li>
+                    <li>It’s important to pay attention to your mental wellbeing, observing how you feel and your level of stress.</li>
+                    <li>Seeking help when we are on the lower end of the scale is important.</li>
+                    <li>Self-care is important when on the higher end of the scale.</li>
                 </ul>
             </div>
         </div>
     </div>
 
     <div class="lesson-section">
-        <h2>Where Can I Reach Out for Help</h2>
+        <h2>Where Can I Reach Out for Help?</h2>
 
         <div class="support-grid">
             <div>
                 <ul class="course-intro-list">
                     <li>Your GP or doctor</li>
-                    <li>Mental health professionals such as psychologists, psychiatrists, and counsellors</li>
+                    <li>Mental health professionals such as psychologists, psychiatrists and counsellors</li>
                     <li>Support workers and Support Coordinators</li>
                     <li>Family or friends</li>
                 </ul>
@@ -309,9 +443,10 @@
                 <p>
                     For people who need support with depression, anxiety or suicidal thoughts:
                 </p>
+
                 <p>
                     Reaching out for help is a positive step. You do not need to wait until things feel too hard.
-                    Talking with someone early can help you feel supported, safe, and understood.
+                    Talking with someone early can help you feel supported, safe and understood.
                 </p>
 
                 <p>
@@ -334,7 +469,7 @@
                     <li>
                         Beyond Blue aims to increase awareness of depression and anxiety and reduce stigma.
                         If you or a loved one need help, you can call <span class="reflink">1300 22 4636</span>,
-                        24 hours/7 days a week or chat online.
+                        24 hours a day, 7 days a week, or chat online.
                     </li>
 
                     <li>
@@ -352,18 +487,17 @@
                     <li>
                         If you’re feeling lonely, FriendLine supports anyone who’s feeling lonely, needs to reconnect or just wants a chat.
                         You can call them 7 days a week on <span class="reflink">1800 424 287</span>,
-                        or chat online with one of their trained volunteers. All conversations with FriendLine are anonymous.
+                        or chat online with one of their trained volunteers.
                     </li>
 
                     <li>
-                        For young people who need mental health support, and their parents or carers:
                         Kids Helpline is Australia’s only free 24/7 confidential and private counselling service specifically for children
-                        and young people aged 5 – 25.
+                        and young people aged 5 to 25.
                         Call <span class="reflink">1800 55 1800</span>.
                     </li>
 
                     <li>
-                        Headspace provides free online and telephone support and counselling to young people 12 – 25
+                        Headspace provides free online and telephone support and counselling to young people 12 to 25
                         and their families and friends.
                         Call <span class="reflink">1800 650 890</span>, or chat online.
                     </li>
@@ -385,21 +519,17 @@
             <div class="naviBar"></div>
 
             <div class="buttonDiv">
-
                 <a href="module2.html" class="naviButt">
                     ← Previous
                 </a>
 
-                <a href="../selfcareemergency.html"
-                   class="naviButt"
-                   id="backButt">
+                <a href="../selfcareemergency.html" class="naviButt" id="backButt">
                     Back to Course
                 </a>
 
                 <a href="module4.html" class="naviButt">
                     Next →
                 </a>
-
             </div>
         </div>
     </div>   

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Module 4 – Moving out of home</title>
+    <title>Module 4 – Moving Out of Home</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/images/Logo/WeBelong.png">
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="stylesheet" href="../../../css/learninghub.css">
 
@@ -16,6 +17,8 @@
             padding: 15px 180px;
             background: #eceaea;
             font-size: 15px;
+            box-sizing: border-box;
+            line-height: 1.5;
         }
 
         .lessonnav a {
@@ -29,16 +32,46 @@
             text-underline-offset: 4px;
         }
 
+        .lesson-section {
+            width: 86%;
+            max-width: 1400px;
+            margin: 40px auto 20px;
+            box-sizing: border-box;
+        }
+
+        .lesson-section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #111;
+            margin: 0 0 24px;
+            line-height: 1.3;
+        }
+
+        .lesson-section-divider {
+            width: 100%;
+            height: 2px;
+            background: #f04b23;
+            margin-bottom: 42px;
+        }
+
+        .lesson-section p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
         .course-intro-list {
             list-style: disc;
             padding-left: 34px;
-            margin: 0;
+            margin: 0 0 28px;
         }
 
         .course-intro-list li {
             margin-bottom: 10px;
             font-size: 18px;
-            line-height: 1.4;
+            line-height: 1.5;
             color: #111;
         }
 
@@ -47,18 +80,76 @@
             font-size: 1.3em;
         }
 
+        .two-column-section {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .lesson-section-image {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section-image img {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            display: inline-block;
+            border-radius: 8px;
+        }
+
+        .small-image img {
+            max-width: 300px;
+        }
+
+        .medium-image img {
+            max-width: 450px;
+        }
+
+        .purple-link-btn {
+            display: inline-block;
+            background: #6f2c91;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin: 10px 0;
+            overflow-wrap: break-word;
+            word-break: break-word;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .purple-link-btn:hover {
+            background: #4f186b;
+        }
+
+        .reflink {
+            text-decoration: none;
+            color: #6f2c91;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+
         .lesson-actions {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             margin: 60px 0;
+            padding: 0 180px;
+            box-sizing: border-box;
         }
 
         #lessonDoneMsg {
             margin-top: 15px;
             color: green;
             font-size: 18px;
+            text-align: center;
         }
 
         .navigationdiv {
@@ -79,6 +170,7 @@
             grid-template-columns: 1fr auto 1fr;
             align-items: center;
             width: 100%;
+            gap: 15px;
         }
 
         .buttonDiv a:first-child {
@@ -101,111 +193,162 @@
             border-radius: 25px;
             font-size: 16px;
             transition: 0.2s;
+            text-align: center;
+            box-sizing: border-box;
         }
 
         .naviButt:hover {
             background: #4f186b;
         }
 
-        .lesson-section {
-            width: 86%;
-            max-width: 1400px;
-            margin: 40px auto 20px;
-        }
-
-        .lesson-section-title {
-            text-align: center;
-            font-size: 34px;
-            font-weight: 400;
-            color: #111;
-            margin: 0 0 24px;
-        }
-
-        .lesson-section-divider {
-            width: 100%;
-            height: 2px;
-            background: #f04b23;
-            margin-bottom: 42px;
-        }
-
-        .lesson-section p {
-            font-size: 18px;
-            line-height: 1.4;
-            color: #111;
-            margin: 0 0 28px;
-        }
-
-        .lesson-section-image {
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
-
-        .lesson-section-image img {
-            width: 100%;
-            max-width: 750px;
-            height: auto;
-            display: inline-block;
-        }
-
-        .two-column-section {
-            display: grid;
-            grid-template-columns: 1fr 350px;
-            gap: 60px;
-            align-items: start;
-        }
-
-        .small-image img {
-            max-width: 300px;
-        }
-
-        .medium-image img {
-            max-width: 450px;
-        }
-
-        .purple-link-btn {
-            display: inline-block;
-            background: #6f2c91;
-            color: white;
-            text-decoration: none;
-            padding: 12px 22px;
-            border-radius: 25px;
-            font-weight: 600;
-            margin: 10px 0;
-        }
-
-        .purple-link-btn:hover {
-            background: #4f186b;
-        }
-
-        .reflink {
-            text-decoration: none;
-            color: #6f2c91;
-        }
-
-        @media (max-width: 992px) {
-            .lesson-section {
-                width: 92%;
-            }
-
-            .lesson-section-title {
-                font-size: 28px;
-            }
-
-            .lesson-section p {
+        @media screen and (max-width: 768px) {
+            .lessonnav {
+                padding: 14px 20px;
                 font-size: 14px;
             }
 
-            .two-column-section {
-                grid-template-columns: 1fr;
+            .lessonnav a,
+            .lessonnav span {
+                display: inline;
+                overflow-wrap: break-word;
             }
 
-            .lessonnav {
-                padding: 15px 30px;
+            .lesson-section {
+                width: 100%;
+                max-width: 100%;
+                padding: 0 20px;
+                margin: 35px auto 20px;
+            }
+
+            .lesson-section-title {
+                font-size: 25px;
+                line-height: 1.3;
+                margin-bottom: 18px;
+            }
+
+            .lesson-section-divider {
+                margin-bottom: 28px;
+            }
+
+            .lesson-section p {
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 22px;
+            }
+
+            .course-intro-list {
+                padding-left: 24px;
+                margin-bottom: 24px;
             }
 
             .course-intro-list li {
-                font-size: 19px;
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 12px;
+            }
+
+            .course-intro-list li::marker {
+                font-size: 1.15em;
+            }
+
+            .two-column-section {
+                display: flex;
+                flex-direction: column;
+                gap: 28px;
+            }
+
+            .lesson-section-image {
+                width: 100%;
+                max-width: 100%;
+                margin: 24px auto 28px;
+            }
+
+            .lesson-section-image img,
+            .small-image img,
+            .medium-image img {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .purple-link-btn {
+                font-size: 15px;
+                padding: 12px 18px;
+                text-align: center;
+            }
+
+            .lesson-actions {
+                margin: 40px 0;
+                padding: 0 20px;
+            }
+
+            #markCompleteBtn {
+                width: fit-content;
+                max-width: 100%;
+                text-align: center;
+            }
+
+            #lessonDoneMsg {
+                font-size: 16px;
+            }
+
+            .navigationdiv {
+                width: 100%;
+                margin-top: 25px;
+            }
+
+            .buttonDiv {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                width: 100%;
+            }
+
+            .buttonDiv a:first-child,
+            .buttonDiv a:nth-child(2),
+            .buttonDiv a:last-child {
+                justify-self: unset;
+            }
+
+            .naviButt {
+                display: block;
+                width: 100%;
+                max-width: 260px;
+                padding: 12px 18px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .lessonnav {
+                padding: 12px 16px;
+                font-size: 13px;
+            }
+
+            .lesson-section {
+                padding: 0 16px;
+                margin: 30px auto 18px;
+            }
+
+            .lesson-section-title {
+                font-size: 23px;
+            }
+
+            .lesson-section p,
+            .course-intro-list li {
+                font-size: 15px;
+            }
+
+            .purple-link-btn {
+                width: 100%;
+                font-size: 14px;
+            }
+
+            .lesson-actions {
+                padding: 0 16px;
+            }
+
+            .naviButt {
+                max-width: 100%;
+                font-size: 15px;
             }
         }
     </style>
@@ -216,7 +359,7 @@
     data-course-id="money"
     data-total-lessons="6"
     data-lesson-number="4"
-    data-title="Module 4 – Moving out of home"
+    data-title="Module 4 – Moving Out of Home"
     data-button="true"
 >
 
@@ -226,27 +369,20 @@
     <div class="lessonnav">
         <a href="../../../learnhub.html">Learning Hub</a>
         <span>&gt;</span>
-
-        <a href="../money.html">
-            Money
-        </a>
-
+        <a href="../money.html">Money</a>
         <span>&gt;</span>
-
-        <a href="module4.html">
-            Module 4 – Moving out of home
-        </a>
+        <a href="module4.html">Module 4 – Moving Out of Home</a>
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">What you’ll learn...</h2>
+        <h2 class="lesson-section-title">What You’ll Learn</h2>
         <div class="lesson-section-divider"></div>
 
         <div class="two-column-section">
             <div>
                 <ul class="course-intro-list">
-                    <li>Types of expenses and cost for living out of home</li>
-                    <li>The basic items required to move out of home</li>
+                    <li>Types of expenses and costs for living out of home.</li>
+                    <li>The basic items required to move out of home.</li>
                 </ul>
             </div>
 
@@ -257,14 +393,14 @@
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Moving out of home</h2>
+        <h2 class="lesson-section-title">Moving Out of Home</h2>
         <div class="lesson-section-divider"></div>
 
         <div class="two-column-section">
             <div>
                 <p>
                     Moving out of home for the first time can be exciting and a little scary.
-                    Before you make the move you need to be aware of the following costs.
+                    Before you make the move, you need to be aware of the following costs.
                 </p>
 
                 <ul class="course-intro-list">
@@ -272,7 +408,7 @@
                     <li>Regular weekly payments</li>
                     <li>Electricity, gas, water and other bills</li>
                     <li>Groceries</li>
-                    <li>Personal expenses – mobile bill, clothes, travel, entertainment, etc.</li>
+                    <li>Personal expenses such as mobile bills, clothes, travel and entertainment</li>
                 </ul>
             </div>
 
@@ -283,19 +419,19 @@
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">What will you take with you?</h2>
+        <h2 class="lesson-section-title">What Will You Take with You?</h2>
         <div class="lesson-section-divider"></div>
 
         <div class="two-column-section">
             <div>
                 <p>
                     Whether you’re moving out by yourself or with other people,
-                    you will need to make sure you have a:
+                    you will need to make sure you have:
                 </p>
 
                 <ul class="course-intro-list">
                     <li>Bed</li>
-                    <li>Fridge/freezer</li>
+                    <li>Fridge or freezer</li>
                     <li>Table and chairs</li>
                     <li>Lounge and TV</li>
                 </ul>
@@ -308,7 +444,7 @@
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">How much will I need for bond?</h2>
+        <h2 class="lesson-section-title">How Much Will I Need for Bond?</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
@@ -324,11 +460,11 @@
         </p>
 
         <p>
-            Bond = 4 x $200 = $800
+            Bond = 4 × $200 = $800
         </p>
 
         <p>
-            Two weeks rent = 2 x $200 = $400
+            Two weeks rent = 2 × $200 = $400
         </p>
 
         <p>
@@ -337,13 +473,13 @@
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Ongoing costs</h2>
+        <h2 class="lesson-section-title">Ongoing Costs</h2>
         <div class="lesson-section-divider"></div>
 
         <div class="two-column-section">
             <div>
                 <p>
-                    While living out of home you will need to save money for:
+                    While living out of home, you will need to save money for:
                 </p>
 
                 <ul class="course-intro-list">
@@ -361,22 +497,22 @@
     </div>
 
     <div class="lesson-section">
-        <h2 class="lesson-section-title">Finding a place</h2>
+        <h2 class="lesson-section-title">Finding a Place</h2>
         <div class="lesson-section-divider"></div>
 
         <p>
-            If you’re not sure what’s available to rent or if you’re looking for a flat mate,
+            If you’re not sure what’s available to rent or if you’re looking for a flatmate,
             visit these websites:
         </p>
 
         <a href="https://www.realestate.com.au/rent/" target="_blank" class="purple-link-btn">
-            https://www.realestate.com.au/rent/
+            realestate.com.au/rent
         </a>
 
         <br>
 
         <a href="https://flatmates.com.au/" target="_blank" class="purple-link-btn">
-            https://flatmates.com.au/
+            flatmates.com.au
         </a>
 
         <p>
@@ -397,21 +533,17 @@
             <div class="naviBar"></div>
 
             <div class="buttonDiv">
-
                 <a href="module3.html" class="naviButt">
                     ← Previous
                 </a>
 
-                <a href="../money.html"
-                   class="naviButt"
-                   id="backButt">
+                <a href="../money.html" class="naviButt" id="backButt">
                     Back to Course
                 </a>
 
                 <a href="module5.html" class="naviButt">
                     Next →
                 </a>
-
             </div>
         </div>
     </div>   

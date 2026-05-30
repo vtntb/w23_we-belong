@@ -486,6 +486,34 @@ body.highlight-links .navbar a {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .dropdown > a::after {
+        content: " ▼";
+        font-size: 12px;
+    }
+
+    .dropdown.open > a {
+        background: #4f186b;
+        color: white;
+    }
+
+    .dropdown.open .content {
+        display: block;
+    }
+
+    .dropdown:hover .content {
+        display: none;
+    }
+
+    .dropdown.open:hover .content {
+        display: block;
+    }
+
+    .dropdown .content a::after {
+        content: "";
+    }
+}
+
 /* ===== FOOTER ===== */
 .site-footer {
     margin-top: 20px;
