@@ -32,7 +32,6 @@ function initChatbot() {
   chatToggle.addEventListener("click", () => {
     chatWindow.hidden = false;
     localStorage.setItem(CHAT_OPEN_KEY, "true");
-    userInput.focus();
   });
 
   closeChat.addEventListener("click", () => {
@@ -171,11 +170,8 @@ function restoreChatWindowState() {
 
   const isOpen = localStorage.getItem(CHAT_OPEN_KEY);
   chatWindow.hidden = isOpen !== "true";
-
-  if (isOpen === "true" && userInput) {
-    userInput.focus();
-  }
 }
+
 
 function clearChatHistory() {
   localStorage.removeItem(CHAT_STORAGE_KEY);
