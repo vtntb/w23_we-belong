@@ -48,12 +48,12 @@ The token is returned when you register or log in.
 ```
 
 **Error Responses:**
-| Code | Reason |
-|------|--------|
-| 400 | Missing required fields |
-| 400 | Password less than 6 characters |
-| 409 | Email already registered |
-| 500 | Server error |
+| Code | Reason                          |
+|------|---------------------------------|
+| 400  | Missing required fields         |
+| 400  | Password less than 6 characters |
+| 409  | Email already registered        |
+| 500  | Server error                    |
 
 ---
 
@@ -85,11 +85,11 @@ The token is returned when you register or log in.
 ```
 
 **Error Responses:**
-| Code | Reason |
-|------|--------|
-| 400 | Missing email or password |
-| 401 | Invalid email or password |
-| 500 | Server error |
+| Code | Reason                    |
+|------|---------------------------|
+| 400  | Missing email or password |
+| 401  | Invalid email or password |
+| 500  | Server error              |
 
 ---
 
@@ -140,10 +140,10 @@ The token is returned when you register or log in.
 ```
 
 **Error Responses:**
-| Code | Reason |
-|------|--------|
-| 404 | Course not found |
-| 500 | Server error |
+| Code | Reason           |
+|------|------------------|
+| 404  | Course not found |
+| 500  | Server error     |  
 
 ---
 
@@ -167,12 +167,12 @@ The token is returned when you register or log in.
 ```
 
 **Error Responses:**
-| Code | Reason |
-|------|--------|
-| 400 | Missing courseId |
-| 401 | Not logged in |
-| 404 | Course not found |
-| 500 | Server error |
+| Code | Reason           |
+|------|------------------|
+| 400  | Missing courseId |
+| 401  | Not logged in    |
+| 404  | Course not found |
+| 500  | Server error     |
 
 ---
 
@@ -198,10 +198,10 @@ The token is returned when you register or log in.
 ```
 
 **Error Responses:**
-| Code | Reason |
-|------|--------|
-| 401 | Not logged in |
-| 500 | Server error |
+| Code | Reason        |
+|------|---------------|
+| 401  | Not logged in |
+| 500  | Server error  |
 
 ---
 
@@ -226,12 +226,12 @@ The token is returned when you register or log in.
 ```
 
 **Error Responses:**
-| Code | Reason |
-|------|--------|
-| 400 | Missing courseId or lessonsCompleted |
-| 400 | User not enrolled in this course |
-| 401 | Not logged in |
-| 500 | Server error |
+| Code | Reason                               |
+|------|--------------------------------------|
+| 400  | Missing courseId or lessonsCompleted |
+| 400  | User not enrolled in this course     |
+| 401  | Not logged in                        |
+| 500  | Server error                         |
 
 ---
 
@@ -264,23 +264,23 @@ The token is returned when you register or log in.
 4. Saves message and response to `chatbot_logs` table
 
 **Error Responses:**
-| Code | Reason |
-|------|--------|
-| 400 | Empty message |
-| 500 | Server error |
+| Code | Reason        |
+|------|---------------|
+| 400  | Empty message |
+| 500  | Server error  |
 
 ---
 
 ## Database Tables
 
-| Table | Purpose |
-|-------|---------|
-| `users` | Stores registered user accounts with hashed passwords |
-| `courses` | Stores all available courses |
-| `lessons` | Stores individual lessons linked to courses |
-| `progress` | Tracks which courses each user is enrolled in and their progress |
-| `chatbot_faqs` | Stores FAQ questions, answers and keywords for chatbot matching |
-| `chatbot_logs` | Logs all chatbot conversations |
+| Table          | Purpose                                                          |
+|----------------|------------------------------------------------------------------|
+| `users`        | Stores registered user accounts with hashed passwords            |
+| `courses`      | Stores all available courses                                     |
+| `lessons`      | Stores individual lessons linked to courses                      |
+| `progress`     | Tracks which courses each user is enrolled in and their progress |
+| `chatbot_faqs` | Stores FAQ questions, answers and keywords for chatbot matching  |
+| `chatbot_logs` | Logs all chatbot conversations                                   |
 
 ---
 
