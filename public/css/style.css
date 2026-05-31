@@ -514,31 +514,119 @@ body.highlight-links .navbar a {
     }
 }
 
-/* ===== FOOTER ===== */
+/* ================= FOOTER ================= */
+
 .site-footer {
-    margin-top: 20px;
+    background: #ffffff;
+    color: #111;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr 1.1fr;
+    gap: 40px;
+    padding: 55px 80px;
+    align-items: center;
+}
+
+.footer-column {
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-logo-column,
+.footer-links-column {
+    border-right: 1px solid #e3e3e3;
+}
+
+.footer-logo {
+    width: 170px;
+    max-width: 100%;
+}
+
+.footer-links-column h3 {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+.footer-links-column a {
+    color: #111;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.footer-links-column a:hover {
+    color: #6f2c91;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.footer-info-column p {
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0 0 12px;
+}
+
+.flagstaff-footer-logo {
+    width: 220px;
+    max-width: 100%;
+    margin-top: 5px;
 }
 
 .footer-bar {
     width: 100%;
     border-collapse: collapse;
-    background: #1f6e7a;
+    background: #6f2c91;
+    color: white;
 }
 
 .footer-bar td {
     text-align: center;
+    padding: 14px 20px;
     font-size: 14px;
-    color: white;
-    padding: 12px;
 }
 
 .footer-link {
     color: white;
     text-decoration: none;
+    font-weight: 600;
 }
 
 .footer-link:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .footer-main {
+        grid-template-columns: 1fr;
+        padding: 40px 30px;
+        text-align: center;
+    }
+
+    .footer-column {
+        min-height: auto;
+        align-items: center;
+    }
+
+    .footer-logo-column,
+    .footer-links-column {
+        border-right: none;
+        border-bottom: 1px solid #e3e3e3;
+        padding-bottom: 30px;
+    }
+
+    .footer-bar tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-bar td {
+        padding: 10px;
+    }
 }
 
 /* ===== IMAGE BANNER ===== */
@@ -1259,3 +1347,4 @@ body.highlight-links .navbar a {
         line-height: 1.15;
     }
 }
+
