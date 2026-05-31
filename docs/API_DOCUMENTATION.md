@@ -185,7 +185,7 @@ The token is returned when you register or log in.
 ```json
 [
   {
-    "id": "awarenesstraining",
+    "id": "awareness",
     "title": "Disability Awareness Training",
     "description": "Learn to understand and support people with disabilities.",
     "category": "Awareness",
@@ -209,7 +209,7 @@ The token is returned when you register or log in.
 
 ```json
 {
-  "id": "awarenesstraining",
+  "id": "awareness",
   "title": "Disability Awareness Training",
   "description": "...",
   "category": "Awareness",
@@ -245,7 +245,7 @@ The token is returned when you register or log in.
 
 ```json
 {
-  "courseId": "awarenesstraining"
+  "courseId": "awareness"
 }
 ```
 
@@ -280,7 +280,7 @@ The token is returned when you register or log in.
 ```json
 [
   {
-    "courseId": "awarenesstraining",
+    "courseId": "awareness",
     "title": "Disability Awareness Training",
     "description": "Learn to understand and support people with disabilities.",
     "courseUrl": "/LearningHub/awarenesstraining.html",
@@ -312,7 +312,7 @@ The token is returned when you register or log in.
 
 ```json
 {
-  "courseId": "awarenesstraining",
+  "courseId": "awareness",
   "title": "Disability Awareness Training",
   "courseUrl": "/LearningHub/awarenesstraining.html",
   "isEnrolled": true,
@@ -342,7 +342,7 @@ The token is returned when you register or log in.
 
 ```json
 {
-  "courseId": "awarenesstraining"
+  "courseId": "awareness"
 }
 ```
 
@@ -373,7 +373,7 @@ The token is returned when you register or log in.
 
 ```json
 {
-  "courseId": "awarenesstraining",
+  "courseId": "awareness",
   "lessonNumber": 3
 }
 ```
